@@ -5,79 +5,78 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import java.io.File;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-enum Mode {
-    infinitive("infinitive-present"),
-    indicative("present", "imperfect", "future", "simple-past"),
-    conditional("present"),
-    subjunctive("present", "imperfect"),
-    imperative("imperative-present"),
-    participle("present-participle", "past-participle");
-    private String[] tenses;
-
-    Mode(String... tenses) {
-        this.tenses = tenses;
-    }
-
-    public int getTenseIndex(String tense) {
-        if (tense.equals("present")) {
-            switch (this) {
-                case infinitive:
-                    tense = tense + "-present";
-                    break;
-                case imperative:
-                    tense = "imperative-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                default:
-                    break;
-            }
-        } else if (tense.equals("past")) {
-            switch (this) {
-                case indicative:
-                    tense = "simple-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                    break;
-                default:
-                    break;
-            }
-        }
-        int i = 0;
-        for (String s : tenses) {
-            if (tense.equals(s))
-                return i++;
-        }
-        throw new NoSuchElementException("tense not found");
-    }
-
-    public int length() {
-        return tenses.length;
-    }
-}
 
 /**
  * @author Bach Phan
  * @version 01/31/2017
  */
 public class Conjugation {
+    private final String path_to_verbs_fr = "./data/verbs-fr.xml";
+    private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
     //todo : revise the code
-    public String[][] _listConjugation;
+    private String[][] _listConjugation;
     private NodeList nVerbs;
     private NodeList nConj;
     private List <List <String>> rads_vs = new ArrayList <>();
-    private List <List <String>> conjugatedList = new ArrayList <>();
 
-    private final String path_to_verbs_fr =  "./data/verbs-fr.xml";
-    private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
+    enum Mode {
+        infinitive("infinitive-present"),
+        indicative("present", "imperfect", "future", "simple-past"),
+        conditional("present"),
+        subjunctive("present", "imperfect"),
+        imperative("imperative-present"),
+        participle("present-participle", "past-participle");
+        private String[] tenses;
+
+        Mode(String... tenses) {
+            this.tenses = tenses;
+        }
+
+        public int getTenseIndex(String tense) {
+            if (tense.equals("present")) {
+                switch (this) {
+                    case infinitive:
+                        tense = tense + "-present";
+                        break;
+                    case imperative:
+                        tense = "imperative-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                    default:
+                        break;
+                }
+            } else if (tense.equals("past")) {
+                switch (this) {
+                    case indicative:
+                        tense = "simple-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            int i = 0;
+            for (String s : tenses) {
+                if (tense.equals(s))
+                    return i++;
+            }
+            throw new NoSuchElementException("tense not found");
+        }
+
+        public int length() {
+            return tenses.length;
+        }
+    }
+    /**
+     * empty constructor, when initiated will be use for the entire operation
+     */
     public Conjugation() {
         try {
             //read verbs-fr.xml file
@@ -97,6 +96,45 @@ public class Conjugation {
         }
     }
 
+    /**
+     * @param temp
+     * @param v
+     * @return
+     */
+    public static String trim(String temp, String v) {
+        int index = 0;
+        for (int i = 0; i < temp.length(); i++) {
+            char c = temp.charAt(i);
+            if (c == ':') {
+                index = temp.length() - 1 - i;
+            }
+        }
+        return v.substring(0, v.length() - index);
+    }
+
+    /**
+     * @param radical
+     * @param listP
+     * @return
+     */
+    public static String[][] append(String radical, String[][] listP) {
+        // already trim
+        for (int i = 0; i < listP.length; i++) {
+            if (listP[i] == null)
+                break;
+            for (int j = 0; j < listP[i].length; j++) {
+                listP[i][j] = radical + listP[i][j];
+            }
+        }
+        return listP;
+    }
+
+    /**
+     * search for
+     *
+     * @param v
+     * @return
+     */
     public String search(String v) {
         String templateName = "";
         for (int i = 0; i < nVerbs.getLength(); i++) {
@@ -114,29 +152,12 @@ public class Conjugation {
         return templateName;
     }
 
-    public static String trim(String temp, String v) {
-        int index = 0;
-        for (int i = 0; i < temp.length(); i++) {
-            char c = temp.charAt(i);
-            if (c == ':') {
-                index = temp.length() - 1 - i;
-            }
-        }
-        return v.substring(0, v.length() - index);
-    }
-
-    public static String[][] append(String radical, String[][] listP) {
-        // already trim
-        for (int i = 0; i < listP.length; i++) {
-            if (listP[i] == null)
-                break;
-            for (int j = 0; j < listP[i].length; j++) {
-                listP[i][j] = radical + listP[i][j];
-            }
-        }
-        return listP;
-    }
-
+    /**
+     * @param templateName
+     * @param modeIndex
+     * @param tenseIndex
+     * @return
+     */
     public String[][] listOfPrefix(String templateName,
                                    int modeIndex,
                                    int tenseIndex) {
@@ -170,6 +191,9 @@ public class Conjugation {
         return p;
     }
 
+    /**
+     *
+     */
     public void display() {
         String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
         for (int i = 0; i < _listConjugation.length; i++) {
@@ -187,10 +211,8 @@ public class Conjugation {
         }
     }
 
-    //get NodeList of verbs-fr and conjugation-fr
-
     //list of verbs and its radical, use for deconjugation...
-    //todo : create inheritance class of Conjugation to search for conjugasted verb
+    //todo : create inheritance class of Conjugation to search for conjugated verb
     //todo : strip accent for input.
     public List <List <String>> setListRad_and_Verbs() {
         List <String> list = new ArrayList <>();
@@ -212,11 +234,23 @@ public class Conjugation {
         return this.rads_vs;
     }
 
+    //get NodeList of verbs-fr and conjugation-fr
+
+
+
+    class Deconjugation {
+        public void main() {
+
+        }
+    }
+
     /**
      * testing code
+     *
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
     }
+
 }
