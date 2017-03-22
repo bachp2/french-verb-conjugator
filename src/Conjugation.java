@@ -5,9 +5,64 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import java.io.File;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+
+enum Mode {
+    infinitive("infinitive-present"),
+    indicative("present", "imperfect", "future", "simple-past"),
+    conditional("present"),
+    subjunctive("present", "imperfect"),
+    imperative("imperative-present"),
+    participle("present-participle", "past-participle");
+    private String[] tenses;
+
+    Mode(String... tenses) {
+        this.tenses = tenses;
+    }
+
+    public int getTenseIndex(String tense) {
+        if (tense.equals("present")) {
+            switch (this) {
+                case infinitive:
+                    tense = tense + "-present";
+                    break;
+                case imperative:
+                    tense = "imperative-" + tense;
+                    break;
+                case participle:
+                    tense = tense + "-participle";
+                default:
+                    break;
+            }
+        } else if (tense.equals("past")) {
+            switch (this) {
+                case indicative:
+                    tense = "simple-" + tense;
+                    break;
+                case participle:
+                    tense = tense + "-participle";
+                    break;
+                default:
+                    break;
+            }
+        }
+        int i = 0;
+        for (String s : tenses) {
+            if (tense.equals(s))
+                return i++;
+        }
+        throw new NoSuchElementException("tense not found");
+    }
+
+    public int length() {
+        return tenses.length;
+    }
+}
 
 /**
  * @author Bach Phan
@@ -21,14 +76,17 @@ public class Conjugation {
     private List <List <String>> rads_vs = new ArrayList <>();
     private List <List <String>> conjugatedList = new ArrayList <>();
 
+    private final String path_to_verbs_fr =  "./data/verbs-fr.xml";
+    private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
     public Conjugation() {
-        try {//read verbs-fr.xml file
-            File vFile = new File("./data/verbs-fr.xml");
+        try {
+            //read verbs-fr.xml file
+            File vFile = new File(path_to_verbs_fr);
             //read conjugation-fr.xml file
-            File conFile = new File("./data/conjugation-fr.xml");
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory
-                    .newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            File conFile = new File(path_to_conjugation_fr);
+
+            DocumentBuilder dBuilder = DocumentBuilderFactory
+                    .newInstance().newDocumentBuilder();
             //parse verbs-fr file
             Document docVerbs = dBuilder.parse(vFile);
             this.nVerbs = docVerbs.getElementsByTagName("v");
@@ -152,5 +210,13 @@ public class Conjugation {
             }
         }
         return this.rads_vs;
+    }
+
+    /**
+     * testing code
+     * @param args
+     */
+    public static void main(String[] args){
+
     }
 }
