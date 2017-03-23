@@ -20,10 +20,12 @@ import java.util.NoSuchElementException;
 public class Conjugation {
     private final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    private String[][] _listConjugation;
-    protected NodeList nVerbs;
-    protected NodeList nConj;
-    protected List <List <String>> rads_vs = new ArrayList <>();
+    private String[][] _listConjugation; //conjugated version of verb for each pronoun
+    private NodeList nVerbs; //list of french infinitive verbs
+    private NodeList nConj;  //list of french template name in the form of 'rad:prefix'
+
+    private List <List <String>> rads_vs = new ArrayList <>();
+    //list of verbs, radicals and template names
 
     enum Mode {
         infinitive("infinitive-present"),
@@ -82,6 +84,7 @@ public class Conjugation {
     public Conjugation() {
         File vFile, conFile;
         DocumentBuilder dBuilder;
+        _listConjugation = null;
         try {
             //read verbs-fr.xml file
             vFile = new File(path_to_verbs_fr);
@@ -203,21 +206,23 @@ public class Conjugation {
     /**
      *
      */
-    public void display() {
+    public String toString() {
+        String out = "";
         String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
         for (int i = 0; i < _listConjugation.length; i++) {
             if (_listConjugation[i] != null) {
-                System.out.print(pronouns[i] + " ");
+                out = pronouns[i] + " ";
                 for (int j = 0; j < _listConjugation[i].length; j++) {
-                    System.out.print(_listConjugation[i][j]);
+                    out+= _listConjugation[i][j];
                     if (j < _listConjugation[i].length - 1
                             && _listConjugation[i].length > 1)
-                        System.out.print("/");
+                        out += "/";
                 }
-                System.out.println();
+                out += "%n";
             } else
-                System.out.println();
+                out += "%n";
         }
+        return out;
     }
     //todo : strip accent for input.
 
@@ -251,32 +256,36 @@ public class Conjugation {
      *
      * @param verb
      */
-    public void displayAll(String verb) {
-        String[] modes = {"infinitive", "indicative", "conditional",
-                "subjunctive", "imperative", "participle"};
-        int count = 0;
-        for (String m : modes) {
-            String[] tenses = mode.get(m);
-            for (String t : tenses) {
-                System.out.printf("%d. %s %s", count++, m, t);
-                System.out.println();
-                display();
-            }
-        }
-    }
+//    public void displayAll(String verb) {
+//        String[] modes = {"infinitive", "indicative", "conditional",
+//                "subjunctive", "imperative", "participle"};
+//        int count = 0;
+//        for (String m : modes) {
+//            String[] tenses = mode.get(m);
+//            for (String t : tenses) {
+//                System.out.printf("%d. %s %s", count++, m, t);
+//                System.out.println();
+//                display();
+//            }
+//        }
+//    }
     public class Deconjugation {
         private Trie verb_trie;
         public Deconjugation(){
             verb_trie = new Trie();
             for(List<String> rad_v : rads_vs){
-                verb_trie.insert(rad_v.get(0));
+                verb_trie.insert(rad_v.get(1));
             }
         }
-        public String match(String verb){
+        public String[] match(String verb){
+            String[] verb_templateName = new String[2];
             String temp = verb_trie.search(verb);
             for(List<String> rad_v : rads_vs){
-                if(rad_v.contains(temp))
-                    return rad_v.get(1);
+                if(rad_v.contains(temp)){
+                    verb_templateName[0] = rad_v.get(0);
+                    verb_templateName[1] = rad_v.get(2);
+                    return verb_templateName;
+                }
             }
             return null;
         }
