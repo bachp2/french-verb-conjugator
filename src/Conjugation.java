@@ -2,10 +2,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -17,11 +20,10 @@ import java.util.NoSuchElementException;
 public class Conjugation {
     private final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    //todo : revise the code
     private String[][] _listConjugation;
-    private NodeList nVerbs;
-    private NodeList nConj;
-    private List <List <String>> rads_vs = new ArrayList <>();
+    protected NodeList nVerbs;
+    protected NodeList nConj;
+    protected List <List <String>> rads_vs = new ArrayList <>();
 
     enum Mode {
         infinitive("infinitive-present"),
@@ -78,21 +80,28 @@ public class Conjugation {
      * empty constructor, when initiated will be use for the entire operation
      */
     public Conjugation() {
+        File vFile, conFile;
+        DocumentBuilder dBuilder;
         try {
             //read verbs-fr.xml file
-            File vFile = new File(path_to_verbs_fr);
+            vFile = new File(path_to_verbs_fr);
             //read conjugation-fr.xml file
-            File conFile = new File(path_to_conjugation_fr);
-
-            DocumentBuilder dBuilder = DocumentBuilderFactory
+            conFile = new File(path_to_conjugation_fr);
+            dBuilder = DocumentBuilderFactory
                     .newInstance().newDocumentBuilder();
-            //parse verbs-fr file
-            Document docVerbs = dBuilder.parse(vFile);
-            this.nVerbs = docVerbs.getElementsByTagName("v");
-            Document docConj = dBuilder.parse(conFile);
-            this.nConj = docConj.getElementsByTagName("template");
-        } catch (Exception e) {
+            this.nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
+            this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
+            //clean up resource
+        } catch (ParserConfigurationException e) {
             e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            vFile = null;
+            conFile = null;
+            dBuilder = null;
         }
     }
 
@@ -210,10 +219,12 @@ public class Conjugation {
                 System.out.println();
         }
     }
-
-    //list of verbs and its radical, use for deconjugation...
-    //todo : create inheritance class of Conjugation to search for conjugated verb
     //todo : strip accent for input.
+
+    /**
+     *
+     * @return
+     */
     public List <List <String>> setListRad_and_Verbs() {
         List <String> list = new ArrayList <>();
         for (int i = 0; i < nVerbs.getLength(); i++) {
@@ -236,14 +247,40 @@ public class Conjugation {
 
     //get NodeList of verbs-fr and conjugation-fr
 
-
-
-    class Deconjugation {
-        public void main() {
-
+    /**
+     *
+     * @param verb
+     */
+    public void displayAll(String verb) {
+        String[] modes = {"infinitive", "indicative", "conditional",
+                "subjunctive", "imperative", "participle"};
+        int count = 0;
+        for (String m : modes) {
+            String[] tenses = mode.get(m);
+            for (String t : tenses) {
+                System.out.printf("%d. %s %s", count++, m, t);
+                System.out.println();
+                display();
+            }
         }
     }
-
+    public class Deconjugation {
+        private Trie verb_trie;
+        public Deconjugation(){
+            verb_trie = new Trie();
+            for(List<String> rad_v : rads_vs){
+                verb_trie.insert(rad_v.get(0));
+            }
+        }
+        public String match(String verb){
+            String temp = verb_trie.search(verb);
+            for(List<String> rad_v : rads_vs){
+                if(rad_v.contains(temp))
+                    return rad_v.get(1);
+            }
+            return null;
+        }
+    }
     /**
      * testing code
      *
