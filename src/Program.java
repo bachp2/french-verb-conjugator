@@ -25,6 +25,7 @@ public class Program {
     Stack<String> verbsTobeConjugated;
     Stack<Conjugation.Mode> modes;
     ArrayList<Stack<String>> tenses;
+    int i = 0;
 
     public Program() {
         init();
@@ -72,11 +73,18 @@ public class Program {
             case "-tense":
             case "t":
                 //todo: clone Stack
+                //this line need to move somewhere in the prompt selection
+                System.out.println("you can only input tenses for one mode at a time");
                 Stack<Conjugation.Mode> temp = (Stack<Conjugation.Mode>) modes.clone();
-                for(int i = 0; i < args.length; i++){
-                    Mode.
-                }
+                int i = 0; //counter for each stack of tenses for each mode
+                if(!temp.empty()) {
+                    Mode tmp = temp.pop();
+                    for (int j = 1; j < args.length; j++) {
+                        if (tmp.isTense(args[j])){
 
+                        }
+                    }
+                }
         }
     }
     public String trim(String temp, String v){
@@ -133,10 +141,12 @@ public class Program {
             }
             return false;
         }
-        public String getTense(int index) {
-            if (index < this.length() && index >= 0) {
-                return tenses[index];
-            } else throw new NoSuchElementException();
+        public String getTense(String tense) {
+            for(String t : tenses){
+                if(t.equals(tense))
+                    return t;
+            }
+            return null;
         }
 
         public int length() {
