@@ -23,9 +23,8 @@ public class Program {
     static boolean flag = true;
     private Scanner s;
     Stack<String> verbsTobeConjugated;
-    Stack<Conjugation.Mode> modes;
-    ArrayList<Stack<String>> tenses;
-    int i = 0;
+    Stack<Mode> modes;
+    ArrayList<Stack<String>> tensesOfDiffModes;
 
     public Program() {
         init();
@@ -38,7 +37,7 @@ public class Program {
         deconj = new Deconjugation();
         verbsTobeConjugated = new Stack <>();
         modes = new Stack <>();
-        tenses = new ArrayList <>();
+        tensesOfDiffModes = new ArrayList <>();
     }
     public void start(Scanner s){
         String[] argBlocks = s.nextLine().split(" -");
@@ -76,15 +75,27 @@ public class Program {
                 //this line need to move somewhere in the prompt selection
                 System.out.println("you can only input tenses for one mode at a time");
                 Stack<Conjugation.Mode> temp = (Stack<Conjugation.Mode>) modes.clone();
-                int i = 0; //counter for each stack of tenses for each mode
-                if(!temp.empty()) {
-                    Mode tmp = temp.pop();
-                    for (int j = 1; j < args.length; j++) {
-                        if (tmp.isTense(args[j])){
-
+                Stack<String> tenses = new Stack <>();
+                try {
+                    if(!temp.empty()) {
+                        Mode tmp = temp.pop();
+                        for (int j = 1; j < args.length; j++) {
+                            if (tmp.isTense(args[j])){
+                                tenses.push(args[j]);
+                            }
+                            else throw new NoSuchElementException();
                         }
                     }
+                    if(!tenses.empty()) tensesOfDiffModes.add(tenses);
+                } catch (NoSuchElementException e) {
+                    e.printStackTrace();
                 }
+                break;
+            case "-status":
+            case "s":
+                //todo: write up an update status for each stacks
+                System.out.println("display stack");
+
         }
     }
     public String trim(String temp, String v){
