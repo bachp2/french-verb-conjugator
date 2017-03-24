@@ -90,8 +90,6 @@ public class Trie {
      * @param rad
      */
     public void insert(String rad) {
-        if (!search(rad).equals(""))
-            return;
         TrieNode current = root;
         for (char ch : rad.toCharArray()) {
             TrieNode child = current.subNode(ch);
@@ -119,11 +117,12 @@ public class Trie {
                 temp += ch;
                 if (trie_node.isEnd)
                     rad = temp;
-                current = current.subNode(ch);
+                current = trie_node;
             }
         }
         return rad;
     }
+
     /**
      * this class is a subclass used for Trie
      * use for the arrangement of childList
@@ -155,5 +154,21 @@ public class Trie {
             if ((n = childList.contains(c)) != null) return n.content;
             return null;
         }
+    }
+
+    public static void main(String[] args){
+        Trie trie = new Trie();
+        trie.insert("subside");
+        trie.insert("sa");
+        trie.insert("sb");
+        trie.insert("sc");
+        trie.insert("sub");
+        trie.insert("creak");
+        trie.insert("larron");
+        trie.insert("depuis");
+        trie.insert("ascession");
+        trie.insert("s");
+        trie.insert("su");
+        System.out.println(trie.search("subsideride"));
     }
 }
