@@ -55,8 +55,8 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+            <state relative-caret-position="441">
+              <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
               <folding>
                 <element signature="docComment;class#Program#0" expanded="false" />
                 <element signature="method#init#0;class#Program#0" expanded="false" />
@@ -64,12 +64,10 @@
                 <element signature="method#argParser#0;class#Program#0" expanded="false" />
                 <element signature="e#2156#2175#0" expanded="false" />
                 <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-                <element signature="class#Mode#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
                 <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
                 <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
                 <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-                <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
                 <element signature="method#main#0;class#Program#0" expanded="false" />
                 <element signature="class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -80,7 +78,7 @@
                 <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#10188#10220#0" expanded="false" />
+                <element signature="e#11990#12022#0" expanded="false" />
                 <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -92,7 +90,7 @@
                 <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-                <element signature="e#13217#13246#0" expanded="false" />
+                <element signature="e#15019#15048#0" expanded="false" />
                 <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
               </folding>
             </state>
@@ -699,12 +697,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -715,7 +711,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -727,7 +723,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -761,12 +757,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -777,7 +771,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -789,7 +783,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -806,12 +800,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -822,7 +814,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -834,7 +826,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -852,12 +844,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -868,7 +858,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -880,7 +870,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -907,12 +897,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -923,7 +911,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -935,7 +923,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -961,12 +949,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -977,7 +963,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -989,7 +975,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1015,12 +1001,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1031,7 +1015,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1043,7 +1027,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1068,12 +1052,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1084,7 +1066,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1096,7 +1078,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1121,12 +1103,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1137,7 +1117,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1149,7 +1129,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1175,12 +1155,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1191,7 +1169,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1203,7 +1181,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1229,12 +1207,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1245,7 +1221,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1257,7 +1233,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1338,8 +1314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        <state relative-caret-position="441">
+          <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
@@ -1347,12 +1323,10 @@
             <element signature="method#argParser#0;class#Program#0" expanded="false" />
             <element signature="e#2156#2175#0" expanded="false" />
             <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="class#Mode#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getTense#0;class#Mode#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1363,7 +1337,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#10188#10220#0" expanded="false" />
+            <element signature="e#11990#12022#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1375,7 +1349,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#13217#13246#0" expanded="false" />
+            <element signature="e#15019#15048#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>

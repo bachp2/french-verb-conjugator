@@ -145,6 +145,31 @@ public class Program {
             return false;
         }
         public boolean isTense(String tense){
+            if (tense.equals("present")) {
+                switch (this) {
+                    case infinitive:
+                        tense = tense + "-present";
+                        break;
+                    case imperative:
+                        tense = "imperative-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                    default:
+                        break;
+                }
+            } else if (tense.equals("past")) {
+                switch (this) {
+                    case indicative:
+                        tense = "simple-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                        break;
+                    default:
+                        break;
+                }
+            }
             for(String t : tenses){
                 if(t.equals(tense)){
                     return true;
@@ -153,6 +178,31 @@ public class Program {
             return false;
         }
         public String getTense(String tense) {
+            if (tense.equals("present")) {
+                switch (this) {
+                    case infinitive:
+                        tense = tense + "-present";
+                        break;
+                    case imperative:
+                        tense = "imperative-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                    default:
+                        break;
+                }
+            } else if (tense.equals("past")) {
+                switch (this) {
+                    case indicative:
+                        tense = "simple-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                        break;
+                    default:
+                        break;
+                }
+            }
             for(String t : tenses){
                 if(t.equals(tense))
                     return t;
