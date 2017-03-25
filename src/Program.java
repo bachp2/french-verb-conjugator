@@ -10,7 +10,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-
+import com.beust.jcommander.*;
 /**
  * @author Bach Phan
  * @version 01/31/2017
@@ -21,31 +21,70 @@ public class Program {
     private Conjugation conj;
     private Deconjugation deconj;
     static boolean flag = true;
-    private Scanner s;
-    Stack<String> verbsTobeConjugated;
-    Stack<Mode> modes;
-    ArrayList<Stack<String>> tensesOfDiffModes;
 
+
+
+    @Parameter(names={"--verb", "-v"})
+    String[] verbs;
+    @Parameter(names={"--mode", "-m"}, converter= Mode.ModeConverter.class)
+    Mode[] modes;
+    @Parameter(names={"--tense", "-t"})
+    String[] tenses;
+
+    /**
+     * empty constructor
+     */
     public Program() {
         init();
     }
+
+    /**
+     * helper method to initialize Program constructor
+     */
     private void init(){
-        s = new Scanner(System.in);
         conj = new Conjugation();
         this.nVerbs = conj.nVerbs;
         this.nConj = conj.nConj;
         deconj = new Deconjugation();
-        verbsTobeConjugated = new Stack <>();
-        modes = new Stack <>();
-        tensesOfDiffModes = new ArrayList <>();
-    }
-    public void start(Scanner s){
-        String[] argBlocks = s.nextLine().split(" -");
-        for(String argBlock : argBlocks){
-            String[] args = argBlock.split(" ");
-        }
     }
 
+    /**
+     * build the program
+     * @param s
+     */
+    public void build(Scanner s, Program p){
+        String intro = "";
+        while(Program.flag){
+            System.out.println(intro);
+            String input = s.next();
+            new JCommander(p, input);
+        }
+    }
+    public List<List<String>> processTensesForEachMode(){
+        List<List<String>> tensesOfEachMode = new ArrayList <>();
+        try {
+            if(modes != null && tenses != null){
+                for(int i = 0; i < Math.min(modes.length, tenses.length); i++){
+                    ArrayList temp = null;
+                    for(String e : tenses[i].split(".")){
+                        temp = new ArrayList();
+                        temp.add(modes[i].getTense(e));
+                    }
+                    tensesOfEachMode.add(temp);
+                }
+            }
+            if(modes == null && tenses != null)
+                throw new ConjugationException("no tenses found for each mode");
+            return tensesOfEachMode;
+        } catch (ConjugationException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    /**
+     * a parser for argument input during runtime
+     * @param args String
+     */
     public void argParser(String[] args){
         String arg = args[0];
         switch(arg){
@@ -76,8 +115,10 @@ public class Program {
                 System.out.println("you can only input tenses for one mode at a time");
                 Stack<Conjugation.Mode> temp = (Stack<Conjugation.Mode>) modes.clone();
                 Stack<String> tenses = new Stack <>();
+                String blockParameters = "";
+                for(String a)
                 try {
-                    if(!temp.empty()) {
+                    while(!temp.empty()) {
                         Mode tmp = temp.pop();
                         for (int j = 1; j < args.length; j++) {
                             if (tmp.isTense(args[j])){
@@ -98,124 +139,18 @@ public class Program {
 
         }
     }
-    public String trim(String temp, String v){
-        return conj.trim(temp, v);
-    }
     public String search(String v){
         return conj.search(v);
     }
+    public String trim(String temp, String v){
+        return conj.trim(temp, v);
+    }
     //todo arguments parser
     //
-    enum Mode {
-        infinitive("infinitive-present"),
-        indicative("present", "imperfect", "future", "simple-past"),
-        conditional("present"),
-        subjunctive("present", "imperfect"),
-        imperative("imperative-present"),
-        participle("present-participle", "past-participle");
-        private String[] tenses;
-
-        Mode(String... tenses) {
-            this.tenses = tenses;
-        }
-
-        /**
-         * get index of a given mode
-         *
-         * @param mode
-         * @return
-         */
-        public static Mode getMode(String mode) {
-            try {
-                for (Mode m : Mode.values()) {
-                    if (mode.equals(m.toString()))
-                        return m;
-                }
-                throw new NoSuchElementException();
-            } catch (NoSuchElementException e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-        public static boolean isMode(String mode){
-            for (Mode m : Mode.values()) {
-                if (mode.equals(m.toString()))
-                    return true;
-            }
-            return false;
-        }
-        public boolean isTense(String tense){
-            if (tense.equals("present")) {
-                switch (this) {
-                    case infinitive:
-                        tense = tense + "-present";
-                        break;
-                    case imperative:
-                        tense = "imperative-" + tense;
-                        break;
-                    case participle:
-                        tense = tense + "-participle";
-                    default:
-                        break;
-                }
-            } else if (tense.equals("past")) {
-                switch (this) {
-                    case indicative:
-                        tense = "simple-" + tense;
-                        break;
-                    case participle:
-                        tense = tense + "-participle";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            for(String t : tenses){
-                if(t.equals(tense)){
-                    return true;
-                }
-            }
-            return false;
-        }
-        public String getTense(String tense) {
-            if (tense.equals("present")) {
-                switch (this) {
-                    case infinitive:
-                        tense = tense + "-present";
-                        break;
-                    case imperative:
-                        tense = "imperative-" + tense;
-                        break;
-                    case participle:
-                        tense = tense + "-participle";
-                    default:
-                        break;
-                }
-            } else if (tense.equals("past")) {
-                switch (this) {
-                    case indicative:
-                        tense = "simple-" + tense;
-                        break;
-                    case participle:
-                        tense = tense + "-participle";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            for(String t : tenses){
-                if(t.equals(tense))
-                    return t;
-            }
-            return null;
-        }
-
-        public int length() {
-            return tenses.length;
-        }
-    }
     public static void main(String[] args){
-
+        Program prg = new Program();
+        Scanner s = new Scanner(System.in);
+        prg.build(s, prg);
     }
 }
 

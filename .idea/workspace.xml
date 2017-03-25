@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jcommander-1.64.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manifest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Mode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/french-verb-conjugator.iml" afterPath="$PROJECT_DIR$/french-verb-conjugator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,17 +29,17 @@
       <file leaf-file-name="Trie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="172" column="5" lean-forward="false" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
+            <state relative-caret-position="2771">
+              <caret line="171" column="40" lean-forward="false" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
               <folding>
-                <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#171#172#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#1724#1725#0" expanded="true" />
-                <element signature="e#1764#1765#0" expanded="true" />
+                <element signature="e#144#145#0" expanded="false" />
+                <element signature="e#171#172#0" expanded="false" />
+                <element signature="e#250#251#0" expanded="false" />
+                <element signature="e#307#308#0" expanded="false" />
+                <element signature="e#347#348#0" expanded="false" />
+                <element signature="e#395#396#0" expanded="false" />
+                <element signature="e#1724#1725#0" expanded="false" />
+                <element signature="e#1764#1765#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -43,7 +48,7 @@
       <file leaf-file-name="Driver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="493">
               <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="docComment;method#main#0;class#Driver#0" expanded="false" />
@@ -55,20 +60,13 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
+            <state relative-caret-position="464">
+              <caret line="140" column="5" lean-forward="true" selection-start-line="87" selection-start-column="4" selection-end-line="140" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
-                <element signature="method#init#0;class#Program#0" expanded="false" />
-                <element signature="method#start#0;class#Program#0" expanded="false" />
-                <element signature="method#argParser#0;class#Program#0" expanded="false" />
-                <element signature="e#2156#2175#0" expanded="false" />
-                <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-                <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-                <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-                <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-                <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-                <element signature="method#main#0;class#Program#0" expanded="false" />
+                <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+                <element signature="e#3262#3281#0" expanded="false" />
                 <element signature="class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -78,7 +76,7 @@
                 <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#11990#12022#0" expanded="false" />
+                <element signature="e#9814#9846#0" expanded="false" />
                 <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -90,9 +88,37 @@
                 <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-                <element signature="e#15019#15048#0" expanded="false" />
+                <element signature="e#12843#12872#0" expanded="false" />
                 <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="651">
+              <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
+                <element signature="method#getMode#0;class#Mode#0" expanded="false" />
+                <element signature="method#isMode#0;class#Mode#0" expanded="false" />
+                <element signature="method#isTense#0;class#Mode#0" expanded="false" />
+                <element signature="e#3368#3369#0" expanded="true" />
+                <element signature="e#3409#3410#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manifest.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/Conjugate.java" />
         <option value="$PROJECT_DIR$/src/Mood.java" />
         <option value="$PROJECT_DIR$/src/Conjugator.java" />
-        <option value="$PROJECT_DIR$/src/Mode.java" />
         <option value="$PROJECT_DIR$/src/Deconjugation.java" />
         <option value="$PROJECT_DIR$/src/Align.java" />
         <option value="$PROJECT_DIR$/src/ConjugationDriver.java" />
@@ -133,15 +158,18 @@
         <option value="$PROJECT_DIR$/src/ConjugationException.java" />
         <option value="$PROJECT_DIR$/src/DeconjugationException.java" />
         <option value="$PROJECT_DIR$/src/Verbs.java" />
+        <option value="$PROJECT_DIR$/manifest.txt" />
+        <option value="$PROJECT_DIR$/src/Mode.java" />
+        <option value="$PROJECT_DIR$/src/ModeConverter.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1362" />
+    <option name="x" value="-4" />
     <option name="y" value="-4" />
     <option name="width" value="1374" />
-    <option name="height" value="776" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -161,9 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,30 +225,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Program.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,12 +241,16 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jcommander-1.64.jar!/" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
   </component>
@@ -566,7 +580,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1362" y="-4" width="1374" height="776" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -577,79 +591,27 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3485294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3485294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3779412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3779412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3779412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3485294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3779412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3485294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -660,7 +622,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="35" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -669,39 +631,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Trie.java">
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="57" lean-forward="true" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
-          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -711,7 +649,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -723,67 +661,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
-            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
-            <element signature="class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
-            <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#search#0;class#Conjugation#0" expanded="false" />
-            <element signature="class#Deconjugation#0" expanded="false" />
-            <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
-            <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
-            <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -794,17 +672,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -814,7 +685,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -826,7 +697,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -838,17 +709,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -858,7 +722,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -870,7 +734,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -891,17 +755,10 @@
         <state relative-caret-position="256">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -911,7 +768,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -923,7 +780,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -943,17 +800,10 @@
         <state relative-caret-position="527">
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -963,7 +813,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -975,7 +825,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -995,17 +845,10 @@
         <state relative-caret-position="2278">
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1015,7 +858,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1027,7 +870,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1046,17 +889,10 @@
         <state relative-caret-position="680">
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1066,7 +902,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1078,7 +914,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1097,17 +933,10 @@
         <state relative-caret-position="2992">
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1117,7 +946,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1129,7 +958,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1149,17 +978,10 @@
         <state relative-caret-position="952">
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1169,7 +991,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1181,7 +1003,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1201,17 +1023,10 @@
         <state relative-caret-position="697">
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1221,7 +1036,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1233,7 +1048,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1250,7 +1065,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Mode.java" />
     <entry file="file://$PROJECT_DIR$/src/testing.java" />
-    <entry file="file://$PROJECT_DIR$/src/Mode.java" />
     <entry file="file://$PROJECT_DIR$/src/Deconjugation.java" />
     <entry file="file://$PROJECT_DIR$/src/ConjugationDriver.java" />
     <entry file="file://$PROJECT_DIR$/src/Align.java" />
@@ -1285,26 +1099,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Verbs.java" />
-    <entry file="file://$PROJECT_DIR$/src/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="172" column="5" lean-forward="false" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
-          <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="493">
           <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding>
             <element signature="docComment;method#main#0;class#Driver#0" expanded="false" />
@@ -1312,22 +1109,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/1490417570028.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="171" column="40" lean-forward="false" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
+          <folding>
+            <element signature="e#144#145#0" expanded="false" />
+            <element signature="e#171#172#0" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#307#308#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+            <element signature="e#395#396#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="false" />
+            <element signature="e#1764#1765#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
+            <element signature="method#getMode#0;class#Mode#0" expanded="false" />
+            <element signature="method#isMode#0;class#Mode#0" expanded="false" />
+            <element signature="method#isTense#0;class#Mode#0" expanded="false" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
+        <state relative-caret-position="464">
+          <caret line="140" column="5" lean-forward="true" selection-start-line="87" selection-start-column="4" selection-end-line="140" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#start#0;class#Program#0" expanded="false" />
-            <element signature="method#argParser#0;class#Program#0" expanded="false" />
-            <element signature="e#2156#2175#0" expanded="false" />
-            <element signature="n#!!doc;n#Mode#0;n#Program#0" expanded="false" />
-            <element signature="docComment;method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isMode#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#isTense#0;class#Mode#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#argParser#0;class#Program#0" expanded="false" />
+            <element signature="e#3262#3281#0" expanded="false" />
             <element signature="class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
@@ -1337,7 +1181,7 @@
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#11990#12022#0" expanded="false" />
+            <element signature="e#9814#9846#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
@@ -1349,7 +1193,7 @@
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#15019#15048#0" expanded="false" />
+            <element signature="e#12843#12872#0" expanded="false" />
             <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
@@ -1412,7 +1256,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
