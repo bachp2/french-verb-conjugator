@@ -12,7 +12,6 @@ class Tree {
     }
 
     /**
-     *
      * @param c
      */
     public void add(Trie.TrieNode c) {
@@ -24,7 +23,6 @@ class Tree {
     }
 
     /**
-     *
      * @param root
      * @param node
      * @return
@@ -42,7 +40,6 @@ class Tree {
     }
 
     /**
-     *
      * @param root
      * @param c
      * @return
@@ -64,7 +61,6 @@ class Tree {
         protected TreeNode right;
 
         /**
-         *
          * @param c
          */
         public TreeNode(Trie.TrieNode c) {
@@ -85,8 +81,23 @@ public class Trie {
         root = new TrieNode(' ');
     }
 
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("subside");
+        trie.insert("sa");
+        trie.insert("sb");
+        trie.insert("sc");
+        trie.insert("sub");
+        trie.insert("creak");
+        trie.insert("larron");
+        trie.insert("depuis");
+        trie.insert("ascession");
+        trie.insert("s");
+        trie.insert("su");
+        System.out.println(trie.search("subsideride"));
+    }
+
     /**
-     *
      * @param rad
      */
     public void insert(String rad) {
@@ -104,7 +115,6 @@ public class Trie {
     }
 
     /**
-     *
      * @param word
      * @return
      */
@@ -136,6 +146,7 @@ public class Trie {
         /**
          * constructor for TrieNode
          * store sub-nodes in binary tree
+         *
          * @param c char
          */
         public TrieNode(char c) {
@@ -146,6 +157,7 @@ public class Trie {
 
         /**
          * search for sub-node in the current trie node
+         *
          * @param c char
          * @return TrieNode
          */
@@ -154,21 +166,5 @@ public class Trie {
             if ((n = childList.contains(c)) != null) return n.content;
             return null;
         }
-    }
-
-    public static void main(String[] args){
-        Trie trie = new Trie();
-        trie.insert("subside");
-        trie.insert("sa");
-        trie.insert("sb");
-        trie.insert("sc");
-        trie.insert("sub");
-        trie.insert("creak");
-        trie.insert("larron");
-        trie.insert("depuis");
-        trie.insert("ascession");
-        trie.insert("s");
-        trie.insert("su");
-        System.out.println(trie.search("subsideride"));
     }
 }

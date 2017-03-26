@@ -9,8 +9,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-import com.beust.jcommander.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
 /**
  * @author Bach Phan
  * @version 01/31/2017
@@ -18,18 +20,10 @@ import com.beust.jcommander.*;
 public class Program {
     protected NodeList nVerbs;
     protected NodeList nConj;
+    protected Trie verb_trie;
+    protected List <List <String>> rads_tns; //list of radicals and template names
     private Conjugation conj;
     private Deconjugation deconj;
-    static boolean flag = true;
-
-
-
-    @Parameter(names={"--verb", "-v"})
-    String[] verbs;
-    @Parameter(names={"--mode", "-m"}, converter= Mode.ModeConverter.class)
-    Mode[] modes;
-    @Parameter(names={"--tense", "-t"})
-    String[] tenses;
 
     /**
      * empty constructor
@@ -41,124 +35,21 @@ public class Program {
     /**
      * helper method to initialize Program constructor
      */
-    private void init(){
+    private void init() {
         conj = new Conjugation();
         this.nVerbs = conj.nVerbs;
         this.nConj = conj.nConj;
-        deconj = new Deconjugation();
-    }
-
-    /**
-     * build the program
-     * @param s
-     */
-    public void build(Scanner s, Program p){
-        String intro = "";
-        while(Program.flag){
-            System.out.println(intro);
-            String input = s.next();
-            new JCommander(p, input);
-        }
-    }
-    public List<List<String>> processTensesForEachMode(){
-        List<List<String>> tensesOfEachMode = new ArrayList <>();
-        try {
-            if(modes != null && tenses != null){
-                for(int i = 0; i < Math.min(modes.length, tenses.length); i++){
-                    ArrayList temp = null;
-                    for(String e : tenses[i].split(".")){
-                        temp = new ArrayList();
-                        temp.add(modes[i].getTense(e));
-                    }
-                    tensesOfEachMode.add(temp);
-                }
-            }
-            if(modes == null && tenses != null)
-                throw new ConjugationException("no tenses found for each mode");
-            return tensesOfEachMode;
-        } catch (ConjugationException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-    /**
-     * a parser for argument input during runtime
-     * @param args String
-     */
-    public void argParser(String[] args){
-        String arg = args[0];
-        switch(arg){
-            case "-help":
-            case "h":
-                //todo: write a help message here
-                System.out.println("");
-                break;
-            case "-verb":
-            case "v":
-                for(int i = 1; i < args.length; i++){
-                    verbsTobeConjugated.push(args[i]);
-                }
-                break;
-            case "-mode":
-            case "m":
-                for(int i = 1; i < args.length; i++){
-                    if(Mode.isMode(args[i])){
-                        modes.push( Mode.getMode(args[i]) );
-                    }
-                    else throw new NoSuchElementException();
-                }
-                break;
-            case "-tense":
-            case "t":
-                //todo: clone Stack
-                //this line need to move somewhere in the prompt selection
-                System.out.println("you can only input tenses for one mode at a time");
-                Stack<Conjugation.Mode> temp = (Stack<Conjugation.Mode>) modes.clone();
-                Stack<String> tenses = new Stack <>();
-                String blockParameters = "";
-                for(String a)
-                try {
-                    while(!temp.empty()) {
-                        Mode tmp = temp.pop();
-                        for (int j = 1; j < args.length; j++) {
-                            if (tmp.isTense(args[j])){
-                                tenses.push(args[j]);
-                            }
-                            else throw new NoSuchElementException();
-                        }
-                    }
-                    if(!tenses.empty()) tensesOfDiffModes.add(tenses);
-                } catch (NoSuchElementException e) {
-                    e.printStackTrace();
-                }
-                break;
-            case "-status":
-            case "s":
-                //todo: write up an update status for each stacks
-                System.out.println("display stack");
-
-        }
-    }
-    public String search(String v){
-        return conj.search(v);
-    }
-    public String trim(String temp, String v){
-        return conj.trim(temp, v);
-    }
-    //todo arguments parser
-    //
-    public static void main(String[] args){
-        Program prg = new Program();
-        Scanner s = new Scanner(System.in);
-        prg.build(s, prg);
+        deconj = new Deconjugation(this.nVerbs);
+        this.verb_trie = deconj.verb_trie;
+        this.rads_tns = deconj.rads_vs;
     }
 }
 
-class Conjugation extends Program {
+class Conjugation {
     private final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    protected NodeList nVerbs; //list of french infinitive verbs
-    protected NodeList nConj;  //list of french template name in the form of 'rad:prefix'
+    public NodeList nVerbs; //list of french infinitive verbs
+    public NodeList nConj;  //list of french template name in the form of 'rad:prefix'
 
     /**
      * empty constructor, when initiated will be use for the entire operation
@@ -175,14 +66,20 @@ class Conjugation extends Program {
                     .newInstance().newDocumentBuilder();
             this.nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
             this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
-            //clean up resource
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
+            nVerbs = null;
+            nConj = null;
         } catch (SAXException e) {
             e.printStackTrace();
+            nVerbs = null;
+            nConj = null;
         } catch (IOException e) {
             e.printStackTrace();
+            nVerbs = null;
+            nConj = null;
         } finally {
+            //clean up resource
             vFile = null;
             conFile = null;
             dBuilder = null;
@@ -300,6 +197,7 @@ class Conjugation extends Program {
 
 
     //get NodeList of verbs-fr and conjugation-fr
+
     /**
      * helper method to trim a verb into remaining radical (discard prefix)
      *
@@ -348,20 +246,68 @@ class Conjugation extends Program {
 
 }
 
-class Deconjugation extends Program {
+class Deconjugation {
+    private final NodeList nVerbs;
     protected Trie verb_trie;
     protected List <List <String>> rads_vs; //list of radicals and template names
 
     /**
      * empty constructor
      */
-    public Deconjugation() {
+    public Deconjugation(NodeList nVerbs) {
         rads_vs = new ArrayList <>();
+        this.nVerbs = nVerbs;
         setListRad_and_Verbs();
         verb_trie = new Trie();
         for (List <String> rad_v : rads_vs) {
             verb_trie.insert(rad_v.get(0));
         }
+    }
+
+    /**
+     * helper method to trim a verb into remaining radical (discard prefix)
+     *
+     * @param temp::String
+     * @param v::String
+     * @return
+     */
+    public String trim(String temp, String v) {
+        int index = 0;
+        for (int i = 0; i < temp.length(); i++) {
+            char c = temp.charAt(i);
+            if (c == ':') {
+                index = temp.length() - 1 - i;
+            }
+        }
+        return v.substring(0, v.length() - index);
+    }
+
+    /**
+     * search for template name with a given verb
+     * <p>
+     * verb has to be of infinitive form
+     * </p>
+     *
+     * @param v :: verb:String
+     * @return String[][]
+     */
+    public String search(String v) {
+        String templateName = "";
+        for (int i = 0; i < nVerbs.getLength(); i++) {
+            Node verb = nVerbs.item(i);
+            if (verb.getNodeType() == Node.ELEMENT_NODE) {
+                Element eVerb = (Element) verb;
+                if (v.equals(eVerb.getElementsByTagName("i").item(0)
+                        .getTextContent())) {
+                    templateName = eVerb.getElementsByTagName("t").item(0)
+                            .getTextContent();
+                    break;
+                }
+            }
+        }
+        if (templateName.isEmpty())
+            throw new NoSuchElementException();
+        return templateName;
     }
 
     private void setListRad_and_Verbs() {
@@ -412,15 +358,16 @@ class Deconjugation extends Program {
         return listOfPossibleVerbs_and_TNs;
     }
 
-    public int getIndex(ArrayList <String[]> list){
+    public int getIndex(ArrayList <String[]> list) {
         int i = 0;
-        for(String[] l : list){
-            if(search(l[0]).equals(l[1]))
+        for (String[] l : list) {
+            if (search(l[0]).equals(l[1]))
                 return i;
             i++;
         }
         return -1;
     }
+
     private String appendVerb(String rad, String tn) {
         return rad.concat(tn.substring(tn.indexOf(':') + 1));
     }

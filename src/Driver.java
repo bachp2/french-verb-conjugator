@@ -31,13 +31,13 @@ public class Driver {
 //                }
 //            }
 //        }
-        Conjugation.Deconjugation deconj = new Conjugation().new Deconjugation();
-        //System.out.println(deconj.match("places"));
-        for(List<String> l : deconj.getList()){
-            if(l.get(0).length() == 1)
-                System.out.println( l.get(0).concat(l.get(1).substring(l.get(1).indexOf(':')+1)) + " " + l.get(1) );
-        }
-        System.out.println("===============================");
+//        Deconjugation deconj = new Conjugation().new Deconjugation();
+//        //System.out.println(deconj.match("places"));
+//        for(List<String> l : deconj.getList()){
+//            if(l.get(0).length() == 1)
+//                System.out.println( l.get(0).concat(l.get(1).substring(l.get(1).indexOf(':')+1)) + " " + l.get(1) );
+//        }
+//        System.out.println("===============================");
 //        int i = 1;
 //        for(List<String> l : deconj.getList()) {
 //            if (deconj.match(l.get(0)).spli.equals(l.get(0)))

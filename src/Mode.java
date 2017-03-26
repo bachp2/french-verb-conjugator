@@ -6,15 +6,15 @@ import java.util.NoSuchElementException;
  * Created by bachp on 3/25/2017.
  */
 public enum Mode {
-    infinitive("infinitive-present"),
-    indicative("present", "imperfect", "future", "simple-past"),
-    conditional("present"),
-    subjunctive("present", "imperfect"),
-    imperative("imperative-present"),
-    participle("present-participle", "past-participle");
-    private String[] tenses;
+    infinitive(Tense.present),
+    indicative(Tense.present, Tense.imperfect, Tense.future, Tense.past),
+    conditional(Tense.present),
+    subjunctive(Tense.present, Tense.imperfect),
+    imperative(Tense.present),
+    participle(Tense.present, Tense.past);
+    private Tense[] tenses;
 
-    Mode(String... tenses) {
+    Mode(Tense... tenses) {
         this.tenses = tenses;
     }
 
@@ -43,74 +43,13 @@ public enum Mode {
         }
         return false;
     }
-    public boolean isTense(String tense){
-        if (tense.equals("present")) {
-            switch (this) {
-                case infinitive:
-                    tense = tense + "-present";
-                    break;
-                case imperative:
-                    tense = "imperative-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                default:
-                    break;
-            }
-        } else if (tense.equals("past")) {
-            switch (this) {
-                case indicative:
-                    tense = "simple-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                    break;
-                default:
-                    break;
-            }
-        }
-        for(String t : tenses){
+    public boolean isTenseInMode(Tense tense){
+        for(Tense t : tenses){
             if(t.equals(tense)){
                 return true;
             }
         }
         return false;
-    }
-    public String getTense(String tense) {
-        if (tense.equals("present")) {
-            switch (this) {
-                case infinitive:
-                    tense = tense + "-present";
-                    break;
-                case imperative:
-                    tense = "imperative-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                default:
-                    break;
-            }
-        } else if (tense.equals("past")) {
-            switch (this) {
-                case indicative:
-                    tense = "simple-" + tense;
-                    break;
-                case participle:
-                    tense = tense + "-participle";
-                    break;
-                default:
-                    break;
-            }
-        }
-        for(String t : tenses){
-            if(t.equals(tense))
-                return t;
-        }
-        return null;
-    }
-
-    public int length() {
-        return tenses.length;
     }
 
     /**
@@ -120,6 +59,53 @@ public enum Mode {
         @Override
         public Mode convert(String s) {
             return getMode(s);
+        }
+    }
+    enum Tense{
+        present, imperfect, future, past;
+        public static Tense toTense(String s){
+            for(Tense t : Tense.values()){
+                if (s.equals(t.toString()) ){
+                    return t;
+                }
+            }
+            throw new IllegalArgumentException();
+        }
+        public String toString(Mode m){
+            String tense = this.toString();
+            if (this == Tense.present) {
+                switch (m) {
+                    case infinitive:
+                        tense = tense + "-present";
+                        break;
+                    case imperative:
+                        tense = "imperative-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                    default:
+                        break;
+                }
+            } else if (this == Tense.past) {
+                switch (m) {
+                    case indicative:
+                        tense = "simple-" + tense;
+                        break;
+                    case participle:
+                        tense = tense + "-participle";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return tense;
+        }
+        public static class TenseConverter implements IStringConverter<Tense>{
+
+            @Override
+            public Tense convert(String s) {
+                return Tense.toTense(s);
+            }
         }
     }
 }
