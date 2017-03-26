@@ -1,5 +1,6 @@
 import com.beust.jcommander.IStringConverter;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
@@ -36,42 +37,42 @@ public enum Mode {
             return null;
         }
     }
-    public static boolean isMode(String mode){
+
+    public static boolean isMode(String mode) {
         for (Mode m : Mode.values()) {
             if (mode.equals(m.toString()))
                 return true;
         }
         return false;
     }
-    public boolean isTenseInMode(Tense tense){
-        for(Tense t : tenses){
-            if(t.equals(tense)){
+
+    public boolean isTenseInMode(Tense tense) {
+        for (Tense t : tenses) {
+            if (t.equals(tense)) {
                 return true;
             }
         }
         return false;
     }
 
-    /**
-     * Created by bachp on 3/25/2017.
-     */
-    public static class ModeConverter implements IStringConverter<Mode> {
-        @Override
-        public Mode convert(String s) {
-            return getMode(s);
-        }
-    }
-    enum Tense{
+    enum Tense {
         present, imperfect, future, past;
-        public static Tense toTense(String s){
-            for(Tense t : Tense.values()){
-                if (s.equals(t.toString()) ){
-                    return t;
+
+        public static Tense toTense(String s) {
+            try {
+                for (Tense t : Tense.values()) {
+                    if (s.equals(t.toString())) {
+                        return t;
+                    }
                 }
+                throw new IllegalArgumentException();
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+                return null;
             }
-            throw new IllegalArgumentException();
         }
-        public String toString(Mode m){
+
+        public String toString(Mode m) {
             String tense = this.toString();
             if (this == Tense.present) {
                 switch (m) {
@@ -100,12 +101,28 @@ public enum Mode {
             }
             return tense;
         }
-        public static class TenseConverter implements IStringConverter<Tense>{
+
+        public static class TenseConverter implements IStringConverter <ArrayList <Tense>> {
 
             @Override
-            public Tense convert(String s) {
-                return Tense.toTense(s);
+            public ArrayList <Tense> convert(String s) {
+                String[] temp = s.split(",|/.|;");
+                ArrayList <Tense> tmp = new ArrayList <>();
+                for (String e : temp) {
+                    tmp.add(Tense.toTense(e));
+                }
+                return tmp;
             }
+        }
+    }
+
+    /**
+     * Created by bachp on 3/25/2017.
+     */
+    public static class ModeConverter implements IStringConverter <Mode> {
+        @Override
+        public Mode convert(String s) {
+            return getMode(s);
         }
     }
 }

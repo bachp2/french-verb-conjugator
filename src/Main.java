@@ -9,12 +9,12 @@ import java.util.Scanner;
  * Created by bachp on 3/25/2017.
  */
 public class Main {
-    @Parameter(names = {"--tense", "-t"}, converter = Mode.Tense.TenseConverter.class, variableArity = true)
-    List <Mode.Tense> tenses;
     @Parameter(names = {"--verb", "-v"}, variableArity = true)
     private List <String> verbs = new ArrayList <>();
-    @Parameter(names = {"--mode", "-m"}, converter = Mode.ModeConverter.class, variableArity = true)
+    @Parameter(names = {"--mode", "-m"}, converter = Mode.ModeConverter.class)
     private List <Mode> modes = new ArrayList <>();
+    @Parameter(names = {"--tense", "-t"}, converter = Mode.Tense.TenseConverter.class)
+    List <ArrayList <Mode.Tense>> tenses = new ArrayList <>();
 
     /**
      * build the program
@@ -43,7 +43,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        //
         Scanner s = new Scanner(System.in);
         Main main = new Main();
         build(s, main);
@@ -51,28 +50,5 @@ public class Main {
 
     public void run(Program prg) {
 
-    }
-
-    public List <List <Mode.Tense>> processTensesForEachMode() {
-        List <List <Mode.Tense>> tensesOfEachMode = new ArrayList <>();
-        try {
-            if (modes != null && tenses != null) {
-                for (Mode m : modes) {
-                    ArrayList temp = null;
-                    for (Mode.Tense t : tenses) {
-                        temp = new ArrayList();
-                        if (m.isTenseInMode(t))
-                            temp.add(t);
-                    }
-                    tensesOfEachMode.add(temp);
-                }
-            }
-            if (modes == null && tenses != null)
-                throw new ConjugationException("no tenses found for each mode");
-            return tensesOfEachMode;
-        } catch (ConjugationException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 }
