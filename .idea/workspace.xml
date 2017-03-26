@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation$Deconjugation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation$Mode.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Driver.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Driver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Driver.java" afterPath="$PROJECT_DIR$/src/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mode.java" afterPath="$PROJECT_DIR$/src/Mode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Trie.java" afterPath="$PROJECT_DIR$/src/Trie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,33 +24,36 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="150">
+              <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
-                <element signature="class#Program#0" expanded="false" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
+                <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+                <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+                <element signature="method#init#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+                <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+                <element signature="method#append#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-                <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#6285#6317#0" expanded="false" />
+                <element signature="e#6384#6416#0" expanded="false" />
                 <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+                <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-                <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+                <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+                <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-                <element signature="e#10752#10781#0" expanded="false" />
+                <element signature="e#10847#10876#0" expanded="false" />
+                <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,9 +96,9 @@
         <option value="$PROJECT_DIR$/src/ModeConverter.java" />
         <option value="$PROJECT_DIR$/src/Driver.java" />
         <option value="$PROJECT_DIR$/src/Mode.java" />
-        <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Trie.java" />
+        <option value="$PROJECT_DIR$/src/Program.java" />
       </list>
     </option>
   </component>
@@ -169,6 +163,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,30 +635,33 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,30 +681,33 @@
         <state relative-caret-position="256">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -712,30 +726,33 @@
         <state relative-caret-position="527">
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -754,30 +771,33 @@
         <state relative-caret-position="2278">
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -795,30 +815,33 @@
         <state relative-caret-position="680">
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,30 +859,33 @@
         <state relative-caret-position="2992">
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,30 +904,33 @@
         <state relative-caret-position="952">
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,30 +949,33 @@
         <state relative-caret-position="697">
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,33 +1109,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#toString#0;class#Conjugation#0" expanded="false" />
             <element signature="method#toString#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
             <element signature="method#listOfPrefix#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#6285#6317#0" expanded="false" />
+            <element signature="e#6384#6416#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#trim#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Deconjugation#0" expanded="false" />
-            <element signature="method#setListRad_and_Verbs#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#search#0;class#Deconjugation#0" expanded="false" />
+            <element signature="method#setListRad_and_TNs#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#getList#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#10752#10781#0" expanded="false" />
+            <element signature="e#10847#10876#0" expanded="false" />
+            <element signature="method#getIndex#0;class#Deconjugation#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -148,7 +148,8 @@ class Conjugation {
         String other;
         try {
             String[][] p = new String[6][];
-            for (int i = 0; i < nConj.getLength(); i++) {
+            int len = nConj.getLength();
+            for (int i = 0; i < len; i++) {
                 temp = nConj.item(i);
                 tmp = (Element) temp;
                 other = temp.getAttributes().getNamedItem("name")
@@ -158,7 +159,8 @@ class Conjugation {
                     ten = (Element) md.getElementsByTagName(tense).item(0);
                     listP = (NodeList) ten.getElementsByTagName("p");
                     listI = null;
-                    for (int j = 0; j < listP.getLength(); j++) {
+                    int le = listP.getLength();
+                    for (int j = 0; j < le; j++) {
                         boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
                         if (isType) {
                             person = (Element) listP.item(j);
@@ -167,7 +169,8 @@ class Conjugation {
                                         .getElementsByTagName("i");
                             }
                             p[j] = new String[listI.getLength()];
-                            for (int k = 0; k < listI.getLength(); k++) {
+                            int l = listI.getLength();
+                            for (int k = 0; k < l; k++) {
                                 p[j][k] = listI.item(k).getTextContent();
                             }
                         }
@@ -257,7 +260,7 @@ class Deconjugation {
     public Deconjugation(NodeList nVerbs) {
         rads_vs = new ArrayList <>();
         this.nVerbs = nVerbs;
-        setListRad_and_Verbs();
+        setListRad_and_TNs();
         verb_trie = new Trie();
         for (List <String> rad_v : rads_vs) {
             verb_trie.insert(rad_v.get(0));
@@ -310,7 +313,7 @@ class Deconjugation {
         return templateName;
     }
 
-    private void setListRad_and_Verbs() {
+    private void setListRad_and_TNs() {
         for (int i = 0; i < nVerbs.getLength(); i++) {
             Node verb = nVerbs.item(i);
             List <String> list = new ArrayList <>();
