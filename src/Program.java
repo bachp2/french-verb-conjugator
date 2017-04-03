@@ -19,7 +19,6 @@ public class Program {
 
     protected NodeList nConj;
     protected Trie verb_trie;
-    protected List <String> radVector; //list of radicals
     private Conjugation conj;
     private Deconjugation deconj;
 
@@ -35,9 +34,8 @@ public class Program {
     private void init() {
         conj = new Conjugation();
         this.nConj = conj.nConj;
-        deconj = new Deconjugation(conj.v_tn_Vector);
+        deconj = new Deconjugation(conj.v_tn_rad_Vector);
         this.verb_trie = deconj.verb_trie;
-        this.radVector = deconj.radVector;
     }
 
     /**
@@ -46,29 +44,39 @@ public class Program {
      */
     public void conjugate(String verb, Mode mode, Mode.Tense tense){
         try {
-            String template_name = conj.search(verb);
-            String[][] listOfPrefixes = conj.listOfPrefixes(template_name, mode, tense);
-            String[][] conjugatedVerbs = conj.append(template_name, listOfPrefixes);
+            Verb v = conj.search(verb);
+            String[][] listOfPrefixes = conj.listOfPrefixes(v.template_name, mode, tense);
+            String[][] conjugatedVerbs = conj.append(v.template_name, listOfPrefixes);
             ConjugatedForm conjugatedForm = new ConjugatedForm(verb, mode, tense, conjugatedVerbs);
             System.out.println(conjugatedForm);
             return;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        for(int index : deconj.match(verb)){
+        String matching_radical = deconj.search(verb);
+        String remaining_prefix = trimPrefix(verb, matching_radical);
+        ArrayList<Verb> listOfPossibleVerbs = deconj.match(matching_radical);
+        for(Verb v : listOfPossibleVerbs){
             //todo: trim prefix
-            ArrayList<String> temp = conj.v_tn_Vector.get(i);//hpolder for list of tn and verb
-            String template_name = temp.get(1);
-            String inf_verb = temp.get(0);
+            String template_name = v.template_name;
+            String inf_verb = v.infinitive_form;
             String[][] listOfPrefixes = conj.listOfPrefixes(template_name, mode, tense);
-
+            if(!isMatchingPrefix(listOfPrefixes, remaining_prefix)) continue;
             String[][] conjugatedVerbs = conj.append(template_name, listOfPrefixes);
             ConjugatedForm conjugatedForm = new ConjugatedForm(inf_verb, mode, tense, conjugatedVerbs);
             System.out.println(conjugatedForm);
-            return;
         }
     }
-
+    private String trimPrefix(String verb, String radical){
+        return verb.substring(radical.length(), verb.length());
+    }
+    private boolean isMatchingPrefix(String[][] listOfPrefixes, String prefix){
+        for(String[] e : listOfPrefixes){
+            if(Arrays.asList(e).contains(prefix))
+                return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         long startTime = System.nanoTime();
         Program p = new Program();
@@ -82,8 +90,7 @@ class Conjugation {
     private final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
     protected NodeList nConj;  //list of french template name in the form of 'rad:prefix'
-    protected ArrayList <ArrayList <String>> v_tn_Vector;
-
+    protected ArrayList <Verb> v_tn_rad_Vector;
     /**
      * empty constructor, when initiated will be use for the entire operation
      */
@@ -102,22 +109,17 @@ class Conjugation {
             int len = nVerbs.getLength();
             //todo: implement single circular linkedlist to linked 2 separate list together so that when sort the first
             //todo: collumn the second column won't be disturb
-            v_tn_Vector = new ArrayList <>();
+            v_tn_rad_Vector = new ArrayList <>();
             for (int i = 0; i < len; i++) {
-                ArrayList <String> temp = new ArrayList <>();
                 Element node = (Element) nVerbs.item(i);
-                temp.add(node.getElementsByTagName("i").item(0)
-                        .getTextContent());
-                temp.add(node.getElementsByTagName("t").item(0)
-                        .getTextContent());
-                v_tn_Vector.add(temp);
+                String verb = node.getElementsByTagName("i").item(0)
+                        .getTextContent();
+                String tname= node.getElementsByTagName("t").item(0)
+                        .getTextContent();
+                Verb temp = new Verb(verb, tname);
+                v_tn_rad_Vector.add(temp);
             }
-            Collections.sort(v_tn_Vector, new Comparator <ArrayList <String>>() {
-                @Override
-                public int compare(ArrayList <String> o1, ArrayList <String> o2) {
-                    return o1.get(0).compareTo(o2.get(0));
-                }
-            });
+            Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
 
             this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
         } catch (ParserConfigurationException e) {
@@ -152,32 +154,6 @@ class Conjugation {
             }
         }
         return listOfPrefixes;
-    }
-
-    /**
-     * toString method
-     *
-     * @param f String[][]
-     * @return String
-     */
-    public static String toString(String[][] f) {
-        if (f == null) return "";
-        String out = "";
-        String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
-        for (int i = 0; i < f.length; i++) {
-            if (f[i] != null) {
-                out = pronouns[i] + " ";
-                for (int j = 0; j < f[i].length; j++) {
-                    out += f[i][j];
-                    if (j < f[i].length - 1
-                            && f[i].length > 1)
-                        out += "/";
-                }
-                out += "%n";
-            } else
-                out += "%n";
-        }
-        return out;
     }
 
     /**
@@ -251,24 +227,6 @@ class Conjugation {
     //get NodeList of verbs-fr and conjugation-fr
 
     /**
-     * helper method to trim a verb into remaining radical (discard prefix)
-     *
-     * @param temp::String
-     * @param v::String
-     * @return
-     */
-    public String trim(String temp, String v) {
-        int index = 0;
-        for (int i = 0; i < temp.length(); i++) {
-            char c = temp.charAt(i);
-            if (c == ':') {
-                index = temp.length() - 1 - i;
-            }
-        }
-        return v.substring(0, v.length() - index);
-    }
-
-    /**
      * search for template name with a given verb
      * <p>
      * verb has to be of infinitive form
@@ -277,66 +235,29 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    public String search(String v) {
-        for (int i = 0; i < v_tn_Vector.size(); i++) {
-            ArrayList <String> temp = v_tn_Vector.get(i);
-            if (temp.contains(v)) return temp.get(1);
-        }
+    public Verb search(String v) {
+        int index = Collections.binarySearch(v_tn_rad_Vector, new Verb(v));
+        if(index >= 0)
+            return v_tn_rad_Vector.get(index);
         throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
     }
 }
 
 class Deconjugation {
-    protected final List <String> radVector; //list of radicals and template names
-    private final ArrayList <ArrayList <String>> v_tn_Vector;
+    private final ArrayList <Verb> v_tn_rad_Vector;
     protected Trie verb_trie;
 
     /**
      * empty constructor
      */
-    public Deconjugation(ArrayList <ArrayList <String>> v_tn_Vector) {
-        radVector = new ArrayList <>();
-        this.v_tn_Vector = v_tn_Vector;
-        setListRad_and_TNs();
+    public Deconjugation(ArrayList <Verb> v_tn_rad_Vector) {
+        this.v_tn_rad_Vector = v_tn_rad_Vector;
         verb_trie = new Trie();
-        for (String rad : radVector) {
-            verb_trie.insert(rad);
+        for (Verb v : v_tn_rad_Vector) {
+            verb_trie.insert(v.radical);
         }
     }
 
-    private void setListRad_and_TNs() {
-        StringBuilder rad = new StringBuilder();
-        for (ArrayList <String> temp : v_tn_Vector) {
-            radVector.add(trim(temp.get(1), temp.get(0)));
-        }
-    }
-
-    /**
-     * helper method to trim a verb into remaining radical (discard prefix)
-     *
-     * @param temp::String
-     * @param v::String
-     * @return
-     */
-    public String trim(String temp, String v) {
-        int index = 0;
-        for (int i = 0; i < temp.length(); i++) {
-            char c = temp.charAt(i);
-            if (c == ':') {
-                index = temp.length() - 1 - i;
-            }
-        }
-        return v.substring(0, v.length() - index);
-    }
-
-    /**
-     * init an array list of radicals, verbs and template names
-     *
-     * @return
-     */
-    public List <String> getList() {
-        return radVector;
-    }
     public String search(String verb){
         //search for radical that match the conjugated verb
         return verb_trie.search(verb);
@@ -347,20 +268,16 @@ class Deconjugation {
      * @param radical String
      * @return String[] -> 2 entries::verb & templateName
      */
-    public ArrayList <Integer> match(String radical) {
+    public ArrayList <Verb> match(String radical) {
         // verb is already conjugated
         //todo: implement search base on radical or search based on prefixe compare the performance of both cases
-        ArrayList <Integer> listOfPossibleInfVerbs = new ArrayList <>();
-        for (int i = 0; i < radVector.size(); i++) {
-            if (radVector.get(i).equals(radical)) {
-                //this will be the indexes of possible verbs that can be refer back from v_tn_Vector
-                listOfPossibleInfVerbs.add(i);
+        ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
+        for (Verb v : v_tn_rad_Vector) {
+            if (v.radical.equals(radical)) {
+                //this will be the indexes of possible verbs that can be refer back from v_tn_rad_Vector
+                listOfPossibleInfVerbs.add(v);
             }
         }
         return listOfPossibleInfVerbs;
-    }
-
-    private String appendVerb(String rad, String tn) {
-        return rad.concat(tn.substring(tn.indexOf(':') + 1));
     }
 }
