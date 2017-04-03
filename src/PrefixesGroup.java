@@ -4,6 +4,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Set;
+
 
 /**
  * Created by bachp on 4/2/2017.
@@ -35,6 +37,11 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
         return this.template_name.compareTo(o.template_name);
     }
     public String toString(){
-        
+        Set<Mode> modes = table.rowKeySet();
+        Set<Mode.Tense> tense = table.columnKeySet();
+        for(Mode mode : modes){
+
+        }
+        return null;
     }
 }
