@@ -9,7 +9,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.NoSuchElementException;
 
 /**
  * @author Bach Phan
@@ -28,6 +31,15 @@ public class Program {
     public Program() {
         init();
     }
+
+    public static void main(String[] args) {
+        long startTime = System.nanoTime();
+        Program p = new Program();
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        System.out.println(duration);
+    }
+
     /**
      * helper method to initialize Program constructor
      */
@@ -39,10 +51,9 @@ public class Program {
     }
 
     /**
-     *
      * @param verb
      */
-    public void conjugate(String verb, Mode mode, Mode.Tense tense){
+    public void conjugate(String verb, Mode mode, Mode.Tense tense) {
         try {
             Verb v = conj.search(verb);
             String[][] listOfPrefixes = conj.listOfPrefixes(v.template_name, mode, tense);
@@ -55,34 +66,29 @@ public class Program {
         }
         String matching_radical = deconj.search(verb);
         String remaining_prefix = trimPrefix(verb, matching_radical);
-        ArrayList<Verb> listOfPossibleVerbs = deconj.match(matching_radical);
-        for(Verb v : listOfPossibleVerbs){
+        ArrayList <Verb> listOfPossibleVerbs = deconj.match(matching_radical);
+        for (Verb v : listOfPossibleVerbs) {
             //todo: trim prefix
             String template_name = v.template_name;
             String inf_verb = v.infinitive_form;
             String[][] listOfPrefixes = conj.listOfPrefixes(template_name, mode, tense);
-            if(!isMatchingPrefix(listOfPrefixes, remaining_prefix)) continue;
+            if (!isMatchingPrefix(listOfPrefixes, remaining_prefix)) continue;
             String[][] conjugatedVerbs = conj.append(template_name, listOfPrefixes);
             ConjugatedForm conjugatedForm = new ConjugatedForm(inf_verb, mode, tense, conjugatedVerbs);
             System.out.println(conjugatedForm);
         }
     }
-    private String trimPrefix(String verb, String radical){
+
+    private String trimPrefix(String verb, String radical) {
         return verb.substring(radical.length(), verb.length());
     }
-    private boolean isMatchingPrefix(String[][] listOfPrefixes, String prefix){
-        for(String[] e : listOfPrefixes){
-            if(Arrays.asList(e).contains(prefix))
+
+    private boolean isMatchingPrefix(String[][] listOfPrefixes, String prefix) {
+        for (String[] e : listOfPrefixes) {
+            if (Arrays.asList(e).contains(prefix))
                 return true;
         }
         return false;
-    }
-    public static void main(String[] args) {
-        long startTime = System.nanoTime();
-        Program p = new Program();
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println(duration);
     }
 }
 
@@ -109,6 +115,7 @@ class Conjugation {
 //            e.printStackTrace();
 //        }
 //    }
+
     /**
      * empty constructor, when initiated will be use for the entire operation
      */
@@ -132,7 +139,7 @@ class Conjugation {
                 Element node = (Element) nVerbs.item(i);
                 String verb = node.getElementsByTagName("i").item(0)
                         .getTextContent();
-                String template_name= node.getElementsByTagName("t").item(0)
+                String template_name = node.getElementsByTagName("t").item(0)
                         .getTextContent();
                 Verb temp = new Verb(verb, template_name);
                 v_tn_rad_Vector.add(temp);
@@ -140,15 +147,17 @@ class Conjugation {
             Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
 
             this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
-            ArrayList<String> p = new ArrayList <>();
+            ArrayList <PrefixesGroup> frefixes_Vector = new ArrayList <>(1000);
             len = nConj.getLength();
             for (int i = 0; i < len; i++) {
                 Node temp = nConj.item(i);
                 Element tmp = (Element) temp;
                 String t_n = temp.getAttributes().getNamedItem("name")
                         .getNodeValue();
-                for(Mode mode : Mode.values()){
-                    for(Mode.Tense tense : mode.getTenses()){
+                ArrayList <String> p = new ArrayList <>();
+                PrefixesGroup frefixesGroup = new PrefixesGroup(t_n);
+                for (Mode mode : Mode.values()) {
+                    for (Mode.Tense tense : mode.getTenses()) {
                         Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
                         Element ten = (Element) md.getElementsByTagName(tense.toString()).item(0);
                         NodeList listP = (NodeList) ten.getElementsByTagName("p");
@@ -162,13 +171,16 @@ class Conjugation {
                                         .getElementsByTagName("i");
                                 int length = listI.getLength();
                                 StringBuilder in = new StringBuilder();
-                                for(int k = 0; k < length; k++){
+                                for (int k = 0; k < length; k++) {
+                                    if (k > 0) in.append("/");
                                     in.append(listI.item(k).getTextContent());
-                                    if(k > 0) in.append("/");
                                 }
+                                p.add(in.toString());
                             }
                         }
+                        frefixesGroup.append(mode, tense, p);
                     }
+                    frefixes_Vector.add(frefixesGroup);
                 }
             }
         } catch (ParserConfigurationException e) {
@@ -177,16 +189,17 @@ class Conjugation {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             //clean up resource
             vFile = null;
             conFile = null;
             dBuilder = null;
             nVerbs = null;
+            nConj = null;
         }
     }
 
-        /**
+    /**
      * append radical with list of prefixes when conjugated
      *
      * @param radical::String
@@ -214,8 +227,8 @@ class Conjugation {
      * @return
      */
     public String[][] listOfPrefixes(String templateName,
-                                   Mode mode,
-                                   Mode.Tense tense) {
+                                     Mode mode,
+                                     Mode.Tense tense) {
         Node temp;
         Element tmp, md, ten, person;
         NodeList listP, listI;
@@ -272,9 +285,6 @@ class Conjugation {
     }
     //todo : strip accent for input.
 
-
-    //get NodeList of verbs-fr and conjugation-fr
-
     /**
      * search for template name with a given verb
      * <p>
@@ -286,7 +296,7 @@ class Conjugation {
      */
     public Verb search(String v) {
         int index = Collections.binarySearch(v_tn_rad_Vector, new Verb(v));
-        if(index >= 0)
+        if (index >= 0)
             return v_tn_rad_Vector.get(index);
         throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
     }
@@ -307,10 +317,11 @@ class Deconjugation {
         }
     }
 
-    public String search(String verb){
+    public String search(String verb) {
         //search for radical that match the conjugated verb
         return verb_trie.search(verb);
     }
+
     /**
      * match conjugated verb with a probable radical then return verb and template name
      *
