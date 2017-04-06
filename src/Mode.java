@@ -13,7 +13,7 @@ public enum Mode {
     subjunctive(Tense.present, Tense.imperfect),
     imperative(Tense.present),
     participle(Tense.present, Tense.past);
-    private Tense[] tenses;
+    private final Tense[] tenses;
 
     Mode(Tense... tenses) {
         this.tenses = tenses;
@@ -54,7 +54,9 @@ public enum Mode {
         }
         return false;
     }
-
+    public Tense[] getTenses(){
+        return tenses;
+    }
     enum Tense {
         present, imperfect, future, past;
 

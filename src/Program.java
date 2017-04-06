@@ -132,21 +132,52 @@ class Conjugation {
                 Element node = (Element) nVerbs.item(i);
                 String verb = node.getElementsByTagName("i").item(0)
                         .getTextContent();
-                String tname= node.getElementsByTagName("t").item(0)
+                String template_name= node.getElementsByTagName("t").item(0)
                         .getTextContent();
-                Verb temp = new Verb(verb, tname);
+                Verb temp = new Verb(verb, template_name);
                 v_tn_rad_Vector.add(temp);
             }
             Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
 
             this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
+            ArrayList<String> p = new ArrayList <>();
+            len = nConj.getLength();
+            for (int i = 0; i < len; i++) {
+                Node temp = nConj.item(i);
+                Element tmp = (Element) temp;
+                String t_n = temp.getAttributes().getNamedItem("name")
+                        .getNodeValue();
+                for(Mode mode : Mode.values()){
+                    for(Mode.Tense tense : mode.getTenses()){
+                        Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
+                        Element ten = (Element) md.getElementsByTagName(tense.toString()).item(0);
+                        NodeList listP = (NodeList) ten.getElementsByTagName("p");
+                        NodeList listI = null;
+                        int le = listP.getLength();
+                        for (int j = 0; j < le; j++) {
+                            boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
+                            if (isType) {
+                                Element person = (Element) listP.item(j);
+                                listI = person
+                                        .getElementsByTagName("i");
+                                int length = listI.getLength();
+                                StringBuilder in = new StringBuilder();
+                                for(int k = 0; k < length; k++){
+                                    in.append(listI.item(k).getTextContent());
+                                    if(k > 0) in.append("/");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
+        }finally {
             //clean up resource
             vFile = null;
             conFile = null;
@@ -155,7 +186,7 @@ class Conjugation {
         }
     }
 
-    /**
+        /**
      * append radical with list of prefixes when conjugated
      *
      * @param radical::String
