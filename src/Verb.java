@@ -50,4 +50,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
     public int compareTo(@NotNull Verb o) {
         return this.infinitive_form.compareTo(o.infinitive_form);
     }
+    public String toString(){
+        return String.format("infinitive form: %s, template name: %s, radical: %s", infinitive_form, template_name, radical);
+    }
 }

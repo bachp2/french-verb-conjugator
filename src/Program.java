@@ -87,10 +87,28 @@ public class Program {
 }
 
 class Conjugation {
-    private final String path_to_verbs_fr = "./data/verbs-fr.xml";
-    private final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
+    private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
+    private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
     protected NodeList nConj;  //list of french template name in the form of 'rad:prefix'
     protected ArrayList <Verb> v_tn_rad_Vector;
+//    static{
+//        //read verbs-fr.xml file
+//        File vFile = new File(path_to_verbs_fr);
+//        //read conjugation-fr.xml file
+//        File conFile = new File(path_to_conjugation_fr);
+//
+//        try {
+//            DocumentBuilder dBuilder = DocumentBuilderFactory
+//                    .newInstance().newDocumentBuilder();
+//            NodeList nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
+//        } catch (ParserConfigurationException e) {
+//            e.printStackTrace();
+//        } catch (SAXException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     /**
      * empty constructor, when initiated will be use for the entire operation
      */
