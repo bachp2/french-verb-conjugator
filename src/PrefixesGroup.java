@@ -15,7 +15,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
     protected Table<Mode, Mode.Tense, ArrayList<String>> table;
     public PrefixesGroup(String template_name){
         this.template_name = template_name;
-        Table<Mode, Mode.Tense, ArrayList<String>> table = HashBasedTable.create();
+        table = HashBasedTable.create();
     }
     public void append(Mode mode, Mode.Tense tense, ArrayList<String> prefixes){
         table.put(mode, tense, prefixes);
@@ -26,7 +26,9 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
     public ArrayList<String> getPrefixes(Mode mode, Mode.Tense tense){
         return table.get(mode, tense);
     }
-
+    public ArrayList<String> getPrefixesGroup(Mode mode, Mode.Tense tense){
+        return (ArrayList<String>) table.get(mode, tense).clone();
+    }
     @Override
     public int compare(PrefixesGroup o1, PrefixesGroup o2) {
         return o1.template_name.compareTo(o2.template_name);
@@ -40,7 +42,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
         Set<Mode> modes = table.rowKeySet();
         Set<Mode.Tense> tense = table.columnKeySet();
         for(Mode mode : modes){
-
+            //todo
         }
         return null;
     }

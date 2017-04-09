@@ -330,7 +330,6 @@ class Deconjugation {
      */
     public ArrayList <Verb> match(String radical) {
         // verb is already conjugated
-        //todo: implement search base on radical or search based on prefixe compare the performance of both cases
         ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
         for (Verb v : v_tn_rad_Vector) {
             if (v.radical.equals(radical)) {
