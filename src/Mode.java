@@ -58,12 +58,18 @@ public enum Mode {
         return tenses;
     }
     enum Tense {
-        present, imperfect, future, past;
-
+        present("infinitive-present", "imperative-present", "present-participle"),
+        imperfect,
+        future,
+        past("simple-past", "past-participle");
+        final String[] tenses;
+        Tense(String... tenses){
+            this.tenses = tenses;
+        }
         public static Tense toTense(String s) {
             try {
                 for (Tense t : Tense.values()) {
-                    if (s.equals(t.toString())) {
+                    if (s.contains(t.toString())) {
                         return t;
                     }
                 }
@@ -75,33 +81,28 @@ public enum Mode {
         }
 
         public String toString(Mode m) {
-            String tense = this.toString();
             if (this == Tense.present) {
                 switch (m) {
                     case infinitive:
-                        tense = tense + "-present";
-                        break;
+                        return this.tenses[0];
                     case imperative:
-                        tense = "imperative-" + tense;
-                        break;
+                        return this.tenses[1];
                     case participle:
-                        tense = tense + "-participle";
+                        return this.tenses[2];
                     default:
                         break;
                 }
             } else if (this == Tense.past) {
                 switch (m) {
                     case indicative:
-                        tense = "simple-" + tense;
-                        break;
+                        return this.tenses[0];
                     case participle:
-                        tense = tense + "-participle";
-                        break;
+                        return this.tenses[1];
                     default:
                         break;
                 }
             }
-            return tense;
+            return this.toString();
         }
 
         public static class TenseConverter implements IStringConverter <ArrayList <Tense>> {

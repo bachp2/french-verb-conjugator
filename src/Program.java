@@ -159,7 +159,7 @@ class Conjugation {
                 for (Mode mode : Mode.values()) {
                     for (Mode.Tense tense : mode.getTenses()) {
                         Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
-                        Element ten = (Element) md.getElementsByTagName(tense.toString()).item(0);
+                        Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
                         NodeList listP = (NodeList) ten.getElementsByTagName("p");
                         NodeList listI = null;
                         int le = listP.getLength();

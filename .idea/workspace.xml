@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mode.java" afterPath="$PROJECT_DIR$/src/Mode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,30 +23,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-913">
-              <caret line="243" column="39" lean-forward="false" selection-start-line="243" selection-start-column="39" selection-end-line="243" selection-end-column="39" />
+            <state relative-caret-position="731">
+              <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#Program#0" expanded="false" />
-                <element signature="class#Program#0" expanded="false" />
                 <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-                <element signature="method#main#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-                <element signature="method#init#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
                 <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-                <element signature="e#2730#2731#0" expanded="true" />
                 <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-                <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#append#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-                <element signature="e#12373#12402#0" expanded="false" />
+                <element signature="e#12377#12406#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conjugation-fr.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="32" column="61" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Mode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
+                <element signature="method#getMode#0;class#Mode#0" expanded="false" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1735#1736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,28 +76,12 @@
       <file leaf-file-name="PrefixesGroup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PrefixesGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="237">
               <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#892#893#0" expanded="true" />
                 <element signature="e#937#938#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Mode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
-                <element signature="method#getMode#0;class#Mode#0" expanded="false" />
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +93,11 @@
             <state relative-caret-position="680">
               <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#trim#0;class#Verb#0" expanded="false" />
+                <element signature="e#1360#1361#0" expanded="false" />
+                <element signature="e#1431#1432#0" expanded="false" />
+                <element signature="e#1490#1491#0" expanded="false" />
+                <element signature="e#1562#1563#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,7 +108,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-              <folding />
+              <folding>
+                <element signature="e#136#137#0" expanded="false" />
+                <element signature="e#190#191#0" expanded="false" />
+                <element signature="e#235#236#0" expanded="false" />
+                <element signature="e#261#262#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,16 +173,16 @@
         <option value="$PROJECT_DIR$/src/PrefixesGroups.java" />
         <option value="$PROJECT_DIR$/src/PrefixesGroup.java" />
         <option value="$PROJECT_DIR$/src/Verb.java" />
-        <option value="$PROJECT_DIR$/src/Mode.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/Mode.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
+    <option name="x" value="1362" />
     <option name="y" value="-4" />
     <option name="width" value="1374" />
-    <option name="height" value="748" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -188,8 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,31 +238,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Program.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -615,7 +611,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
+    <frame x="1362" y="-4" width="1374" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,8 +622,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24264705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24386503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -637,8 +633,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64723927" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -687,7 +683,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -711,23 +707,18 @@
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,23 +738,18 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,23 +769,18 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -818,23 +799,18 @@
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,23 +829,18 @@
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,23 +860,18 @@
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -925,23 +891,18 @@
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
             <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
             <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,20 +921,6 @@
     <entry file="file://$PROJECT_DIR$/src/Deconjugation.java" />
     <entry file="file://$PROJECT_DIR$/src/ConjugationDriver.java" />
     <entry file="file://$PROJECT_DIR$/src/Align.java" />
-    <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeconjugationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -991,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,9 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="48" selection-end-column="11" />
-          <folding>
-            <element signature="docComment;method#main#0;class#Driver#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,7 +961,7 @@
         <state relative-caret-position="226">
           <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#Main#0" expanded="false" />
             <element signature="docComment;method#build#0;class#Main#0" expanded="false" />
           </folding>
@@ -1029,13 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="method#insertInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="method#isInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="docComment;method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
-            <element signature="method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,7 +987,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="e#136#137#0" expanded="false" />
+            <element signature="e#190#191#0" expanded="false" />
+            <element signature="e#235#236#0" expanded="false" />
+            <element signature="e#261#262#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,29 +1001,48 @@
         <state relative-caret-position="680">
           <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#trim#0;class#Verb#0" expanded="false" />
+            <element signature="e#1360#1361#0" expanded="false" />
+            <element signature="e#1431#1432#0" expanded="false" />
+            <element signature="e#1490#1491#0" expanded="false" />
+            <element signature="e#1562#1563#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mode.java">
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state relative-caret-position="731">
+          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
-            <element signature="method#getMode#0;class#Mode#0" expanded="false" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="docComment;class#Program#0" expanded="false" />
+            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
+            <element signature="method#conjugate#0;class#Program#0" expanded="false" />
+            <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
+            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
+            <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
+            <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
+            <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
+            <element signature="e#12377#12406#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PrefixesGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="237">
           <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1092,29 +1052,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
+    <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-913">
-          <caret line="243" column="39" lean-forward="false" selection-start-line="243" selection-start-column="39" selection-end-line="243" selection-end-column="39" />
+        <state relative-caret-position="204">
+          <caret line="32" column="61" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
           <folding>
-            <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
-            <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
-            <element signature="method#main#0;class#Program#0" expanded="false" />
-            <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
-            <element signature="method#init#0;class#Program#0" expanded="false" />
-            <element signature="docComment;method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="method#conjugate#0;class#Program#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="method#isMatchingPrefix#0;class#Program#0" expanded="false" />
-            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#listOfPrefixes#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="docComment;method#match#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#12373#12402#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getMode#0;class#Mode#0" expanded="false" />
+            <element signature="method#getMode#0;class#Mode#0" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
           </folding>
         </state>
       </provider>
