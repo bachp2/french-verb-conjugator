@@ -20,10 +20,8 @@ import java.util.NoSuchElementException;
  */
 public class Program {
 
-    protected NodeList nConj;
-    protected Trie verb_trie;
-    private Conjugation conj;
-    private Deconjugation deconj;
+    private Conjugation conjugate;
+    private Deconjugation deconjugate;
 
     /**
      * empty constructor
@@ -35,6 +33,8 @@ public class Program {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
         Program p = new Program();
+        String tn = p.conjugate.search("placer").infinitive_form;
+        System.out.println(tn);
         long endTime = System.nanoTime();
         long duration = (endTime - startTime);
         System.out.println(duration);
@@ -44,39 +44,8 @@ public class Program {
      * helper method to initialize Program constructor
      */
     private void init() {
-        conj = new Conjugation();
-        this.nConj = conj.nConj;
-        deconj = new Deconjugation(conj.v_tn_rad_Vector);
-        this.verb_trie = deconj.verb_trie;
-    }
-
-    /**
-     * @param verb
-     */
-    public void conjugate(String verb, Mode mode, Mode.Tense tense) {
-        try {
-            Verb v = conj.search(verb);
-            String[][] listOfPrefixes = conj.listOfPrefixes(v.template_name, mode, tense);
-            String[][] conjugatedVerbs = conj.append(v.template_name, listOfPrefixes);
-            ConjugatedForm conjugatedForm = new ConjugatedForm(verb, mode, tense, conjugatedVerbs);
-            System.out.println(conjugatedForm);
-            return;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        String matching_radical = deconj.search(verb);
-        String remaining_prefix = trimPrefix(verb, matching_radical);
-        ArrayList <Verb> listOfPossibleVerbs = deconj.match(matching_radical);
-        for (Verb v : listOfPossibleVerbs) {
-            //todo: trim prefix
-            String template_name = v.template_name;
-            String inf_verb = v.infinitive_form;
-            String[][] listOfPrefixes = conj.listOfPrefixes(template_name, mode, tense);
-            if (!isMatchingPrefix(listOfPrefixes, remaining_prefix)) continue;
-            String[][] conjugatedVerbs = conj.append(template_name, listOfPrefixes);
-            ConjugatedForm conjugatedForm = new ConjugatedForm(inf_verb, mode, tense, conjugatedVerbs);
-            System.out.println(conjugatedForm);
-        }
+        conjugate = new Conjugation();
+        deconjugate = new Deconjugation(conjugate.v_tn_rad_Vector);
     }
 
     private String trimPrefix(String verb, String radical) {
@@ -95,47 +64,28 @@ public class Program {
 class Conjugation {
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    protected NodeList nConj;  //list of french template name in the form of 'rad:prefix'
     protected ArrayList <Verb> v_tn_rad_Vector;
-//    static{
-//        //read verbs-fr.xml file
-//        File vFile = new File(path_to_verbs_fr);
-//        //read conjugation-fr.xml file
-//        File conFile = new File(path_to_conjugation_fr);
-//
-//        try {
-//            DocumentBuilder dBuilder = DocumentBuilderFactory
-//                    .newInstance().newDocumentBuilder();
-//            NodeList nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
-//        } catch (ParserConfigurationException e) {
-//            e.printStackTrace();
-//        } catch (SAXException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    ArrayList <PrefixesGroup> frefixes_Vector;
 
     /**
      * empty constructor, when initiated will be use for the entire operation
      */
     public Conjugation() {
         File vFile, conFile;
-        NodeList nVerbs;
+        NodeList nVerbs, nConj;
         DocumentBuilder dBuilder;
         try {
             //read verbs-fr.xml file
             vFile = new File(path_to_verbs_fr);
-            //read conjugation-fr.xml file
+            //read conjugate-fr.xml file
             conFile = new File(path_to_conjugation_fr);
             dBuilder = DocumentBuilderFactory
                     .newInstance().newDocumentBuilder();
             nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
-            int len = nVerbs.getLength();
-            //todo: implement single circular linkedlist to linked 2 separate list together so that when sort the first
-            //todo: collumn the second column won't be disturb
+            nConj = dBuilder.parse(conFile).getElementsByTagName("template");
+            int length1 = nVerbs.getLength();
             v_tn_rad_Vector = new ArrayList <>();
-            for (int i = 0; i < len; i++) {
+            for (int i = 0; i < length1; i++) {
                 Element node = (Element) nVerbs.item(i);
                 String verb = node.getElementsByTagName("i").item(0)
                         .getTextContent();
@@ -146,10 +96,10 @@ class Conjugation {
             }
             Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
 
-            this.nConj = dBuilder.parse(conFile).getElementsByTagName("template");
-            ArrayList <PrefixesGroup> frefixes_Vector = new ArrayList <>(1000);
-            len = nConj.getLength();
-            for (int i = 0; i < len; i++) {
+
+            frefixes_Vector = new ArrayList <>(1000);
+            length1 = nConj.getLength();
+            for (int i = 0; i < length1; i++) {
                 Node temp = nConj.item(i);
                 Element tmp = (Element) temp;
                 String t_n = temp.getAttributes().getNamedItem("name")
@@ -218,71 +168,6 @@ class Conjugation {
         return listOfPrefixes;
     }
 
-    /**
-     * get list of prefixes
-     *
-     * @param templateName String
-     * @param mode         String
-     * @param tense        String
-     * @return
-     */
-    public String[][] listOfPrefixes(String templateName,
-                                     Mode mode,
-                                     Mode.Tense tense) {
-        Node temp;
-        Element tmp, md, ten, person;
-        NodeList listP, listI;
-        String other;
-        try {
-            String[][] p = new String[6][];
-            int len = nConj.getLength();
-            for (int i = 0; i < len; i++) {
-                temp = nConj.item(i);
-                tmp = (Element) temp;
-                other = temp.getAttributes().getNamedItem("name")
-                        .getNodeValue();
-                if (templateName.equals(other)) {
-                    md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
-                    ten = (Element) md.getElementsByTagName(tense.toString()).item(0);
-                    listP = (NodeList) ten.getElementsByTagName("p");
-                    listI = null;
-                    int le = listP.getLength();
-                    for (int j = 0; j < le; j++) {
-                        boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
-                        if (isType) {
-                            person = (Element) listP.item(j);
-                            if (person.hasChildNodes()) {
-                                listI = person
-                                        .getElementsByTagName("i");
-                            }
-                            p[j] = new String[listI.getLength()];
-                            int l = listI.getLength();
-                            for (int k = 0; k < l; k++) {
-                                p[j][k] = listI.item(k).getTextContent();
-                            }
-                        }
-                    }
-                    return p;
-                }
-            }
-            throw new NoSuchElementException();
-        } catch (DOMException e) {
-            e.printStackTrace();
-            return null;
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            temp = null;
-            tmp = null;
-            md = null;
-            ten = null;
-            person = null;
-            listP = null;
-            listI = null;
-            other = null;
-        }
-    }
     //todo : strip accent for input.
 
     /**
