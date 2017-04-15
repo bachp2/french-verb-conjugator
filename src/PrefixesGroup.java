@@ -29,6 +29,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
     public ArrayList<String> getPrefixesGroup(Mode mode, Mode.Tense tense){
         return (ArrayList<String>) table.get(mode, tense).clone();
     }
+
     @Override
     public int compare(PrefixesGroup o1, PrefixesGroup o2) {
         return o1.template_name.compareTo(o2.template_name);

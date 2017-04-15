@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.concurrent.TimeUnit;
 
+import com.google.common.base.Stopwatch;
 /**
  * @author Bach Phan
  * @version 01/31/2017
@@ -29,13 +31,19 @@ public class Program {
     }
 
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
+        Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
-        String tn = p.conjugate.searchTemplateName("placer").infinitive_form;
+        String tn = p.conjugate.searchTemplateName("placer").template_name;
+        PrefixesGroup temp = p.conjugate.searchFrefixesGroup(tn);
+        ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
+        StringBuilder sb = new StringBuilder();
+        for (String a : tmp) {
+            sb.append(a + "\n");
+        }
+        System.out.print(sb.toString());
         System.out.println(tn);
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println(duration);
+        stopwatch.stop();
+        System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }
 
     /**
@@ -44,10 +52,6 @@ public class Program {
     private void init() {
         conjugate = new Conjugation();
         deconjugate = new Deconjugation(conjugate.v_tn_rad_Vector);
-    }
-
-    private String trimPrefix(String verb, String radical) {
-        return verb.substring(radical.length(), verb.length());
     }
 
     private boolean isMatchingPrefix(String[][] listOfPrefixes, String prefix) {
@@ -102,10 +106,10 @@ class Conjugation {
                 Element tmp = (Element) temp;
                 String t_n = temp.getAttributes().getNamedItem("name")
                         .getNodeValue();
-                ArrayList <String> p = new ArrayList <>();
                 PrefixesGroup frefixesGroup = new PrefixesGroup(t_n);
                 for (Mode mode : Mode.values()) {
                     for (Mode.Tense tense : mode.getTenses()) {
+                        ArrayList <String> p = new ArrayList <>();
                         Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
                         Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
                         NodeList listP = (NodeList) ten.getElementsByTagName("p");
@@ -156,7 +160,7 @@ class Conjugation {
      * @return String[][]
      */
     public static String[][] append(String radical, String[][] listOfPrefixes) {
-        // already trim
+        // already trimPrefix
         for (int i = 0; i < listOfPrefixes.length; i++) {
             if (listOfPrefixes[i] == null)
                 continue;
@@ -186,13 +190,13 @@ class Conjugation {
         else throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
     }
 
-    public PrefixesGroup searchFrefixes(String template_name){
+    public PrefixesGroup searchFrefixesGroup(String template_name) {
         int index = Collections.binarySearch(frefixes_Vector, new PrefixesGroup(template_name));
-        if(index >= 0)
-            return frefixes_Vector.get(index);
-        else throw new ConjugationException("Can't find match frefixes with that template name ");
+        if (index >= 0)
+            return frefixes_Vector.get(index);//privacy leak
+        else throw new ConjugationException("Can't find matching group with that template name ");
     }
-    
+
 }
 
 class Deconjugation {

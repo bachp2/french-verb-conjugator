@@ -20,7 +20,7 @@ public class Driver {
 //                }
 //            }
 //        }
-//        String rad = Conjugation.trim(tn, "abjurer");
+//        String rad = Conjugation.trimPrefix(tn, "abjurer");
 //        System.out.println(rad);
 //        String[][] f = conj.append(rad, p);
 //

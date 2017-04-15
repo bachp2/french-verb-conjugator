@@ -1,14 +1,14 @@
 /**
  * Created by bachp on 3/26/2017.
  */
-public class ConjugatedForm {
+public class OuputConsole {
     final String verbToBeConjugated;
     final Mode mode;
     final Mode.Tense tense;
     final String[][] conjugatedForm;
     final String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
 
-    public ConjugatedForm(String verb, Mode mode, Mode.Tense tense, String[][] conjugatedForm) {
+    public OuputConsole(String verb, Mode mode, Mode.Tense tense, String[][] conjugatedForm) {
         this.verbToBeConjugated = verb;
         this.mode = mode;
         this.tense = tense;

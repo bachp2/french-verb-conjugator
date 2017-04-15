@@ -17,7 +17,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
     public Verb(String infinitive_form, String template_name){
         this.infinitive_form = infinitive_form;
         this.template_name = template_name;
-        this.radical = trim(template_name, infinitive_form);
+        this.radical = trimPrefix(template_name, infinitive_form);
     }
     public Verb(Verb copy){
         this.infinitive_form = copy.infinitive_form;
@@ -31,13 +31,13 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
         return template_name;
     }
     /**
-     * helper method to trim a verb into remaining radical (discard prefix)
+     * helper method to trimPrefix a verb into remaining radical (discard prefix)
      *
      * @param temp::String
      * @param v::String
      * @return
      */
-    public String trim(String temp, String v) {
+    public static String trimPrefix(String temp, String v) {
         int index = 0;
         for (int i = 0; i < temp.length(); i++) {
             char c = temp.charAt(i);
