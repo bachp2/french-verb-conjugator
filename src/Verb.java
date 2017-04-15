@@ -24,6 +24,12 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
         this.template_name = copy.template_name;
         this.radical = copy.radical;
     }
+    public String getInfinitive_form(){
+        return infinitive_form;
+    }
+    public String getTemplate_name(){
+        return template_name;
+    }
     /**
      * helper method to trim a verb into remaining radical (discard prefix)
      *

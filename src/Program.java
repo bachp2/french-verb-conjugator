@@ -1,4 +1,3 @@
-import org.w3c.dom.DOMException;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -12,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.NoSuchElementException;
 
 /**
  * @author Bach Phan
@@ -33,7 +31,7 @@ public class Program {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
         Program p = new Program();
-        String tn = p.conjugate.search("placer").infinitive_form;
+        String tn = p.conjugate.searchTemplateName("placer").infinitive_form;
         System.out.println(tn);
         long endTime = System.nanoTime();
         long duration = (endTime - startTime);
@@ -133,6 +131,7 @@ class Conjugation {
                     frefixes_Vector.add(frefixesGroup);
                 }
             }
+            Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -171,7 +170,7 @@ class Conjugation {
     //todo : strip accent for input.
 
     /**
-     * search for template name with a given verb
+     * searchTemplateName for template name with a given verb
      * <p>
      * verb has to be of infinitive form
      * </p>
@@ -179,12 +178,21 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    public Verb search(String v) {
+    public Verb searchTemplateName(String v) {
         int index = Collections.binarySearch(v_tn_rad_Vector, new Verb(v));
         if (index >= 0)
-            return v_tn_rad_Vector.get(index);
-        throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
+            return v_tn_rad_Vector.get(index);//privacy leak
+            //todo implement clone
+        else throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
     }
+
+    public PrefixesGroup searchFrefixes(String template_name){
+        int index = Collections.binarySearch(frefixes_Vector, new PrefixesGroup(template_name));
+        if(index >= 0)
+            return frefixes_Vector.get(index);
+        else throw new ConjugationException("Can't find match frefixes with that template name ");
+    }
+    
 }
 
 class Deconjugation {
@@ -203,7 +211,7 @@ class Deconjugation {
     }
 
     public String search(String verb) {
-        //search for radical that match the conjugated verb
+        //searchTemplateName for radical that match the conjugated verb
         return verb_trie.search(verb);
     }
 

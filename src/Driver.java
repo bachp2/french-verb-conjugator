@@ -11,7 +11,7 @@ public class Driver {
      */
     public static void main(String[] args) {
 //        Conjugation conj = new Conjugation();
-//        String tn = conj.search("abjurer");
+//        String tn = conj.searchTemplateName("abjurer");
 //        String[][] p = conj.listOfPrefix(tn, "indicative", "future");
 //        for (int i = 0; i < p.length; i++) {
 //            if (p[i] != null) {

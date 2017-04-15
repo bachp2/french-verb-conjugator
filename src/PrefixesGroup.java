@@ -11,7 +11,7 @@ import java.util.Set;
  * Created by bachp on 4/2/2017.
  */
 public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<PrefixesGroup>{
-    private String template_name;
+    public final String template_name;
     protected Table<Mode, Mode.Tense, ArrayList<String>> table;
     public PrefixesGroup(String template_name){
         this.template_name = template_name;
