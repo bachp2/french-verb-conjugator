@@ -24,10 +24,27 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
         return table.isEmpty();
     }
     public ArrayList<String> getPrefixes(Mode mode, Mode.Tense tense){
-        return table.get(mode, tense);
+        return (ArrayList <String>) table.get(mode, tense).clone();
     }
     public ArrayList<String> getPrefixesGroup(Mode mode, Mode.Tense tense){
         return (ArrayList<String>) table.get(mode, tense).clone();
+    }
+    public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
+        // already trimPrefix
+        ArrayList<String> conjugated = new ArrayList <>();
+        for (String s : listOfPrefixes) {
+            if(s.contains("/")){
+                StringBuilder temp = new StringBuilder();
+                String[] ptmp = s.split("/");
+                for(int i = 0; i < ptmp.length; i++){
+                    if(i < ptmp.length - 1) temp.append(radical + ptmp[i] + "/");
+                    else temp.append(radical + ptmp[i]);
+                }
+                conjugated.add(temp.toString());
+            }
+            else conjugated.add(s);
+        }
+        return conjugated;
     }
 
     @Override
