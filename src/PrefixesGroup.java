@@ -42,7 +42,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
                 }
                 conjugated.add(temp.toString());
             }
-            else conjugated.add(s);
+            else conjugated.add(radical + s);
         }
         return conjugated;
     }

@@ -19,7 +19,7 @@ import com.google.common.base.Stopwatch;
  * @version 01/31/2017
  */
 public class Program {
-    private Program instance;
+    //private Program instance;
     //todo: implement static build and replace old constructor build method
     private Conjugation conjugate;
     private Deconjugation deconjugate;
@@ -27,7 +27,7 @@ public class Program {
     /**
      * empty constructor
      */
-    private Program() {
+    public Program() {
         //will subject to change
         init();
     }
@@ -43,6 +43,12 @@ public class Program {
             sb.append(a + "\n");
         }
         System.out.print(sb.toString());
+        ArrayList<String> mylist = PrefixesGroup.append(Verb.trimPrefix(tn, "placer"), tmp);
+        StringBuilder sb1 = new StringBuilder();
+        for (String a : mylist) {
+            sb1.append(a + "\n");
+        }
+        System.out.println(sb1);
         System.out.println(tn);
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
@@ -216,7 +222,7 @@ class Deconjugation {
         }
     }
 
-    public String search(String verb) {
+    public String searchRadical(String verb) {
         //searchTemplateName for radical that match the conjugated verb
         return verb_trie.search(verb);
     }
