@@ -19,14 +19,16 @@ import com.google.common.base.Stopwatch;
  * @version 01/31/2017
  */
 public class Program {
-
+    private Program instance;
+    //todo: implement static build and replace old constructor build method
     private Conjugation conjugate;
     private Deconjugation deconjugate;
 
     /**
      * empty constructor
      */
-    public Program() {
+    private Program() {
+        //will subject to change
         init();
     }
 
