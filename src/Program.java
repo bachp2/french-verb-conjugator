@@ -148,7 +148,6 @@ class Conjugation {
                                 p.add(Joiner.on("/").join(NodeList2Array(listI)));
                             else if(listILength == 1)
                                 p.add(listI.item(0).getTextContent());
-                            else throw new NullPointerException();
                         }
                     }
                     frefixesGroup.append(mode, tense, p);
