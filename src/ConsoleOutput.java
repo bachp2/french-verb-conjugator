@@ -2,11 +2,12 @@
  * Created by bachp on 3/26/2017.
  */
 public class ConsoleOutput  {
-    final String verbToBeConjugated;
-    final Mode mode;
-    final Mode.Tense tense;
-    final String[][] conjugatedForm;
-    final String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
+    private String verbToBeConjugated;
+    private Mode mode;
+    private Mode.Tense tense;
+    private String[][] conjugatedForm;
+    private String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
+    private ConsoleOutput instance;
 
     public ConsoleOutput(String verb, Mode mode, Mode.Tense tense, String[][] conjugatedForm) {
         this.verbToBeConjugated = verb;
@@ -17,8 +18,7 @@ public class ConsoleOutput  {
 
     public String toString() {
         StringBuilder sb = new StringBuilder(verbToBeConjugated);
-        sb.append("%n"+mode.toString());
-        sb.append("%n"+tense.toString());
+        sb.append("\n"+mode.toString()+"\n"+tense.toString());
         int index = 0;
         for (String[] e : conjugatedForm) {
             if (e != null) {

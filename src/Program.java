@@ -36,7 +36,7 @@ public class Program {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
         String tn = p.conjugate.searchVerb("placer").template_name;
-        PrefixesGroup temp = p.conjugate.searchFrefixesGroup(tn);
+        PrefixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
         ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
         StringBuilder sb = new StringBuilder();
         for (String a : tmp) {
@@ -183,7 +183,7 @@ class Conjugation {
         else throw new ConjugationException("No verb match the string input%nLooking to deconjugate...");
     }
 
-    public PrefixesGroup searchFrefixesGroup(String template_name) {
+    public PrefixesGroup searchSuffixesGroup(String template_name) {
         int index = Collections.binarySearch(frefixes_Vector, new PrefixesGroup(template_name));
         if (index >= 0)
             return frefixes_Vector.get(index);//privacy leak
@@ -230,5 +230,9 @@ class Deconjugation {
     }
     public static boolean isMatchWithOneCandidate(ArrayList <Verb> list){
         return list.size() == 1;
+    }
+    public static boolean isConjugated(String verb){
+        //todo regex suffix
+        return verb.matches("^.*[ir|er|re]$");
     }
 }
