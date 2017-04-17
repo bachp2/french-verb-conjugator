@@ -203,7 +203,7 @@ class Deconjugation {
         this.v_tn_rad_Vector = v_tn_rad_Vector;
         verb_trie = new Trie();
         for (Verb v : v_tn_rad_Vector) {
-            verb_trie.insert(v.radical);
+            verb_trie.insert(Verb.trimPrefix(v.getTemplate_name(), v.getInfinitive_form()));
         }
     }
 
@@ -222,7 +222,7 @@ class Deconjugation {
         // verb is already conjugated
         ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
         for (Verb v : v_tn_rad_Vector) {
-            if (v.radical.equals(radical)) {
+            if (v.isRadical(radical)) {
                 //this will be the indexes of possible verbs that can be refer back from v_tn_rad_Vector
                 listOfPossibleInfVerbs.add(v);
             }

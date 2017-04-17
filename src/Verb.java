@@ -8,21 +8,17 @@ import java.util.Comparator;
 public class Verb implements Comparator<Verb>, Comparable<Verb>{
     final String infinitive_form;
     final String template_name;
-    final String radical;
     public Verb(String infinitive_form){
         this.infinitive_form = infinitive_form;
         this.template_name = null;
-        this.radical = null;
     }
     public Verb(String infinitive_form, String template_name){
         this.infinitive_form = infinitive_form;
         this.template_name = template_name;
-        this.radical = trimPrefix(template_name, infinitive_form);
     }
     public Verb(Verb copy){
         this.infinitive_form = copy.infinitive_form;
         this.template_name = copy.template_name;
-        this.radical = copy.radical;
     }
     public String getInfinitive_form(){
         return infinitive_form;
@@ -57,6 +53,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
         return this.infinitive_form.compareTo(o.infinitive_form);
     }
     public String toString(){
-        return String.format("infinitive form: %s, template name: %s, radical: %s", infinitive_form, template_name, radical);
+        return String.format("infinitive form: %s, template name: %s", infinitive_form, template_name);
+    }
+    public boolean isRadical(String rad){
+        return trimPrefix(template_name, infinitive_form).equals(rad);
     }
 }
