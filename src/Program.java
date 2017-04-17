@@ -1,3 +1,4 @@
+import com.google.common.base.Joiner;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -133,8 +134,8 @@ class Conjugation {
                     ArrayList <String> p = new ArrayList <>();
                     Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
                     Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
-                    NodeList listP = (NodeList) ten.getElementsByTagName("p");
-                    NodeList listI = null;
+                    NodeList listP = ten.getElementsByTagName("p");
+                    NodeList listI;
                     int le = listP.getLength();
                     for (int j = 0; j < le; j++) {
                         boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
@@ -142,13 +143,10 @@ class Conjugation {
                             Element person = (Element) listP.item(j);
                             listI = person
                                     .getElementsByTagName("i");
-                            int length1 = listI.getLength();
-                            StringBuilder in = new StringBuilder();
-                            for (int k = 0; k < length1; k++) {
-                                if (k > 0) in.append("/");
-                                in.append(listI.item(k).getTextContent());
-                            }
-                            p.add(in.toString());
+                            int listILength = listI.getLength();
+                            if(listILength > 1)
+                                p.add(Joiner.on("/").join(NodeList2Array(listI)));
+                            else p.add(listI.item(0).getTextContent());
                         }
                     }
                     frefixesGroup.append(mode, tense, p);
@@ -158,25 +156,14 @@ class Conjugation {
         }
         Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
     }
-    /**
-     * append radical with list of prefixes when conjugated
-     *
-     * @param radical::String
-     * @param listOfPrefixes::String[][]
-     * @return String[][]
-     */
-    public static String[][] append(String radical, String[][] listOfPrefixes) {
-        // already trimPrefix
-        for (int i = 0; i < listOfPrefixes.length; i++) {
-            if (listOfPrefixes[i] == null)
-                continue;
-            for (int j = 0; j < listOfPrefixes[i].length; j++) {
-                listOfPrefixes[i][j] = radical + listOfPrefixes[i][j];
-            }
+    private String[] NodeList2Array(NodeList A){
+        int len = A.getLength();
+        String[] temp = new String[len];
+        for (int i = 0; i < len; i++) {
+            temp[i] = A.item(i).getTextContent();
         }
-        return listOfPrefixes;
+        return temp;
     }
-
     //todo : strip accent for input.
 
     /**

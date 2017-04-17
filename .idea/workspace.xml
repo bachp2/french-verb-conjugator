@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Driver.java" afterPath="$PROJECT_DIR$/src/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PrefixesGroup.java" afterPath="$PROJECT_DIR$/src/PrefixesGroup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,21 +24,18 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+            <state relative-caret-position="407">
+              <caret line="147" column="52" lean-forward="true" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
               <folding>
                 <element signature="docComment;class#Program#0" expanded="false" />
-                <element signature="class#Program#0" expanded="false" />
                 <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
                 <element signature="method#Program#0;class#Program#0" expanded="false" />
                 <element signature="method#main#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
                 <element signature="method#init#0;class#Program#0" expanded="false" />
                 <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+                <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-                <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-                <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-                <element signature="method#append#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -720,7 +714,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -744,17 +738,14 @@
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -783,17 +774,14 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -822,17 +810,14 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -860,17 +845,14 @@
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -898,17 +880,14 @@
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -937,17 +916,14 @@
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -976,17 +952,14 @@
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
@@ -1146,21 +1119,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+        <state relative-caret-position="407">
+          <caret line="147" column="52" lean-forward="true" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
           <folding>
             <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="class#Program#0" expanded="false" />
             <element signature="docComment;method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#Program#0;class#Program#0" expanded="false" />
             <element signature="method#main#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#init#0;class#Program#0" expanded="false" />
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
+            <element signature="method#Conjugation#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="docComment;method#append#0;class#Conjugation#0" expanded="false" />
-            <element signature="method#append#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchTemplateName#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchFrefixesGroup#0;class#Conjugation#0" expanded="false" />
