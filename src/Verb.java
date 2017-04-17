@@ -27,13 +27,13 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
         return template_name;
     }
     /**
-     * helper method to trimPrefix a verb into remaining radical (discard prefix)
+     * helper method to radical a verb into remaining radical (discard prefix)
      *
      * @param temp::String
      * @param v::String
      * @return
      */
-    public static String trimPrefix(String temp, String v) {
+    public static String radical(String temp, String v) {
         int index = 0;
         for (int i = 0; i < temp.length(); i++) {
             char c = temp.charAt(i);
@@ -42,6 +42,16 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
             }
         }
         return v.substring(0, v.length() - index);
+    }
+    public String radical(){
+        int index = 0;
+        for (int i = 0; i < template_name.length(); i++) {
+            char c = template_name.charAt(i);
+            if (c == ':') {
+                index = template_name.length() - 1 - i;
+            }
+        }
+        return infinitive_form.substring(0, infinitive_form.length() - index);
     }
     @Override
     public int compare(Verb o1, Verb o2) {
@@ -56,6 +66,6 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>{
         return String.format("infinitive form: %s, template name: %s", infinitive_form, template_name);
     }
     public boolean isRadical(String rad){
-        return trimPrefix(template_name, infinitive_form).equals(rad);
+        return radical(template_name, infinitive_form).equals(rad);
     }
 }

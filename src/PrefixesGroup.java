@@ -31,7 +31,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
         return (ArrayList<String>) table.get(mode, tense).clone();
     }
     public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
-        // already trimPrefix
+        // already radical
         ArrayList<String> conjugated = new ArrayList <>();
         for (String s : listOfPrefixes) {
             if(s.contains("/")){
@@ -59,5 +59,8 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
             //todo
         }
         return null;
+    }
+    public int getLengthOfRadical(){
+        return template_name.indexOf(':');
     }
 }

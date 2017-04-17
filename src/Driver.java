@@ -11,7 +11,7 @@ public class Driver {
      */
     public static void main(String[] args) {
 //        Conjugation conj = new Conjugation();
-//        String tn = conj.searchTemplateName("abjurer");
+//        String tn = conj.searchVerb("abjurer");
 //        String[][] p = conj.listOfPrefix(tn, "indicative", "future");
 //        for (int i = 0; i < p.length; i++) {
 //            if (p[i] != null) {
@@ -20,7 +20,7 @@ public class Driver {
 //                }
 //            }
 //        }
-//        String rad = Conjugation.trimPrefix(tn, "abjurer");
+//        String rad = Conjugation.radical(tn, "abjurer");
 //        System.out.println(rad);
 //        String[][] f = conj.append(rad, p);
 //

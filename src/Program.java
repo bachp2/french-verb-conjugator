@@ -1,4 +1,3 @@
-import com.google.common.base.Joiner;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -10,10 +9,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 /**
  * @author Bach Phan
@@ -36,7 +35,7 @@ public class Program {
     public static void main(String[] args) {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
-        String tn = p.conjugate.searchTemplateName("placer").template_name;
+        String tn = p.conjugate.searchVerb("placer").template_name;
         PrefixesGroup temp = p.conjugate.searchFrefixesGroup(tn);
         ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
         StringBuilder sb = new StringBuilder();
@@ -44,7 +43,7 @@ public class Program {
             sb.append(a + "\n");
         }
         System.out.print(sb.toString());
-        ArrayList<String> mylist = PrefixesGroup.append(Verb.trimPrefix(tn, "placer"), tmp);
+        ArrayList<String> mylist = PrefixesGroup.append(Verb.radical(tn, "placer"), tmp);
         StringBuilder sb1 = new StringBuilder();
         for (String a : mylist) {
             sb1.append(a + "\n");
@@ -168,7 +167,7 @@ class Conjugation {
     //todo : strip accent for input.
 
     /**
-     * searchTemplateName for template name with a given verb
+     * searchVerb for template name with a given verb
      * <p>
      * verb has to be of infinitive form
      * </p>
@@ -176,12 +175,12 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    public Verb searchTemplateName(String v) {
+    public Verb searchVerb(String v) {
         int index = Collections.binarySearch(v_tn_rad_Vector, new Verb(v));
         if (index >= 0)
             return v_tn_rad_Vector.get(index);//privacy leak
             //todo implement clone
-        else throw new ConjugationException("No verbs matchRadical the input%nLooking to deconjugate...");
+        else throw new ConjugationException("No verb match the string input%nLooking to deconjugate...");
     }
 
     public PrefixesGroup searchFrefixesGroup(String template_name) {
@@ -203,12 +202,12 @@ class Deconjugation {
         this.v_tn_rad_Vector = v_tn_rad_Vector;
         verb_trie = new Trie();
         for (Verb v : v_tn_rad_Vector) {
-            verb_trie.insert(Verb.trimPrefix(v.getTemplate_name(), v.getInfinitive_form()));
+            verb_trie.insert(v.radical());
         }
     }
 
     public String searchRadical(String verb) {
-        //searchTemplateName for radical that matchRadical the conjugated verb
+        //searchVerb for radical that matchRadical the conjugated verb
         return verb_trie.search(verb);
     }
 
@@ -229,7 +228,7 @@ class Deconjugation {
         }
         return listOfPossibleInfVerbs;
     }
-    public static boolean isOneMatch(ArrayList <Verb> list){
+    public static boolean isMatchWithOneCandidate(ArrayList <Verb> list){
         return list.size() == 1;
     }
 }

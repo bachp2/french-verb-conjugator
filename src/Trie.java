@@ -156,7 +156,7 @@ public class Trie {
         }
 
         /**
-         * searchTemplateName for sub-node in the current trie node
+         * searchVerb for sub-node in the current trie node
          *
          * @param c char
          * @return TrieNode
