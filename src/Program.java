@@ -68,8 +68,8 @@ public class Program {
 class Conjugation {
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
+    private ArrayList <PrefixesGroup> frefixes_Vector;
     protected ArrayList <Verb> v_tn_rad_Vector;
-    ArrayList <PrefixesGroup> frefixes_Vector;
 
     /**
      * empty constructor, when initiated will be use for the entire operation
@@ -146,7 +146,9 @@ class Conjugation {
                             int listILength = listI.getLength();
                             if(listILength > 1)
                                 p.add(Joiner.on("/").join(NodeList2Array(listI)));
-                            else p.add(listI.item(0).getTextContent());
+                            else if(listILength == 1)
+                                p.add(listI.item(0).getTextContent());
+                            else throw new NullPointerException();
                         }
                     }
                     frefixesGroup.append(mode, tense, p);
@@ -189,7 +191,6 @@ class Conjugation {
             return frefixes_Vector.get(index);//privacy leak
         else throw new ConjugationException("Can't find matching group with that template name ");
     }
-
 }
 
 class Deconjugation {
