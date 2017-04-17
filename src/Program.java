@@ -62,13 +62,6 @@ public class Program {
         deconjugate = new Deconjugation(conjugate.v_tn_rad_Vector);
     }
 
-    private boolean isMatchingPrefix(String[][] listOfPrefixes, String prefix) {
-        for (String[] e : listOfPrefixes) {
-            if (Arrays.asList(e).contains(prefix))
-                return true;
-        }
-        return false;
-    }
 }
 
 class Conjugation {
@@ -93,57 +86,9 @@ class Conjugation {
                     .newInstance().newDocumentBuilder();
             nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
             nConj = dBuilder.parse(conFile).getElementsByTagName("template");
-            int length1 = nVerbs.getLength();
-            v_tn_rad_Vector = new ArrayList <>();
-            for (int i = 0; i < length1; i++) {
-                Element node = (Element) nVerbs.item(i);
-                String verb = node.getElementsByTagName("i").item(0)
-                        .getTextContent();
-                String template_name = node.getElementsByTagName("t").item(0)
-                        .getTextContent();
-                Verb temp = new Verb(verb, template_name);
-                v_tn_rad_Vector.add(temp);
-            }
-            Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
+            initVerbs(nVerbs);
+            initConjugation(nConj);
 
-
-            frefixes_Vector = new ArrayList <>(1000);
-            length1 = nConj.getLength();
-            for (int i = 0; i < length1; i++) {
-                Node temp = nConj.item(i);
-                Element tmp = (Element) temp;
-                String t_n = temp.getAttributes().getNamedItem("name")
-                        .getNodeValue();
-                PrefixesGroup frefixesGroup = new PrefixesGroup(t_n);
-                for (Mode mode : Mode.values()) {
-                    for (Mode.Tense tense : mode.getTenses()) {
-                        ArrayList <String> p = new ArrayList <>();
-                        Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
-                        Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
-                        NodeList listP = (NodeList) ten.getElementsByTagName("p");
-                        NodeList listI = null;
-                        int le = listP.getLength();
-                        for (int j = 0; j < le; j++) {
-                            boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
-                            if (isType) {
-                                Element person = (Element) listP.item(j);
-                                listI = person
-                                        .getElementsByTagName("i");
-                                int length = listI.getLength();
-                                StringBuilder in = new StringBuilder();
-                                for (int k = 0; k < length; k++) {
-                                    if (k > 0) in.append("/");
-                                    in.append(listI.item(k).getTextContent());
-                                }
-                                p.add(in.toString());
-                            }
-                        }
-                        frefixesGroup.append(mode, tense, p);
-                    }
-                    frefixes_Vector.add(frefixesGroup);
-                }
-            }
-            Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -159,7 +104,60 @@ class Conjugation {
             nConj = null;
         }
     }
+    private void initVerbs(NodeList nVerbs){
+        int length1 = nVerbs.getLength();
+        v_tn_rad_Vector = new ArrayList <>();
+        for (int i = 0; i < length1; i++) {
+            Element node = (Element) nVerbs.item(i);
+            String verb = node.getElementsByTagName("i").item(0)
+                    .getTextContent();
+            String template_name = node.getElementsByTagName("t").item(0)
+                    .getTextContent();
+            Verb temp = new Verb(verb, template_name);
+            v_tn_rad_Vector.add(temp);
+        }
+        Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
+    }
 
+    private void initConjugation(NodeList nConj){
+        frefixes_Vector = new ArrayList <>(1000);
+        int length = nConj.getLength();
+        for (int i = 0; i < length; i++) {
+            Node temp = nConj.item(i);
+            Element tmp = (Element) temp;
+            String t_n = temp.getAttributes().getNamedItem("name")
+                    .getNodeValue();
+            PrefixesGroup frefixesGroup = new PrefixesGroup(t_n);
+            for (Mode mode : Mode.values()) {
+                for (Mode.Tense tense : mode.getTenses()) {
+                    ArrayList <String> p = new ArrayList <>();
+                    Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
+                    Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
+                    NodeList listP = (NodeList) ten.getElementsByTagName("p");
+                    NodeList listI = null;
+                    int le = listP.getLength();
+                    for (int j = 0; j < le; j++) {
+                        boolean isType = (listP.item(j).getNodeType() == Node.ELEMENT_NODE);
+                        if (isType) {
+                            Element person = (Element) listP.item(j);
+                            listI = person
+                                    .getElementsByTagName("i");
+                            int length1 = listI.getLength();
+                            StringBuilder in = new StringBuilder();
+                            for (int k = 0; k < length1; k++) {
+                                if (k > 0) in.append("/");
+                                in.append(listI.item(k).getTextContent());
+                            }
+                            p.add(in.toString());
+                        }
+                    }
+                    frefixesGroup.append(mode, tense, p);
+                }
+                frefixes_Vector.add(frefixesGroup);
+            }
+        }
+        Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
+    }
     /**
      * append radical with list of prefixes when conjugated
      *
@@ -195,7 +193,7 @@ class Conjugation {
         if (index >= 0)
             return v_tn_rad_Vector.get(index);//privacy leak
             //todo implement clone
-        else throw new ConjugationException("No verbs match the input%nLooking to deconjugate...");
+        else throw new ConjugationException("No verbs matchRadical the input%nLooking to deconjugate...");
     }
 
     public PrefixesGroup searchFrefixesGroup(String template_name) {
@@ -223,17 +221,17 @@ class Deconjugation {
     }
 
     public String searchRadical(String verb) {
-        //searchTemplateName for radical that match the conjugated verb
+        //searchTemplateName for radical that matchRadical the conjugated verb
         return verb_trie.search(verb);
     }
 
     /**
-     * match conjugated verb with a probable radical then return verb and template name
+     * matchRadical conjugated verb with a probable radical then return verb and template name
      *
      * @param radical String
      * @return String[] -> 2 entries::verb & templateName
      */
-    public ArrayList <Verb> match(String radical) {
+    public ArrayList <Verb> matchRadical(String radical) {
         // verb is already conjugated
         ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
         for (Verb v : v_tn_rad_Vector) {
@@ -243,5 +241,8 @@ class Deconjugation {
             }
         }
         return listOfPossibleInfVerbs;
+    }
+    public static boolean isOneMatch(ArrayList <Verb> list){
+        return list.size() == 1;
     }
 }

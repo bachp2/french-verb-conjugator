@@ -32,7 +32,7 @@ public class Driver {
 //            }
 //        }
 //        Deconjugation deconj = new Conjugation().new Deconjugation();
-//        //System.out.println(deconj.match("places"));
+//        //System.out.println(deconj.matchRadical("places"));
 //        for(List<String> l : deconj.getList()){
 //            if(l.get(0).length() == 1)
 //                System.out.println( l.get(0).concat(l.get(1).substring(l.get(1).indexOf(':')+1)) + " " + l.get(1) );
@@ -40,9 +40,9 @@ public class Driver {
 //        System.out.println("===============================");
 //        int i = 1;
 //        for(List<String> l : deconj.getList()) {
-//            if (deconj.match(l.get(0)).spli.equals(l.get(0)))
+//            if (deconj.matchRadical(l.get(0)).spli.equals(l.get(0)))
 //                System.out.print(".");
-//            else System.out.println(deconj.match(l.get(0))+" "+l.get(0));
+//            else System.out.println(deconj.matchRadical(l.get(0))+" "+l.get(0));
 //            if (i%30 == 0)
 //                System.out.println(i+" "+i/30);
 //            i++;

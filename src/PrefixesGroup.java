@@ -1,3 +1,4 @@
+import com.google.common.base.Joiner;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import org.jetbrains.annotations.NotNull;
@@ -35,12 +36,7 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
         for (String s : listOfPrefixes) {
             if(s.contains("/")){
                 StringBuilder temp = new StringBuilder();
-                String[] ptmp = s.split("/");
-                for(int i = 0; i < ptmp.length; i++){
-                    if(i < ptmp.length - 1) temp.append(radical + ptmp[i] + "/");
-                    else temp.append(radical + ptmp[i]);
-                }
-                conjugated.add(temp.toString());
+                conjugated.add(Joiner.on("/").join(s.split("/")));
             }
             else conjugated.add(radical + s);
         }
