@@ -50,6 +50,8 @@ public class Program {
         }
         System.out.println(sb1);
         System.out.println(tn);
+        //String s1 = "handir";
+        //System.out.println(Deconjugation.isConjugated(s1));
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }
@@ -235,6 +237,6 @@ class Deconjugation {
     }
     public static boolean isConjugated(String verb){
         //todo regex suffix
-        return verb.matches("^.*[ir|er|re]$");
+        return verb.endsWith("er")||verb.endsWith("ir")||verb.endsWith("re");
     }
 }

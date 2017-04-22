@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/french-verb-conjugator.iml" afterPath="$PROJECT_DIR$/french-verb-conjugator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,16 +26,16 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1633">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="-1803">
+              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3482#3483#0" expanded="true" />
-                <element signature="e#3513#3514#0" expanded="true" />
+                <element signature="e#3576#3577#0" expanded="true" />
+                <element signature="e#3607#3608#0" expanded="true" />
                 <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#7708#7709#0" expanded="true" />
-                <element signature="e#7739#7740#0" expanded="true" />
+                <element signature="e#7802#7803#0" expanded="true" />
+                <element signature="e#7833#7834#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -645,12 +647,12 @@
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,12 +672,12 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -695,12 +697,12 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,12 +721,12 @@
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,12 +745,12 @@
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,12 +770,12 @@
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,12 +795,12 @@
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -923,7 +925,7 @@
     <entry file="file://$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -946,16 +948,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1633">
-          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="-1803">
+          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7708#7709#0" expanded="true" />
-            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7802#7803#0" expanded="true" />
+            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
