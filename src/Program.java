@@ -59,7 +59,7 @@ public class Program {
      */
     private void init() {
         conjugate = Conjugation.getInstance();
-        deconjugate = new Deconjugation();
+        deconjugate = Deconjugation.getInstance();
     }
 
 }
@@ -190,19 +190,23 @@ class Conjugation {
 }
 
 class Deconjugation {
-    private final ArrayList <Verb> verbsGroup;
-    private Trie verb_trie;
-
-    /**
-     * empty constructor
-     */
-    public Deconjugation() {
-        this.verbsGroup = Conjugation.verbsGroup;
+    private static final ArrayList <Verb> verbsGroup;
+    private static final Trie verb_trie;
+    private static Deconjugation INSTANCE = new Deconjugation();
+    static{
+        verbsGroup = Conjugation.verbsGroup;
         verb_trie = new Trie();
         for (Verb v : verbsGroup) {
             verb_trie.insert(v.radical());
         }
     }
+    public static Deconjugation getInstance(){
+        return INSTANCE;
+    }
+    /**
+     * empty constructor
+     */
+    private Deconjugation() {}
 
     public String searchRadical(String verb) {
         //searchVerb for radical that matchRadical the conjugated verb
