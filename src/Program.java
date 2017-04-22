@@ -58,53 +58,51 @@ public class Program {
      * helper method to initialize Program constructor
      */
     private void init() {
-        conjugate = new Conjugation();
+        conjugate = Conjugation.getInstance();
         deconjugate = new Deconjugation(conjugate.v_tn_rad_Vector);
     }
 
 }
 
 class Conjugation {
+    private static Conjugation INSTANCE = new Conjugation();
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    private ArrayList <PrefixesGroup> frefixes_Vector;
-    protected ArrayList <Verb> v_tn_rad_Vector;
-
-    /**
-     * empty constructor, when initiated will be use for the entire operation
-     */
-    public Conjugation() {
-        File vFile, conFile;
-        NodeList nVerbs, nConj;
-        DocumentBuilder dBuilder;
+    private static ArrayList <PrefixesGroup> frefixes_Vector;
+    protected static ArrayList <Verb> v_tn_rad_Vector;
+    static{
         try {
             //read verbs-fr.xml file
-            vFile = new File(path_to_verbs_fr);
+            File vFile = new File(path_to_verbs_fr);
             //read conjugate-fr.xml file
-            conFile = new File(path_to_conjugation_fr);
-            dBuilder = DocumentBuilderFactory
-                    .newInstance().newDocumentBuilder();
-            nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
-            nConj = dBuilder.parse(conFile).getElementsByTagName("template");
+            File conFile = new File(path_to_conjugation_fr);
+            DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            NodeList nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
+            NodeList nConj = dBuilder.parse(conFile).getElementsByTagName("template");
             initVerbs(nVerbs);
             initConjugation(nConj);
-
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
             //clean up resource
             vFile = null;
             conFile = null;
             dBuilder = null;
             nVerbs = null;
             nConj = null;
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-    private void initVerbs(NodeList nVerbs){
+    /**
+     * empty constructor, when initiated will be use for the entire operation
+     */
+    private Conjugation() {}
+    public static Conjugation getInstance(){
+        return INSTANCE;
+    }
+    private static void initVerbs(NodeList nVerbs){
         int length1 = nVerbs.getLength();
         v_tn_rad_Vector = new ArrayList <>();
         for (int i = 0; i < length1; i++) {
@@ -119,7 +117,7 @@ class Conjugation {
         Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
     }
 
-    private void initConjugation(NodeList nConj){
+    private static void initConjugation(NodeList nConj){
         frefixes_Vector = new ArrayList <>(1000);
         int length = nConj.getLength();
         for (int i = 0; i < length; i++) {
@@ -156,7 +154,7 @@ class Conjugation {
         }
         Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
     }
-    private String[] NodeList2Array(NodeList A){
+    private static String[] NodeList2Array(NodeList A){
         int len = A.getLength();
         String[] temp = new String[len];
         for (int i = 0; i < len; i++) {
