@@ -36,14 +36,14 @@ public class Program {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
         String tn = p.conjugate.searchVerb("placer").template_name;
-        PrefixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
+        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
         ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
         StringBuilder sb = new StringBuilder();
         for (String a : tmp) {
             sb.append(a + "\n");
         }
         System.out.print(sb.toString());
-        ArrayList<String> mylist = PrefixesGroup.append(Verb.radical(tn, "placer"), tmp);
+        ArrayList<String> mylist = SuffixesGroup.append(Verb.radical(tn, "placer"), tmp);
         StringBuilder sb1 = new StringBuilder();
         for (String a : mylist) {
             sb1.append(a + "\n");
@@ -59,7 +59,7 @@ public class Program {
      */
     private void init() {
         conjugate = Conjugation.getInstance();
-        deconjugate = new Deconjugation(conjugate.v_tn_rad_Vector);
+        deconjugate = new Deconjugation();
     }
 
 }
@@ -68,8 +68,8 @@ class Conjugation {
     private static Conjugation INSTANCE = new Conjugation();
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    private static ArrayList <PrefixesGroup> frefixes_Vector;
-    protected static ArrayList <Verb> v_tn_rad_Vector;
+    private static ArrayList <SuffixesGroup> suffixesGroups;
+    protected static ArrayList <Verb> verbsGroup;
     static{
         try {
             //read verbs-fr.xml file
@@ -104,7 +104,7 @@ class Conjugation {
     }
     private static void initVerbs(NodeList nVerbs){
         int length1 = nVerbs.getLength();
-        v_tn_rad_Vector = new ArrayList <>();
+        verbsGroup = new ArrayList <>();
         for (int i = 0; i < length1; i++) {
             Element node = (Element) nVerbs.item(i);
             String verb = node.getElementsByTagName("i").item(0)
@@ -112,20 +112,20 @@ class Conjugation {
             String template_name = node.getElementsByTagName("t").item(0)
                     .getTextContent();
             Verb temp = new Verb(verb, template_name);
-            v_tn_rad_Vector.add(temp);
+            verbsGroup.add(temp);
         }
-        Collections.sort(v_tn_rad_Vector, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
+        Collections.sort(verbsGroup, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
     }
 
     private static void initConjugation(NodeList nConj){
-        frefixes_Vector = new ArrayList <>(1000);
+        suffixesGroups = new ArrayList <>(1000);
         int length = nConj.getLength();
         for (int i = 0; i < length; i++) {
             Node temp = nConj.item(i);
             Element tmp = (Element) temp;
             String t_n = temp.getAttributes().getNamedItem("name")
                     .getNodeValue();
-            PrefixesGroup frefixesGroup = new PrefixesGroup(t_n);
+            SuffixesGroup frefixesGroup = new SuffixesGroup(t_n);
             for (Mode mode : Mode.values()) {
                 for (Mode.Tense tense : mode.getTenses()) {
                     ArrayList <String> p = new ArrayList <>();
@@ -149,10 +149,10 @@ class Conjugation {
                     }
                     frefixesGroup.append(mode, tense, p);
                 }
-                frefixes_Vector.add(frefixesGroup);
+                suffixesGroups.add(frefixesGroup);
             }
         }
-        Collections.sort(frefixes_Vector, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
+        Collections.sort(suffixesGroups, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
     }
     private static String[] NodeList2Array(NodeList A){
         int len = A.getLength();
@@ -174,32 +174,32 @@ class Conjugation {
      * @return String[][]
      */
     public Verb searchVerb(String v) {
-        int index = Collections.binarySearch(v_tn_rad_Vector, new Verb(v));
+        int index = Collections.binarySearch(verbsGroup, new Verb(v));
         if (index >= 0)
-            return v_tn_rad_Vector.get(index);//privacy leak
+            return verbsGroup.get(index);//privacy leak
             //todo implement clone
         else throw new ConjugationException("No verb match the string input%nLooking to deconjugate...");
     }
 
-    public PrefixesGroup searchSuffixesGroup(String template_name) {
-        int index = Collections.binarySearch(frefixes_Vector, new PrefixesGroup(template_name));
+    public SuffixesGroup searchSuffixesGroup(String template_name) {
+        int index = Collections.binarySearch(suffixesGroups, new SuffixesGroup(template_name));
         if (index >= 0)
-            return frefixes_Vector.get(index);//privacy leak
+            return suffixesGroups.get(index);//privacy leak
         else throw new ConjugationException("Can't find matching group with that template name ");
     }
 }
 
 class Deconjugation {
-    private final ArrayList <Verb> v_tn_rad_Vector;
-    protected Trie verb_trie;
+    private final ArrayList <Verb> verbsGroup;
+    private Trie verb_trie;
 
     /**
      * empty constructor
      */
-    public Deconjugation(ArrayList <Verb> v_tn_rad_Vector) {
-        this.v_tn_rad_Vector = v_tn_rad_Vector;
+    public Deconjugation() {
+        this.verbsGroup = Conjugation.verbsGroup;
         verb_trie = new Trie();
-        for (Verb v : v_tn_rad_Vector) {
+        for (Verb v : verbsGroup) {
             verb_trie.insert(v.radical());
         }
     }
@@ -218,9 +218,9 @@ class Deconjugation {
     public ArrayList <Verb> matchRadical(String radical) {
         // verb is already conjugated
         ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
-        for (Verb v : v_tn_rad_Vector) {
+        for (Verb v : verbsGroup) {
             if (v.isRadical(radical)) {
-                //this will be the indexes of possible verbs that can be refer back from v_tn_rad_Vector
+                //this will be the indexes of possible verbs that can be refer back from verbsGroup
                 listOfPossibleInfVerbs.add(v);
             }
         }

@@ -11,10 +11,10 @@ import java.util.Set;
 /**
  * Created by bachp on 4/2/2017.
  */
-public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<PrefixesGroup>{
+public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>{
     public final String template_name;
     protected Table<Mode, Mode.Tense, ArrayList<String>> table;
-    public PrefixesGroup(String template_name){
+    public SuffixesGroup(String template_name){
         this.template_name = template_name;
         table = HashBasedTable.create();
     }
@@ -44,12 +44,12 @@ public class PrefixesGroup implements Comparator<PrefixesGroup>, Comparable<Pref
     }
 
     @Override
-    public int compare(PrefixesGroup o1, PrefixesGroup o2) {
+    public int compare(SuffixesGroup o1, SuffixesGroup o2) {
         return o1.template_name.compareTo(o2.template_name);
     }
 
     @Override
-    public int compareTo(@NotNull PrefixesGroup o) {
+    public int compareTo(@NotNull SuffixesGroup o) {
         return this.template_name.compareTo(o.template_name);
     }
     public String toString(){
