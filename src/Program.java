@@ -1,3 +1,6 @@
+import DataStructure.Mode;
+import DataStructure.Tense;
+import DataStructure.Trie;
 import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ArrayListMultimap;
@@ -42,7 +45,7 @@ public class Program {
         // Deconjugation.similarRadical();
 //        String tn = p.conjugate.searchVerb("décapeler").template_name;
 //        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
-//        ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
+//        ArrayList <String> tmp = temp.getPrefixes(DataStructure.Mode.indicative, DataStructure.Mode.Tense.past);
 //        StringBuilder sb = new StringBuilder();
 //        for (String a : tmp) {
 //            sb.append(a + "\n");
@@ -137,9 +140,9 @@ class Conjugation {
             Element tmp = (Element) temp;
             String t_n = temp.getAttributes().getNamedItem("name")
                     .getNodeValue();
-            SuffixesGroup frefixesGroup = new SuffixesGroup(t_n);
+            SuffixesGroup suffixesGroup = new SuffixesGroup(t_n);
             for (Mode mode : Mode.values()) {
-                for (Mode.Tense tense : mode.getTenses()) {
+                for (Tense tense : mode.getTenses()) {
                     ArrayList <String> p = new ArrayList <>();
                     Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
                     Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
@@ -159,9 +162,9 @@ class Conjugation {
                                 p.add(listI.item(0).getTextContent());
                         }
                     }
-                    frefixesGroup.append(mode, tense, p);
+                    suffixesGroup.append(mode, tense, p);
                 }
-                suffixesGroups.add(frefixesGroup);
+                suffixesGroups.add(suffixesGroup);
             }
         }
         Collections.sort(suffixesGroups, (o1, o2) -> o1.getTemplateName().compareTo(o2.getTemplateName()));

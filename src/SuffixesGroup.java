@@ -1,3 +1,5 @@
+import DataStructure.Mode;
+import DataStructure.Tense;
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
@@ -14,21 +16,21 @@ import java.util.Set;
  */
 public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>{
     private final String template_name;
-    protected final Table<Mode, Mode.Tense, ArrayList<String>> table;
+    protected final Table<Mode, Tense, ArrayList<String>> table;
     public SuffixesGroup(String template_name){
         this.template_name = template_name;
         table = HashBasedTable.create();
     }
-    public void append(Mode mode, Mode.Tense tense, ArrayList<String> prefixes){
+    public void append(Mode mode, Tense tense, ArrayList<String> prefixes){
         table.put(mode, tense, prefixes);
     }
     public boolean isEmpty(){
         return table.isEmpty();
     }
-    public ArrayList<String> getPrefixes(Mode mode, Mode.Tense tense){
+    public ArrayList<String> getPrefixes(Mode mode, Tense tense){
         return (ArrayList <String>) table.get(mode, tense);
     }
-    public ArrayList<String> getPrefixesGroup(Mode mode, Mode.Tense tense){
+    public ArrayList<String> getPrefixesGroup(Mode mode, Tense tense){
         return (ArrayList<String>) table.get(mode, tense);
     }
     public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
@@ -64,12 +66,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         return this.template_name.compareTo(o.template_name);
     }
     public String toString(){
-        Set<Mode> modes = table.rowKeySet();
-        Set<Mode.Tense> tense = table.columnKeySet();
-        for(Mode mode : modes){
-            //todo
-        }
-        return null;
+        return template_name;
     }
     public int getLengthOfRadical(){
         return template_name.indexOf(':');

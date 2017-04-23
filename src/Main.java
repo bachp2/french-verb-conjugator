@@ -1,3 +1,5 @@
+import DataStructure.Mode;
+import DataStructure.Tense;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 
@@ -13,8 +15,8 @@ public class Main {
     private List <String> verbs = new ArrayList <>();
     @Parameter(names = {"--mode", "-m"}, converter = Mode.ModeConverter.class)
     private List <Mode> modes = new ArrayList <>();
-    @Parameter(names = {"--tense", "-t"}, converter = Mode.Tense.TenseConverter.class)
-    List <ArrayList <Mode.Tense>> tenses = new ArrayList <>();
+    @Parameter(names = {"--tense", "-t"}, converter = Tense.TenseConverter.class)
+    List <ArrayList <Tense>> tenses = new ArrayList <>();
 
     /**
      * build the program

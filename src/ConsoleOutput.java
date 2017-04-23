@@ -1,15 +1,18 @@
+import DataStructure.Mode;
+import DataStructure.Tense;
+
 /**
  * Created by bachp on 3/26/2017.
  */
 public class ConsoleOutput  {
     private String verbToBeConjugated;
     private Mode mode;
-    private Mode.Tense tense;
+    private Tense tense;
     private String[][] conjugatedForm;
     private String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
     private ConsoleOutput instance;
 
-    public ConsoleOutput(String verb, Mode mode, Mode.Tense tense, String[][] conjugatedForm) {
+    public ConsoleOutput(String verb, Mode mode, Tense tense, String[][] conjugatedForm) {
         this.verbToBeConjugated = verb;
         this.mode = mode;
         this.tense = tense;

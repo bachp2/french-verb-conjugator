@@ -1,3 +1,5 @@
+package DataStructure;
+
 /**
  * Created by bachp on 1/31/2017.
  */
@@ -134,7 +136,7 @@ public class Trie {
     }
 
     /**
-     * this class is a subclass used for Trie
+     * this class is a subclass used for DataStructure.Trie
      * use for the arrangement of childList
      */
 
