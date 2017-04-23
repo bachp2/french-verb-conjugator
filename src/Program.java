@@ -36,7 +36,7 @@ public class Program {
     public static void main(String[] args) {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
-        Deconjugation.similarRadical();
+        // Deconjugation.similarRadical();
 //        String tn = p.conjugate.searchVerb("décapeler").template_name;
 //        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
 //        ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
@@ -156,7 +156,7 @@ class Conjugation {
                 suffixesGroups.add(frefixesGroup);
             }
         }
-        Collections.sort(suffixesGroups, (o1, o2) -> o1.template_name.compareTo(o2.template_name));
+        Collections.sort(suffixesGroups, (o1, o2) -> o1.getTemplateName().compareTo(o2.getTemplateName()));
     }
     private static String[] NodeList2Array(NodeList A){
         int len = A.getLength();
@@ -177,7 +177,7 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    public Verb searchVerb(String v) {
+    public static Verb searchVerb(String v) {
         int index = Collections.binarySearch(verbsGroup, new Verb(v));
         if (index >= 0)
             return verbsGroup.get(index);//privacy leak
@@ -185,11 +185,15 @@ class Conjugation {
         else throw new ConjugationException("No verb match the string input%nLooking to deconjugate...");
     }
 
-    public SuffixesGroup searchSuffixesGroup(String template_name) {
+    public static SuffixesGroup searchSuffixesGroup(String template_name) {
         int index = Collections.binarySearch(suffixesGroups, new SuffixesGroup(template_name));
         if (index >= 0)
             return suffixesGroups.get(index);//privacy leak
         else throw new ConjugationException("Can't find matching group with that template name ");
+    }
+
+    public static boolean isNotConjugated(String s){
+        return !Deconjugation.isConjugated(s);
     }
 }
 
@@ -223,21 +227,24 @@ class Deconjugation {
      * @param radical String
      * @return String[] -> 2 entries::verb & templateName
      */
-    public ArrayList <Verb> matchRadical(String radical) {
+    public Verb matchRadical(String radical, String verb) {
         // verb is already conjugated
-        ArrayList <Verb> listOfPossibleInfVerbs = new ArrayList <>();
-        for (Verb v : verbsGroup) {
-            if (v.isRadical(radical)) {
-                //this will be the indexes of possible verbs that can be refer back from verbsGroup
-                listOfPossibleInfVerbs.add(v);
+        String suffix = verb.substring(radical.length());
+        if(radical.equals("")) radical = "null";
+        if(SimilarRadsDict.containsSimilarRadical(radical)){
+            for(String s : SimilarRadsDict.getVerbsString(radical)){
+                Verb v = Conjugation.searchVerb(s);
+                SuffixesGroup suffixesGroup = Conjugation.searchSuffixesGroup(v.getTemplate_name());
+                if(suffixesGroup.containsSuffix(suffix)) return v;
             }
         }
-        return listOfPossibleInfVerbs;
+        return null;
     }
     public static boolean isMatchWithOneCandidate(ArrayList <Verb> list){
         return list.size() == 1;
     }
-    public static void similarRadical(){
+
+    private static void similarRadical(){
         ListMultimap<String, String> multimap = ArrayListMultimap.create();
         for(Verb v : verbsGroup){
             multimap.put(v.radical(), v.infinitive_form);
@@ -253,6 +260,7 @@ class Deconjugation {
             // ...
         }
     }
+
     private static Collection<String> stringWrapper(Collection<String> s){
         Collection<String> temp = new ArrayList <>();
         for(String a : s){
@@ -263,7 +271,6 @@ class Deconjugation {
     }
 
     public static boolean isConjugated(String verb){
-        //todo regex suffix
         return !(verb.endsWith("er")||verb.endsWith("ir")||verb.endsWith("re"));
     }
 }

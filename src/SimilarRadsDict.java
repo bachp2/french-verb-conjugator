@@ -206,7 +206,7 @@ public class SimilarRadsDict {
     public static boolean containsSimilarRadical(String s){
         return MAP.containsKey(s);
     }
-    public static String[] getVerbsString(String key){
+    public static String[] getVerbsString(String key) throws NullPointerException{
         return MAP.get(key);
     }
 }

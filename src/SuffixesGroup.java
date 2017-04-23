@@ -4,6 +4,7 @@ import com.google.common.collect.Table;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Set;
 
@@ -12,8 +13,8 @@ import java.util.Set;
  * Created by bachp on 4/2/2017.
  */
 public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>{
-    public final String template_name;
-    protected Table<Mode, Mode.Tense, ArrayList<String>> table;
+    private final String template_name;
+    protected final Table<Mode, Mode.Tense, ArrayList<String>> table;
     public SuffixesGroup(String template_name){
         this.template_name = template_name;
         table = HashBasedTable.create();
@@ -25,10 +26,10 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         return table.isEmpty();
     }
     public ArrayList<String> getPrefixes(Mode mode, Mode.Tense tense){
-        return (ArrayList <String>) table.get(mode, tense).clone();
+        return (ArrayList <String>) table.get(mode, tense);
     }
     public ArrayList<String> getPrefixesGroup(Mode mode, Mode.Tense tense){
-        return (ArrayList<String>) table.get(mode, tense).clone();
+        return (ArrayList<String>) table.get(mode, tense);
     }
     public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
         // already radical
@@ -42,7 +43,17 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         }
         return conjugated;
     }
-
+    public String getTemplateName(){
+        return template_name;
+    }
+    public boolean containsSuffix(String suffix){
+        for(Collection<String> s : table.values()){
+            if(s.contains(suffix)){
+                return true;
+            }
+        }
+        return false;
+    }
     @Override
     public int compare(SuffixesGroup o1, SuffixesGroup o2) {
         return o1.template_name.compareTo(o2.template_name);
