@@ -1,3 +1,5 @@
+import com.google.common.base.Joiner;
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
 import org.w3c.dom.Element;
@@ -10,11 +12,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import com.google.common.base.Joiner;
-import com.google.common.base.Stopwatch;
 /**
  * @author Bach Phan
  * @version 01/31/2017
@@ -69,12 +72,13 @@ public class Program {
 }
 
 class Conjugation {
-    private static Conjugation INSTANCE = new Conjugation();
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    private static ArrayList <SuffixesGroup> suffixesGroups;
     protected static ArrayList <Verb> verbsGroup;
-    static{
+    private static Conjugation INSTANCE = new Conjugation();
+    private static ArrayList <SuffixesGroup> suffixesGroups;
+
+    static {
         try {
             //read verbs-fr.xml file
             File vFile = new File(path_to_verbs_fr);
@@ -99,14 +103,18 @@ class Conjugation {
             e.printStackTrace();
         }
     }
+
     /**
      * empty constructor, when initiated will be use for the entire operation
      */
-    private Conjugation() {}
-    public static Conjugation getInstance(){
+    private Conjugation() {
+    }
+
+    public static Conjugation getInstance() {
         return INSTANCE;
     }
-    private static void initVerbs(NodeList nVerbs){
+
+    private static void initVerbs(NodeList nVerbs) {
         int length1 = nVerbs.getLength();
         verbsGroup = new ArrayList <>();
         for (int i = 0; i < length1; i++) {
@@ -121,7 +129,7 @@ class Conjugation {
         Collections.sort(verbsGroup, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
     }
 
-    private static void initConjugation(NodeList nConj){
+    private static void initConjugation(NodeList nConj) {
         suffixesGroups = new ArrayList <>(1000);
         int length = nConj.getLength();
         for (int i = 0; i < length; i++) {
@@ -145,9 +153,9 @@ class Conjugation {
                             listI = person
                                     .getElementsByTagName("i");
                             int listILength = listI.getLength();
-                            if(listILength > 1)
+                            if (listILength > 1)
                                 p.add(Joiner.on("/").join(NodeList2Array(listI)));
-                            else if(listILength == 1)
+                            else if (listILength == 1)
                                 p.add(listI.item(0).getTextContent());
                         }
                     }
@@ -158,7 +166,8 @@ class Conjugation {
         }
         Collections.sort(suffixesGroups, (o1, o2) -> o1.getTemplateName().compareTo(o2.getTemplateName()));
     }
-    private static String[] NodeList2Array(NodeList A){
+
+    private static String[] NodeList2Array(NodeList A) {
         int len = A.getLength();
         String[] temp = new String[len];
         for (int i = 0; i < len; i++) {
@@ -182,7 +191,7 @@ class Conjugation {
         if (index >= 0)
             return verbsGroup.get(index);//privacy leak
             //todo implement clone
-        else throw new ConjugationException("No verb match the string input%nLooking to deconjugate...");
+        else return null;
     }
 
     public static SuffixesGroup searchSuffixesGroup(String template_name) {
@@ -192,7 +201,7 @@ class Conjugation {
         else throw new ConjugationException("Can't find matching group with that template name ");
     }
 
-    public static boolean isNotConjugated(String s){
+    public static boolean isNotConjugated(String s) {
         return !Deconjugation.isConjugated(s);
     }
 }
@@ -201,20 +210,58 @@ class Deconjugation {
     private static final ArrayList <Verb> verbsGroup;
     private static final Trie verb_trie;
     private static Deconjugation INSTANCE = new Deconjugation();
-    static{
+
+    static {
         verbsGroup = Conjugation.verbsGroup;
         verb_trie = new Trie();
         for (Verb v : verbsGroup) {
             verb_trie.insert(v.radical());
         }
     }
-    public static Deconjugation getInstance(){
-        return INSTANCE;
-    }
+
     /**
      * empty constructor
      */
-    private Deconjugation() {}
+    private Deconjugation() {
+    }
+
+    public static Deconjugation getInstance() {
+        return INSTANCE;
+    }
+
+    public static boolean isMatchWithOneCandidate(ArrayList <Verb> list) {
+        return list.size() == 1;
+    }
+
+    private static void similarRadical() {
+        ListMultimap <String, String> multimap = ArrayListMultimap.create();
+        for (Verb v : verbsGroup) {
+            multimap.put(v.radical(), v.infinitive_form);
+        }
+        Map <String, Collection <String>> m = multimap.asMap();
+        for (Map.Entry <String, Collection <String>> entry : m.entrySet()) {
+            String key = entry.getKey();
+            Collection <String> values = entry.getValue();
+            if (values.size() > 1) {
+                System.out.print("map.put(\"" + key + "\",new String[]{");
+                System.out.println(Joiner.on(',').join(stringWrapper(values)) + "});");
+            }
+            // ...
+        }
+    }
+
+    private static Collection <String> stringWrapper(Collection <String> s) {
+        Collection <String> temp = new ArrayList <>();
+        for (String a : s) {
+            String b = "\"" + a + "\"";
+            temp.add(b);
+        }
+        return temp;
+    }
+
+    public static boolean isConjugated(String verb) {
+        return !(verb.endsWith("er") || verb.endsWith("ir") || verb.endsWith("re"));
+    }
 
     public String searchRadical(String verb) {
         //searchVerb for radical that matchRadical the conjugated verb
@@ -230,47 +277,19 @@ class Deconjugation {
     public Verb matchRadical(String radical, String verb) {
         // verb is already conjugated
         String suffix = verb.substring(radical.length());
-        if(radical.equals("")) radical = "null";
-        if(SimilarRadsDict.containsSimilarRadical(radical)){
-            for(String s : SimilarRadsDict.getVerbsString(radical)){
+        if (radical.equals("")) radical = "null";
+        if (SimilarRadsDict.contains(radical)) {
+            for (String s : SimilarRadsDict.getVerbsString(radical)) {
                 Verb v = Conjugation.searchVerb(s);
                 SuffixesGroup suffixesGroup = Conjugation.searchSuffixesGroup(v.getTemplate_name());
-                if(suffixesGroup.containsSuffix(suffix)) return v;
+                if (suffixesGroup.containsSuffix(suffix)) return v;
+            }
+        } else {
+            Verb verb2 = Conjugation.searchVerb(verb);
+            if (verb2 != null) {
+                return verb2;
             }
         }
         return null;
-    }
-    public static boolean isMatchWithOneCandidate(ArrayList <Verb> list){
-        return list.size() == 1;
-    }
-
-    private static void similarRadical(){
-        ListMultimap<String, String> multimap = ArrayListMultimap.create();
-        for(Verb v : verbsGroup){
-            multimap.put(v.radical(), v.infinitive_form);
-        }
-        Map<String, Collection<String>> m = multimap.asMap();
-        for (Map.Entry<String, Collection<String>> entry : m.entrySet()) {
-            String key = entry.getKey();
-            Collection<String> values = entry.getValue();
-            if(values.size() > 1){
-                System.out.print("map.put(\""+key+"\",new String[]{");
-                System.out.println(Joiner.on(',').join(stringWrapper(values))+"});");
-            }
-            // ...
-        }
-    }
-
-    private static Collection<String> stringWrapper(Collection<String> s){
-        Collection<String> temp = new ArrayList <>();
-        for(String a : s){
-            String b = "\""+a+"\"";
-            temp.add(b);
-        }
-        return temp;
-    }
-
-    public static boolean isConjugated(String verb){
-        return !(verb.endsWith("er")||verb.endsWith("ir")||verb.endsWith("re"));
     }
 }
