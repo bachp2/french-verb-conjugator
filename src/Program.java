@@ -160,6 +160,7 @@ class Conjugation {
                                 p.add(Joiner.on("/").join(NodeList2Array(listI)));
                             else if (listILength == 1)
                                 p.add(listI.item(0).getTextContent());
+                            else p.add("null");
                         }
                     }
                     suffixesGroup.append(mode, tense, p);

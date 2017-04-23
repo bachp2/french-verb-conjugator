@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Created by bachp on 3/25/2017.
  */
 public class Main {
-    @Parameter(names = {"--verb", "-v"}, variableArity = true)
+    @Parameter(names = {"--verb", "-v"})
     private List <String> verbs = new ArrayList <>();
     @Parameter(names = {"--mode", "-m"}, converter = Mode.ModeConverter.class)
     private List <Mode> modes = new ArrayList <>();
