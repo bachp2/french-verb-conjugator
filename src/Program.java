@@ -1,3 +1,5 @@
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ListMultimap;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -8,8 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Joiner;
@@ -35,21 +36,22 @@ public class Program {
     public static void main(String[] args) {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
-        String tn = p.conjugate.searchVerb("placer").template_name;
-        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
-        ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
-        StringBuilder sb = new StringBuilder();
-        for (String a : tmp) {
-            sb.append(a + "\n");
-        }
-        System.out.print(sb.toString());
-        ArrayList<String> mylist = SuffixesGroup.append(Verb.radical(tn, "placer"), tmp);
-        StringBuilder sb1 = new StringBuilder();
-        for (String a : mylist) {
-            sb1.append(a + "\n");
-        }
-        System.out.println(sb1);
-        System.out.println(tn);
+        Deconjugation.similarRadical();
+//        String tn = p.conjugate.searchVerb("décapeler").template_name;
+//        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
+//        ArrayList <String> tmp = temp.getPrefixes(Mode.indicative, Mode.Tense.past);
+//        StringBuilder sb = new StringBuilder();
+//        for (String a : tmp) {
+//            sb.append(a + "\n");
+//        }
+//        System.out.print(sb.toString());
+//        ArrayList<String> mylist = SuffixesGroup.append(Verb.radical(tn, "placer"), tmp);
+//        StringBuilder sb1 = new StringBuilder();
+//        for (String a : mylist) {
+//            sb1.append(a + "\n");
+//        }
+//        System.out.println(sb1);
+//        System.out.println(tn);
         //String s1 = "handir";
         //System.out.println(Deconjugation.isConjugated(s1));
         stopwatch.stop();
@@ -235,8 +237,33 @@ class Deconjugation {
     public static boolean isMatchWithOneCandidate(ArrayList <Verb> list){
         return list.size() == 1;
     }
+    public static void similarRadical(){
+        ListMultimap<String, String> multimap = ArrayListMultimap.create();
+        for(Verb v : verbsGroup){
+            multimap.put(v.radical(), v.infinitive_form);
+        }
+        Map<String, Collection<String>> m = multimap.asMap();
+        for (Map.Entry<String, Collection<String>> entry : m.entrySet()) {
+            String key = entry.getKey();
+            Collection<String> values = entry.getValue();
+            if(values.size() > 1){
+                System.out.print("map.put(\""+key+"\",new String[]{");
+                System.out.println(Joiner.on(',').join(stringWrapper(values))+"});");
+            }
+            // ...
+        }
+    }
+    private static Collection<String> stringWrapper(Collection<String> s){
+        Collection<String> temp = new ArrayList <>();
+        for(String a : s){
+            String b = "\""+a+"\"";
+            temp.add(b);
+        }
+        return temp;
+    }
+
     public static boolean isConjugated(String verb){
         //todo regex suffix
-        return verb.endsWith("er")||verb.endsWith("ir")||verb.endsWith("re");
+        return !(verb.endsWith("er")||verb.endsWith("ir")||verb.endsWith("re"));
     }
 }

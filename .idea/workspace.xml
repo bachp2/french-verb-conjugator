@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SimilarRadsDict.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Conjugation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Deconjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Deconjugation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DictionaryOfVerbsWithSimilarRadical.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DictionaryOfVerbsWithSimilarRadical.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Program.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Program.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/french-verb-conjugator.iml" afterPath="$PROJECT_DIR$/french-verb-conjugator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,30 +28,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1803">
-              <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+            <state relative-caret-position="287">
+              <caret line="250" column="81" lean-forward="false" selection-start-line="250" selection-start-column="81" selection-end-line="250" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3576#3577#0" expanded="true" />
-                <element signature="e#3607#3608#0" expanded="true" />
                 <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#7802#7803#0" expanded="true" />
-                <element signature="e#7833#7834#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DictionaryOfVerbsWithSimilarRadical.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java">
+      <file leaf-file-name="conjugation-fr.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="62067">
+              <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verbs-fr.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1705" column="14" lean-forward="false" selection-start-line="1705" selection-start-column="14" selection-end-line="1705" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarRadsDict.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="209" column="18" lean-forward="false" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#12005#12006#0" expanded="true" />
+                <element signature="e#12046#12047#0" expanded="true" />
+                <element signature="e#12101#12102#0" expanded="true" />
+                <element signature="e#12136#12137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +93,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#705#706#0" expanded="false" />
+                <element signature="e#753#754#0" expanded="false" />
+                <element signature="e#783#784#0" expanded="false" />
+                <element signature="e#821#822#0" expanded="false" />
+                <element signature="e#1674#1675#0" expanded="false" />
+                <element signature="e#1741#1742#0" expanded="false" />
+                <element signature="e#1809#1810#0" expanded="false" />
+                <element signature="e#1877#1878#0" expanded="false" />
+                <element signature="e#2131#2132#0" expanded="false" />
+                <element signature="e#2180#2181#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +116,17 @@
             <state relative-caret-position="782">
               <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
               <folding>
-                <element signature="e#2106#2107#0" expanded="true" />
-                <element signature="e#2180#2181#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#711#712#0" expanded="false" />
+                <element signature="e#749#750#0" expanded="false" />
+                <element signature="e#787#788#0" expanded="false" />
+                <element signature="e#823#824#0" expanded="false" />
+                <element signature="e#1722#1723#0" expanded="false" />
+                <element signature="e#1793#1794#0" expanded="false" />
+                <element signature="e#1852#1853#0" expanded="false" />
+                <element signature="e#1924#1925#0" expanded="false" />
+                <element signature="e#2106#2107#0" expanded="false" />
+                <element signature="e#2180#2181#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,7 +137,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-              <folding />
+              <folding>
+                <element signature="e#136#137#0" expanded="false" />
+                <element signature="e#190#191#0" expanded="false" />
+                <element signature="e#235#236#0" expanded="false" />
+                <element signature="e#261#262#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,9 +198,12 @@
         <option value="$PROJECT_DIR$/src/DictionaryOfRadicalsSortByLength.java" />
         <option value="$PROJECT_DIR$/src/DictionaryOfRepeteRadicalsSortByLength.java" />
         <option value="$PROJECT_DIR$/src/ConsoleOutput.java" />
-        <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
         <option value="$PROJECT_DIR$/src/SuffixesGroup.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
+        <option value="$PROJECT_DIR$/src/DictionaryImpl.java" />
+        <option value="$PROJECT_DIR$/src/Dictionary.java" />
+        <option value="$PROJECT_DIR$/src/SimilarRadsDict.java" />
       </list>
     </option>
   </component>
@@ -176,8 +232,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,8 +276,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,13 +318,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/guava-19.0.jar!/" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
@@ -600,14 +687,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37058824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7367647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -619,6 +705,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -639,7 +726,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ConjugationDriver.java" />
     <entry file="file://$PROJECT_DIR$/src/Mode.java" />
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -647,12 +733,8 @@
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -672,12 +754,8 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -697,12 +775,8 @@
           <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -721,12 +795,8 @@
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,12 +815,8 @@
           <caret line="176" column="1" lean-forward="true" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -770,12 +836,8 @@
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -795,12 +857,8 @@
           <caret line="41" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -861,20 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="32" column="61" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -901,8 +945,17 @@
         <state relative-caret-position="782">
           <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#711#712#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
+            <element signature="e#823#824#0" expanded="false" />
+            <element signature="e#1722#1723#0" expanded="false" />
+            <element signature="e#1793#1794#0" expanded="false" />
+            <element signature="e#1852#1853#0" expanded="false" />
+            <element signature="e#1924#1925#0" expanded="false" />
+            <element signature="e#2106#2107#0" expanded="false" />
+            <element signature="e#2180#2181#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,11 +975,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java">
+    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#705#706#0" expanded="false" />
+            <element signature="e#753#754#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#1674#1675#0" expanded="false" />
+            <element signature="e#1741#1742#0" expanded="false" />
+            <element signature="e#1809#1810#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#2131#2132#0" expanded="false" />
+            <element signature="e#2180#2181#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -934,30 +999,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <folding>
+            <element signature="e#136#137#0" expanded="false" />
+            <element signature="e#190#191#0" expanded="false" />
+            <element signature="e#235#236#0" expanded="false" />
+            <element signature="e#261#262#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62067">
+          <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+    <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="17">
+          <caret line="1705" column="14" lean-forward="false" selection-start-line="1705" selection-start-column="14" selection-end-line="1705" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1803">
-          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        <state relative-caret-position="287">
+          <caret line="250" column="81" lean-forward="false" selection-start-line="250" selection-start-column="81" selection-end-line="250" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#initConjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7833#7834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DictionaryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="209" column="18" lean-forward="false" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12005#12006#0" expanded="true" />
+            <element signature="e#12046#12047#0" expanded="true" />
+            <element signature="e#12101#12102#0" expanded="true" />
+            <element signature="e#12136#12137#0" expanded="true" />
           </folding>
         </state>
       </provider>
