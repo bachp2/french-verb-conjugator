@@ -122,13 +122,14 @@ public class Trie {
      */
     public String search(String word) {
         TrieNode current = root;
-        String temp = "", rad = "";
+        StringBuilder temp = new StringBuilder();
+        String rad = "";
         for (char ch : word.toCharArray()) {
             TrieNode trie_node = current.subNode(ch);
             if (trie_node != null) {
-                temp += ch;
+                temp.append(ch);
                 if (trie_node.isEnd)
-                    rad = temp;
+                    rad = temp.toString();
                 current = trie_node;
             }
         }
