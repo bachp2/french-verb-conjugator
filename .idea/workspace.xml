@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Program.java" afterPath="$PROJECT_DIR$/src/Program.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MatchTuple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Verb.java" afterPath="$PROJECT_DIR$/src/Verb.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="161" column="54" lean-forward="false" selection-start-line="161" selection-start-column="54" selection-end-line="161" selection-end-column="54" />
+            <state relative-caret-position="152">
+              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
@@ -39,17 +40,12 @@
                 <element signature="method#init#0;class#Program#0" expanded="false" />
                 <element signature="initializer##0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#3922#3923#0" expanded="true" />
                 <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
                 <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
                 <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-                <element signature="e#7779#7780#0" expanded="true" />
                 <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
                 <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-                <element signature="e#8330#8331#0" expanded="true" />
-                <element signature="e#8361#8362#0" expanded="true" />
-                <element signature="e#8437#8438#0" expanded="true" />
                 <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
                 <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -60,34 +56,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
+      <file leaf-file-name="MatchTuple.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MatchTuple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tense.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="271">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#902#903#0" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conjugation-fr.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,8 +107,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="170">
+              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Main#0" expanded="false" />
@@ -135,15 +121,24 @@
       <file leaf-file-name="SuffixesGroup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="169">
+              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trie.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-765">
+              <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding>
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1690#1691#0" expanded="true" />
-                <element signature="e#1726#1727#0" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
-                <element signature="e#2289#2290#0" expanded="true" />
+                <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
+                <element signature="method#insertInSubtree#0;class#Tree#0" expanded="false" />
+                <element signature="method#isInSubtree#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
+                <element signature="method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -152,8 +147,8 @@
       <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Verb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -174,8 +169,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -215,7 +210,6 @@
         <option value="$PROJECT_DIR$/src/PrintOuputConsole.java" />
         <option value="$PROJECT_DIR$/src/OuputConsole.java" />
         <option value="$PROJECT_DIR$/src/PrefixesGroup.java" />
-        <option value="$PROJECT_DIR$/src/Verb.java" />
         <option value="$PROJECT_DIR$/src/DictionaryOfRadicalsSortByLength.java" />
         <option value="$PROJECT_DIR$/src/DictionaryOfRepeteRadicalsSortByLength.java" />
         <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
@@ -229,6 +223,9 @@
         <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/MatchTuple.java" />
+        <option value="$PROJECT_DIR$/src/MatchTuple.java" />
+        <option value="$PROJECT_DIR$/src/Verb.java" />
       </list>
     </option>
   </component>
@@ -256,7 +253,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,8 +294,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Program.java" />
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trie.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -331,7 +350,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -343,19 +362,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/guava-19.0.jar!/" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="DataStructure" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
@@ -709,7 +728,6 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -722,7 +740,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -733,7 +750,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -784,7 +803,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Deconjugation.java" />
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -809,17 +827,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -854,17 +867,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -898,17 +906,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -942,17 +945,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -987,17 +985,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -1032,17 +1025,12 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
@@ -1094,20 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="method#insertInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="method#isInSubtree#0;class#Tree#0" expanded="false" />
-            <element signature="docComment;method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
-            <element signature="method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1126,22 +1100,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DictionaryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Verb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DictionaryImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/ConjugationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1152,38 +1111,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="62067">
           <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UniqueRadsDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1690#1691#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UniqueRadsDict.java" />
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="1105">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1193,9 +1130,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="918">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="docComment;method#build#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1207,18 +1156,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#11991#11992#0" expanded="true" />
             <element signature="e#12032#12033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;method#build#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1235,8 +1172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="161" column="54" lean-forward="false" selection-start-line="161" selection-start-column="54" selection-end-line="161" selection-end-column="54" />
+        <state relative-caret-position="152">
+          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
@@ -1249,22 +1186,67 @@
             <element signature="method#init#0;class#Program#0" expanded="false" />
             <element signature="initializer##0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#Conjugation#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#3922#3923#0" expanded="true" />
             <element signature="method#initVerbs#0;class#Conjugation#0" expanded="false" />
             <element signature="method#NodeList2Array#0;class#Conjugation#0" expanded="false" />
             <element signature="docComment;method#searchVerb#0;class#Conjugation#0" expanded="false" />
             <element signature="method#searchSuffixesGroup#0;class#Conjugation#0" expanded="false" />
-            <element signature="e#7779#7780#0" expanded="true" />
             <element signature="initializer##0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#Deconjugation#0;class#Deconjugation#0" expanded="false" />
-            <element signature="e#8330#8331#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8437#8438#0" expanded="true" />
             <element signature="method#similarRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#stringWrapper#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#isConjugated#0;class#Deconjugation#0" expanded="false" />
             <element signature="method#searchRadical#0;class#Deconjugation#0" expanded="false" />
             <element signature="docComment;method#matchRadical#0;class#Deconjugation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MatchTuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Verb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
+            <element signature="method#insertInSubtree#0;class#Tree#0" expanded="false" />
+            <element signature="method#isInSubtree#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
+            <element signature="method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>
