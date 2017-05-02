@@ -281,6 +281,7 @@ class Deconjugation {
     public Verb matchRadical(String radical, String verb) {
         // verb is already conjugated
         String suffix = verb.substring(radical.length());
+        //todo return mode and tense
         if (radical.equals("")) radical = "null";
         if (SimilarRadsDict.contains(radical)) {
             for (String s : SimilarRadsDict.getVerbsString(radical)) {
