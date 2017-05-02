@@ -203,10 +203,23 @@ public class SimilarRadsDict {
         MAP.put("cal",new String[]{"caler","caleter"});
         MAP.put("cap",new String[]{"capeler","caper"});
     }
+
+    /**
+     *
+     * @param s
+     * @return
+     */
     public static boolean contains(String s){
         return MAP.containsKey(s);
     }
+
+    /**
+     *
+     * @param key
+     * @return
+     * @throws NullPointerException
+     */
     public static String[] getVerbsString(String key) throws NullPointerException{
-        return MAP.get(key);
+        return MAP.get(key).clone();
     }
 }

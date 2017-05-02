@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/DataStructure/Trie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MatchTuple.java" afterPath="$PROJECT_DIR$/src/MatchTuple.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimilarRadsDict.java" afterPath="$PROJECT_DIR$/src/SimilarRadsDict.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SuffixesGroup.java" afterPath="$PROJECT_DIR$/src/SuffixesGroup.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +27,8 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
@@ -55,38 +57,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchTuple.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MatchTuple.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MatchTuple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="492">
+              <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#606#607#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimilarRadsDict.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
+      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3485">
-              <caret line="205" column="34" lean-forward="false" selection-start-line="205" selection-start-column="34" selection-end-line="205" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11991#11992#0" expanded="true" />
-                <element signature="e#12032#12033#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="373">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +82,7 @@
       <file leaf-file-name="ConsoleOutput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConsoleOutput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="238">
               <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -103,34 +91,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="SuffixesGroup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="424">
+              <caret line="62" column="59" lean-forward="false" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Main#0" expanded="false" />
-                <element signature="docComment;method#build#0;class#Main#0" expanded="false" />
+                <element signature="method#clone#0;class#SuffixesGroup#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuffixesGroup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Trie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="594">
               <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
@@ -146,19 +122,18 @@
       <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Verb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConjugationException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConjugationException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+              <folding>
+                <element signature="docComment;class#Verb#0" expanded="false" />
+                <element signature="method#Verb#0;class#Verb#0" expanded="false" />
+                <element signature="method#Verb#1;class#Verb#0" expanded="false" />
+                <element signature="method#Verb#2;class#Verb#0" expanded="false" />
+                <element signature="docComment;method#radical#0;class#Verb#0" expanded="false" />
+                <element signature="method#radical#0;class#Verb#0" expanded="false" />
+                <element signature="method#radical#1;class#Verb#0" expanded="false" />
+                <element signature="method#toString#0;class#Verb#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,18 +189,18 @@
         <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
         <option value="$PROJECT_DIR$/src/DictionaryImpl.java" />
         <option value="$PROJECT_DIR$/src/Dictionary.java" />
-        <option value="$PROJECT_DIR$/src/SimilarRadsDict.java" />
         <option value="$PROJECT_DIR$/src/UniqueRadsDict.java" />
-        <option value="$PROJECT_DIR$/src/SuffixesGroup.java" />
         <option value="$PROJECT_DIR$/src/ConsoleOutput.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Tense.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/MatchTuple.java" />
-        <option value="$PROJECT_DIR$/src/MatchTuple.java" />
-        <option value="$PROJECT_DIR$/src/Verb.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Trie.java" />
+        <option value="$PROJECT_DIR$/src/SimilarRadsDict.java" />
+        <option value="$PROJECT_DIR$/src/SuffixesGroup.java" />
+        <option value="$PROJECT_DIR$/src/Verb.java" />
+        <option value="$PROJECT_DIR$/src/MatchTuple.java" />
       </list>
     </option>
   </component>
@@ -254,6 +229,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,11 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataStructure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trie.java" />
+              <option name="myItemId" value="Program.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,8 +323,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -733,8 +704,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7367647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7367647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -744,8 +715,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1054,13 +1025,6 @@
     <entry file="file://$PROJECT_DIR$/src/Deconjugation.java" />
     <entry file="file://$PROJECT_DIR$/src/ConjugationDriver.java" />
     <entry file="file://$PROJECT_DIR$/src/Align.java" />
-    <entry file="file://$PROJECT_DIR$/src/DeconjugationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Verbs.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/1490417570028.png">
       <provider selected="true" editor-type-id="images">
@@ -1082,16 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="docComment;method#main#0;class#Driver#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/verbs-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1101,14 +1055,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DictionaryImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/ConjugationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62067">
@@ -1128,14 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1148,32 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3485">
-          <caret line="205" column="34" lean-forward="false" selection-start-line="205" selection-start-column="34" selection-end-line="205" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11991#11992#0" expanded="true" />
-            <element signature="e#12032#12033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsoleOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="268" column="0" lean-forward="true" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
@@ -1201,45 +1117,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MatchTuple.java">
+    <entry file="file://$PROJECT_DIR$/src/DeconjugationException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Verb.java">
+    <entry file="file://$PROJECT_DIR$/src/ConjugationException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+    <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="3723">
+          <caret line="221" column="41" lean-forward="true" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConsoleOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="docComment;method#main#0;class#Driver#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="594">
           <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
             <element signature="docComment;method#insertInSubtree#0;class#Tree#0" expanded="false" />
@@ -1247,6 +1176,51 @@
             <element signature="method#isInSubtree#0;class#Tree#0" expanded="false" />
             <element signature="docComment;method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
             <element signature="method#TreeNode#0;class#TreeNode#0;class#Tree#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="62" column="59" lean-forward="false" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
+          <folding>
+            <element signature="method#clone#0;class#SuffixesGroup#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Verb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding>
+            <element signature="docComment;class#Verb#0" expanded="false" />
+            <element signature="method#Verb#0;class#Verb#0" expanded="false" />
+            <element signature="method#Verb#1;class#Verb#0" expanded="false" />
+            <element signature="method#Verb#2;class#Verb#0" expanded="false" />
+            <element signature="docComment;method#radical#0;class#Verb#0" expanded="false" />
+            <element signature="method#radical#0;class#Verb#0" expanded="false" />
+            <element signature="method#radical#1;class#Verb#0" expanded="false" />
+            <element signature="method#toString#0;class#Verb#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MatchTuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

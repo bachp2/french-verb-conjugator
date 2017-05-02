@@ -2,7 +2,9 @@ import DataStructure.Mode;
 import DataStructure.Tense;
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
+import jdk.nashorn.internal.ir.annotations.Immutable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -14,9 +16,9 @@ import java.util.Set;
 /**
  * Created by bachp on 4/2/2017.
  */
-public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>{
+public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>, Cloneable{
     private final String template_name;
-    protected final Table<Mode, Tense, ArrayList<String>> table;
+    protected Table<Mode, Tense, ArrayList<String>> table;
     public SuffixesGroup(String template_name){
         this.template_name = template_name;
         table = HashBasedTable.create();
@@ -28,11 +30,9 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         return table.isEmpty();
     }
     public ArrayList<String> getPrefixes(Mode mode, Tense tense){
-        return (ArrayList <String>) table.get(mode, tense);
+        return table.get(mode, tense);
     }
-    public ArrayList<String> getPrefixesGroup(Mode mode, Tense tense){
-        return (ArrayList<String>) table.get(mode, tense);
-    }
+
     public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
         // already radical
         ArrayList<String> conjugated = new ArrayList <>();
@@ -60,7 +60,11 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
     public int compare(SuffixesGroup o1, SuffixesGroup o2) {
         return o1.template_name.compareTo(o2.template_name);
     }
-
+    public Object clone() throws CloneNotSupportedException{
+        SuffixesGroup temp = new SuffixesGroup(this.template_name);
+        temp.table = ImmutableTable.copyOf(this.table);
+        return temp;
+    }
     @Override
     public int compareTo(@NotNull SuffixesGroup o) {
         return this.template_name.compareTo(o.template_name);

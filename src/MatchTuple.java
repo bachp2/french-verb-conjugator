@@ -20,16 +20,48 @@ public class MatchTuple {
     public MatchTuple build(){
         return this.instance;
     }
+
+    /**
+     *
+     * @return
+     */
     public Verb getVerb(){
-        return verb;//privacy leak
+        try{
+            return (Verb) verb.clone();
+        }
+        catch (CloneNotSupportedException e){
+            e.printStackTrace();
+            return null;
+        }
     }
+
+    /**
+     *
+     * @return
+     */
     public SuffixesGroup getSuffixesGroup(){
-        return suffixesGroup;//privacy leak
+        try{
+            return (SuffixesGroup) suffixesGroup.clone();
+        }
+        catch (CloneNotSupportedException e){
+            e.printStackTrace();
+            return null;
+        }
     }
+
+    /**
+     *
+     * @return
+     */
     public Mode getMode(){
-        return mode;//privacy leak
+        return mode;
     }
+
+    /**
+     *
+     * @return
+     */
     public Tense getTense(){
-        return tense;//privacy leak
+        return tense;
     }
 }
