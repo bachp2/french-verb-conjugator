@@ -236,7 +236,11 @@ class Conjugation {
         int index = rand.nextInt(Mode.values().length);
         return Mode.values()[index];//performance insensitive
     }
-    
+
+    public static Tense getRandomTense(){
+        int index = rand.nextInt(Tense.values().length);
+        return Tense.values()[index];//performance insensitive
+    }
 }
 
 class Deconjugation {
