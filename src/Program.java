@@ -81,7 +81,7 @@ class Conjugation {
     protected static ArrayList <Verb> verbsGroup; //collection of the infinitive verbs from verbs-fr.xml
     private static Conjugation INSTANCE = new Conjugation();
     private static ArrayList <SuffixesGroup> suffixesGroups; //collection of suffixes group from conjugation-fr.xml
-    private Random rand = new Random();
+    private static Random rand = new Random();
     static {
         try {
             //read verbs-fr.xml file
@@ -278,10 +278,20 @@ class Deconjugation {
         return temp;
     }
 
+    /**
+     * check if the verb is already conjugated
+     * @param verb
+     * @return
+     */
     public static boolean isConjugated(String verb) {
         return !(verb.endsWith("er") || verb.endsWith("ir") || verb.endsWith("re"));
     }
 
+    /**
+     * search for part radical of input's verb for deconjugation
+     * @param verb
+     * @return
+     */
     public String searchRadical(String verb) {
         //searchVerb for radical that matchRadical the conjugated verb
         return verb_trie.search(verb);
