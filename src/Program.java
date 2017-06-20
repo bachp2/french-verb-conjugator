@@ -172,6 +172,11 @@ class Conjugation {
         Collections.sort(suffixesGroups, (o1, o2) -> o1.getTemplateName().compareTo(o2.getTemplateName()));
     }
 
+    /**
+     * helper method for initConjugation
+     * @param A
+     * @return
+     */
     private static String[] NodeList2Array(NodeList A) {
         int len = A.getLength();
         String[] temp = new String[len];
@@ -215,6 +220,9 @@ class Conjugation {
         return !Deconjugation.isConjugated(s);
     }
 
+
+                                     //FOR TESTING PURPOSES
+
     /**
      * return a random verb from verbsGroup
      * @return String
@@ -223,6 +231,12 @@ class Conjugation {
         int s = rand.nextInt(verbsGroup.size());
         return verbsGroup.get(s).getInfinitive_form();
     }
+
+    public static Mode getRandomMode(){
+        int index = rand.nextInt(Mode.values().length);
+        return Mode.values()[index];//performance insensitive
+    }
+    
 }
 
 class Deconjugation {

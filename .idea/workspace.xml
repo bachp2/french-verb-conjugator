@@ -24,10 +24,33 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="275" column="46" lean-forward="false" selection-start-line="275" selection-start-column="46" selection-end-line="275" selection-end-column="46" />
+            <state relative-caret-position="554">
+              <caret line="238" column="4" lean-forward="false" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuffixesGroup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#clone#0;class#SuffixesGroup#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,6 +99,18 @@
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Main#0" expanded="false" />
                 <element signature="docComment;method#build#0;class#Main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarRadsDict.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="219" column="35" lean-forward="true" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -931,44 +966,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DeconjugationException.java" />
-    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2115#2116#0" expanded="false" />
-            <element signature="e#2150#2151#0" expanded="false" />
-            <element signature="e#2183#2184#0" expanded="false" />
-            <element signature="e#2219#2220#0" expanded="false" />
-            <element signature="method#clone#0;class#SuffixesGroup#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="221" column="41" lean-forward="false" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,10 +1030,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuffixesGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#clone#0;class#SuffixesGroup#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimilarRadsDict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="219" column="35" lean-forward="true" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="275" column="46" lean-forward="false" selection-start-line="275" selection-start-column="46" selection-end-line="275" selection-end-column="46" />
+        <state relative-caret-position="554">
+          <caret line="238" column="4" lean-forward="false" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
