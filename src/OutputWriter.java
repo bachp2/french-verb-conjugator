@@ -4,15 +4,15 @@ import DataStructure.Tense;
 /**
  * Created by bachp on 3/26/2017.
  */
-public class ConsoleOutput  {
+public class OutputWriter {
     private String verbToBeConjugated;
     private Mode mode;
     private Tense tense;
     private String[][] conjugatedForm;
     private String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
-    private ConsoleOutput instance;
+    private OutputWriter instance;
 
-    public ConsoleOutput(String verb, Mode mode, Tense tense, String[][] conjugatedForm) {
+    public OutputWriter(String verb, Mode mode, Tense tense, String[][] conjugatedForm) {
         this.verbToBeConjugated = verb;
         this.mode = mode;
         this.tense = tense;

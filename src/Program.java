@@ -77,9 +77,9 @@ public class Program {
 class Conjugation {
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
-    protected static ArrayList <Verb> verbsGroup;
+    protected static ArrayList <Verb> verbsGroup; //collection of the infinitive verbs from verbs-fr.xml
     private static Conjugation INSTANCE = new Conjugation();
-    private static ArrayList <SuffixesGroup> suffixesGroups;
+    private static ArrayList <SuffixesGroup> suffixesGroups; //collection of suffixes group from conjugation-fr.xml
 
     static {
         try {
@@ -207,6 +207,11 @@ class Conjugation {
 
     public static boolean isNotConjugated(String s) {
         return !Deconjugation.isConjugated(s);
+    }
+
+    public static String getRandomInfVerb(){
+
+        return null;
     }
 }
 

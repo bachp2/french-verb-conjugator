@@ -4,13 +4,13 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
-import jdk.nashorn.internal.ir.annotations.Immutable;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.Set;
+import java.util.List;
 
 
 /**
@@ -45,6 +45,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         }
         return conjugated;
     }
+
     public String getTemplateName(){
         return template_name;
     }
@@ -55,6 +56,30 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
             }
         }
         return false;
+    }
+    class ModeTensePair{
+        private Mode mode;
+        private Tense tense;
+        public ModeTensePair(Mode mode, Tense tense){
+            this.mode = mode;
+            this.tense = tense;
+        }
+        public Mode getMode(){
+            return mode;
+        }
+        public Tense getTense(){
+            return tense;
+        }
+    }
+    public List<ModeTensePair> contains(String suffix){
+        List<ModeTensePair> modeTensePairs = new ArrayList<>();
+        for(Mode m : Mode.values()){
+            for(Tense t : m.getTenses()){
+                ArrayList<String> list = table.get(m, t);
+                if(list.contains(suffix)) modeTensePairs.add(new ModeTensePair(m,t));
+            }
+        }
+        return modeTensePairs;
     }
     @Override
     public int compare(SuffixesGroup o1, SuffixesGroup o2) {
