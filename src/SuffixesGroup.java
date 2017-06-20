@@ -23,12 +23,34 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         this.template_name = template_name;
         table = HashBasedTable.create();
     }
+
+    /**
+     * copy constructor
+     * @param copy
+     */
+    public SuffixesGroup(SuffixesGroup copy){
+        this.template_name = copy.template_name;
+        this.table = HashBasedTable.create(copy.table);
+    }
+
     public void append(Mode mode, Tense tense, ArrayList<String> prefixes){
         table.put(mode, tense, prefixes);
     }
+
+    /**
+     * check if the table is empty
+     * @return boolean
+     */
     public boolean isEmpty(){
         return table.isEmpty();
     }
+
+    /**
+     * get prefixes of conjugation of a verb
+     * @param mode Mode
+     * @param tense Tense
+     * @return ArrayList<String>
+     */
     public ArrayList<String> getPrefixes(Mode mode, Tense tense){
         return table.get(mode, tense);
     }

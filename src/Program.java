@@ -212,14 +212,19 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    private static Verb searchVerb(String v) {
+    protected static Verb searchVerb(String v) {
         int index = Collections.binarySearch(verbsGroup, new Verb(v));
         if (index >= 0)
             return Verb.newInstance(verbsGroup.get(index));
         else return null;
     }
 
-    private static SuffixesGroup searchSuffixesGroup(String template_name) {
+    /**
+     * search for suffixesGroup with a given template name
+     * @param template_name String
+     * @return SuffixesGroup
+     */
+    protected static SuffixesGroup searchSuffixesGroup(String template_name) {
         int index = Collections.binarySearch(suffixesGroups, new SuffixesGroup(template_name));
         if (index >= 0)
             return suffixesGroups.get(index);//privacy leak
