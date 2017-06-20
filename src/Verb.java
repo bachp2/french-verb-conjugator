@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by bachp on 3/26/2017.
  */
-public class Verb implements Comparator<Verb>, Comparable<Verb>, Cloneable{
+public class Verb implements Comparator<Verb>, Comparable<Verb>{
     final String infinitive_form;
     final String template_name;
     public Verb(String infinitive_form){
@@ -24,8 +24,8 @@ public class Verb implements Comparator<Verb>, Comparable<Verb>, Cloneable{
         return infinitive_form;
     }
 
-    public Object clone() throws CloneNotSupportedException{
-        return new Verb(this);
+    public static Verb newInstance(Verb copy){
+        return new Verb(copy);
     }
     public String getTemplate_name(){
         return template_name;

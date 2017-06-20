@@ -88,9 +88,11 @@ class Conjugation {
             File vFile = new File(path_to_verbs_fr);
             //read conjugate-fr.xml file
             File conFile = new File(path_to_conjugation_fr);
+            //build NodeLists from sources
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             NodeList nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
             NodeList nConj = dBuilder.parse(conFile).getElementsByTagName("template");
+            //initialize
             initVerbs(nVerbs);
             initConjugation(nConj);
             //clean up resource
@@ -114,10 +116,18 @@ class Conjugation {
     private Conjugation() {
     }
 
+    /**
+     * initialization factory
+     * @return
+     */
     public static Conjugation getInstance() {
         return INSTANCE;
     }
 
+    /**
+     * private helper method to sort NodeList of verbs-fr.xml to ArrayList
+     * @param nVerbs NodeList
+     */
     private static void initVerbs(NodeList nVerbs) {
         int length1 = nVerbs.getLength();
         verbsGroup = new ArrayList <>();
@@ -133,6 +143,10 @@ class Conjugation {
         Collections.sort(verbsGroup, (o1, o2) -> o1.infinitive_form.compareTo(o2.infinitive_form));
     }
 
+    /**
+     * private helper method to sort NodeList of conjugation-fr.xml to ArrayList
+     * @param nConj NodeList
+     */
     private static void initConjugation(NodeList nConj) {
         suffixesGroups = new ArrayList <>(1000);
         int length = nConj.getLength();
@@ -174,7 +188,8 @@ class Conjugation {
 
     /**
      * helper method for initConjugation
-     * @param A
+     * convert NodeList to array
+     * @param A NodeList<String>
      * @return
      */
     private static String[] NodeList2Array(NodeList A) {
@@ -199,7 +214,7 @@ class Conjugation {
     public static Verb searchVerb(String v) {
         int index = Collections.binarySearch(verbsGroup, new Verb(v));
         if (index >= 0)
-            return verbsGroup.get(index);//privacy leak
+            return Verb.newInstance(verbsGroup.get(index));
             //todo implement clone
         else return null;
     }
@@ -271,7 +286,8 @@ class Deconjugation {
     }
 
     /**
-     * this method is used to generate code to input verbs with similar radicals for the ease of look up
+     * this method is used to generate code to input verbs with similar radicals for the ease of look up.
+     * Refer to SimilarRadDict.
      */
     private static void similarRadical() {
         ListMultimap <String, String> multimap = ArrayListMultimap.create();
