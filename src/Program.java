@@ -15,12 +15,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.util.Random;
 
 /**
  * @author Bach Phan
@@ -82,6 +78,7 @@ class Conjugation {
     private static Conjugation INSTANCE = new Conjugation();
     private static ArrayList <SuffixesGroup> suffixesGroups; //collection of suffixes group from conjugation-fr.xml
     private static Random rand = new Random();
+
     static {
         try {
             //read verbs-fr.xml file
@@ -118,6 +115,7 @@ class Conjugation {
 
     /**
      * initialization factory
+     *
      * @return
      */
     public static Conjugation getInstance() {
@@ -126,6 +124,7 @@ class Conjugation {
 
     /**
      * private helper method to sort NodeList of verbs-fr.xml to ArrayList
+     *
      * @param nVerbs NodeList
      */
     private static void initVerbs(NodeList nVerbs) {
@@ -145,6 +144,7 @@ class Conjugation {
 
     /**
      * private helper method to sort NodeList of conjugation-fr.xml to ArrayList
+     *
      * @param nConj NodeList
      */
     private static void initConjugation(NodeList nConj) {
@@ -189,6 +189,7 @@ class Conjugation {
     /**
      * helper method for initConjugation
      * convert NodeList to array
+     *
      * @param A NodeList<String>
      * @return
      */
@@ -211,15 +212,14 @@ class Conjugation {
      * @param v :: verb:String
      * @return String[][]
      */
-    public static Verb searchVerb(String v) {
+    private static Verb searchVerb(String v) {
         int index = Collections.binarySearch(verbsGroup, new Verb(v));
         if (index >= 0)
             return Verb.newInstance(verbsGroup.get(index));
-            //todo implement clone
         else return null;
     }
 
-    public static SuffixesGroup searchSuffixesGroup(String template_name) {
+    private static SuffixesGroup searchSuffixesGroup(String template_name) {
         int index = Collections.binarySearch(suffixesGroups, new SuffixesGroup(template_name));
         if (index >= 0)
             return suffixesGroups.get(index);//privacy leak
@@ -228,6 +228,7 @@ class Conjugation {
 
     /**
      * return a boolean value if the input's verb is already conjugated
+     *
      * @param s String
      * @return boolean
      */
@@ -236,26 +237,29 @@ class Conjugation {
     }
 
 
-                                     //FOR TESTING PURPOSES
+    //FOR TESTING PURPOSES
 
     /**
      * return a random verb from verbsGroup
+     *
      * @return String
      */
-    public static String getRandomInfVerb(){
+    public static String getRandomInfVerb() {
         int s = rand.nextInt(verbsGroup.size());
         return verbsGroup.get(s).getInfinitive_form();
     }
 
-    public static Mode getRandomMode(){
+    public static Mode getRandomMode() {
         int index = rand.nextInt(Mode.values().length);
         return Mode.values()[index];//performance insensitive
     }
 
-    public static Tense getRandomTense(){
+    public static Tense getRandomTense() {
         int index = rand.nextInt(Tense.values().length);
         return Tense.values()[index];//performance insensitive
     }
+
+    public static
 }
 
 class Deconjugation {
@@ -281,10 +285,6 @@ class Deconjugation {
         return INSTANCE;
     }
 
-    public static boolean isMatchWithOneCandidate(ArrayList <Verb> list) {
-        return list.size() == 1;
-    }
-
     /**
      * this method is used to generate code to input verbs with similar radicals for the ease of look up.
      * Refer to SimilarRadDict.
@@ -308,6 +308,7 @@ class Deconjugation {
 
     /**
      * helper method for similarRadical method
+     *
      * @param s
      * @return Collection <String>
      */
@@ -322,6 +323,7 @@ class Deconjugation {
 
     /**
      * check if the verb is already conjugated
+     *
      * @param verb
      * @return
      */
@@ -331,6 +333,7 @@ class Deconjugation {
 
     /**
      * search for part radical of input's verb for deconjugation
+     *
      * @param verb
      * @return
      */
