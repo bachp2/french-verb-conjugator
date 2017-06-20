@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 /**
  * @author Bach Phan
@@ -80,7 +81,7 @@ class Conjugation {
     protected static ArrayList <Verb> verbsGroup; //collection of the infinitive verbs from verbs-fr.xml
     private static Conjugation INSTANCE = new Conjugation();
     private static ArrayList <SuffixesGroup> suffixesGroups; //collection of suffixes group from conjugation-fr.xml
-
+    private Random rand = new Random();
     static {
         try {
             //read verbs-fr.xml file
@@ -214,9 +215,13 @@ class Conjugation {
         return !Deconjugation.isConjugated(s);
     }
 
+    /**
+     * return a random verb from verbsGroup
+     * @return String
+     */
     public static String getRandomInfVerb(){
-
-        return null;
+        int s = rand.nextInt(verbsGroup.size());
+        return verbsGroup.get(s).getInfinitive_form();
     }
 }
 
