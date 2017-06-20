@@ -252,6 +252,9 @@ class Deconjugation {
         return list.size() == 1;
     }
 
+    /**
+     * this method is used to generate code to input verbs with similar radicals for the ease of look up
+     */
     private static void similarRadical() {
         ListMultimap <String, String> multimap = ArrayListMultimap.create();
         for (Verb v : verbsGroup) {
@@ -269,6 +272,11 @@ class Deconjugation {
         }
     }
 
+    /**
+     * helper method for similarRadical method
+     * @param s
+     * @return Collection <String>
+     */
     private static Collection <String> stringWrapper(Collection <String> s) {
         Collection <String> temp = new ArrayList <>();
         for (String a : s) {
