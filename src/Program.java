@@ -205,6 +205,11 @@ class Conjugation {
         else throw new ConjugationException("Can't find matching group with that template name ");
     }
 
+    /**
+     * return a boolean value if the input's verb is already conjugated
+     * @param s String
+     * @return boolean
+     */
     public static boolean isNotConjugated(String s) {
         return !Deconjugation.isConjugated(s);
     }
