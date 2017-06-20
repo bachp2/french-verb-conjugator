@@ -68,6 +68,20 @@ public class Program {
         conjugate = Conjugation.getInstance();
         deconjugate = Deconjugation.getInstance();
     }
+    public static OutputWriter conjugate(){
+        return null;
+    }
+
+    public static OutputWriter conjugate(String verb, Mode mode, Tense tense){
+        return null;
+    }
+
+    public static OutputWriter conjugate(String verb){
+        return null;
+    }
+    public static String deconjugate(String verb){
+        return null;
+    }
 
 }
 
@@ -227,7 +241,7 @@ class Conjugation {
     protected static SuffixesGroup searchSuffixesGroup(String template_name) {
         int index = Collections.binarySearch(suffixesGroups, new SuffixesGroup(template_name));
         if (index >= 0)
-            return suffixesGroups.get(index);//privacy leak
+            return new SuffixesGroup(suffixesGroups.get(index));
         else throw new ConjugationException("Can't find matching group with that template name ");
     }
 
@@ -241,7 +255,6 @@ class Conjugation {
         return !Deconjugation.isConjugated(s);
     }
 
-
     //FOR TESTING PURPOSES
 
     /**
@@ -250,8 +263,8 @@ class Conjugation {
      * @return String
      */
     public static String getRandomInfVerb() {
-        int s = rand.nextInt(verbsGroup.size());
-        return verbsGroup.get(s).getInfinitive_form();
+        int index = rand.nextInt(verbsGroup.size());
+        return verbsGroup.get(index).getInfinitive_form();
     }
 
     public static Mode getRandomMode() {
@@ -264,7 +277,12 @@ class Conjugation {
         return Tense.values()[index];//performance insensitive
     }
 
-    public static
+    public static String getRandomConjugatedVerb(){
+        Verb v = Conjugation.searchVerb(getRandomInfVerb());
+        SuffixesGroup sg = Conjugation.searchSuffixesGroup(v.template_name);
+        ArrayList<String> s = sg.getPrefixes(getRandomMode(), getRandomTense());
+        return SuffixesGroup.appendString(v.radical(), s.get(rand.nextInt(s.size())));
+    }
 }
 
 class Deconjugation {

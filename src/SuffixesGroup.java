@@ -55,8 +55,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         return table.get(mode, tense);
     }
 
-    public static ArrayList<String> append(String radical, ArrayList<String> listOfPrefixes){
-        // already radical
+    public static ArrayList<String> appendString(String radical, ArrayList<String> listOfPrefixes){
         ArrayList<String> conjugated = new ArrayList <>();
         for (String s : listOfPrefixes) {
             if(s.contains("/")){
@@ -68,6 +67,9 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         return conjugated;
     }
 
+    public static String appendString(String radical, String prefix){
+        return radical+prefix;
+    }
     public String getTemplateName(){
         return template_name;
     }
