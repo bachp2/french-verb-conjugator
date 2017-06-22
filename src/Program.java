@@ -89,8 +89,8 @@ class Conjugation {
     private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
     private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
     protected static ArrayList <Verb> verbsGroup; //collection of the infinitive verbs from verbs-fr.xml
-    private static Conjugation INSTANCE = new Conjugation();
     private static ArrayList <SuffixesGroup> suffixesGroups; //collection of suffixes group from conjugation-fr.xml
+    private static Conjugation INSTANCE = new Conjugation();
     private static Random rand = new Random();
 
     static {
@@ -172,7 +172,7 @@ class Conjugation {
             SuffixesGroup suffixesGroup = new SuffixesGroup(t_n);
             for (Mode mode : Mode.values()) {
                 for (Tense tense : mode.getTenses()) {
-                    ArrayList <String> p = new ArrayList <>();
+                    List <String> p = new ArrayList <>();
                     Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
                     Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
                     NodeList listP = ten.getElementsByTagName("p");
@@ -280,7 +280,7 @@ class Conjugation {
     public static String getRandomConjugatedVerb(){
         Verb v = Conjugation.searchVerb(getRandomInfVerb());
         SuffixesGroup sg = Conjugation.searchSuffixesGroup(v.template_name);
-        ArrayList<String> s = sg.getPrefixes(getRandomMode(), getRandomTense());
+        List<String> s = sg.getPrefixes(getRandomMode(), getRandomTense());
         return SuffixesGroup.appendString(v.radical(), s.get(rand.nextInt(s.size())));
     }
 }

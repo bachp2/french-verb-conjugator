@@ -5,8 +5,6 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
 import org.jetbrains.annotations.NotNull;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -18,7 +16,7 @@ import java.util.List;
  */
 public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<SuffixesGroup>, Cloneable{
     private final String template_name;
-    protected Table<Mode, Tense, ArrayList<String>> table;
+    protected Table<Mode, Tense, List<String>> table;
     public SuffixesGroup(String template_name){
         this.template_name = template_name;
         table = HashBasedTable.create();
@@ -33,7 +31,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         this.table = HashBasedTable.create(copy.table);
     }
 
-    public void append(Mode mode, Tense tense, ArrayList<String> prefixes){
+    public void append(Mode mode, Tense tense, List<String> prefixes){
         table.put(mode, tense, prefixes);
     }
 
@@ -51,7 +49,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
      * @param tense Tense
      * @return ArrayList<String>
      */
-    public ArrayList<String> getPrefixes(Mode mode, Tense tense){
+    public List<String> getPrefixes(Mode mode, Tense tense){
         return table.get(mode, tense);
     }
 
@@ -99,7 +97,7 @@ public class SuffixesGroup implements Comparator<SuffixesGroup>, Comparable<Suff
         List<ModeTensePair> modeTensePairs = new ArrayList<>();
         for(Mode m : Mode.values()){
             for(Tense t : m.getTenses()){
-                ArrayList<String> list = table.get(m, t);
+                List<String> list = table.get(m, t);
                 if(list.contains(suffix)) modeTensePairs.add(new ModeTensePair(m,t));
             }
         }
