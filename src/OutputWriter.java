@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by bachp on 3/26/2017.
  */
-public class OutputWriter {
+public class OutputWriter implements Cloneable{
     private String verbToBeConjugated;
     private Mode mode;
     private Tense tense;
@@ -14,10 +14,10 @@ public class OutputWriter {
 
     /**
      *
-     * @param verb
-     * @param mode
-     * @param tense
-     * @param conjugatedForm
+     * @param verb String
+     * @param mode Mode
+     * @param tense tense
+     * @param conjugatedForm List<String>
      */
     public OutputWriter(String verb, Mode mode, Tense tense, List<String> conjugatedForm) {
         this.verbToBeConjugated = verb;
@@ -54,4 +54,5 @@ public class OutputWriter {
         }
         return sb.toString();
     }
+
 }

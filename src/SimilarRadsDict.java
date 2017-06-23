@@ -219,7 +219,7 @@ public class SimilarRadsDict {
      * @return
      * @throws NullPointerException
      */
-    public static String[] getVerbsString(String key) throws NullPointerException{
+    public static String[] list(String key) throws NullPointerException{
         return MAP.get(key).clone();
     }
 }
