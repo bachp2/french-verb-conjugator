@@ -7,10 +7,7 @@ import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Table;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by bachp on 3/26/2017.
@@ -20,7 +17,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     private final String template_name;
     private static int index = 0;
     //todo: refactor verb collection to static variable of verb class
-    private static List<Verb> list = new ArrayList<>();
+    public static List<Verb> list = new ArrayList<>();
     private static ListMultimap<String, Verb> multiMap = ArrayListMultimap.create();
     public static Trie trie = new Trie();
     protected Table<Mode, Tense, List<String>> table;
@@ -49,8 +46,32 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
         multiMap.put(list.get(index).getInfinitiveForm(), list.get(index));
         index++;
     }
-    public static Verb create(String infinitive_form){
-        return new Verb(infinitive_form);
+
+    /**
+     * search for ininitive verb
+     * @param v
+     * @return
+     */
+    public static Verb searchVerb(String v){
+        int index = Collections.binarySearch(Verb.list, new Verb(v));
+        if (index >= 0)
+            return Verb.list.get(index);
+        else return null;
+    }
+    /**
+     * search for part radical of input's verb for deconjugation
+     *
+     * @param verb
+     * @return
+     */
+    public List<String> matchesWithInfVerbs(String verb) {
+        //searchVerb for radical that matchRadical the conjugated verb
+
+        for(String v : Verb.trie.search(verb)){
+            searchVerb()
+        }
+
+        return Verb.trie.search(verb);
     }
     public static boolean containsTemplateName(String template_name){
         return multiMap.containsKey(template_name);
@@ -66,10 +87,10 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
 
     public static void setTrie(){
         for(Verb v : list){
-            trie.insert(v.radical());
+            trie.insert(v.infinitive_form, v.template_name.indexOf(":") - 1);
         }
     }
-    public static List<Verb> getVerbsList(){
+    public static List<Verb> list(){
         return list;
     }
     public String getInfinitiveForm(){

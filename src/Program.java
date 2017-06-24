@@ -124,20 +124,10 @@ public class Program {
      * @return boolean
      */
     public static boolean isNotConjugated(String s) {
-        return isConjugated(s);
+        return !isConjugated(s);
     }
 
-    /**
-     * search for part radical of input's verb for deconjugation
-     *
-     * @param verb
-     * @return
-     */
-    public String searchRadical(String verb) {
-        //searchVerb for radical that matchRadical the conjugated verb
-        return Verb.trie.search(verb);
-    }
-
+    //this method may become obsolete
     /**
      * matchRadical conjugated verb with a probable radical then return verb and template name
      *
@@ -151,11 +141,11 @@ public class Program {
         if (radical.equals("")) radical = "null";
         if (SimilarRadsDict.contains(radical)) {
             for (String s : SimilarRadsDict.list(radical)) {
-                Verb v = searchVerb(s);
+                Verb v = Verb.searchVerb(s);
                 if (v.containsSuffix(suffix)) return v;
             }
         } else {
-            for (Verb v2 : Verb.getVerbsList()) {
+            for (Verb v2 : Verb.list) {
                 if (v2.matchesRadical(radical)) return v2;
             }
         }
@@ -220,21 +210,7 @@ public class Program {
         }
         return temp;
     }
-    /**
-     * searchVerb for template name with a given verb
-     * <p>
-     * verb has to be of infinitive form
-     * </p>
-     *
-     * @param v :: verb:String
-     * @return String[][]
-     */
-    private static Verb searchVerb(String v) {
-        int index = Collections.binarySearch(Verb.getVerbsList(), Verb.create(v));
-        if (index >= 0)
-            return Verb.getVerbsList().get(index);
-        else return null;
-    }
+
     /**
      * private helper method to sort NodeList of verbs-fr.xml to ArrayList
      *
@@ -251,7 +227,7 @@ public class Program {
                     .getTextContent();
             Verb.create(verb, template_name);
         }
-        Collections.sort(Verb.getVerbsList(), (o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
+        Collections.sort(Verb.list, (o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
     }
 
     //FOR TESTING PURPOSES
@@ -262,8 +238,8 @@ public class Program {
      * @return String
      */
     public static Verb getRandomVerb() {
-        int index = rand.nextInt(Verb.getVerbsList().size());
-        return Verb.getVerbsList().get(index);
+        int index = rand.nextInt(Verb.list().size());
+        return Verb.list().get(index);
     }
 
     public static Mode getRandomMode() {
