@@ -1,6 +1,8 @@
 package DataStructure;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -78,7 +80,7 @@ class Tree {
 
 public class Trie {
     private TrieNode root;
-    private static final List<String> EMPTY_LIST = new ArrayList <>(0);
+    private static final String[] EMPTY_LIST = new String[0];
     /**
      *
      */
@@ -154,7 +156,8 @@ public class Trie {
         return listOfAllPossibleSuffixes;
     }
     private List<String> searchAtRadicalPosition(TrieNode node){
-        return recursiveSearch(node.childList.root, new StringBuilder(), new ArrayList <String>());
+        List<String> list = recursiveSearch(node.childList.root, new StringBuilder(), new ArrayList <String>());
+        return list.size() == 0 ? Collections.emptyList() : list;
     }
     private List<String> recursiveSearch(Tree.TreeNode node, StringBuilder sb, List<String> l){
         if(node.left != null) recursiveSearch(node.left, sb, l);
@@ -162,11 +165,10 @@ public class Trie {
             sb.append(node.content);
             if(node.content.childList.root != null) recursiveSearch(node.content.childList.root, sb, l);
             l.add(sb.toString());
-            if(node.content.isEnd) return l;
             sb.setLength(0);
         }
         if(node.right != null) recursiveSearch(node.right, sb, l);
-        return EMPTY_LIST;//empty list
+        return l;
     }
     /**
      * this class is a subclass used for DataStructure.Trie

@@ -48,7 +48,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     }
 
     /**
-     * search for ininitive verb
+     * parameter should be in infinitive form
      * @param v
      * @return
      */
@@ -59,19 +59,18 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
         else return null;
     }
     /**
-     * search for part radical of input's verb for deconjugation
+     * sear
      *
      * @param verb
      * @return
      */
-    public List<String> matchesWithInfVerbs(String verb) {
+    public static List<Verb> matchesWithVerbs(String verb) {
         //searchVerb for radical that matchRadical the conjugated verb
-
+        List<Verb> temp = new ArrayList <>();
         for(String v : Verb.trie.search(verb)){
-            searchVerb()
+            temp.add(searchVerb(v));
         }
-
-        return Verb.trie.search(verb);
+        return temp;
     }
     public static boolean containsTemplateName(String template_name){
         return multiMap.containsKey(template_name);
@@ -84,7 +83,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             }
         }
     }
-
+    public boolean containsConjugatedSuffix(String suffix){
+        return this.table.containsValue(suffix);
+    }
     public static void setTrie(){
         for(Verb v : list){
             trie.insert(v.infinitive_form, v.template_name.indexOf(":") - 1);
@@ -139,14 +140,6 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public String getTemplateName(){
         return template_name;
     }
-    public boolean containsSuffix(String suffix){
-        for(Collection<String> s : table.values()){
-            if(s.contains(suffix)){
-                return true;
-            }
-        }
-        return false;
-    }
     class ModeTensePair{
         private Mode mode;
         private Tense tense;
@@ -161,7 +154,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             return tense;
         }
     }
-    public List<Verb.ModeTensePair> contains(String suffix){
+    private List<Verb.ModeTensePair> contains(String suffix){
         List<Verb.ModeTensePair> modeTensePairs = new ArrayList<>();
         for(Mode m : Mode.values()){
             for(Tense t : m.getTenses()){
@@ -203,6 +196,10 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             }
         }
         return infinitive_form.substring(0, infinitive_form.length() - index);
+    }
+    public static String suffix(String verb, String template_name){
+        int start = template_name.indexOf(":");
+        return verb.substring(start, verb.length());
     }
     @Override
     public int compare(Verb o1, Verb o2) {

@@ -35,7 +35,7 @@ public class Program {
         try {
             //read verbs-fr.xml file
             File vFile = new File(path_to_verbs_fr);
-            //read conjugate-fr.xml file
+            //read conjugateInfinitiveVerb-fr.xml file
             File conFile = new File(path_to_conjugation_fr);
             //build NodeLists from sources
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -70,8 +70,8 @@ public class Program {
         Stopwatch stopwatch = Stopwatch.createStarted();
         Program p = new Program();
         // Deconjugation.similarRadical();
-//        String tn = p.conjugate.searchVerb("décapeler").template_name;
-//        SuffixesGroup temp = p.conjugate.searchSuffixesGroup(tn);
+//        String tn = p.conjugateInfinitiveVerb.searchVerb("décapeler").template_name;
+//        SuffixesGroup temp = p.conjugateInfinitiveVerb.searchSuffixesGroup(tn);
 //        ArrayList <String> tmp = temp.getSuffixes(DataStructure.Mode.indicative, DataStructure.Mode.Tense.past);
 //        StringBuilder sb = new StringBuilder();
 //        for (String a : tmp) {
@@ -90,21 +90,38 @@ public class Program {
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }
-
-    public static OutputWriter conjugate() {
+    public static OutputWriter conjugate(String verb, Mode mode, Tense tense){
+        if(isNotConjugated(verb)){
+            return conjugateInfinitiveVerb(verb, mode, tense);
+        }
+        for(Verb infVerb : deconjugate(verb)){
+            String suffix = Verb.suffix(infVerb.getInfinitiveForm(), infVerb.getTemplateName());
+            if(infVerb.containsConjugatedSuffix(suffix))
+                return new OutputWriter(infVerb.getInfinitiveForm(), mode, tense, infVerb.getSuffixes(mode,tense));
+        }
         return null;
     }
-
-    public static OutputWriter conjugate(String verb, Mode mode, Tense tense) {
-        return null;
+    public static OutputWriter conjugateInfinitiveVerb() {
+        Verb v = getRandomVerb();
+        Mode m = getRandomMode();
+        Tense t = getRandomTense();
+        return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
     }
 
-    public static OutputWriter conjugate(String verb) {
-        return null;
+    public static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
+        Verb v = Verb.searchVerb(verb);
+        return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode,tense));
     }
 
-    public static String deconjugate(String verb) {
-        return null;
+    public static OutputWriter conjugateInfinitiveVerb(String verb) {
+        Verb v = Verb.searchVerb(verb);
+        Mode m = getRandomMode();
+        Tense t = getRandomTense();
+        return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
+    }
+
+    public static List<Verb> deconjugate(String verb) {
+        return Verb.matchesWithVerbs(verb);
     }
 
     /**
@@ -120,11 +137,11 @@ public class Program {
     /**
      * return a boolean value if the input's verb is already conjugated
      *
-     * @param s String
+     * @param verb String
      * @return boolean
      */
-    public static boolean isNotConjugated(String s) {
-        return !isConjugated(s);
+    public static boolean isNotConjugated(String verb) {
+        return !isConjugated(verb);
     }
 
     //this method may become obsolete
@@ -134,23 +151,24 @@ public class Program {
      * @param radical String
      * @return String[] -> 2 entries::verb & templateName
      */
-    public Verb matchesRadical(String radical, String verb) {
-        // verb is already conjugated
-        String suffix = verb.substring(radical.length());
-        //todo return mode and tense
-        if (radical.equals("")) radical = "null";
-        if (SimilarRadsDict.contains(radical)) {
-            for (String s : SimilarRadsDict.list(radical)) {
-                Verb v = Verb.searchVerb(s);
-                if (v.containsSuffix(suffix)) return v;
-            }
-        } else {
-            for (Verb v2 : Verb.list) {
-                if (v2.matchesRadical(radical)) return v2;
-            }
-        }
-        return null;
-    }
+//    public Verb matchesRadical(String radical, String verb) {
+//        // verb is already conjugated
+//        String suffix = verb.substring(radical.length());
+//        //todo return mode and tense
+//        if (radical.equals("")) radical = "null";
+//        if (SimilarRadsDict.contains(radical)) {
+//            for (String s : SimilarRadsDict.list(radical)) {
+//                Verb v = Verb.searchVerb(s);
+//                if (v.containsSuffix(suffix)) return v;
+//            }
+//        } else {
+//            for (Verb v2 : Verb.list) {
+//                if (v2.matchesRadical(radical)) return v2;
+//            }
+//        }
+//        return null;
+//    }
+
     //PRIVATE METHODS
 
     /**
@@ -196,22 +214,6 @@ public class Program {
     }
 
     /**
-     * helper method for initConjugation
-     * convert NodeList to array
-     *
-     * @param A NodeList<String>
-     * @return
-     */
-    private static String[] NodeList2Array(NodeList A) {
-        int len = A.getLength();
-        String[] temp = new String[len];
-        for (int i = 0; i < len; i++) {
-            temp[i] = A.item(i).getTextContent();
-        }
-        return temp;
-    }
-
-    /**
      * private helper method to sort NodeList of verbs-fr.xml to ArrayList
      *
      * @param nVerbs NodeList
@@ -230,6 +232,22 @@ public class Program {
         Collections.sort(Verb.list, (o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
     }
 
+    /**
+     * helper method for initConjugation
+     * convert NodeList to array
+     *
+     * @param A NodeList<String>
+     * @return
+     */
+    private static String[] NodeList2Array(NodeList A) {
+        int len = A.getLength();
+        String[] temp = new String[len];
+        for (int i = 0; i < len; i++) {
+            temp[i] = A.item(i).getTextContent();
+        }
+        return temp;
+    }
+
     //FOR TESTING PURPOSES
 
     /**
@@ -240,6 +258,11 @@ public class Program {
     public static Verb getRandomVerb() {
         int index = rand.nextInt(Verb.list().size());
         return Verb.list().get(index);
+    }
+
+    public static String getRandomVerbString(){
+        int index = rand.nextInt(Verb.list().size());
+        return Verb.list().get(index).getInfinitiveForm();
     }
 
     public static Mode getRandomMode() {
