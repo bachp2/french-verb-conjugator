@@ -7,6 +7,7 @@ import Main.Program;
  */
 public class TestMultiMap {
     public static void main(String[] args){
-        Program.printVerbsWithSameTemplateName();
+        //ProgramTestingSuite.printVerbsWithSameTemplateName();
+        ProgramTestingSuite.printTNToFile();
     }
 }

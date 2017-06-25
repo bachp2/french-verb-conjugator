@@ -17,7 +17,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -61,7 +60,10 @@ public class Program {
         }
     }
 
-    private Program() {
+    /**
+     *
+     */
+    protected Program() {
     }
 
     public static void main(String[] args) {
@@ -79,6 +81,12 @@ public class Program {
             return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode, tense));
         return null;
     }
+
+    /**
+     *
+     * @return
+     */
+
     private static OutputWriter conjugateInfinitiveVerb() {
         Verb v = getRandomVerb();
         Mode m = getRandomMode();
@@ -86,18 +94,35 @@ public class Program {
         return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
     }
 
+    /**
+     *
+     * @param verb
+     * @param mode
+     * @param tense
+     * @return
+     */
     private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
-        Verb v = Verb.searchVerb(verb);
+        Verb v = Verb.searchVerbList(verb);
         return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode,tense));
     }
 
+    /**
+     *
+     * @param verb
+     * @return
+     */
     private static OutputWriter conjugateInfinitiveVerb(String verb) {
-        Verb v = Verb.searchVerb(verb);
+        Verb v = Verb.searchVerbList(verb);
         Mode m = getRandomMode();
         Tense t = getRandomTense();
         return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
     }
 
+    /**
+     *
+     * @param verb
+     * @return
+     */
     public static Verb deconjugate(String verb) {
         for(Verb infVerb : Verb.matchesWithVerbs(verb)){
             String suffix = Verb.suffix(infVerb.getInfinitiveForm(), infVerb.getTemplateName());
@@ -207,35 +232,6 @@ public class Program {
 
     //FOR TESTING PURPOSES
 
-    public static void printListElementsToFile(){
-        try {
-            PrintWriter pw = new PrintWriter("list.txt", "UTF-16");
-            for(int i = 0; i < Verb.getListSize(); i++){
-                pw.println(Verb.getListElement(i).toString());
-            }
-            pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void printVerbsWithSameTemplateName(){
-        try {
-            PrintWriter pw = new PrintWriter("verbs_with_same_tn.txt", "UTF-16");
-            for(String key : Verb.getMultiMapKeys()){
-                pw.println(key);
-                for(Verb v : Verb.getMultiMapValuesFromKey(key)){
-                    pw.println("    "+v.getInfinitiveForm());
-                }
-            }
-            pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
     /**
      * return a random verb from verbsGroup
      *
@@ -246,21 +242,37 @@ public class Program {
         return Verb.getListElement(index);
     }
 
+    /**
+     *
+     * @return
+     */
     public static String getRandomVerbString(){
         int index = rand.nextInt(Verb.getList().size());
         return Verb.getListElement(index).getInfinitiveForm();
     }
 
+    /**
+     *
+     * @return
+     */
     public static Mode getRandomMode() {
         int index = rand.nextInt(Mode.values().length);
         return Mode.values()[index];//performance insensitive
     }
 
+    /**
+     *
+     * @return
+     */
     public static Tense getRandomTense() {
         int index = rand.nextInt(Tense.values().length);
         return Tense.values()[index];//performance insensitive
     }
 
+    /**
+     *
+     * @return
+     */
     public static String getRandomConjugatedVerb() {
         Verb v = getRandomVerb();
         List <String> s = v.getSuffixes(getRandomMode(), getRandomTense());

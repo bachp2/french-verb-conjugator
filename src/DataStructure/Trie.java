@@ -1,7 +1,6 @@
 package DataStructure;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -101,7 +100,7 @@ public class Trie {
         trie.insert("ascession", 3);
         trie.insert("s", 3);
         trie.insert("su", 3);
-        System.out.println(trie.search("subsideride"));
+        System.out.println(trie.matchesWithInfVerbsInTrie("subsideride"));
     }
 
     /**
@@ -125,10 +124,32 @@ public class Trie {
     }
 
     /**
+     * verb in infinitive form
      * @param word
      * @return
      */
-    public List<String> search(String word) {
+    public boolean isVerbInTrie(String word){
+        TrieNode current = root;
+        String infVerb = "";
+        StringBuilder temp = new StringBuilder();
+        for(char ch : word.toCharArray()){
+            TrieNode trie_node = current.subNode(ch);
+            if(trie_node != null){
+                temp.append(ch);
+                if(trie_node.isEnd){
+                    infVerb = temp.toString();
+                }
+                current = trie_node;
+            }
+        }
+        return infVerb.equals(word);
+    }
+    /**
+     * in the case of verb is conjugated
+     * @param word
+     * @return
+     */
+    public List<String> matchesWithInfVerbsInTrie(String word) {
         TrieNode current = root;
         TrieNode radicalNode = null;
         List<String> listOfAllPossibleSuffixes = null;
@@ -197,7 +218,7 @@ public class Trie {
             return childList;
         }
         /**
-         * searchVerb for sub-node in the current trie node
+         * searchVerbList for sub-node in the current trie node
          *
          * @param c char
          * @return TrieNode

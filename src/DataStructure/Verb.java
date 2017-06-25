@@ -63,7 +63,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
      * @param v
      * @return
      */
-    public static Verb searchVerb(String v){
+    public static Verb searchVerbList(String v){
         int index = Collections.binarySearch(Verb.list, new Verb(v));
         if (index >= 0)
             return Verb.list.get(index);
@@ -72,6 +72,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public String toString(){
         return "{"+this.infinitive_form+"<"+this.template_name+">}";
     }
+    public static boolean isVerbInTrie(String s){
+        return Verb.trie.isVerbInTrie(s);
+    }
     /**
      * sear
      *
@@ -79,10 +82,10 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
      * @return
      */
     public static List<Verb> matchesWithVerbs(String verb) {
-        //searchVerb for radical that matchRadical the conjugated verb
+        //searchVerbList for radical that matchRadical the conjugated verb
         List<Verb> temp = new ArrayList <>();
-        for(String v : Verb.trie.search(verb)){
-            temp.add(searchVerb(v));
+        for(String v : Verb.trie.matchesWithInfVerbsInTrie(verb)){
+            temp.add(searchVerbList(v));
         }
         return temp;
     }
@@ -126,7 +129,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
      * check if the table is empty
      * @return boolean
      */
-    public boolean isEmpty(){
+    public boolean isTableEmpty(){
         return table.isEmpty();
     }
 
