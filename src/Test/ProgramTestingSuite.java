@@ -1,6 +1,9 @@
 package Test;
 
+import DataStructure.Mode;
+import DataStructure.Tense;
 import DataStructure.Verb;
+import Main.OutputWriter;
 import Main.Program;
 
 import java.io.FileNotFoundException;
@@ -73,6 +76,9 @@ public class ProgramTestingSuite extends Program {
         }
         System.out.println();
         System.out.printf("passes: %d, fails: %d", passes, Verb.getListSize() - passes);
+    }
+    public static void printConjugation(){
+        System.out.println(conjugateInfinitiveVerb());
     }
 
 }

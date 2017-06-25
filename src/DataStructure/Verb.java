@@ -114,11 +114,6 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             trie.insert(v.infinitive_form, v.template_name.indexOf(":") - 1);
         }
     }
-    public static List<Verb> getList(){
-        List<Verb> newList = new ArrayList <>();
-        Collections.copy(list, newList);;
-        return newList;
-    }
     public String getInfinitiveForm(){
         return infinitive_form;
     }

@@ -72,7 +72,9 @@ public class Program {
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }
-    private static OutputWriter conjugate(String verb, Mode mode, Tense tense){
+    public static OutputWriter conjugate(String verb, Mode mode, Tense tense){
+        if(!mode.isTenseInMode(tense))
+            throw new IllegalArgumentException("the tense is not compatible with the mode input");
         if(isNotConjugated(verb)){
             return conjugateInfinitiveVerb(verb, mode, tense);
         }
@@ -87,10 +89,10 @@ public class Program {
      * @return
      */
 
-    private static OutputWriter conjugateInfinitiveVerb() {
+    public static OutputWriter conjugateInfinitiveVerb() {
         Verb v = getRandomVerb();
         Mode m = getRandomMode();
-        Tense t = getRandomTense();
+        Tense t = getRandomTenseFromMode(m);
         return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
     }
 
@@ -102,10 +104,11 @@ public class Program {
      * @return
      */
     private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
+        if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
         Verb v = Verb.searchVerbList(verb);
         return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode,tense));
     }
-
+    //todo check the validity of tense that belongs to a specific mode
     /**
      *
      * @param verb
@@ -114,7 +117,7 @@ public class Program {
     private static OutputWriter conjugateInfinitiveVerb(String verb) {
         Verb v = Verb.searchVerbList(verb);
         Mode m = getRandomMode();
-        Tense t = getRandomTense();
+        Tense t = getRandomTenseFromMode(m);
         return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
     }
 
@@ -238,7 +241,7 @@ public class Program {
      * @return String
      */
     public static Verb getRandomVerb() {
-        int index = rand.nextInt(Verb.getList().size());
+        int index = rand.nextInt(Verb.getListSize());
         return Verb.getListElement(index);
     }
 
@@ -247,7 +250,7 @@ public class Program {
      * @return
      */
     public static String getRandomVerbString(){
-        int index = rand.nextInt(Verb.getList().size());
+        int index = rand.nextInt(Verb.getListSize());
         return Verb.getListElement(index).getInfinitiveForm();
     }
 
@@ -264,9 +267,9 @@ public class Program {
      *
      * @return
      */
-    public static Tense getRandomTense() {
-        int index = rand.nextInt(Tense.values().length);
-        return Tense.values()[index];//performance insensitive
+    public static Tense getRandomTenseFromMode(Mode mode) {
+        int index = rand.nextInt(mode.getTenses().length);
+        return mode.getTenses()[index];//performance insensitive
     }
 
     /**
@@ -275,7 +278,8 @@ public class Program {
      */
     public static String getRandomConjugatedVerb() {
         Verb v = getRandomVerb();
-        List <String> s = v.getSuffixes(getRandomMode(), getRandomTense());
+        Mode m = getRandomMode();
+        List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
         return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
     }
 }
