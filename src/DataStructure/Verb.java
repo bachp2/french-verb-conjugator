@@ -1,6 +1,5 @@
-import DataStructure.Mode;
-import DataStructure.Tense;
-import DataStructure.Trie;
+package DataStructure;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
@@ -17,9 +16,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     private final String template_name;
     private static int index = 0;
     //todo: refactor verb collection to static variable of verb class
-    public static List<Verb> list = new ArrayList<>();
+    private static List<Verb> list = new ArrayList<>();
     private static ListMultimap<String, Verb> multiMap = ArrayListMultimap.create();
-    public static Trie trie = new Trie();
+    private static Trie trie = new Trie();
     protected Table<Mode, Tense, List<String>> table;
 
 
@@ -38,12 +37,24 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
         this.template_name = null;
         this.table = null;
     }
+    public static void addListElement(Verb v){
+        list.add(v);
+    }
+    public static int getListSize(){
+        return list.size();
+    }
+    public static Verb getListElement(int index){
+        return list.get(index);
+    }
+    public static void sortList(){
+        Collections.sort(Verb.list, (o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
+    }
     public boolean matchesRadical(String radical){
         return this.radical().equals(radical);
     }
     public static void create(String infinitive_form, String template_name){
         list.add(new Verb(infinitive_form, template_name));
-        multiMap.put(list.get(index).getInfinitiveForm(), list.get(index));
+        multiMap.put(list.get(index).getTemplateName(), list.get(index));
         index++;
     }
 
@@ -58,6 +69,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             return Verb.list.get(index);
         else return null;
     }
+    public String toString(){
+        return "{"+this.infinitive_form+"<"+this.template_name+">}";
+    }
     /**
      * sear
      *
@@ -71,6 +85,12 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             temp.add(searchVerb(v));
         }
         return temp;
+    }
+    public static Set<String> getMultiMapKeys(){
+        return multiMap.keys().elementSet();
+    }
+    public static List<Verb> getMultiMapValuesFromKey(String key){
+        return multiMap.get(key);
     }
     public static boolean containsTemplateName(String template_name){
         return multiMap.containsKey(template_name);
@@ -91,13 +111,17 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             trie.insert(v.infinitive_form, v.template_name.indexOf(":") - 1);
         }
     }
-    public static List<Verb> list(){
-        return list;
+    public static List<Verb> getList(){
+        List<Verb> newList = new ArrayList <>();
+        Collections.copy(list, newList);;
+        return newList;
     }
     public String getInfinitiveForm(){
         return infinitive_form;
     }
-
+    public static Verb getVerbFromList(int index){
+        return list.get(index);
+    }
     /**
      * check if the table is empty
      * @return boolean
@@ -209,9 +233,6 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     @Override
     public int compareTo(@NotNull Verb o) {
         return this.infinitive_form.compareTo(o.infinitive_form);
-    }
-    public String toString(){
-        return String.format("infinitive form: %s, template name: %s", infinitive_form, template_name);
     }
     public boolean isRadical(String rad){
         return radical(template_name, infinitive_form).equals(rad);

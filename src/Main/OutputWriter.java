@@ -1,3 +1,5 @@
+package Main;
+
 import DataStructure.Mode;
 import DataStructure.Tense;
 import java.util.List;

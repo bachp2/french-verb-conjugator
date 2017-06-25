@@ -1,2 +1,2 @@
 Class-Path: lib/jcommander-1.64.jar
-Main-Class: Program
+Main-Class: Main.Program
