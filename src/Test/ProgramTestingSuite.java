@@ -77,8 +77,21 @@ public class ProgramTestingSuite extends Program {
         System.out.println();
         System.out.printf("passes: %d, fails: %d", passes, Verb.getListSize() - passes);
     }
-    public static void printConjugation(){
-        System.out.println(conjugateInfinitiveVerb());
-    }
+    public static void printRandomConjugation(){
+        int count = rand.nextInt(100);
+        try {
+            PrintWriter pw = new PrintWriter("./src/Test/conjugation.txt", "UTF-16");
+            while(count>0){
+                pw.println(conjugateInfinitiveVerb());
+                pw.println();
+                count--;
+            }
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
+    }
 }

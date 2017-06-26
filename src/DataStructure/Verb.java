@@ -191,38 +191,26 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public int getLengthOfRadical(){
         return template_name.indexOf(':');
     }
-
+    //todo make this radical true for every verb regardless if it is conjugate or not
     /**
      * helper method to radical a verb into remaining radical (discard prefix)
-     *
+     * verb is not conjugated
      * @param temp::String
      * @param v::String
      * @return
      */
     public static String radical(String temp, String v) {
-        int index = 0;
-        for (int i = 0; i < temp.length(); i++) {
-            char c = temp.charAt(i);
-            if (c == ':') {
-                index = temp.length() - 1 - i;
-            }
-        }
+        int index = temp.length() - temp.indexOf(":") - 1;
         return v.substring(0, v.length() - index);
     }
     public String radical(){
-        int index = 0;
-        for (int i = 0; i < template_name.length(); i++) {
-            char c = template_name.charAt(i);
-            if (c == ':') {
-                index = template_name.length() - 1 - i;
-            }
-        }
+        int index = template_name.length() - template_name.indexOf(":") - 1;
         return infinitive_form.substring(0, infinitive_form.length() - index);
     }
-    public static String suffix(String verb, String template_name){
-        int start = template_name.indexOf(":");
-        return verb.substring(start, verb.length());
+    public static String suffix(String temp, String v){
+        return v.substring(radical(temp, v).length(), v.length());
     }
+
     @Override
     public int compare(Verb o1, Verb o2) {
         return o1.infinitive_form.compareTo(o2.infinitive_form);

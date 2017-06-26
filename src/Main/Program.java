@@ -30,7 +30,7 @@ public class Program {
     private static final String PATH_TO_CONJUGATION_FR = "./data/conjugation-fr.xml";
     //private Main.Program instance;
     //todo: implement static build and replace old constructor build method
-    private static Random rand = new Random();
+    protected static Random rand = new Random();
 
     static {
         try {
@@ -80,7 +80,10 @@ public class Program {
         }
         Verb v = deconjugate(verb);
         if(v != null)
-            return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(mode, tense));
+            return new OutputWriter.Builder(v.getSuffixes(mode,tense))
+                    .templateName(v.getTemplateName())
+                    .verb(verb).infVerb(v.getInfinitiveForm())
+                    .mode(mode).tense(tense).build();
         return null;
     }
 
@@ -91,9 +94,14 @@ public class Program {
 
     public static OutputWriter conjugateInfinitiveVerb() {
         Verb v = getRandomVerb();
-        Mode m = getRandomMode();
-        Tense t = getRandomTenseFromMode(m);
-        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(m,t));
+        Mode mode = Mode.infinitive;
+        while(mode == Mode.infinitive)
+            mode = getRandomMode();
+        Tense tense = getRandomTenseFromMode(mode);
+        return new OutputWriter.Builder(v.getSuffixes(mode,tense))
+                .templateName(v.getTemplateName())
+                .verb(v.getInfinitiveForm()).infVerb(v.getInfinitiveForm())
+                .mode(mode).tense(tense).build();
     }
 
     /**
@@ -106,7 +114,10 @@ public class Program {
     private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
         if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
         Verb v = Verb.searchVerbList(verb);
-        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(mode,tense));
+        return new OutputWriter.Builder(v.getSuffixes(mode,tense))
+                .templateName(v.getTemplateName())
+                .verb(verb).infVerb(v.getInfinitiveForm())
+                .mode(mode).tense(tense).build();
     }
     //todo check the validity of tense that belongs to a specific mode
     /**
@@ -116,9 +127,14 @@ public class Program {
      */
     private static OutputWriter conjugateInfinitiveVerb(String verb) {
         Verb v = Verb.searchVerbList(verb);
-        Mode m = getRandomMode();
-        Tense t = getRandomTenseFromMode(m);
-        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(m,t));
+        Mode mode = Mode.infinitive;
+        while(mode == Mode.infinitive)
+            mode = getRandomMode();
+        Tense tense = getRandomTenseFromMode(mode);
+        return new OutputWriter.Builder(v.getSuffixes(mode,tense))
+                .templateName(v.getTemplateName())
+                .verb(verb).infVerb(v.getInfinitiveForm())
+                .mode(mode).tense(tense).build();
     }
 
     /**
