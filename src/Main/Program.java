@@ -26,8 +26,8 @@ import java.util.concurrent.TimeUnit;
  * @version 01/31/2017
  */
 public class Program {
-    private static final String path_to_verbs_fr = "./data/verbs-fr.xml";
-    private static final String path_to_conjugation_fr = "./data/conjugation-fr.xml";
+    private static final String PATH_TO_VERBS_FR = "./data/verbs-fr.xml";
+    private static final String PATH_TO_CONJUGATION_FR = "./data/conjugation-fr.xml";
     //private Main.Program instance;
     //todo: implement static build and replace old constructor build method
     private static Random rand = new Random();
@@ -35,9 +35,9 @@ public class Program {
     static {
         try {
             //read verbs-fr.xml file
-            File vFile = new File(path_to_verbs_fr);
+            File vFile = new File(PATH_TO_VERBS_FR);
             //read conjugateInfinitiveVerb-fr.xml file
-            File conFile = new File(path_to_conjugation_fr);
+            File conFile = new File(PATH_TO_CONJUGATION_FR);
             //build NodeLists from sources
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             NodeList nVerbs = dBuilder.parse(vFile).getElementsByTagName("v");
@@ -80,7 +80,7 @@ public class Program {
         }
         Verb v = deconjugate(verb);
         if(v != null)
-            return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode, tense));
+            return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(mode, tense));
         return null;
     }
 
@@ -93,7 +93,7 @@ public class Program {
         Verb v = getRandomVerb();
         Mode m = getRandomMode();
         Tense t = getRandomTenseFromMode(m);
-        return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
+        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(m,t));
     }
 
     /**
@@ -106,7 +106,7 @@ public class Program {
     private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
         if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
         Verb v = Verb.searchVerbList(verb);
-        return new OutputWriter(v.getInfinitiveForm(), mode, tense, v.getSuffixes(mode,tense));
+        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(mode,tense));
     }
     //todo check the validity of tense that belongs to a specific mode
     /**
@@ -118,7 +118,7 @@ public class Program {
         Verb v = Verb.searchVerbList(verb);
         Mode m = getRandomMode();
         Tense t = getRandomTenseFromMode(m);
-        return new OutputWriter(v.getInfinitiveForm(), m, t, v.getSuffixes(m,t));
+        return new OutputWriter(v.getInfinitiveForm(), v.getTemplateName(), v.getSuffixes(m,t));
     }
 
     /**
