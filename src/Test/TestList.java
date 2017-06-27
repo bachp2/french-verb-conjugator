@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class TestList {
     public static void main(String[] args){
         //ProgramTestingSuite.printListElementsToFile();
-        assertEquals(false, ProgramTestingSuite.isTablesInVerbListEmpty());
+        //assertEquals(false, ProgramTestingSuite.isTablesInVerbListEmpty());
+        ProgramTestingSuite.printRadicalsFromList();
     }
 }

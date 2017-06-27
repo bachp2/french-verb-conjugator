@@ -75,6 +75,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public static boolean isVerbInTrie(String s){
         return Verb.trie.isVerbInTrie(s);
     }
+    public static boolean isRadInTrie(String s){
+        return Verb.trie.isRadInTrie(s);
+    }
     /**
      * sear
      *
@@ -111,7 +114,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     }
     public static void setTrie(){
         for(Verb v : list){
-            trie.insert(v.infinitive_form, v.template_name.indexOf(":") - 1);
+            trie.insert(v.infinitive_form, v.radical().length()-1);
         }
     }
     public String getInfinitiveForm(){

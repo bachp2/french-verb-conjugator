@@ -3,6 +3,7 @@ package Main;
 import DataStructure.Mode;
 import DataStructure.Tense;
 import DataStructure.Verb;
+import Test.ProgramTestingSuite;
 import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.HashBasedTable;
@@ -93,11 +94,11 @@ public class Program {
      */
 
     public static OutputWriter conjugateInfinitiveVerb() {
-        Verb v = getRandomVerb();
+        Verb v = ProgramTestingSuite.getRandomVerb();
         Mode mode = Mode.infinitive;
         while(mode == Mode.infinitive)
-            mode = getRandomMode();
-        Tense tense = getRandomTenseFromMode(mode);
+            mode = ProgramTestingSuite.getRandomMode();
+        Tense tense = ProgramTestingSuite.getRandomTenseFromMode(mode);
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(v.getInfinitiveForm()).infVerb(v.getInfinitiveForm())
@@ -129,8 +130,8 @@ public class Program {
         Verb v = Verb.searchVerbList(verb);
         Mode mode = Mode.infinitive;
         while(mode == Mode.infinitive)
-            mode = getRandomMode();
-        Tense tense = getRandomTenseFromMode(mode);
+            mode = ProgramTestingSuite.getRandomMode();
+        Tense tense = ProgramTestingSuite.getRandomTenseFromMode(mode);
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(verb).infVerb(v.getInfinitiveForm())
@@ -251,51 +252,4 @@ public class Program {
 
     //FOR TESTING PURPOSES
 
-    /**
-     * return a random verb from verbsGroup
-     *
-     * @return String
-     */
-    public static Verb getRandomVerb() {
-        int index = rand.nextInt(Verb.getListSize());
-        return Verb.getListElement(index);
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static String getRandomVerbString(){
-        int index = rand.nextInt(Verb.getListSize());
-        return Verb.getListElement(index).getInfinitiveForm();
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static Mode getRandomMode() {
-        int index = rand.nextInt(Mode.values().length);
-        return Mode.values()[index];//performance insensitive
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static Tense getRandomTenseFromMode(Mode mode) {
-        int index = rand.nextInt(mode.getTenses().length);
-        return mode.getTenses()[index];//performance insensitive
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static String getRandomConjugatedVerb() {
-        Verb v = getRandomVerb();
-        Mode m = getRandomMode();
-        List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
-        return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
-    }
 }

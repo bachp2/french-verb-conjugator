@@ -3,6 +3,7 @@ package DataStructure;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by bachp on 1/31/2017.
@@ -79,7 +80,6 @@ class Tree {
 
 public class Trie {
     private TrieNode root;
-    private static final String[] EMPTY_LIST = new String[0];
     /**
      *
      */
@@ -144,6 +144,22 @@ public class Trie {
         }
         return infVerb.equals(word);
     }
+    public boolean isRadInTrie(String radical){
+        TrieNode current = root;
+        String rad = "";
+        StringBuilder temp = new StringBuilder();
+        for(char ch : radical.toCharArray()){
+            TrieNode trie_node = current.subNode(ch);
+            if(trie_node != null){
+                temp.append(ch);
+                if(trie_node.isRadical){
+                    rad = temp.toString();
+                }
+                current = trie_node;
+            }
+        }
+        return rad.equals(radical);
+    }
     /**
      * in the case of verb is conjugated
      * @param word
@@ -174,6 +190,7 @@ public class Trie {
                         temp.append(radical).append(listOfAllPossibleSuffixes.get(i)).toString());
             }
         }
+
         return listOfAllPossibleSuffixes;
     }
     private List<String> searchAtRadicalPosition(TrieNode node){
@@ -183,9 +200,9 @@ public class Trie {
     private List<String> recursiveSearch(Tree.TreeNode node, StringBuilder sb, List<String> l){
         if(node.left != null) recursiveSearch(node.left, sb, l);
         if(node.content != null){
-            sb.append(node.content);
+            sb.append(node.content.aChar);
             if(node.content.childList.root != null) recursiveSearch(node.content.childList.root, sb, l);
-            l.add(sb.toString());
+            if(sb.length() != 0) l.add(sb.toString());
             sb.setLength(0);
         }
         if(node.right != null) recursiveSearch(node.right, sb, l);

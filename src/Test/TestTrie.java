@@ -5,6 +5,7 @@ package Test;
  */
 public class TestTrie {
     public static void main(String[] args){
-        ProgramTestingSuite.trieExhaustiveCheck();
+        //ProgramTestingSuite.trieExhaustiveCheck();
+        ProgramTestingSuite.trieExhaustiveCheckRadical();
     }
 }
