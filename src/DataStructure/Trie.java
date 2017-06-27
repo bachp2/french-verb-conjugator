@@ -5,79 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Created by bachp on 1/31/2017.
- */
-class Tree {
-    protected TreeNode root;
-
-    /**
-     * empty constructor
-     */
-    public Tree() {
-        root = null;
-    }
-
-    /**
-     * @param c
-     */
-    public void add(Trie.TrieNode c) {
-        this.root = insertInSubtree(this.root, c);
-    }
-
-    public TreeNode contains(char c) {
-        return isInSubtree(this.root, c);
-    }
-
-    /**
-     * @param root
-     * @param node
-     * @return
-     */
-    private TreeNode insertInSubtree(TreeNode root, Trie.TrieNode node) {
-        if (root == null) {
-            root = new TreeNode(node);
-        } else {
-            if (node.aChar < root.content.aChar)
-                root.left = insertInSubtree(root.left, node);
-            else if (node.aChar > root.content.aChar)
-                root.right = insertInSubtree(root.right, node);
-        }
-        return root;
-    }
-
-    /**
-     * @param root
-     * @param c
-     * @return
-     */
-    private TreeNode isInSubtree(TreeNode root, char c) {
-        if (root != null) {
-            if (c < root.content.aChar)
-                return isInSubtree(root.left, c);
-            else if (c > root.content.aChar)
-                return isInSubtree(root.right, c);
-            else return root;
-        }
-        return null;
-    }
-
-    class TreeNode {
-        protected Trie.TrieNode content;
-        protected TreeNode left;
-        protected TreeNode right;
-
-        /**
-         * @param c
-         */
-        public TreeNode(Trie.TrieNode c) {
-            content = c;
-            left = null;
-            right = null;
-        }
-    }
-}
-
 public class Trie {
     private TrieNode root;
     /**
@@ -201,7 +128,7 @@ public class Trie {
         if(node.left != null) recursiveSearch(node.left, sb, l);
         if(node.content != null){
             sb.append(node.content.aChar);
-            if(node.content.childList.root != null) recursiveSearch(node.content.childList.root, sb, l);
+            if(node.content.hasBranch()) recursiveSearch(node.content.childList.root, sb, l);
             if(sb.length() != 0) l.add(sb.toString());
             sb.setLength(0);
         }
@@ -233,6 +160,9 @@ public class Trie {
         }
         public Tree getChildList(){
             return childList;
+        }
+        public boolean hasBranch(){
+            return !childList.isNull();
         }
         /**
          * searchVerbList for sub-node in the current trie node

@@ -5,17 +5,22 @@ import DataStructure.Tense;
 import DataStructure.Trie;
 import DataStructure.Verb;
 import Main.Program;
+import com.google.common.base.Stopwatch;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * Created by bachp on 6/25/2017.
  */
-public class ProgramTestingSuite extends Program {
+public class ProgramTestSuite extends Program {
     public static void printListElementsToFile(){
         try {
             PrintWriter pw = new PrintWriter("./src/Test/list.txt", "UTF-16");
@@ -198,4 +203,5 @@ public class ProgramTestingSuite extends Program {
         List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
         return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
     }
+
 }

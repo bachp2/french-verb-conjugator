@@ -3,7 +3,7 @@ package Main;
 import DataStructure.Mode;
 import DataStructure.Tense;
 import DataStructure.Verb;
-import Test.ProgramTestingSuite;
+import Test.ProgramTestSuite;
 import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.HashBasedTable;
@@ -93,12 +93,12 @@ public class Program {
      * @return
      */
 
-    public static OutputWriter conjugateInfinitiveVerb() {
-        Verb v = ProgramTestingSuite.getRandomVerb();
+    protected static OutputWriter conjugateInfinitiveVerb() {
+        Verb v = ProgramTestSuite.getRandomVerb();
         Mode mode = Mode.infinitive;
         while(mode == Mode.infinitive)
-            mode = ProgramTestingSuite.getRandomMode();
-        Tense tense = ProgramTestingSuite.getRandomTenseFromMode(mode);
+            mode = ProgramTestSuite.getRandomMode();
+        Tense tense = ProgramTestSuite.getRandomTenseFromMode(mode);
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(v.getInfinitiveForm()).infVerb(v.getInfinitiveForm())
@@ -130,8 +130,8 @@ public class Program {
         Verb v = Verb.searchVerbList(verb);
         Mode mode = Mode.infinitive;
         while(mode == Mode.infinitive)
-            mode = ProgramTestingSuite.getRandomMode();
-        Tense tense = ProgramTestingSuite.getRandomTenseFromMode(mode);
+            mode = ProgramTestSuite.getRandomMode();
+        Tense tense = ProgramTestSuite.getRandomTenseFromMode(mode);
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(verb).infVerb(v.getInfinitiveForm())
@@ -249,7 +249,4 @@ public class Program {
         }
         return temp;
     }
-
-    //FOR TESTING PURPOSES
-
 }
