@@ -5,17 +5,15 @@ import DataStructure.Tense;
 import DataStructure.Trie;
 import DataStructure.Verb;
 import Main.Program;
-import com.google.common.base.Stopwatch;
+import org.junit.Assert;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+
+import static junit.framework.TestCase.assertEquals;
 
 /**
  * Created by bachp on 6/25/2017.
@@ -54,6 +52,7 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
+
     public static void printVerbsWithSameTemplateName(){
         try {
             PrintWriter pw = new PrintWriter("./src/Test/multimap.txt", "UTF-16");
@@ -70,6 +69,7 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
+
     public static void trieExhaustiveCheck(){
         int passes = Verb.getListSize();
         for(int i = 0; i < Verb.getListSize(); i++){
@@ -84,6 +84,7 @@ public class ProgramTestSuite extends Program {
         System.out.println();
         System.out.printf("passes: %d, fails: %d", passes, Verb.getListSize() - passes);
     }
+
     public static void trieExhaustiveCheckRadical(){
         int passes = Verb.getListSize();
         for(int i = 0; i < Verb.getListSize(); i++){
@@ -98,6 +99,7 @@ public class ProgramTestSuite extends Program {
         System.out.println();
         System.out.printf("passes: %d, fails: %d", passes, Verb.getListSize() - passes);
     }
+
     public static void printRandomConjugation(){
         int count = rand.nextInt(100);
         try {
@@ -114,6 +116,7 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
+
     public static void printRadicalsFromList(){
         try {
             PrintWriter pw = new PrintWriter("./src/Test/listRadicals.txt", "UTF-16");
@@ -128,19 +131,57 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
+    public static void exhaustiveDeconjugation(){
+        try {
+            PrintWriter pw = new PrintWriter("./src/Test/Deconjugation.txt", "UTF-16");
+            for(int i = 0; i < Verb.getListSize(); i++){
+                Verb verbObj = Verb.getListElement(i);
+                testDeconjugation2(verbObj.getInfinitiveForm(), pw);
+                pw.println(Verb.getListElement(i).toString());
+            }
+            pw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void testDeconjugation2(String s, PrintWriter pw){
+        Verb compare = Verb.searchVerbList(s);
+        String temp = ProgramTestSuite.getRandomConjugatedVerb(compare);
+        //String temp = "avoir";
+        pw.println(temp);
+        pw.println(Verb.matchesWithVerbs(temp));
+    }
+    public static void printRadicalsLength(){
+        try {
+            PrintWriter pw = new PrintWriter("./src/Test/listRadicalsLength.txt", "UTF-16");
+            for(int i = 0; i < Verb.getListSize(); i++){
+                if(Verb.getListElement(i).radical().length() == 0){
+                    pw.println(Verb.getListElement(i).toString());
+                    pw.println(Verb.getListElement(i).radical().length());
+                }
+            }
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void printDeconjugation(){
         String verb = getRandomConjugatedVerb();
         Verb v = deconjugate(verb);
         System.out.print(verb+" ");
         System.out.println(v.getInfinitiveForm());
     }
+
     public static void testDeconjugation(){
         Trie newTrie = new Trie();
         List<Verb> l = new ArrayList <>();
         int i = 0;
         while(i < 20){
             Verb v = getRandomVerb();
-            newTrie.insert(v.getInfinitiveForm(), v.radical().length() - 1);
+            newTrie.insert(v, v.getInfinitiveForm(), v.radical().length() - 1);
             l.add(v);
             i++;
         }
@@ -150,11 +191,17 @@ public class ProgramTestSuite extends Program {
         System.out.println(Verb.matchesWithVerbs(test));
     }
 
+    public static Verb testDeconjugation(String conjugatedVerb){
+        Verb v = deconjugate(conjugatedVerb);
+        return v;
+    }
+
     /**
      * return a random verb from verbsGroup
      *
      * @return String
      */
+
     public static Verb getRandomVerb() {
         int index = rand.nextInt(Verb.getListSize());
         return Verb.getListElement(index);
@@ -164,6 +211,7 @@ public class ProgramTestSuite extends Program {
      *
      * @return
      */
+
     public static String getRandomVerbString(){
         int index = rand.nextInt(Verb.getListSize());
         return Verb.getListElement(index).getInfinitiveForm();
@@ -173,6 +221,7 @@ public class ProgramTestSuite extends Program {
      *
      * @return
      */
+
     public static Mode getRandomMode() {
         int index = rand.nextInt(Mode.values().length);
         return Mode.values()[index];//performance insensitive
@@ -182,11 +231,11 @@ public class ProgramTestSuite extends Program {
      *
      * @return
      */
+
     public static Tense getRandomTenseFromMode(Mode mode) {
         int index = rand.nextInt(mode.getTenses().length);
         return mode.getTenses()[index];//performance insensitive
     }
-
     /**
      *
      * @return
@@ -196,12 +245,10 @@ public class ProgramTestSuite extends Program {
         List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
         return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
     }
-
     public static String getRandomConjugatedVerb() {
         Verb v = getRandomVerb();
         Mode m = getRandomMode();
         List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
         return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
     }
-
 }

@@ -14,7 +14,8 @@ public class TestList {
         Stopwatch stopwatch = Stopwatch.createStarted();
         //ProgramTestSuite.printListElementsToFile();
         //assertEquals(false, ProgramTestSuite.isTablesInVerbListEmpty());
-        ProgramTestSuite.printRadicalsFromList();
+        //ProgramTestSuite.printRadicalsFromList();
+        ProgramTestSuite.printRadicalsLength();
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }

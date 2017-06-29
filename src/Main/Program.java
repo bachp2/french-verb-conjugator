@@ -5,7 +5,6 @@ import DataStructure.Tense;
 import DataStructure.Verb;
 import Test.ProgramTestSuite;
 import com.google.common.base.Joiner;
-import com.google.common.base.Stopwatch;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import org.w3c.dom.Element;
@@ -16,11 +15,11 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Bach Phan
@@ -32,6 +31,7 @@ public class Program {
     //private Main.Program instance;
     //todo: implement static build and replace old constructor build method
     protected static Random rand = new Random();
+    private static final String[] verbsWithSpecialRadicals = {"avoir", "aller", "ravoir", "être"};
 
     static {
         try {
@@ -52,11 +52,7 @@ public class Program {
             dBuilder = null;
             nVerbs = null;
             nConj = null;
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
     }
@@ -64,15 +60,9 @@ public class Program {
     /**
      *
      */
-    protected Program() {
+    public Program() {
     }
 
-    public static void main(String[] args) {
-        Stopwatch stopwatch = Stopwatch.createStarted();
-        Program p = new Program();
-        stopwatch.stop();
-        System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
-    }
     public static OutputWriter conjugate(String verb, Mode mode, Tense tense){
         if(!mode.isTenseInMode(tense))
             throw new IllegalArgumentException("the tense is not compatible with the mode input");
@@ -115,6 +105,7 @@ public class Program {
     private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
         if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
         Verb v = Verb.searchVerbList(verb);
+        assert v != null;
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(verb).infVerb(v.getInfinitiveForm())
@@ -132,6 +123,7 @@ public class Program {
         while(mode == Mode.infinitive)
             mode = ProgramTestSuite.getRandomMode();
         Tense tense = ProgramTestSuite.getRandomTenseFromMode(mode);
+        assert v != null;
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(verb).infVerb(v.getInfinitiveForm())
@@ -144,10 +136,17 @@ public class Program {
      * @return
      */
     public static Verb deconjugate(String verb) {
+        if(isNotConjugated(verb)) return Verb.searchVerbList(verb);
+        for(String v : verbsWithSpecialRadicals){
+            Verb vv =Verb.searchVerbList(v);
+            assert vv != null;
+            if(vv.containsConjugatedForm(verb)) return vv;
+        }
         for(Verb infVerb : Verb.matchesWithVerbs(verb)){
-            String suffix = Verb.suffix(infVerb.getInfinitiveForm(), infVerb.getTemplateName());
-            if(infVerb.containsConjugatedSuffix(suffix))
+            if(infVerb == null) continue;
+            if(infVerb.containsConjugatedForm(verb)) {
                 return infVerb;
+            }
         }
         return null;
     }
@@ -157,7 +156,7 @@ public class Program {
      * @param verb
      * @return
      */
-    public static boolean isConjugated(String verb) {
+    private static boolean isConjugated(String verb) {
         return !(verb.endsWith("er") || verb.endsWith("ir") || verb.endsWith("re"));
     }
     /**
@@ -166,7 +165,7 @@ public class Program {
      * @param verb String
      * @return boolean
      */
-    public static boolean isNotConjugated(String verb) {
+    private static boolean isNotConjugated(String verb) {
         return !isConjugated(verb);
     }
 
@@ -249,4 +248,5 @@ public class Program {
         }
         return temp;
     }
+
 }

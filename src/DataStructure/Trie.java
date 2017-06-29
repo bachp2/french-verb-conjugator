@@ -14,26 +14,10 @@ public class Trie {
         root = new TrieNode(' ');
     }
 
-    public static void main(String[] args) {
-        Trie trie = new Trie();
-        trie.insert("subside", 3);
-        trie.insert("sa", 3);
-        trie.insert("sb", 3);
-        trie.insert("sc", 3);
-        trie.insert("sub", 3);
-        trie.insert("creak", 3);
-        trie.insert("larron", 3);
-        trie.insert("depuis", 3);
-        trie.insert("ascession", 3);
-        trie.insert("s", 3);
-        trie.insert("su", 3);
-        System.out.println(trie.matchesWithInfVerbsInTrie("subsideride"));
-    }
-
     /**
      * @param verb
      */
-    public void insert(String verb, int radIndex) {
+    public void insert(Verb v, String verb, int radIndex) {
         int i = 0;
         TrieNode current = root;
         for (char ch : verb.toCharArray()) {
@@ -48,6 +32,7 @@ public class Trie {
             i++;
         }
         current.isEnd = true;
+        current.verb = v;
     }
 
     /**
@@ -92,18 +77,16 @@ public class Trie {
      * @param word
      * @return
      */
-    public List<String> matchesWithInfVerbsInTrie(String word) {
+    public List<Verb> matchesWithInfVerbsInTrie(String word) {
         TrieNode current = root;
         TrieNode radicalNode = null;
-        List<String> listOfAllPossibleSuffixes = null;
-        String radical = "";
+        List<Verb> listOfAllPossibleSuffixes = null;
         StringBuilder temp = new StringBuilder();
         for (char ch : word.toCharArray()) {
             TrieNode trie_node = current.subNode(ch);
             if (trie_node != null) {
                 temp.append(ch);
                 if (trie_node.isRadical){
-                    radical = temp.toString();
                     radicalNode = trie_node;
                 }
                 current = trie_node;
@@ -111,28 +94,22 @@ public class Trie {
         }
         if(radicalNode != null) {
             listOfAllPossibleSuffixes = searchAtRadicalPosition(radicalNode);
-            for (int i = 0; i < listOfAllPossibleSuffixes.size(); i++){
-                temp.setLength(0);
-                listOfAllPossibleSuffixes.set(i,
-                        temp.append(radical).append(listOfAllPossibleSuffixes.get(i)).toString());
-            }
         }
-
+        //for testing
+        System.out.println(listOfAllPossibleSuffixes);
         return listOfAllPossibleSuffixes;
     }
-    private List<String> searchAtRadicalPosition(TrieNode node){
-        List<String> list = recursiveSearch(node.childList.root, new StringBuilder(), new ArrayList <String>());
+    private List<Verb> searchAtRadicalPosition(TrieNode node){
+        List<Verb> list = recursiveSearch(node.childList.root, new ArrayList <Verb>());
         return list.size() == 0 ? Collections.emptyList() : list;
     }
-    private List<String> recursiveSearch(Tree.TreeNode node, StringBuilder sb, List<String> l){
-        if(node.left != null) recursiveSearch(node.left, sb, l);
+    private List<Verb> recursiveSearch(Tree.TreeNode node, List<Verb> l){
+        if(node.left != null) recursiveSearch(node.left, l);
         if(node.content != null){
-            sb.append(node.content.aChar);
-            if(node.content.hasBranch()) recursiveSearch(node.content.childList.root, sb, l);
-            if(sb.length() != 0) l.add(sb.toString());
-            sb.setLength(0);
+            if(node.content.hasBranch()) recursiveSearch(node.content.childList.root, l);
+            if(node.content.verb != null) l.add(node.content.verb);
         }
-        if(node.right != null) recursiveSearch(node.right, sb, l);
+        if(node.right != null) recursiveSearch(node.right, l);
         return l;
     }
     /**
@@ -145,7 +122,7 @@ public class Trie {
         private boolean isEnd;
         private boolean isRadical;
         private Tree childList;
-
+        private Verb verb;
         /**
          * constructor for TrieNode
          * store sub-nodes in binary tree
@@ -157,6 +134,7 @@ public class Trie {
             isEnd = false;
             isRadical = false;
             childList = new Tree();
+            verb = null;
         }
         public Tree getChildList(){
             return childList;
