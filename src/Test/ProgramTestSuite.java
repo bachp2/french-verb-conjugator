@@ -175,26 +175,6 @@ public class ProgramTestSuite extends Program {
         System.out.println(v.getInfinitiveForm());
     }
 
-    public static void testDeconjugation(){
-        Trie newTrie = new Trie();
-        List<Verb> l = new ArrayList <>();
-        int i = 0;
-        while(i < 20){
-            Verb v = getRandomVerb();
-            newTrie.insert(v, v.getInfinitiveForm(), v.radical().length() - 1);
-            l.add(v);
-            i++;
-        }
-        Verb t = l.get(rand.nextInt(l.size()));
-        String test = getRandomConjugatedVerb(t);
-        System.out.println(test);
-        System.out.println(Verb.matchesWithVerbs(test));
-    }
-
-    public static Verb testDeconjugation(String conjugatedVerb){
-        Verb v = deconjugate(conjugatedVerb);
-        return v;
-    }
 
     /**
      * return a random verb from verbsGroup

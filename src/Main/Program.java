@@ -31,7 +31,6 @@ public class Program {
     //private Main.Program instance;
     //todo: implement static build and replace old constructor build method
     protected static Random rand = new Random();
-    private static final String[] verbsWithSpecialRadicals = {"avoir", "aller", "ravoir", "être"};
 
     static {
         try {
@@ -129,27 +128,7 @@ public class Program {
                 .verb(verb).infVerb(v.getInfinitiveForm())
                 .mode(mode).tense(tense).build();
     }
-
-    /**
-     *
-     * @param verb
-     * @return
-     */
-    public static Verb deconjugate(String verb) {
-        if(isNotConjugated(verb)) return Verb.searchVerbList(verb);
-        for(String v : verbsWithSpecialRadicals){
-            Verb vv =Verb.searchVerbList(v);
-            assert vv != null;
-            if(vv.containsConjugatedForm(verb)) return vv;
-        }
-        for(Verb infVerb : Verb.matchesWithVerbs(verb)){
-            if(infVerb == null) continue;
-            if(infVerb.containsConjugatedForm(verb)) {
-                return infVerb;
-            }
-        }
-        return null;
-    }
+    
     /**
      * check if the verb is already conjugated
      *
