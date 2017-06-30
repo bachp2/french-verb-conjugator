@@ -12,10 +12,10 @@ import static org.junit.Assert.assertEquals;
 public class TestList {
     public static void main(String[] args){
         Stopwatch stopwatch = Stopwatch.createStarted();
-        //ProgramTestSuite.printListElementsToFile();
+        ProgramTestSuite.printListElementsToFile();
         //assertEquals(false, ProgramTestSuite.isTablesInVerbListEmpty());
         //ProgramTestSuite.printRadicalsFromList();
-        ProgramTestSuite.printRadicalsLength();
+        //ProgramTestSuite.printRadicalsLength();
         stopwatch.stop();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));
     }

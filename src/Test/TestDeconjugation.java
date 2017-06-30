@@ -16,7 +16,6 @@ public class TestDeconjugation {
 //        ProgramTestSuite.testDeconjugation();
        //ProgramTestSuite.testDeconjugation2("acculturer");
         //assertEquals(compare, test);
-        ProgramTestSuite.exhaustiveDeconjugation();
         stopwatch.stop();
         System.out.println();
         System.out.println("Elapsed time in milliseconds ==> " + stopwatch.elapsed(TimeUnit.MILLISECONDS));

@@ -62,21 +62,6 @@ public class Program {
     public Program() {
     }
 
-    public static OutputWriter conjugate(String verb, Mode mode, Tense tense){
-        if(!mode.isTenseInMode(tense))
-            throw new IllegalArgumentException("the tense is not compatible with the mode input");
-        if(isNotConjugated(verb)){
-            return conjugateInfinitiveVerb(verb, mode, tense);
-        }
-        Verb v = deconjugate(verb);
-        if(v != null)
-            return new OutputWriter.Builder(v.getSuffixes(mode,tense))
-                    .templateName(v.getTemplateName())
-                    .verb(verb).infVerb(v.getInfinitiveForm())
-                    .mode(mode).tense(tense).build();
-        return null;
-    }
-
     /**
      *
      * @return
@@ -101,10 +86,10 @@ public class Program {
      * @param tense
      * @return
      */
-    private static OutputWriter conjugateInfinitiveVerb(String verb, Mode mode, Tense tense) {
+    private static OutputWriter conjugateVerb(String verb, Mode mode, Tense tense) {
         if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
-        Verb v = Verb.searchVerbList(verb);
-        assert v != null;
+        Verb v = Verb.searchVerb(verb);
+        if(v == null) return null;
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
                 .templateName(v.getTemplateName())
                 .verb(verb).infVerb(v.getInfinitiveForm())
@@ -128,7 +113,7 @@ public class Program {
                 .verb(verb).infVerb(v.getInfinitiveForm())
                 .mode(mode).tense(tense).build();
     }
-    
+
     /**
      * check if the verb is already conjugated
      *
@@ -190,6 +175,7 @@ public class Program {
             }
             Verb.setTable(t_n, newTable);
         }
+        Verb.setTrie();
     }
 
     /**
@@ -209,7 +195,6 @@ public class Program {
             Verb.create(verb, template_name);
         }
         Verb.sortList();
-        Verb.setTrie();
     }
 
     /**

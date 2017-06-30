@@ -70,19 +70,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public static boolean isRadInTrie(String s){
         return Verb.trie.isRadInTrie(s);
     }
-    /**
-     * sear
-     *
-     * @param verb
-     * @return
-     */
-    public static List<Verb> matchesWithVerbs(String verb) {
-        //searchVerbList for radical that matchRadical the conjugated verb
-        List<Verb> temp =  Verb.trie.matchesWithInfVerbsInTrie(verb);
-        //for testing
-        //System.out.println(temp);
-        return temp;
-    }
+
     public static Set<String> getMultiMapKeys(){
         return multiMap.keys().elementSet();
     }
@@ -123,6 +111,9 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
         for(Verb v : list){
             trie.insert(v ,v.table.values(), v.getRadicalIndex());
         }
+    }
+    public static Verb searchVerb(String verb){
+        return Verb.trie.searchVerb(verb);
     }
     public String getInfinitiveForm(){
         return infinitive_form;

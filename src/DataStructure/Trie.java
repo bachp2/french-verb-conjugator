@@ -42,6 +42,7 @@ public class Trie {
                                     current = current.subNode(ch);
                                 }
                             }
+                            current.isEnd = true;
                             current.verb = v;
                         }
                     }
@@ -50,8 +51,6 @@ public class Trie {
             }
             i++;
         }
-        current.isEnd = true;
-        current.verb = v;
     }
 
     /**
@@ -91,46 +90,17 @@ public class Trie {
         }
         return rad.equals(radical);
     }
-    /**
-     * in the case of verb is conjugated
-     * @param word
-     * @return
-     */
-    public List<Verb> matchesWithInfVerbsInTrie(String word) {
+    public Verb searchVerb(String verb){
         TrieNode current = root;
-        TrieNode radicalNode = null;
-        List<Verb> listOfAllPossibleSuffixes = null;
-        StringBuilder temp = new StringBuilder();
-        for (char ch : word.toCharArray()) {
-            TrieNode trie_node = current.subNode(ch);
-            if (trie_node != null) {
-                temp.append(ch);
-                if (trie_node.isRadical){
-                    radicalNode = trie_node;
-                }
-                current = trie_node;
+        for(char ch : verb.toCharArray()){
+            TrieNode trieNode = current.subNode(ch);
+            if(trieNode != null){
+                current = trieNode;
             }
+            else return null;
         }
-        if(radicalNode != null) {
-            listOfAllPossibleSuffixes = searchAtRadicalPosition(radicalNode);
-        }
-        //for testing
-        //System.out.println(listOfAllPossibleSuffixes);
-        return listOfAllPossibleSuffixes;
-    }
-    private List<Verb> searchAtRadicalPosition(TrieNode node){
-        List<Verb> list = recursiveSearch(node.childList.root, new ArrayList <Verb>());
-        return list.size() == 0 ? Collections.emptyList() : list;
-    }
-    private List<Verb> recursiveSearch(Tree.TreeNode node, List<Verb> l){
-        if(node.left != null) recursiveSearch(node.left, l);
-        if(node.content != null){
-            if(node.content.isRadical) return l;
-            if(node.content.hasBranch()) recursiveSearch(node.content.childList.root, l);
-            if(node.content.verb != null) l.add(node.content.verb);
-        }
-        if(node.right != null) recursiveSearch(node.right, l);
-        return l;
+        if(current.isEnd) return current.verb;
+        else return null;
     }
     /**
      * this class is a subclass used for DataStructure.Trie

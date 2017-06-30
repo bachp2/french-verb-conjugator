@@ -131,26 +131,7 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
-    public static void exhaustiveDeconjugation(){
-        try {
-            PrintWriter pw = new PrintWriter("./src/Test/Deconjugation.txt", "UTF-16");
-            for(int i = 0; i < Verb.getListSize(); i++){
-                Verb verbObj = Verb.getListElement(i);
-                testDeconjugation2(verbObj.getInfinitiveForm(), pw);
-                //pw.println(Verb.getListElement(i).toString());
-            }
-            pw.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public static void testDeconjugation2(String s, PrintWriter pw){
-        Verb compare = Verb.searchVerbList(s);
-        String temp = ProgramTestSuite.getRandomConjugatedVerb(compare);
-        //String temp = "avoir";
-        pw.println(temp+" "+compare);
-        pw.println(Verb.matchesWithVerbs(temp));
-    }
+
     public static void printRadicalsLength(){
         try {
             PrintWriter pw = new PrintWriter("./src/Test/listRadicalsLength.txt", "UTF-16");
@@ -166,13 +147,6 @@ public class ProgramTestSuite extends Program {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void printDeconjugation(){
-        String verb = getRandomConjugatedVerb();
-        Verb v = deconjugate(verb);
-        System.out.print(verb+" ");
-        System.out.println(v.getInfinitiveForm());
     }
 
 
