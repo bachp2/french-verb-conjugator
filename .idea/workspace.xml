@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb$ModeTensePair.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/Program.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/Program.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Tense.java" afterPath="$PROJECT_DIR$/src/DataStructure/Tense.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Tree.java" afterPath="$PROJECT_DIR$/src/DataStructure/Tree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/Deconjugation.txt" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/Deconjugation.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/DataStructure/Trie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Verb.java" afterPath="$PROJECT_DIR$/src/DataStructure/Verb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Program.java" afterPath="$PROJECT_DIR$/src/Main/Program.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/Deconjugation.txt" afterPath="$PROJECT_DIR$/src/Test/Deconjugation.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" afterPath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" afterPath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/TestList.java" afterPath="$PROJECT_DIR$/src/Test/TestList.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +37,8 @@
       <file leaf-file-name="ProgramTestSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/ProgramTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="135" column="87" lean-forward="false" selection-start-line="135" selection-start-column="87" selection-end-line="135" selection-end-column="87" />
+            <state relative-caret-position="160">
+              <caret line="183" column="49" lean-forward="false" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,8 +49,18 @@
       <file leaf-file-name="Deconjugation.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/Deconjugation.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28526">
-              <caret line="1515" column="0" lean-forward="false" selection-start-line="1515" selection-start-column="0" selection-end-line="1515" selection-end-column="5" />
+            <state relative-caret-position="176">
+              <caret line="11030" column="16" lean-forward="false" selection-start-line="11030" selection-start-column="16" selection-end-line="11030" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listRadicals.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test/listRadicals.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="8410" column="5" lean-forward="false" selection-start-line="8410" selection-start-column="1" selection-end-line="8410" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -76,7 +79,7 @@
       <file leaf-file-name="TestTrie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/TestTrie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="272">
               <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,8 +103,8 @@
       <file leaf-file-name="Trie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="103" column="44" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+            <state relative-caret-position="203">
+              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -117,34 +120,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Verb.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="-4">
+              <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/OutputWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="39" column="13" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="39" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="148" column="13" lean-forward="true" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
+            <state relative-caret-position="-950">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
+                <element signature="initializer##0;class#Program#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -162,12 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subs</find>
-      <find>radical(</find>
-      <find>matches</find>
-      <find>search</find>
-      <find>list</find>
-      <find>Verb.get</find>
       <find>toS</find>
       <find>toStr</find>
       <find>aim:er</find>
@@ -192,6 +180,12 @@
       <find>contai</find>
       <find>conta</find>
       <find>test</find>
+      <find>tre</find>
+      <find>être</find>
+      <find>aller</find>
+      <find>rire</find>
+      <find>r:ire</find>
+      <find>setTr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,11 +245,11 @@
         <option value="$PROJECT_DIR$/src/Main/GUI.java" />
         <option value="$PROJECT_DIR$/src/Main/GUI.form" />
         <option value="$PROJECT_DIR$/src/Test/TestList.java" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Trie.java" />
         <option value="$PROJECT_DIR$/src/Test/TestDeconjugation.java" />
+        <option value="$PROJECT_DIR$/src/Main/Program.java" />
         <option value="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
-        <option value="$PROJECT_DIR$/src/Main/Program.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Trie.java" />
       </list>
     </option>
   </component>
@@ -782,6 +776,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1362" y="-4" width="1374" height="776" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -799,7 +794,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32205883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -946,18 +941,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/listRadicals.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="8410" column="5" lean-forward="false" selection-start-line="8410" selection-start-column="1" selection-end-line="8410" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
           <caret line="75" column="1" lean-forward="false" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="103" column="44" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
@@ -1047,9 +1027,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-950">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Program#0" expanded="false" />
+            <element signature="initializer##0;class#Program#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/listRadicals.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="8410" column="5" lean-forward="false" selection-start-line="8410" selection-start-column="1" selection-end-line="8410" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Deconjugation.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11030" column="16" lean-forward="false" selection-start-line="11030" selection-start-column="16" selection-end-line="11030" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/TestTrie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="272">
           <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1067,18 +1075,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Deconjugation.txt">
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28526">
-          <caret line="1515" column="0" lean-forward="false" selection-start-line="1515" selection-start-column="0" selection-end-line="1515" selection-end-column="5" />
+        <state relative-caret-position="203">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/ProgramTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="135" column="87" lean-forward="false" selection-start-line="135" selection-start-column="87" selection-end-line="135" selection-end-column="87" />
+        <state relative-caret-position="160">
+          <caret line="183" column="49" lean-forward="false" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1087,20 +1095,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="-4">
+          <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="148" column="13" lean-forward="true" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Program#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

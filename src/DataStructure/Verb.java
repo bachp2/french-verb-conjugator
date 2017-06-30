@@ -121,7 +121,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     }
     public static void setTrie(){
         for(Verb v : list){
-            trie.insert(v ,v.infinitive_form, v.getRadicalIndex());
+            trie.insert(v ,v.table.values(), v.getRadicalIndex());
         }
     }
     public String getInfinitiveForm(){
@@ -151,6 +151,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public static String appendString(String radical, String prefix){
         return radical+prefix;
     }
+
     public String getTemplateName(){
         return template_name;
     }

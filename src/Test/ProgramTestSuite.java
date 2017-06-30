@@ -137,7 +137,7 @@ public class ProgramTestSuite extends Program {
             for(int i = 0; i < Verb.getListSize(); i++){
                 Verb verbObj = Verb.getListElement(i);
                 testDeconjugation2(verbObj.getInfinitiveForm(), pw);
-                pw.println(Verb.getListElement(i).toString());
+                //pw.println(Verb.getListElement(i).toString());
             }
             pw.close();
         } catch (Exception e) {
@@ -148,7 +148,7 @@ public class ProgramTestSuite extends Program {
         Verb compare = Verb.searchVerbList(s);
         String temp = ProgramTestSuite.getRandomConjugatedVerb(compare);
         //String temp = "avoir";
-        pw.println(temp);
+        pw.println(temp+" "+compare);
         pw.println(Verb.matchesWithVerbs(temp));
     }
     public static void printRadicalsLength(){

@@ -1,9 +1,6 @@
 package DataStructure;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Trie {
     private TrieNode root;
@@ -15,20 +12,42 @@ public class Trie {
     }
 
     /**
-     * @param verb
+     * @param
      */
-    public void insert(Verb v, String verb, int radIndex) {
+    public void insert(Verb v, Collection<List<String>> lists, int radIndex) {
         int i = 0;
         TrieNode current = root;
-        for (char ch : verb.toCharArray()) {
-            TrieNode child = current.subNode(ch);
+
+        for (char c : v.getInfinitiveForm().toCharArray()) {
+            TrieNode child = current.subNode(c);
             if (child != null)
                 current = child;
             else {
-                current.childList.add(new TrieNode(ch));
-                current = current.subNode(ch);
+                current.childList.add(new TrieNode(c));
+                current = current.subNode(c);
             }
-            if(i == radIndex) current.isRadical = true;
+            if(i == radIndex){
+                current.isRadical = true;
+                TrieNode radical = current;
+                for (List<String> list : lists) {
+                    for (String e : list) {
+                        if (!e.equals("null")) {
+                            current = radical;
+                            for (char ch : e.toCharArray()) {
+                                child = current.subNode(ch);
+                                if (child != null)
+                                    current = child;
+                                else {
+                                    current.childList.add(new TrieNode(ch));
+                                    current = current.subNode(ch);
+                                }
+                            }
+                            current.verb = v;
+                        }
+                    }
+                }
+                break;
+            }
             i++;
         }
         current.isEnd = true;
@@ -96,7 +115,7 @@ public class Trie {
             listOfAllPossibleSuffixes = searchAtRadicalPosition(radicalNode);
         }
         //for testing
-        System.out.println(listOfAllPossibleSuffixes);
+        //System.out.println(listOfAllPossibleSuffixes);
         return listOfAllPossibleSuffixes;
     }
     private List<Verb> searchAtRadicalPosition(TrieNode node){
@@ -106,6 +125,7 @@ public class Trie {
     private List<Verb> recursiveSearch(Tree.TreeNode node, List<Verb> l){
         if(node.left != null) recursiveSearch(node.left, l);
         if(node.content != null){
+            if(node.content.isRadical) return l;
             if(node.content.hasBranch()) recursiveSearch(node.content.childList.root, l);
             if(node.content.verb != null) l.add(node.content.verb);
         }
