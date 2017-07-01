@@ -57,14 +57,14 @@ public class Program {
     }
 
     /**
-     *
+     * empty constructor to be extended to a testing suite
      */
     public Program() {
     }
 
     /**
-     *
-     * @return
+     * conjugate a random verb with random mode and tense
+     * @return OutputWriter
      */
 
     protected static OutputWriter conjugateInfinitiveVerb() {
@@ -80,20 +80,28 @@ public class Program {
     }
 
     /**
-     *
+     * conjugate a verb with given mode and tense
      * @param verb
      * @param mode
      * @param tense
      * @return
      */
-    private static OutputWriter conjugateVerb(String verb, Mode mode, Tense tense) {
+    private static OutputWriter[] conjugateVerb(String verb, Mode mode, Tense tense) {
+        Verb[] lv = null;
+        OutputWriter[] owVectors = null;
         if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
-        Verb v = Verb.searchVerb(verb);
-        if(v == null) return null;
-        return new OutputWriter.Builder(v.getSuffixes(mode,tense))
-                .templateName(v.getTemplateName())
-                .verb(verb).infVerb(v.getInfinitiveForm())
-                .mode(mode).tense(tense).build();
+        //array of Verb elements that matched in trie
+        lv = Verb.searchVerb(verb);
+        owVectors = new OutputWriter[lv.length];
+        int index = 0;
+        for(Verb v : lv){
+            OutputWriter ow = new OutputWriter.Builder(v.getSuffixes(mode,tense))
+                    .templateName(v.getTemplateName())
+                    .verb(verb).infVerb(v.getInfinitiveForm())
+                    .mode(mode).tense(tense).build();
+            owVectors[index] = ow;
+        }
+        return owVectors;
     }
     //todo check the validity of tense that belongs to a specific mode
     /**

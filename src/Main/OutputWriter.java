@@ -3,6 +3,7 @@ package Main;
 import DataStructure.Mode;
 import DataStructure.Tense;
 import DataStructure.Verb;
+import com.google.common.base.Joiner;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Created by bachp on 3/26/2017.
  */
-public class OutputWriter{
+public class OutputWriter {
     private final String verbToBeConjugated;
     private final String infVerb;
     private final Mode mode;
@@ -33,6 +34,15 @@ public class OutputWriter{
             this.conjugatedForms = new ArrayList <>();
             for(String e : builder.conjugatedForms){
                 if(!e.equals("null")){
+                    if(e.contains("/")){
+                        List<String> temp = new ArrayList <>();
+                        for(String s : e.split("/")){
+                            sb.setLength(0);
+                            sb.append(Verb.radical(templateName, infVerb)).append(s);
+                            temp.add(sb.toString());
+                        }
+                        this.conjugatedForms.add(Joiner.on("/").join(temp));
+                    }
                     sb.setLength(0);
                     sb.append(Verb.radical(templateName, infVerb)).append(e);
                     this.conjugatedForms.add(sb.toString());
@@ -85,6 +95,7 @@ public class OutputWriter{
     }
     public static class Builder{
         private final List<String> conjugatedForms;
+        private final List<String>[] multipleConjugatedForms;
         private String verb;
         private String infVerb;
         private Mode mode;
@@ -92,6 +103,11 @@ public class OutputWriter{
         private String templateName;
         public Builder(List<String> conjugatedForms){
             this.conjugatedForms = conjugatedForms;
+            this.multipleConjugatedForms = null;
+        }
+        public Builder(List<String>... multipleConjugatedForms){
+            this.conjugatedForms = null;
+            this.multipleConjugatedForms = multipleConjugatedForms;
         }
         public Builder verb(String verb){
             this.verb = verb;

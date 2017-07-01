@@ -112,7 +112,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
             trie.insert(v ,v.table.values(), v.getRadicalIndex());
         }
     }
-    public static Verb searchVerb(String verb){
+    public static Verb[] searchVerb(String verb){
         return Verb.trie.searchVerb(verb);
     }
     public String getInfinitiveForm(){

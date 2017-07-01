@@ -17,21 +17,45 @@ public class Trie {
     public void insert(Verb v, Collection<List<String>> lists, int radIndex) {
         int i = 0;
         TrieNode current = root;
-
         for (char c : v.getInfinitiveForm().toCharArray()) {
-            TrieNode child = current.subNode(c);
-            if (child != null)
-                current = child;
-            else {
-                current.childList.add(new TrieNode(c));
-                current = current.subNode(c);
+            TrieNode child;
+            if (radIndex != -1) {
+                child = current.subNode(c);
+                if (child != null)
+                    current = child;
+                else {
+                    current.childList.add(new TrieNode(c));
+                    current = current.subNode(c);
+                }
             }
-            if(i == radIndex){
+            if(i == radIndex || radIndex == -1){
                 current.isRadical = true;
                 TrieNode radical = current;
                 for (List<String> list : lists) {
                     for (String e : list) {
-                        if (!e.equals("null")) {
+                        //in the form of {asseoir<ass:eoir>}:assiéras/eyeras/oiras>{assoir<ass:oir>}
+                        if(e.contains("/"))
+                            for(String l : e.split("/")){
+                                current = radical;
+                                for (char ch : l.toCharArray()) {
+                                    child = current.subNode(ch);
+                                    if (child != null)
+                                        current = child;
+                                    else {
+                                        current.childList.add(new TrieNode(ch));
+                                        current = current.subNode(ch);
+                                    }
+                                }
+                                current.isEnd = true;
+                                if(current.verb != null){
+                                    current.setOfVerbs = new HashSet <>();
+                                    current.setOfVerbs.add(current.verb);
+                                    current.setOfVerbs.add(v);
+                                }
+                                current.verb = v;
+                            }
+                        // regular verb with only onw conjugation
+                        if (!e.equals("null") || e != null) {
                             current = radical;
                             for (char ch : e.toCharArray()) {
                                 child = current.subNode(ch);
@@ -43,6 +67,11 @@ public class Trie {
                                 }
                             }
                             current.isEnd = true;
+                            if(current.verb != null){
+                                current.setOfVerbs = new HashSet <>();
+                                current.setOfVerbs.add(current.verb);
+                                current.setOfVerbs.add(v);
+                            }
                             current.verb = v;
                         }
                     }
@@ -90,8 +119,9 @@ public class Trie {
         }
         return rad.equals(radical);
     }
-    public Verb searchVerb(String verb){
+    public Verb[] searchVerb(String verb){
         TrieNode current = root;
+        Verb[] temp = new Verb[1];
         for(char ch : verb.toCharArray()){
             TrieNode trieNode = current.subNode(ch);
             if(trieNode != null){
@@ -99,7 +129,10 @@ public class Trie {
             }
             else return null;
         }
-        if(current.isEnd) return current.verb;
+        temp[0] = current.verb;
+        if(current.isEnd && current.setOfVerbs == null) return temp;
+        else if (current.isEnd && current != null)
+            return current.setOfVerbs.toArray(new Verb[current.setOfVerbs.size()]);
         else return null;
     }
     /**
@@ -113,6 +146,7 @@ public class Trie {
         private boolean isRadical;
         private Tree childList;
         private Verb verb;
+        private Set<Verb> setOfVerbs;
         /**
          * constructor for TrieNode
          * store sub-nodes in binary tree
@@ -125,6 +159,7 @@ public class Trie {
             isRadical = false;
             childList = new Tree();
             verb = null;
+            setOfVerbs = null;
         }
         public Tree getChildList(){
             return childList;

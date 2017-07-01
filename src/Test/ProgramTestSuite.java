@@ -2,18 +2,13 @@ package Test;
 
 import DataStructure.Mode;
 import DataStructure.Tense;
-import DataStructure.Trie;
 import DataStructure.Verb;
 import Main.Program;
-import org.junit.Assert;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
-
-import static junit.framework.TestCase.assertEquals;
 
 /**
  * Created by bachp on 6/25/2017.
@@ -116,7 +111,40 @@ public class ProgramTestSuite extends Program {
             e.printStackTrace();
         }
     }
-
+    public static void testConjugation(){
+//        try {
+//            int passes = 0;
+//            PrintWriter pw = new PrintWriter("./src/Test/testDecon.txt", "UTF-16");
+//            for (int i = 0; i < Verb.getListSize(); i++) {
+//                Verb v = Verb.getListElement(i);
+//                String c = getRandomConjugatedVerb(v);
+//                Verb[] vv = Verb.searchVerb(c);
+//                pw.println(v+":"+c+">"+vv);
+//                System.out.println(v+":"+c+">"+vv);
+//                for(Verb verb : vv){
+//                    if(v == verb) passes++;
+//                }
+//            }
+//            System.out.print(passes);
+//            pw.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
+        int count = 8000;
+        int i = 0;
+        while(i < count){
+            Verb verbFromList = getRandomVerb();
+            String conjugatedVerb = getRandomConjugatedVerb(verbFromList);
+            System.out.println(verbFromList+" "+conjugatedVerb);
+            for(Verb v : Verb.searchVerb(conjugatedVerb)){
+                System.out.print(v+" ");
+            }
+            System.out.println();
+            System.out.print(i++);
+        }
+    }
     public static void printRadicalsFromList(){
         try {
             PrintWriter pw = new PrintWriter("./src/Test/listRadicals.txt", "UTF-16");
@@ -149,7 +177,6 @@ public class ProgramTestSuite extends Program {
         }
     }
 
-
     /**
      * return a random verb from verbsGroup
      *
@@ -159,16 +186,6 @@ public class ProgramTestSuite extends Program {
     public static Verb getRandomVerb() {
         int index = rand.nextInt(Verb.getListSize());
         return Verb.getListElement(index);
-    }
-
-    /**
-     *
-     * @return
-     */
-
-    public static String getRandomVerbString(){
-        int index = rand.nextInt(Verb.getListSize());
-        return Verb.getListElement(index).getInfinitiveForm();
     }
 
     /**
@@ -197,12 +214,12 @@ public class ProgramTestSuite extends Program {
     public static String getRandomConjugatedVerb(Verb v) {
         Mode m = getRandomMode();
         List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
-        return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
-    }
-    public static String getRandomConjugatedVerb() {
-        Verb v = getRandomVerb();
-        Mode m = getRandomMode();
-        List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
-        return Verb.appendString(v.radical(), s.get(rand.nextInt(s.size())));
+        String temp = s.get(rand.nextInt(s.size()));
+        while(temp.equals("null")) temp = s.get(rand.nextInt(s.size()));
+        if(temp.contains("/")){
+            String[] tmp = temp.split("/");
+            return Verb.appendString(v.radical(), tmp[rand.nextInt(tmp.length)]);
+        }
+        return Verb.appendString(v.radical(), temp);
     }
 }
