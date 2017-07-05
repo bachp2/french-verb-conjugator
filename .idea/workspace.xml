@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Gui.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Main.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$TenseConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/OutputWriter$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/OutputWriter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/Program.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/OutputWriter.java" afterPath="$PROJECT_DIR$/src/App/OutputWriter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/Program.java" afterPath="$PROJECT_DIR$/src/App/Program.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.txt" afterPath="$PROJECT_DIR$/manifest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Mode.java" afterPath="$PROJECT_DIR$/src/DataStructure/Mode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Tense.java" afterPath="$PROJECT_DIR$/src/DataStructure/Tense.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/DataStructure/Trie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Verb.java" afterPath="$PROJECT_DIR$/src/DataStructure/Verb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" afterPath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Main.java" afterPath="$PROJECT_DIR$/src/App/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Program.java" afterPath="$PROJECT_DIR$/src/App/Program.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +48,8 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="145" column="102" lean-forward="false" selection-start-line="145" selection-start-column="102" selection-end-line="145" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
@@ -75,11 +58,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TestList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test/TestList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="374">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/App/Handler.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Tense.java" />
-        <option value="$PROJECT_DIR$/src/App/Program.java" />
         <option value="$PROJECT_DIR$/src/App/Controller.java" />
+        <option value="$PROJECT_DIR$/src/App/Program.java" />
         <option value="$PROJECT_DIR$/src/App/Main.java" />
       </list>
     </option>
@@ -263,6 +256,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,10 +652,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestDeconjugation" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestTrie" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestList" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TestMultiMap" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestMultiMap" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestList" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestDeconjugation" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestTrie" />
       </list>
     </recent_temporary>
   </component>
@@ -690,7 +711,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="285" y="139" width="927" height="532" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="285" y="139" width="927" height="532" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -844,6 +865,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61302">
           <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -888,13 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1079,10 +1094,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/TestList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        <state relative-caret-position="362">
+          <caret line="145" column="102" lean-forward="false" selection-start-line="145" selection-start-column="102" selection-end-line="145" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Program#0" expanded="false" />
@@ -1092,8 +1115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        <state relative-caret-position="374">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

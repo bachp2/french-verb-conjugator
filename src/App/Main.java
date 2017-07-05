@@ -13,7 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("french verb conjugator");
         primaryStage.setScene(new Scene(root, 545, 350));
-        //new Program();
+        new Program();
         primaryStage.show();
     }
 

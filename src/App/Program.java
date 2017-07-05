@@ -142,8 +142,8 @@ public class Program {
             for (Mode mode : Mode.values()) {
                 for (Tense tense : mode.getTenses()) {
                     List <String> p = new ArrayList <>();
-                    Element md = (Element) tmp.getElementsByTagName(mode.toString()).item(0);
-                    Element ten = (Element) md.getElementsByTagName(tense.toString(mode)).item(0);
+                    Element md = (Element) tmp.getElementsByTagName(mode.toString().toLowerCase()).item(0);
+                    Element ten = (Element) md.getElementsByTagName(tense.toString(mode).toLowerCase()).item(0);
                     NodeList listP = ten.getElementsByTagName("p");
                     NodeList listI;
                     int le = listP.getLength();
