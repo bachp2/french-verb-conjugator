@@ -1,19 +1,13 @@
 package DataStructure;
 
-import com.beust.jcommander.IStringConverter;
-
-import java.util.ArrayList;
-
-import static DataStructure.Mode.getMode;
-
 /**
  * Created by bachp on 4/22/2017.
  */
 public enum Tense {
-    present("infinitive-present", "imperative-present", "present-participle"),
-    imperfect,
-    future,
-    past("simple-past", "past-participle");
+    PRESENT("INFINITIVE-PRESENT", "IMPERATIVE-PRESENT", "PRESENT-PARTICIPLE"),
+    IMPERFECT,
+    FUTURE,
+    PAST("SIMPLE-PAST", "PAST-PARTICIPLE");
     final String[] tenses;
     Tense(String... tenses){
         this.tenses = tenses;
@@ -33,22 +27,22 @@ public enum Tense {
     }
 
     public String toString(Mode m) {
-        if (this == Tense.present) {
+        if (this == Tense.PRESENT) {
             switch (m) {
-                case infinitive:
+                case INFINITIVE:
                     return this.tenses[0];
-                case imperative:
+                case IMPERATIVE:
                     return this.tenses[1];
-                case participle:
+                case PARTICIPLE:
                     return this.tenses[2];
                 default:
                     break;
             }
-        } else if (this == Tense.past) {
+        } else if (this == Tense.PAST) {
             switch (m) {
-                case indicative:
+                case INDICATIVE:
                     return this.tenses[0];
-                case participle:
+                case PARTICIPLE:
                     return this.tenses[1];
                 default:
                     break;
@@ -56,18 +50,4 @@ public enum Tense {
         }
         return this.toString();
     }
-
-    public static class TenseConverter implements IStringConverter<ArrayList<Tense>> {
-
-        @Override
-        public ArrayList <Tense> convert(String s) {
-            String[] temp = s.split(",|/.|;");
-            ArrayList <Tense> tmp = new ArrayList <>();
-            for (String e : temp) {
-                tmp.add(Tense.toTense(e));
-            }
-            return tmp;
-        }
-    }
-
 }

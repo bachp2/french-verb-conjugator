@@ -2,19 +2,18 @@ package DataStructure;
 
 import com.beust.jcommander.IStringConverter;
 
-import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
  * Created by bachp on 3/25/2017.
  */
 public enum Mode {
-    infinitive(Tense.present),
-    indicative(Tense.present, Tense.imperfect, Tense.future, Tense.past),
-    conditional(Tense.present),
-    subjunctive(Tense.present, Tense.imperfect),
-    imperative(Tense.present),
-    participle(Tense.present, Tense.past);
+    INFINITIVE(Tense.PRESENT),
+    INDICATIVE(Tense.PRESENT, Tense.IMPERFECT, Tense.FUTURE, Tense.PAST),
+    CONDITIONAL(Tense.PRESENT),
+    SUBJUNCTIVE(Tense.PRESENT, Tense.IMPERFECT),
+    IMPERATIVE(Tense.PRESENT),
+    PARTICIPLE(Tense.PRESENT, Tense.PAST);
     private final Tense[] tenses;
 
     Mode(Tense... tenses) {

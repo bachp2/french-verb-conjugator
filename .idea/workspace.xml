@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Gui.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/Main.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$TenseConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/OutputWriter$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/OutputWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Main/Program.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/OutputWriter.java" afterPath="$PROJECT_DIR$/src/App/OutputWriter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/Program.java" afterPath="$PROJECT_DIR$/src/App/Program.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/list.txt" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/list.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.txt" afterPath="$PROJECT_DIR$/manifest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Mode.java" afterPath="$PROJECT_DIR$/src/DataStructure/Mode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Tense.java" afterPath="$PROJECT_DIR$/src/DataStructure/Tense.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/DataStructure/Trie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Verb.java" afterPath="$PROJECT_DIR$/src/DataStructure/Verb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/OutputWriter.java" afterPath="$PROJECT_DIR$/src/Main/OutputWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Program.java" afterPath="$PROJECT_DIR$/src/Main/Program.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" afterPath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" afterPath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,117 +50,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProgramTestSuite.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Test/ProgramTestSuite.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-386">
-              <caret line="144" column="19" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="145" selection-end-column="9" />
+            <state relative-caret-position="594">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testDecon.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/testDecon.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Deconjugation.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/Deconjugation.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187510">
-              <caret line="11030" column="16" lean-forward="false" selection-start-line="11030" selection-start-column="16" selection-end-line="11030" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestTrie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/TestTrie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestConjugation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/TestConjugation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDeconjugation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/TestDeconjugation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-              <folding>
-                <element signature="e#132#133#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="126" column="7" lean-forward="false" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1548">
-              <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
+        <entry file="file://$PROJECT_DIR$/src/App/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-232">
-              <caret line="174" column="44" lean-forward="false" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
+            <state relative-caret-position="209">
+              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Program#0" expanded="false" />
-                <element signature="initializer##0;class#Program#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/OutputWriter.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+            <state relative-caret-position="255">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding>
-                <element signature="e#2763#2764#0" expanded="true" />
-                <element signature="e#2804#2805#0" expanded="true" />
-                <element signature="e#2850#2851#0" expanded="true" />
-                <element signature="e#2898#2899#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>aim</find>
       <find>searchVerb</find>
       <find>toString</find>
       <find>getList</find>
@@ -197,6 +128,7 @@
       <find>se</find>
       <find>rad</find>
       <find>trie</find>
+      <find>setTrie</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,14 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Verbs.java" />
-        <option value="$PROJECT_DIR$/manifest.txt" />
-        <option value="$PROJECT_DIR$/src/ModeConverter.java" />
-        <option value="$PROJECT_DIR$/src/Driver.java" />
-        <option value="$PROJECT_DIR$/src/Trie.java" />
-        <option value="$PROJECT_DIR$/src/ConjugationException.java" />
-        <option value="$PROJECT_DIR$/src/Token.java" />
-        <option value="$PROJECT_DIR$/src/Prefixes.java" />
         <option value="$PROJECT_DIR$/src/PrefixesTable.java" />
         <option value="$PROJECT_DIR$/src/PrefixesGroups.java" />
         <option value="$PROJECT_DIR$/src/Mode.java" />
@@ -232,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/UniqueRadsDict.java" />
         <option value="$PROJECT_DIR$/src/ConsoleOutput.java" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/MatchTuple.java" />
         <option value="$PROJECT_DIR$/src/MatchTuple.java" />
@@ -247,20 +170,29 @@
         <option value="$PROJECT_DIR$/src/Test/TestConjugation.java" />
         <option value="$PROJECT_DIR$/src/Test/TestMultiMap.java" />
         <option value="$PROJECT_DIR$/src/Test/TestTrie.java" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Tense.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Tree.java" />
         <option value="$PROJECT_DIR$/src/Main/GUI.java" />
         <option value="$PROJECT_DIR$/src/Main/GUI.form" />
         <option value="$PROJECT_DIR$/src/Test/TestList.java" />
         <option value="$PROJECT_DIR$/src/Test/TestDeconjugation.java" />
         <option value="$PROJECT_DIR$/src/Test/testDecon.txt" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
         <option value="$PROJECT_DIR$/src/Main/Output.java" />
         <option value="$PROJECT_DIR$/src/Main/ExceptionOutputWriter.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Trie.java" />
-        <option value="$PROJECT_DIR$/src/Main/Program.java" />
-        <option value="$PROJECT_DIR$/src/Main/OutputWriter.java" />
         <option value="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" />
+        <option value="$PROJECT_DIR$/src/Main/Program.java" />
+        <option value="$PROJECT_DIR$/src/Main/Application.java" />
+        <option value="$PROJECT_DIR$/src/Main/App.java" />
+        <option value="$PROJECT_DIR$/src/Main/OutputWriter.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
+        <option value="$PROJECT_DIR$/src/Source/Handler.java" />
+        <option value="$PROJECT_DIR$/src/Source/Main.java" />
+        <option value="$PROJECT_DIR$/src/App/Handler.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Tense.java" />
+        <option value="$PROJECT_DIR$/src/App/Program.java" />
+        <option value="$PROJECT_DIR$/src/App/Controller.java" />
+        <option value="$PROJECT_DIR$/src/App/Main.java" />
       </list>
     </option>
   </component>
@@ -288,6 +220,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -313,10 +247,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -332,47 +262,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataStructure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="french-verb-conjugator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,23 +282,24 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Test.ProgramTestingSuite" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="DataStructure" />
       <recent name="Main" />
     </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="Test.ProgramTestingSuite" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\Main" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
@@ -419,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestDeconjugation">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="TestList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -500,30 +397,24 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="ProgramTestSuite.printListElementsToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="french-verb-conjugator" />
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.ProgramTestSuite" />
-      <option name="METHOD_NAME" value="printListElementsToFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="french-verb-conjugator" />
       <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -735,15 +626,15 @@
       <item index="1" class="java.lang.String" itemvalue="Application.TestMultiMap" />
       <item index="2" class="java.lang.String" itemvalue="Application.TestTrie" />
       <item index="3" class="java.lang.String" itemvalue="Application.TestDeconjugation" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ProgramTestSuite.printListElementsToFile" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestDeconjugation" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestTrie" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestList" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestMultiMap" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ProgramTestSuite.printListElementsToFile" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestDeconjugation" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestTrie" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestList" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestMultiMap" />
       </list>
     </recent_temporary>
   </component>
@@ -799,12 +690,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="285" y="139" width="927" height="532" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="285" y="139" width="927" height="532" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1647145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -820,6 +711,38 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32205883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="285" y="139" width="927" height="532" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1647145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32205883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -833,7 +756,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="76" />
+      <option name="time" value="78" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -842,14 +765,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ConjugationDriver.java" />
-    <entry file="file://$PROJECT_DIR$/src/Align.java" />
-    <entry file="file://$PROJECT_DIR$/src/Verbs.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/1490417570028.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -894,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="387" column="0" lean-forward="false" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,35 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/conjugation-fr.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61302">
           <caret line="3651" column="19" lean-forward="false" selection-start-line="3651" selection-start-column="19" selection-end-line="3651" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="75" column="1" lean-forward="false" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,9 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="107" lean-forward="false" selection-start-line="15" selection-start-column="107" selection-end-line="15" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187510">
           <caret line="11030" column="16" lean-forward="false" selection-start-line="11030" selection-start-column="16" selection-end-line="11030" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,60 +916,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Output.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/ExceptionOutputWriter.java" />
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="126" column="7" lean-forward="false" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OutputWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="e#2763#2764#0" expanded="true" />
-            <element signature="e#2804#2805#0" expanded="true" />
-            <element signature="e#2850#2851#0" expanded="true" />
-            <element signature="e#2898#2899#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="174" column="44" lean-forward="false" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="initializer##0;class#Program#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1548">
-          <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/TestConjugation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,17 +939,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/ProgramTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386">
-          <caret line="144" column="19" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="145" selection-end-column="9" />
+        <state relative-caret-position="430">
+          <caret line="192" column="14" lean-forward="false" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/OutputWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="192" column="24" lean-forward="false" selection-start-line="192" selection-start-column="24" selection-end-line="192" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#OutputWriter#0;class#OutputWriter#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
+            <element signature="e#3187#3188#0" expanded="false" />
+            <element signature="e#3385#3386#0" expanded="false" />
+            <element signature="e#3433#3434#0" expanded="false" />
+            <element signature="e#6083#6084#0" expanded="false" />
+            <element signature="e#6136#6137#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="75" column="1" lean-forward="false" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="161" column="15" lean-forward="false" selection-start-line="161" selection-start-column="15" selection-end-line="161" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="109" column="31" lean-forward="false" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1894#1895#0" expanded="false" />
+            <element signature="e#1928#1929#0" expanded="false" />
+            <element signature="e#2086#2087#0" expanded="false" />
+            <element signature="e#2124#2125#0" expanded="false" />
+            <element signature="e#2462#2463#0" expanded="false" />
+            <element signature="e#2533#2534#0" expanded="false" />
+            <element signature="e#3312#3313#0" expanded="false" />
+            <element signature="e#3387#3388#0" expanded="false" />
+            <element signature="e#3532#3533#0" expanded="false" />
+            <element signature="e#3580#3581#0" expanded="false" />
+            <element signature="e#3725#3726#0" expanded="false" />
+            <element signature="e#3772#3773#0" expanded="false" />
+            <element signature="e#3890#3891#0" expanded="false" />
+            <element signature="e#3941#3942#0" expanded="false" />
+            <element signature="e#4131#4132#0" expanded="false" />
+            <element signature="e#4171#4172#0" expanded="false" />
+            <element signature="e#4390#4391#0" expanded="false" />
+            <element signature="e#4448#4449#0" expanded="false" />
+            <element signature="method#setTable#0;class#Verb#0" expanded="false" />
+            <element signature="e#5828#5829#0" expanded="false" />
+            <element signature="e#5877#5878#0" expanded="false" />
+            <element signature="e#5916#5917#0" expanded="false" />
+            <element signature="e#5953#5954#0" expanded="false" />
+            <element signature="e#6004#6005#0" expanded="false" />
+            <element signature="e#6042#6043#0" expanded="false" />
+            <element signature="e#6151#6152#0" expanded="false" />
+            <element signature="e#6189#6190#0" expanded="false" />
+            <element signature="e#6395#6396#0" expanded="false" />
+            <element signature="e#6440#6441#0" expanded="false" />
+            <element signature="e#6511#6512#0" expanded="false" />
+            <element signature="e#6548#6549#0" expanded="false" />
+            <element signature="e#6586#6587#0" expanded="false" />
+            <element signature="e#6621#6622#0" expanded="false" />
+            <element signature="e#7205#7206#0" expanded="false" />
+            <element signature="e#7274#7275#0" expanded="false" />
+            <element signature="e#7333#7334#0" expanded="false" />
+            <element signature="e#7403#7404#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38235">
+          <caret line="2432" column="29" lean-forward="true" selection-start-line="2432" selection-start-column="29" selection-end-line="2432" selection-end-column="29" />
+          <folding>
+            <element signature="e#84840#84841#0" expanded="false" />
+            <element signature="e#84877#84878#0" expanded="false" />
+            <element signature="e#85050#85051#0" expanded="false" />
+            <element signature="e#85102#85103#0" expanded="false" />
+            <element signature="e#85270#85271#0" expanded="false" />
+            <element signature="e#85310#85311#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Gui.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Program#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

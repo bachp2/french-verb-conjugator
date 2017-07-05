@@ -83,7 +83,7 @@ public class Trie {
     }
 
     /**
-     * verb in infinitive form
+     * verb in INFINITIVE form
      * @param word
      * @return
      */

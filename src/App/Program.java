@@ -1,4 +1,4 @@
-package Main;
+package App;
 
 import DataStructure.Mode;
 import DataStructure.Tense;
@@ -28,8 +28,7 @@ import java.util.Random;
 public class Program {
     private static final String PATH_TO_VERBS_FR = "./data/verbs-fr.xml";
     private static final String PATH_TO_CONJUGATION_FR = "./data/conjugation-fr.xml";
-    //private Main.Program instance;
-    //todo: implement static build and replace old constructor build method
+    //private App.Program instance;
     protected static Random rand = new Random();
 
     static {
@@ -69,8 +68,8 @@ public class Program {
 
     protected static OutputWriter conjugateInfinitiveVerb() {
         Verb v = ProgramTestSuite.getRandomVerb();
-        Mode mode = Mode.infinitive;
-        while(mode == Mode.infinitive)
+        Mode mode = Mode.INFINITIVE;
+        while(mode == Mode.INFINITIVE)
             mode = ProgramTestSuite.getRandomMode();
         Tense tense = ProgramTestSuite.getRandomTenseFromMode(mode);
         return new OutputWriter.Builder(v.getSuffixes(mode,tense))
@@ -86,10 +85,11 @@ public class Program {
      * @param tense
      * @return
      */
-    private static OutputWriter[] conjugateVerb(String verb, Mode mode, Tense tense) {
+    public static OutputWriter[] conjugateVerb(String verb, Mode mode, Tense tense) {
         Verb[] lv = null;
         OutputWriter[] owVectors = null;
-        if(!mode.isTenseInMode(tense)) throw new IllegalArgumentException("the tense is not compatible with the mode input");
+        if(!mode.isTenseInMode(tense))
+            throw new IllegalArgumentException("the tense is not compatible with the mode input");
         //array of Verb elements that matched in trie
         lv = Verb.searchVerb(verb);
         owVectors = new OutputWriter[lv.length];
@@ -103,34 +103,17 @@ public class Program {
         }
         return owVectors;
     }
-    //todo check the validity of tense that belongs to a specific mode
-    /**
-     *
-     * @param verb
-     * @return
-     */
-    private static OutputWriter conjugateInfinitiveVerb(String verb) {
-        Verb v = Verb.searchVerbList(verb);
-        Mode mode = Mode.infinitive;
-        while(mode == Mode.infinitive)
-            mode = ProgramTestSuite.getRandomMode();
-        Tense tense = ProgramTestSuite.getRandomTenseFromMode(mode);
-        assert v != null;
-        return new OutputWriter.Builder(v.getSuffixes(mode,tense))
-                .templateName(v.getTemplateName())
-                .verb(verb).infVerb(v.getInfinitiveForm())
-                .mode(mode).tense(tense).build();
-    }
 
     /**
      * check if the verb is already conjugated
      *
-     * @param verb
-     * @return
+     * @param verb String
+     * @return boolean
      */
     private static boolean isConjugated(String verb) {
         return !(verb.endsWith("er") || verb.endsWith("ir") || verb.endsWith("re"));
     }
+
     /**
      * return a boolean value if the input's verb is already conjugated
      *
@@ -187,7 +170,8 @@ public class Program {
     }
 
     /**
-     * private helper method to sort NodeList of verbs-fr.xml to ArrayList
+     * private helper method to sort NodeList of verbs-fr.xml into table
+     * and then put into verbs of the same template names
      *
      * @param nVerbs NodeList
      */
@@ -220,5 +204,4 @@ public class Program {
         }
         return temp;
     }
-
 }

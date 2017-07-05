@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.2993311036789298" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+  <items>
+    <AnchorPane fx:id="leftPane" prefHeight="398.0" prefWidth="214.0">
+         <children>
+            <TextField fx:id="inputTextField" layoutX="52.0" layoutY="22.0" prefHeight="22.0" prefWidth="114.0" promptText="verb" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="13.0" />
+            <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="132.98095703125" />
+            <ComboBox fx:id="modeComboBox" layoutX="13.0" layoutY="58.0" prefWidth="150.0" promptText="Mode" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
+            <ComboBox fx:id="tenseComboBox" layoutX="13.0" layoutY="99.0" prefWidth="150.0" promptText="Tense" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
+            <HBox fx:id="buttons" layoutX="14.0" layoutY="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#conjugateButtonClicked" text="Conjugate" />
+                  <Button mnemonicParsing="false" text="Deconjugate">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+    <AnchorPane fx:id="rightPane" minHeight="0.0" minWidth="0.0" prefHeight="408.0" prefWidth="415.0">
+         <children>
+            <TextArea fx:id="displayArea" editable="false" layoutX="18.0" layoutY="17.0" prefHeight="361.0" prefWidth="379.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

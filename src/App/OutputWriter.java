@@ -1,4 +1,4 @@
-package Main;
+package App;
 
 import DataStructure.Mode;
 import DataStructure.Tense;
@@ -13,17 +13,17 @@ import java.util.List;
  * Created by bachp on 3/26/2017.
  */
 public class OutputWriter {
-    private final String verbToBeConjugated;
-    private final String infVerb;
-    private final Mode mode;
-    private final Tense tense;
-    private final String templateName;
+    private final String verbToBeConjugated;//String input
+    private final String infVerb;//output from verb object
+    private final Mode mode;//mode of conjugation forms
+    private final Tense tense;//tense of conjugation forms
+    private final String templateName;//output from verb object
     private final List<String> conjugatedForms;
 
     public static String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
     private static StringBuilder sb = new StringBuilder();
+    //static string builder for concatenating radical and suffixes of conjugated forms
 
-    //todo create a builder for OUtputwriter
     public OutputWriter(Builder builder) {
         this.verbToBeConjugated = builder.verb;
         this.infVerb = builder.infVerb;
@@ -52,6 +52,12 @@ public class OutputWriter {
         this.tense = builder.tense;
         this.mode = builder.mode;
     }
+
+    /**
+     * private method to check if a list contains "null" strings
+     * @param list
+     * @return
+     */
     private boolean isListNull(List<String> list){
         for(String e : list){
             if(!e.equals("null")) return false;
@@ -59,7 +65,7 @@ public class OutputWriter {
         return true;
     }
     /**
-     *
+     *  toString method for OutputWriter class
      * @return
      */
     public String toString() {
@@ -80,9 +86,18 @@ public class OutputWriter {
         return sb.toString();
     }
 
+    /**
+     * getter for input verb
+     * @return String
+     */
     public String getVerbToBeConjugated(){
         return verbToBeConjugated;
     }
+
+    /**
+     * getter for conjugated forms(these forms are already concatenated with radical in the template name)
+     * @return List<String>
+     */
     public List<String> getConjugatedForms(){
         return copyList(conjugatedForms);
     }
@@ -93,7 +108,12 @@ public class OutputWriter {
         }
         return newList;
     }
+
+    /**
+     * Builder static class for Output Writer
+     */
     public static class Builder{
+        //instance variables
         private final List<String> conjugatedForms;
         private final List<String>[] multipleConjugatedForms;
         private String verb;
@@ -101,34 +121,78 @@ public class OutputWriter {
         private Mode mode;
         private Tense tense;
         private String templateName;
+
+        /**
+         * constructor
+         * @param conjugatedForms List<String>
+         */
         public Builder(List<String> conjugatedForms){
             this.conjugatedForms = conjugatedForms;
             this.multipleConjugatedForms = null;
         }
+
+        /**
+         * constructor when there are multiple conjugated forms
+         * @param multipleConjugatedForms
+         */
         public Builder(List<String>... multipleConjugatedForms){
             this.conjugatedForms = null;
             this.multipleConjugatedForms = multipleConjugatedForms;
         }
+
+        /**
+         * input verb string
+         * @param verb String
+         * @return Builder obj
+         */
         public Builder verb(String verb){
             this.verb = verb;
             return this;
         }
+
+        /**
+         * output from verb object in INFINITIVE form
+         * @param infVerb String
+         * @return Builder
+         */
         public Builder infVerb(String infVerb){
             this.infVerb = infVerb;
             return this;
         }
+
+        /**
+         * Mode input
+         * @param mode Mode
+         * @return Builder
+         */
         public Builder mode(Mode mode){
             this.mode = mode;
             return this;
         }
+
         public Builder tense(Tense tense){
-            this.tense =tense;
+            if(mode == null)
+                throw new IllegalArgumentException("mode enum should be put as a parameter before tense enum");
+            else if(!this.mode.isTenseInMode(tense))
+                throw new IllegalArgumentException("tense is not compatible with a given mode");
+            this.tense = tense;
             return this;
         }
+
+        /**
+         * input template name which is taken from verb Object
+         * @param templateName
+         * @return
+         */
         public Builder templateName(String templateName){
             this.templateName = templateName;
             return this;
         }
+
+        /**
+         * generic build method
+         * @return OutputWriter obj
+         */
         public OutputWriter build(){
             return new OutputWriter(this);
         }

@@ -3,7 +3,7 @@ package Test;
 import DataStructure.Mode;
 import DataStructure.Tense;
 import DataStructure.Verb;
-import Main.Program;
+import App.Program;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
