@@ -17,8 +17,10 @@ import javafx.scene.layout.HBox;
  * Created by bachp on 7/1/2017.
  */
 public class Controller {
-    ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
-    ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
+    private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
+    private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
+    private String textField = "";
+
     @FXML
     private SplitPane splitPane;
     @FXML
@@ -42,14 +44,22 @@ public class Controller {
         SplitPane.setResizableWithParent(leftPane, Boolean.FALSE);
         buttons.setSpacing(5);
         buttons.setAlignment(Pos.CENTER);
+        displayArea.setWrapText(true);
     }
     public void conjugateButtonClicked(){
         String verb = inputTextField.getText();
-        Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
-        Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
-        OutputWriter[] ow = Program.conjugateVerb(verb, mode, tense);
+        if(!verb.equals("") && !verb.equals(textField)){
+            textField = verb;
+            Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
+            Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
+            OutputWriter[] ows = Program.conjugateVerb(verb, mode, tense);
+            for(OutputWriter ow : ows){
+                appendTextArea(ow);
+            }
+        }
     }
     private void appendTextArea(OutputWriter ow){
-
+        displayArea.appendText(ow.toString());
+        displayArea.appendText("\n");
     }
 }
