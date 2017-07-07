@@ -12,7 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("french verb conjugator");
-        primaryStage.setScene(new Scene(root, 545, 350));
+        Scene scene = new Scene(root, 545, 350);
+        scene.getStylesheets().add("App/comboBoxDisabled.css");
+        primaryStage.setScene(scene);
         new Program();
         primaryStage.show();
     }

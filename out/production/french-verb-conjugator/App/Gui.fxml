@@ -13,7 +13,7 @@
          <children>
             <TextField fx:id="inputTextField" layoutX="52.0" layoutY="22.0" prefHeight="22.0" prefWidth="114.0" promptText="verb" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="13.0" />
             <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="132.98095703125" />
-            <ComboBox fx:id="modeComboBox" layoutX="13.0" layoutY="58.0" prefWidth="150.0" promptText="Mode" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
+            <ComboBox fx:id="modeComboBox" layoutX="13.0" layoutY="58.0" onAction="#onPickedMode" prefWidth="150.0" promptText="Mode" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
             <ComboBox fx:id="tenseComboBox" layoutX="13.0" layoutY="99.0" prefWidth="150.0" promptText="Tense" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
             <HBox fx:id="buttons" layoutX="14.0" layoutY="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
                <children>
