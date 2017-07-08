@@ -86,19 +86,27 @@ public class Controller {
         return mode.isTenseInMode(tense);
     }
     public void conjugateButtonClicked(){
-        final String notFoundMessage = "<p style=\"color:#762817;\"><em>verb not found</em></p>";
+        final String notFoundMessage = "<p style=\"color:#762817;\"><em>verb not found!</em></p>";
+        final String modeTenseSpecificationMessage = "<p style=\"color:#762817;\"><em>please specify mode and tense for conjugation!</em></p>";
         final WebEngine engine = wv.getEngine();
         String verb = inputTextField.getText();
         Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
         Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
-        if( (!verb.equals("") && !textField.equals(verb.toLowerCase())) || mode != m || tense != t ) {
-            textField = verb.toLowerCase();
-            m = mode; t = tense;
-            OutputWriter[] ows = Program.conjugateVerb(verb, mode, tense);
-            if(ows == null) engine.loadContent(notFoundMessage);
-            for(OutputWriter ow : ows){
-                engine.loadContent(ow.toHTMLFormat());
+        try {
+            if( (!verb.equals("") && !textField.equals(verb.toLowerCase())) || mode != m || tense != t ) {
+                textField = verb.toLowerCase();
+                m = mode; t = tense;
+                OutputWriter[] ows = Program.conjugateVerb(verb, mode, tense);
+                if(ows == null)
+                    engine.loadContent(notFoundMessage);
+                else{
+                    for(OutputWriter ow : ows){
+                        engine.loadContent(ow.toHTMLFormat());
+                    }
+                }
             }
+        } catch (NullPointerException e) {
+            engine.loadContent(modeTenseSpecificationMessage);
         }
     }
 }

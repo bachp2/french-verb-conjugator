@@ -22,9 +22,11 @@ public class Main extends Application {
                 });
             }
         }).start();
-        Scene scene = new Scene(root, 545, 350);
+        Scene scene = new Scene(root, 470, 208);
         scene.getStylesheets().add("StyleSheets/comboBoxDisabled.css");
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(470);
+        primaryStage.setMinHeight(208);
         primaryStage.show();
     }
 
