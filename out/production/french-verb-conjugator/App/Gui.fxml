@@ -18,7 +18,7 @@
             <ComboBox fx:id="tenseComboBox" layoutX="13.0" layoutY="99.0" prefWidth="150.0" promptText="Tense" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
             <HBox fx:id="buttons" layoutX="14.0" layoutY="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#conjugateButtonClicked" text="Conjugate" />
+                  <Button fx:id="conjugate" mnemonicParsing="false" onAction="#conjugateButtonClicked" text="Conjugate" />
                </children>
             </HBox>
          </children></AnchorPane>

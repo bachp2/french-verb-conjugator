@@ -21,7 +21,7 @@ import java.util.Set;
 public class Controller {
     private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
     private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
-    private String textField;
+    private String textField = "";
     private Mode m;
     private Tense t;
     @FXML
