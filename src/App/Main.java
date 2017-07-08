@@ -1,6 +1,7 @@
 package App;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,10 +13,18 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("french verb conjugator");
+        new Thread(new Runnable() {
+            @Override public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override public void run() {
+                        new Program();
+                    }
+                });
+            }
+        }).start();
         Scene scene = new Scene(root, 545, 350);
-        scene.getStylesheets().add("App/comboBoxDisabled.css");
+        scene.getStylesheets().add("StyleSheets/comboBoxDisabled.css");
         primaryStage.setScene(scene);
-        new Program();
         primaryStage.show();
     }
 

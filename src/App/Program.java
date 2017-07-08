@@ -86,12 +86,13 @@ public class Program {
      * @return
      */
     public static OutputWriter[] conjugateVerb(String verb, Mode mode, Tense tense) {
-        Verb[] lv = null;
+        Verb[] lv;
         OutputWriter[] owVectors = null;
         if(!mode.isTenseInMode(tense))
             throw new IllegalArgumentException("the tense is not compatible with the mode input");
         //array of Verb elements that matched in trie
         lv = Verb.searchVerb(verb);
+        if(lv == null) return null;
         owVectors = new OutputWriter[lv.length];
         int index = 0;
         for(Verb v : lv){

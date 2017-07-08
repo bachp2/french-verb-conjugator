@@ -20,7 +20,7 @@ public class OutputWriter {
     private final String templateName;//output from verb object
     private final List<String> conjugatedForms;
 
-    public static String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
+    public static String[] pronouns = {"Je", "Tu", "Il", "Nous", "Vous", "Ils"};
     private static StringBuilder sb = new StringBuilder();
     //static string builder for concatenating radical and suffixes of conjugated forms
 
@@ -49,6 +49,8 @@ public class OutputWriter {
                 }
             }
         }
+        //reset String builder
+        sb.setLength(0);
         this.tense = builder.tense;
         this.mode = builder.mode;
     }
@@ -85,7 +87,41 @@ public class OutputWriter {
         }
         return sb.toString();
     }
+    public String toHTMLFormat(){
+        sb.append("<!DOCTYPE html><html><head><style>table, th, td {border: none;}</style></head><body>")
+          .append("<h1 style=\"color:#4078c0;\">").append(infVerb).append("</h1><hr />");
 
+        sb.append("<p>")
+                .append("\n").append(mode.toString().toLowerCase())
+                .append("-").append(tense.toString().toLowerCase())
+                .append("<p>");
+
+        //initialize table
+        sb.append("<table style=\"width:90%\">");
+
+        int c = 0;
+        for(int i : new int[]{0,3,1,4,2,5}){
+            String e = getElementHelper(this.conjugatedForms, i);
+            if(!e.equals("null")) {
+                if(c%2==0) sb.append("<tr>");
+                sb.append("<td>")
+                    .append(pronouns[i]).append(" <strong style=\"color:#4078c0;\">")
+                    .append(e).append("</strong>")
+                .append("</td>");
+                if(c%2==1) sb.append("</tr>");
+                c++;
+            }
+        }
+
+        //finalize
+        sb.append("</table></body></html>");
+        String result = sb.toString();
+        sb.setLength(0);
+        return result;
+    }
+    private String getElementHelper(List<String> A, int i){
+        return (i < A.size() && i >=0) ? A.get(i) : "null";
+    }
     /**
      * getter for input verb
      * @return String

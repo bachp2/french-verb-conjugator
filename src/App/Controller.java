@@ -9,6 +9,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,7 +21,7 @@ import java.util.Set;
 public class Controller {
     private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
     private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
-    private Set<String> textField = new HashSet <>();
+    private String textField;
     private Mode m;
     private Tense t;
     @FXML
@@ -31,9 +33,11 @@ public class Controller {
     @FXML
     private TextField inputTextField;
     @FXML
-    private TextArea displayArea;
+    private WebView wv;
     @FXML
     private HBox buttons;
+    @FXML
+    private Button conjugate;
     @FXML
     private AnchorPane leftPane;
     @FXML
@@ -56,8 +60,8 @@ public class Controller {
         });
         SplitPane.setResizableWithParent(leftPane, Boolean.FALSE);
         buttons.setSpacing(5);
-        buttons.setAlignment(Pos.CENTER);
-        displayArea.setWrapText(true);
+        buttons.setAlignment(Pos.CENTER_RIGHT);
+        conjugate.setDefaultButton(true);
     }
     public void onPickedMode(){
         tenseComboBox.setCellFactory(lv -> new ListCell<Tense>(){
@@ -82,20 +86,19 @@ public class Controller {
         return mode.isTenseInMode(tense);
     }
     public void conjugateButtonClicked(){
+        final String notFoundMessage = "<p style=\"color:#762817;\"><em>verb not found</em></p>";
+        final WebEngine engine = wv.getEngine();
         String verb = inputTextField.getText();
         Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
         Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
-        if( (!verb.equals("") && !textField.contains(verb.toLowerCase())) || mode != m || tense != t ) {
-            textField.add(verb.toLowerCase());
+        if( (!verb.equals("") && !textField.equals(verb.toLowerCase())) || mode != m || tense != t ) {
+            textField = verb.toLowerCase();
             m = mode; t = tense;
             OutputWriter[] ows = Program.conjugateVerb(verb, mode, tense);
+            if(ows == null) engine.loadContent(notFoundMessage);
             for(OutputWriter ow : ows){
-                appendTextArea(ow);
+                engine.loadContent(ow.toHTMLFormat());
             }
         }
-    }
-    private void appendTextArea(OutputWriter ow){
-        displayArea.appendText(ow.toString());
-        displayArea.appendText("\n");
     }
 }
