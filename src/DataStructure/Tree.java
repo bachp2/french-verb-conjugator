@@ -33,8 +33,8 @@ class Tree {
     public TreeNode contains(char c) {
         return isInSubtree(this.root, c);
     }
-    public Stack<TreeNode> containsStack(char c){
-        Stack<TreeNode> stack = new Stack <>();
+    public Stack<Trie.TrieNode> containsStack(char c){
+        Stack<Trie.TrieNode> stack = new Stack <>();
         return stackIsInSubtree(stack, this.root, c);
     }
     /**
@@ -80,18 +80,16 @@ class Tree {
      * @param c
      * @return
      */
-    private Stack<TreeNode> stackIsInSubtree(Stack<TreeNode> stack, TreeNode root, char c){
-        if (root != null) {
-            if (collator.compare(c,root.content.aChar) < 0)
-                return stackIsInSubtree(stack, root.left, c);
-            else if (collator.compare(c,root.content.aChar) > 0)
-                return stackIsInSubtree(stack, root.right, c);
-            else{
-                stack.add(root);
-                return stack;
-            }
-        }
-        return null;
+    private Stack<Trie.TrieNode> stackIsInSubtree(Stack<Trie.TrieNode> stack, TreeNode root, char c){
+        if (root.left != null)
+            stackIsInSubtree(stack, root.left, c);
+
+        if(collator.compare(Character.toString(c), Character.toString(root.content.aChar)) == 0)
+            stack.add(root.content);
+
+        if (root.right != null)
+            stackIsInSubtree(stack, root.right, c);
+        return stack;
     }
     class TreeNode {
         protected Trie.TrieNode content;

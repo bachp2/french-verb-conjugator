@@ -130,10 +130,12 @@ public class Trie {
             if(trieNode != null){
                 current = trieNode;
             }
-            else return null;
+            else break;
         }
-        temp[0] = current.verb;
-        if(current.isEnd && current.setOfVerbs == null && current.verb != null) return temp;
+        if(current.isEnd && current.setOfVerbs == null && current.verb != null){
+            temp[0] = current.verb;
+            return temp;
+        }
         else if (current.isEnd && current.setOfVerbs != null)
             return current.setOfVerbs.toArray(new Verb[current.setOfVerbs.size()]);
         else{
@@ -152,15 +154,17 @@ public class Trie {
     }
     private Verb[] searchVerbIgnoreAccents(String verb){
         String stripVerb = verb.replaceAll("\\p{M}", "");
-        return searchVerbIgnoreAccentsHelper(root, stripVerb, 0 , stripVerb.length(), new Verb[1]);
+        List<Verb> list = new ArrayList <>();
+        searchVerbIgnoreAccentsHelper(this.root, stripVerb, 0 , stripVerb.length(), list);
+        return (Verb[]) list.toArray();
     }
-    private Verb[] searchVerbIgnoreAccentsHelper(TrieNode root, String stripVerb, int count, int length, Verb[] temp){
+    private void searchVerbIgnoreAccentsHelper(TrieNode root, String stripVerb, int count, int length, List<Verb> temp){
         for(char ch : stripVerb.toCharArray()){
             if(isVowel(ch)){
                 Stack<TrieNode> charsWithAccent = root.stackSubNode(ch);
                 while(!charsWithAccent.empty()){
                     searchVerbIgnoreAccentsHelper(charsWithAccent.pop(),
-                            stripVerb.substring(count+1,stripVerb.length()), count, length, temp);
+                            stripVerb.substring(count+1,stripVerb.length()), count+1, length, temp);
                 }
             }
             else{
@@ -168,22 +172,20 @@ public class Trie {
                 if(trieNode != null){
                     root = trieNode;
                 }
-                else{
-                    return null;
-                }
+                else break;
+                //count for index of char 'ch'
+                count++;
             }
-            //count for index of char 'ch'
-            count++;
-
         }
         if (count == length) {
-            temp[0] = root.verb;
-            if(root.isEnd && root.setOfVerbs == null) return temp;
-            else if (root.isEnd && root.setOfVerbs != null)
-                return root.setOfVerbs.toArray(new Verb[root.setOfVerbs.size()]);
-            else return null;
+            if (root.isEnd && root.setOfVerbs == null) {
+                temp.add(root.verb);
+            } else if (root.isEnd){
+                for (Verb b : root.setOfVerbs) {
+                    temp.add(b);
+                }
+            }
         }
-        else return null;
     }
 
     /**
@@ -230,12 +232,8 @@ public class Trie {
             return null;
         }
         private Stack<TrieNode> stackSubNode(char c){
-            Stack<Tree.TreeNode> treeNodeStack = childList.containsStack(c);
-            if(treeNodeStack.empty()) return null;
-            Stack<TrieNode> trieNodeStack = new Stack <>();
-            while(!treeNodeStack.empty()){
-                trieNodeStack.add(treeNodeStack.pop().content);
-            }
+            Stack<Trie.TrieNode> trieNodeStack = childList.containsStack(c);
+            if(trieNodeStack.empty()) return null;
             return trieNodeStack;
         }
     }
