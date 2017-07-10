@@ -24,7 +24,6 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     private Table<Mode, Tense, List<String>> table;
     //static string builder to facilitate string concatenation
     private static final StringBuilder sb = new StringBuilder();
-
     /**
      * constructor with INFINITIVE form and template name
      * @param infinitiveForm String

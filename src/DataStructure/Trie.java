@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Trie {
     private TrieNode root;
+
     /**
      *
      */
@@ -119,7 +120,9 @@ public class Trie {
         }
         return rad.equals(radical);
     }
+
     public Verb[] searchVerb(String verb){
+        //first search through for exact match
         TrieNode current = root;
         Verb[] temp = new Verb[1];
         for(char ch : verb.toCharArray()){
@@ -130,11 +133,59 @@ public class Trie {
             else return null;
         }
         temp[0] = current.verb;
-        if(current.isEnd && current.setOfVerbs == null) return temp;
-        else if (current.isEnd && current != null)
+        if(current.isEnd && current.setOfVerbs == null && current.verb != null) return temp;
+        else if (current.isEnd && current.setOfVerbs != null)
             return current.setOfVerbs.toArray(new Verb[current.setOfVerbs.size()]);
+        else{
+            //second search through, ignore accents
+            return searchVerbIgnoreAccents(verb);
+        }
+    }
+
+    private boolean isVowel(char c){
+        //with exception of char 'c'
+        final char[] vowels = {'a','e','i','u','c','o'};
+        for(char a : vowels){
+            if(a==c) return true;
+        }
+        return false;
+    }
+    private Verb[] searchVerbIgnoreAccents(String verb){
+        String stripVerb = verb.replaceAll("\\p{M}", "");
+        return searchVerbIgnoreAccentsHelper(root, stripVerb, 0 , stripVerb.length(), new Verb[1]);
+    }
+    private Verb[] searchVerbIgnoreAccentsHelper(TrieNode root, String stripVerb, int count, int length, Verb[] temp){
+        for(char ch : stripVerb.toCharArray()){
+            if(isVowel(ch)){
+                Stack<TrieNode> charsWithAccent = root.stackSubNode(ch);
+                while(!charsWithAccent.empty()){
+                    searchVerbIgnoreAccentsHelper(charsWithAccent.pop(),
+                            stripVerb.substring(count+1,stripVerb.length()), count, length, temp);
+                }
+            }
+            else{
+                TrieNode trieNode = root.subNode(ch);
+                if(trieNode != null){
+                    root = trieNode;
+                }
+                else{
+                    return null;
+                }
+            }
+            //count for index of char 'ch'
+            count++;
+
+        }
+        if (count == length) {
+            temp[0] = root.verb;
+            if(root.isEnd && root.setOfVerbs == null) return temp;
+            else if (root.isEnd && root.setOfVerbs != null)
+                return root.setOfVerbs.toArray(new Verb[root.setOfVerbs.size()]);
+            else return null;
+        }
         else return null;
     }
+
     /**
      * this class is a subclass used for DataStructure.Trie
      * use for the arrangement of childList
@@ -177,6 +228,15 @@ public class Trie {
             Tree.TreeNode n;
             if ((n = childList.contains(c)) != null) return n.content;
             return null;
+        }
+        private Stack<TrieNode> stackSubNode(char c){
+            Stack<Tree.TreeNode> treeNodeStack = childList.containsStack(c);
+            if(treeNodeStack.empty()) return null;
+            Stack<TrieNode> trieNodeStack = new Stack <>();
+            while(!treeNodeStack.empty()){
+                trieNodeStack.add(treeNodeStack.pop().content);
+            }
+            return trieNodeStack;
         }
     }
 }

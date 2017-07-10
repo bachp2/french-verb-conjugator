@@ -1,11 +1,21 @@
 package DataStructure;
 
+import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
+
 /**
  * Created by bachp on 1/31/2017.
  */
 class Tree {
     protected TreeNode root;
-
+    private static Collator collator = Collator.getInstance();
+    static {
+        // This strategy mean it'll ignore the accents
+        collator.setStrength(Collator.NO_DECOMPOSITION);
+    }
     /**
      * empty constructor
      */
@@ -14,7 +24,7 @@ class Tree {
     }
 
     /**
-     * @param c
+     * @param c char
      */
     public void add(Trie.TrieNode c) {
         this.root = insertInSubtree(this.root, c);
@@ -23,10 +33,13 @@ class Tree {
     public TreeNode contains(char c) {
         return isInSubtree(this.root, c);
     }
-
+    public Stack<TreeNode> containsStack(char c){
+        Stack<TreeNode> stack = new Stack <>();
+        return stackIsInSubtree(stack, this.root, c);
+    }
     /**
-     * @param root
-     * @param node
+     * @param root TreeNode
+     * @param node Trie.TrieNode
      * @return
      */
     private TreeNode insertInSubtree(TreeNode root, Trie.TrieNode node) {
@@ -44,8 +57,9 @@ class Tree {
         return root == null;
     }
     /**
-     * @param root
-     * @param c
+     * check if a char is in a tree node
+     * @param root TreeNode
+     * @param c char
      * @return
      */
     private TreeNode isInSubtree(TreeNode root, char c) {
@@ -59,13 +73,34 @@ class Tree {
         return null;
     }
 
+    /**
+     *
+     * @param stack
+     * @param root
+     * @param c
+     * @return
+     */
+    private Stack<TreeNode> stackIsInSubtree(Stack<TreeNode> stack, TreeNode root, char c){
+        if (root != null) {
+            if (collator.compare(c,root.content.aChar) < 0)
+                return stackIsInSubtree(stack, root.left, c);
+            else if (collator.compare(c,root.content.aChar) > 0)
+                return stackIsInSubtree(stack, root.right, c);
+            else{
+                stack.add(root);
+                return stack;
+            }
+        }
+        return null;
+    }
     class TreeNode {
         protected Trie.TrieNode content;
         protected TreeNode left;
         protected TreeNode right;
 
         /**
-         * @param c
+         * constructor
+         * @param c char
          */
         public TreeNode(Trie.TrieNode c) {
             content = c;
