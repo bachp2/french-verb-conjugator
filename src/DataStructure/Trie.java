@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Trie {
     private TrieNode root;
-
+    private static Verb[] EMPTY_ARRAY = new Verb[0];
     /**
      *
      */
@@ -16,19 +16,22 @@ public class Trie {
      * @param
      */
     public void insert(Verb v, Collection<List<String>> lists, int radIndex) {
-        int i = 0;
+        int i = 0; //counting for radical's index
         TrieNode current = root;
         for (char c : v.getInfinitiveForm().toCharArray()) {
             TrieNode child;
             if (radIndex != -1) {
+                //move to sub node that contains char 'c'
                 child = current.subNode(c);
                 if (child != null)
+                    //point reference to the next node
                     current = child;
                 else {
                     current.childList.add(new TrieNode(c));
                     current = current.subNode(c);
                 }
             }
+            //radical's index is -1 when the verb contains no radical
             if(i == radIndex || radIndex == -1){
                 current.isRadical = true;
                 TrieNode radical = current;
@@ -37,6 +40,9 @@ public class Trie {
                         //in the form of {asseoir<ass:eoir>}:assiéras/eyeras/oiras>{assoir<ass:oir>}
                         if(e.contains("/"))
                             for(String l : e.split("/")){
+                                /**
+                                 * this block of code will execute to add all the variation of a conjugation
+                                 */
                                 current = radical;
                                 for (char ch : l.toCharArray()) {
                                     child = current.subNode(ch);
@@ -48,6 +54,7 @@ public class Trie {
                                     }
                                 }
                                 current.isEnd = true;
+                                //add multiple verb objects to hash set
                                 if(current.verb != null){
                                     current.setOfVerbs = new HashSet <>();
                                     current.setOfVerbs.add(current.verb);
@@ -155,20 +162,24 @@ public class Trie {
     private Verb[] searchVerbIgnoreAccents(String verb){
         String stripVerb = verb.replaceAll("\\p{M}", "");
         List<Verb> list = new ArrayList <>();
-        searchVerbIgnoreAccentsHelper(this.root, stripVerb, 0 , stripVerb.length(), list);
-        return (Verb[]) list.toArray();
+        searchVerbIgnoreAccentsHelper(this.root, stripVerb,0 , stripVerb.length(), list);
+        if(list.size() == 0) return EMPTY_ARRAY;
+        return list.toArray(new Verb[list.size()]);
     }
     private void searchVerbIgnoreAccentsHelper(TrieNode root, String stripVerb, int count, int length, List<Verb> temp){
-        for(char ch : stripVerb.toCharArray()){
-            if(isVowel(ch)){
-                Stack<TrieNode> charsWithAccent = root.stackSubNode(ch);
+        char[] chars = stripVerb.toCharArray();
+        for(int i = 0; i < chars.length; i++){
+            if(isVowel(chars[i])){
+                Stack<TrieNode> charsWithAccent = root.stackSubNode(chars[i]);
                 while(!charsWithAccent.empty()){
+                    //todo fix substring conflict
                     searchVerbIgnoreAccentsHelper(charsWithAccent.pop(),
-                            stripVerb.substring(count+1,stripVerb.length()), count+1, length, temp);
+                            stripVerb.substring(i+1,stripVerb.length()),count+1, length, temp);
                 }
+                break;
             }
             else{
-                TrieNode trieNode = root.subNode(ch);
+                TrieNode trieNode = root.subNode(chars[i]);
                 if(trieNode != null){
                     root = trieNode;
                 }

@@ -42,6 +42,7 @@ public class OutputWriter {
                             temp.add(sb.toString());
                         }
                         this.conjugatedForms.add(Joiner.on("/").join(temp));
+                        continue;
                     }
                     sb.setLength(0);
                     sb.append(Verb.radical(templateName, infVerb)).append(e);
@@ -89,7 +90,7 @@ public class OutputWriter {
     }
     public String toHTMLFormat(){
         sb.append("<!DOCTYPE html><html><head><style>table, th, td {border: none;}</style></head><body>")
-          .append("<h1 style=\"color:#4078c0;\">").append(infVerb).append("</h1><hr />");
+          .append("<h2 style=\"color:#4078c0;\">").append(infVerb).append("</h2><hr />");
 
         sb.append("<p>")
                 .append("\n").append(mode.toString().toLowerCase())

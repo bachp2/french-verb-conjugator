@@ -22,6 +22,7 @@ public class Controller {
     private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
     private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
     private String textField = "";
+    private static StringBuilder sb = new StringBuilder();
     private Mode m;
     private Tense t;
     @FXML
@@ -102,8 +103,10 @@ public class Controller {
                     engine.loadContent(notFoundMessage);
                 else{
                     for(OutputWriter ow : ows){
-                        engine.loadContent(ow.toHTMLFormat());
+                        sb.append(ow.toHTMLFormat());
                     }
+                    engine.loadContent(sb.toString());
+                    sb.setLength(0);
                 }
             }
         } catch (NullPointerException e) {
