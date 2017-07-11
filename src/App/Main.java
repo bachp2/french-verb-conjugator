@@ -5,7 +5,9 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 
 public class Main extends Application {
 
@@ -25,6 +27,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 470, 208);
         scene.getStylesheets().add("StyleSheets/comboBoxDisabled.css");
         primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
         primaryStage.setMinWidth(470);
         primaryStage.setMinHeight(208);
         primaryStage.show();

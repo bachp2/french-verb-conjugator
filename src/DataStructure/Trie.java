@@ -137,18 +137,24 @@ public class Trie {
             if(trieNode != null){
                 current = trieNode;
             }
-            else break;
+            else{
+                current = null;
+                break;
+            }
         }
-        if(current.isEnd && current.setOfVerbs == null && current.verb != null){
-            temp[0] = current.verb;
-            return temp;
-        }
-        else if (current.isEnd && current.setOfVerbs != null)
-            return current.setOfVerbs.toArray(new Verb[current.setOfVerbs.size()]);
-        else{
+        if(current == null){
             //second search through, ignore accents
             return searchVerbIgnoreAccents(verb);
         }
+        else{
+            if(current.isEnd && current.setOfVerbs == null && current.verb != null){
+                temp[0] = current.verb;
+                return temp;
+            }
+            else if (current.isEnd && current.setOfVerbs != null)
+                return current.setOfVerbs.toArray(new Verb[current.setOfVerbs.size()]);
+        }
+        return EMPTY_ARRAY;
     }
 
     private boolean isVowel(char c){
@@ -171,6 +177,7 @@ public class Trie {
         for(int i = 0; i < chars.length; i++){
             if(isVowel(chars[i])){
                 Stack<TrieNode> charsWithAccent = root.stackSubNode(chars[i]);
+                if(charsWithAccent==null) break;
                 while(!charsWithAccent.empty()){
                     //todo fix substring conflict
                     searchVerbIgnoreAccentsHelper(charsWithAccent.pop(),
