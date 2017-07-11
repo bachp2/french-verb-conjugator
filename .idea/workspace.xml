@@ -4,17 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Main.java" afterPath="$PROJECT_DIR$/src/App/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/DataStructure/Trie.java" />
-    </list>
+    <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
