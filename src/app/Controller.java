@@ -1,6 +1,5 @@
 package app;
 
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.controlsfx.control.PopOver;
@@ -22,11 +21,13 @@ import javafx.scene.web.WebView;
 public class Controller {
     private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
     private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
+
     private String textField = "";
     private static StringBuilder sb = new StringBuilder();
+
     private Mode m;
     private Tense t;
-    private Stage stage;
+
     @FXML
     private SplitPane splitPane;
 
@@ -79,6 +80,10 @@ public class Controller {
         buttons.setAlignment(Pos.CENTER_RIGHT);
         conjugate.setDefaultButton(true);
     }
+
+    /**
+     * show accents pop over when click on button
+     */
     public void showAccents(){
         try {
             GridPane gridPane = new GridPane();
@@ -86,8 +91,9 @@ public class Controller {
             int i = 0;
             for(int r = 0; r < 3; ++r){
                 for(int c = 0; c < 6; ++c){
-                    Button btn = new Button(accents[i]);
                     String accent = accents[i];
+                    Button btn = new Button(accent);
+                    btn.getStyleClass().add("customButton");
                     btn.setOnAction(e -> {
                         //when clicked will append special accent to the text field
                         inputTextField.appendText(accent);
@@ -95,15 +101,16 @@ public class Controller {
                     gridPane.add(btn,c,r);
                     i++;
                 }
-                if(i == accents.length-1) break;
+                //if(i == accents.length-1) break;
             }
             popOver = new PopOver(gridPane);
             popOver.setDetachable(false);
             popOver.setArrowLocation(PopOver.ArrowLocation.BOTTOM_RIGHT);
-            popOver.show(roundButton);
             popOver.setOnCloseRequest(e -> popOver.hide());
+            popOver.show(roundButton);
         } catch (Exception e) {}
     }
+
     public void onPickedMode(){
         tenseComboBox.setCellFactory(lv -> new ListCell<Tense>(){
             @Override
@@ -123,6 +130,13 @@ public class Controller {
         tenseComboBox.valueProperty().set(null);
     }
 
+    /**
+     * check if tense is in s specific mode
+     * this method is delegate to isTenseInMode in Mode class
+     * @param tense
+     * @param mode
+     * @return
+     */
     private boolean isTenseInMode(Tense tense, Mode mode){
         if(mode == null) return false;
         return mode.isTenseInMode(tense);

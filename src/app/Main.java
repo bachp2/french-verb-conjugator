@@ -23,6 +23,7 @@ public class Main extends Application {
         }).start();
         Scene scene = new Scene(root, 470, 208);
         scene.getStylesheets().add("stylesheets/comboBoxDisabled.css");
+        scene.getStylesheets().add("stylesheets/customButton.css");
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
         primaryStage.setOnCloseRequest(e -> {

@@ -5,65 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controlsfx-8.40.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_8_40_12.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jcommander-1.64.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tree$TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Controller.java" afterPath="$PROJECT_DIR$/src/app/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Gui.fxml" afterPath="$PROJECT_DIR$/src/app/Gui.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Main.java" afterPath="$PROJECT_DIR$/src/app/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/OutputWriter.java" afterPath="$PROJECT_DIR$/src/app/OutputWriter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Program.java" afterPath="$PROJECT_DIR$/src/app/Program.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/icon.png" afterPath="$PROJECT_DIR$/src/app/icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Mode.java" afterPath="$PROJECT_DIR$/src/structure/Mode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Tense.java" afterPath="$PROJECT_DIR$/src/structure/Tense.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Tree.java" afterPath="$PROJECT_DIR$/src/structure/Tree.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/structure/Trie.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Verb.java" afterPath="$PROJECT_DIR$/src/structure/Verb.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/StyleSheets/comboBoxDisabled.css" afterPath="$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/Deconjugation.txt" afterPath="$PROJECT_DIR$/src/test/Deconjugation.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" afterPath="$PROJECT_DIR$/src/test/ProgramTestSuite.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestCollator.java" afterPath="$PROJECT_DIR$/src/test/TestCollator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestConjugation.java" afterPath="$PROJECT_DIR$/src/test/TestConjugation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" afterPath="$PROJECT_DIR$/src/test/TestDeconjugation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestList.java" afterPath="$PROJECT_DIR$/src/test/TestList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestMultiMap.java" afterPath="$PROJECT_DIR$/src/test/TestMultiMap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestTrie.java" afterPath="$PROJECT_DIR$/src/test/TestTrie.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/conjugation.txt" afterPath="$PROJECT_DIR$/src/test/conjugation.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/list.txt" afterPath="$PROJECT_DIR$/src/test/list.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/listRadicals.txt" afterPath="$PROJECT_DIR$/src/test/listRadicals.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/listRadicalsLength.txt" afterPath="$PROJECT_DIR$/src/test/listRadicalsLength.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/multimap.txt" afterPath="$PROJECT_DIR$/src/test/multimap.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/multimapTN.txt" afterPath="$PROJECT_DIR$/src/test/multimapTN.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/testDecon.txt" afterPath="$PROJECT_DIR$/src/test/testDecon.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestCollator.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestCollator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestConjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestConjugation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestMultiMap.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestMultiMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/french-verb-conjugator.iml" afterPath="$PROJECT_DIR$/french-verb-conjugator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.txt" afterPath="$PROJECT_DIR$/manifest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Gui.fxml" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Gui.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Controller.java" afterPath="$PROJECT_DIR$/src/app/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Main.java" afterPath="$PROJECT_DIR$/src/app/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,41 +36,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="391">
+              <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1286#1287#0" expanded="true" />
-                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+                <element signature="e#1382#1383#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
+      <file leaf-file-name="comboBoxDisabled.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1542#1908#0" expanded="true" />
-                <element signature="e#1907#1908#0" expanded="true" />
-                <element signature="e#3322#3841#0" expanded="true" />
-                <element signature="e#3840#3841#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -133,7 +63,7 @@
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="119">
               <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
               <folding>
                 <element signature="docComment;class#Program#0" expanded="false" />
@@ -142,66 +72,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/structure/Verb.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3281">
-              <caret line="236" column="42" lean-forward="false" selection-start-line="236" selection-start-column="42" selection-end-line="236" selection-end-column="42" />
+            <state relative-caret-position="339">
+              <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1889#1890#0" expanded="false" />
-                <element signature="e#1923#1924#0" expanded="false" />
-                <element signature="e#2081#2082#0" expanded="false" />
-                <element signature="e#2119#2120#0" expanded="false" />
-                <element signature="e#2457#2458#0" expanded="false" />
-                <element signature="e#2528#2529#0" expanded="false" />
-                <element signature="e#3307#3308#0" expanded="false" />
-                <element signature="e#3382#3383#0" expanded="false" />
-                <element signature="e#3527#3528#0" expanded="false" />
-                <element signature="e#3575#3576#0" expanded="false" />
-                <element signature="e#3720#3721#0" expanded="false" />
-                <element signature="e#3767#3768#0" expanded="false" />
-                <element signature="e#3885#3886#0" expanded="false" />
-                <element signature="e#3936#3937#0" expanded="false" />
-                <element signature="e#4126#4127#0" expanded="false" />
-                <element signature="e#4166#4167#0" expanded="false" />
-                <element signature="e#4385#4386#0" expanded="false" />
-                <element signature="e#4443#4444#0" expanded="false" />
-                <element signature="method#setTable#0;class#Verb#0" expanded="false" />
-                <element signature="e#5823#5824#0" expanded="false" />
-                <element signature="e#5872#5873#0" expanded="false" />
-                <element signature="e#5911#5912#0" expanded="false" />
-                <element signature="e#5948#5949#0" expanded="false" />
-                <element signature="e#5999#6000#0" expanded="false" />
-                <element signature="e#6037#6038#0" expanded="false" />
-                <element signature="e#6146#6147#0" expanded="false" />
-                <element signature="e#6184#6185#0" expanded="false" />
-                <element signature="e#6390#6391#0" expanded="false" />
-                <element signature="e#6435#6436#0" expanded="false" />
-                <element signature="e#6510#6511#0" expanded="false" />
-                <element signature="e#6547#6548#0" expanded="false" />
-                <element signature="e#6585#6586#0" expanded="false" />
-                <element signature="e#6620#6621#0" expanded="false" />
-                <element signature="e#7204#7205#0" expanded="false" />
-                <element signature="e#7273#7274#0" expanded="false" />
-                <element signature="e#7332#7333#0" expanded="false" />
-                <element signature="e#7402#7403#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1483#1849#0" expanded="true" />
+                <element signature="e#1848#1849#0" expanded="true" />
+                <element signature="e#3390#3909#0" expanded="true" />
+                <element signature="e#3908#3909#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/structure/Mode.java">
+      <file leaf-file-name="customButton.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stylesheets/customButton.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding>
-                <element signature="e#445#446#0" expanded="false" />
-                <element signature="e#481#482#0" expanded="false" />
-                <element signature="e#1361#1362#0" expanded="false" />
-                <element signature="e#1390#1391#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -262,9 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
-        <option value="$PROJECT_DIR$/src/DictionaryImpl.java" />
-        <option value="$PROJECT_DIR$/src/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/UniqueRadsDict.java" />
         <option value="$PROJECT_DIR$/src/ConsoleOutput.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -311,8 +200,11 @@
         <option value="$PROJECT_DIR$/src/App/Controller.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
         <option value="$PROJECT_DIR$/src/structure/Verb.java" />
-        <option value="$PROJECT_DIR$/src/app/Controller.java" />
+        <option value="$PROJECT_DIR$/src/stylesheets/mouseHover.css" />
         <option value="$PROJECT_DIR$/src/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/stylesheets/button.css" />
+        <option value="$PROJECT_DIR$/src/stylesheets/customButton.css" />
+        <option value="$PROJECT_DIR$/src/app/Controller.java" />
       </list>
     </option>
   </component>
@@ -366,6 +258,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,20 +347,20 @@
       <recent name="DataStructure" />
       <recent name="Main" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data\images" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\stylesheets" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\app" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\App" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data\images" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\App" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\StyleSheets" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\Main" />
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -839,7 +749,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="366" y="149" width="927" height="532" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="366" y="150" width="927" height="532" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -876,15 +786,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3617647" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21319018" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="989" y="194" width="927" height="532" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="366" y="149" width="927" height="532" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1647145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -914,7 +824,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/list.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -1057,13 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1243,35 +1145,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding>
-            <element signature="docComment;class#Program#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1542#1908#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
-            <element signature="e#3322#3841#0" expanded="true" />
-            <element signature="e#3840#3841#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,12 +1171,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="391">
+          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="docComment;class#Program#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/customButton.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1483#1849#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#3390#3909#0" expanded="true" />
+            <element signature="e#3908#3909#0" expanded="true" />
           </folding>
         </state>
       </provider>
