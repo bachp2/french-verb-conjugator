@@ -1,7 +1,11 @@
-package App;
+package app;
 
-import DataStructure.Mode;
-import DataStructure.Tense;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+import org.controlsfx.control.PopOver;
+import structure.Mode;
+import structure.Tense;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,9 +15,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by bachp on 7/1/2017.
@@ -25,24 +26,37 @@ public class Controller {
     private static StringBuilder sb = new StringBuilder();
     private Mode m;
     private Tense t;
+    private Stage stage;
     @FXML
     private SplitPane splitPane;
+
     @FXML
     private ComboBox modeComboBox;
+
+    @FXML
+    private Button roundButton;
+    private PopOver popOver;
     @FXML
     private ComboBox tenseComboBox;
+
     @FXML
     private TextField inputTextField;
+
     @FXML
     private WebView wv;
+
     @FXML
     private HBox buttons;
+
     @FXML
     private Button conjugate;
+
     @FXML
     private AnchorPane leftPane;
+
     @FXML
     private AnchorPane rightPane;
+
     @FXML
     private void initialize(){
         modeComboBox.setItems(modes);
@@ -59,10 +73,36 @@ public class Controller {
                 }
             }
         });
+        //TextFields.bindAutoCompletion(inputTextField, Verb.getVerbsListString());
         SplitPane.setResizableWithParent(leftPane, Boolean.FALSE);
-        buttons.setSpacing(5);
+        buttons.setSpacing(15);
         buttons.setAlignment(Pos.CENTER_RIGHT);
         conjugate.setDefaultButton(true);
+    }
+    public void showAccents(){
+        try {
+            GridPane gridPane = new GridPane();
+            final String[] accents = {"ç","â","à","ê","é","è","ë","î","ï","ô","û" ,"ù", "ü"};
+            int i = 0;
+            for(int r = 0; r < 3; ++r){
+                for(int c = 0; c < 6; ++c){
+                    Button btn = new Button(accents[i]);
+                    String accent = accents[i];
+                    btn.setOnAction(e -> {
+                        //when clicked will append special accent to the text field
+                        inputTextField.appendText(accent);
+                    });
+                    gridPane.add(btn,c,r);
+                    i++;
+                }
+                if(i == accents.length-1) break;
+            }
+            popOver = new PopOver(gridPane);
+            popOver.setDetachable(false);
+            popOver.setArrowLocation(PopOver.ArrowLocation.BOTTOM_RIGHT);
+            popOver.show(roundButton);
+            popOver.setOnCloseRequest(e -> popOver.hide());
+        } catch (Exception e) {}
     }
     public void onPickedMode(){
         tenseComboBox.setCellFactory(lv -> new ListCell<Tense>(){
@@ -82,10 +122,12 @@ public class Controller {
         });
         tenseComboBox.valueProperty().set(null);
     }
+
     private boolean isTenseInMode(Tense tense, Mode mode){
         if(mode == null) return false;
         return mode.isTenseInMode(tense);
     }
+
     public void conjugateButtonClicked(){
         final String notFoundMessage = "<p style=\"color:#762817;\"><em>verb not found!</em></p>";
         final String modeTenseSpecificationMessage = "<p style=\"color:#762817;\">" +
@@ -95,6 +137,8 @@ public class Controller {
         Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
         Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
         try {
+            if(!verb.equals("") && (mode == null || tense == null))
+                engine.loadContent(modeTenseSpecificationMessage);
             if( (!verb.equals("") && !textField.equals(verb.toLowerCase())) || mode != m || tense != t ) {
                 textField = verb.toLowerCase();
                 m = mode; t = tense;

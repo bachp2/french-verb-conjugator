@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 /**
  * Created by bachp on 6/30/2017.

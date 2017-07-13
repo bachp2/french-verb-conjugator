@@ -1,4 +1,4 @@
-package DataStructure;
+package structure;
 
 import java.util.*;
 
@@ -207,7 +207,7 @@ public class Trie {
     }
 
     /**
-     * this class is a subclass used for DataStructure.Trie
+     * this class is a subclass used for structure.Trie
      * use for the arrangement of childList
      */
 

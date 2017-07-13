@@ -1,8 +1,8 @@
-package App;
+package app;
 
-import DataStructure.Mode;
-import DataStructure.Tense;
-import DataStructure.Verb;
+import structure.Mode;
+import structure.Tense;
+import structure.Verb;
 import com.google.common.base.Joiner;
 
 import java.util.ArrayList;

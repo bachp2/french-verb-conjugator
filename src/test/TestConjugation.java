@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import com.google.common.base.Stopwatch;
 

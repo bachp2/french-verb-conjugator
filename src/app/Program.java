@@ -1,9 +1,9 @@
-package App;
+package app;
 
-import DataStructure.Mode;
-import DataStructure.Tense;
-import DataStructure.Verb;
-import Test.ProgramTestSuite;
+import structure.Mode;
+import structure.Tense;
+import structure.Verb;
+import test.ProgramTestSuite;
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
@@ -28,7 +28,7 @@ import java.util.Random;
 public class Program {
     private static final String PATH_TO_VERBS_FR = "./data/verbs-fr.xml";
     private static final String PATH_TO_CONJUGATION_FR = "./data/conjugation-fr.xml";
-    //private App.Program instance;
+    //private app.Program instance;
     protected static Random rand = new Random();
 
     static {

@@ -1,4 +1,4 @@
-package DataStructure;
+package structure;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
@@ -217,7 +217,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
     public List<String> getSuffixes(Mode mode, Tense tense){
         return table.get(mode, tense);
     }
-
+    
     public static String appendString(String radical, String prefix){
         return radical+prefix;
     }

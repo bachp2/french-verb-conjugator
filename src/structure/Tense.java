@@ -1,4 +1,4 @@
-package DataStructure;
+package structure;
 
 /**
  * Created by bachp on 4/22/2017.

@@ -1,6 +1,5 @@
-package DataStructure;
+package structure;
 
-import com.beust.jcommander.IStringConverter;
 
 import java.util.NoSuchElementException;
 
@@ -59,13 +58,4 @@ public enum Mode {
         return tenses;
     }
 
-    /**
-     * Created by bachp on 3/25/2017.
-     */
-    public static class ModeConverter implements IStringConverter <Mode> {
-        @Override
-        public Mode convert(String s) {
-            return getMode(s);
-        }
-    }
 }

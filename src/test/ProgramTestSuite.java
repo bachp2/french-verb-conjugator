@@ -1,9 +1,9 @@
-package Test;
+package test;
 
-import DataStructure.Mode;
-import DataStructure.Tense;
-import DataStructure.Verb;
-import App.Program;
+import structure.Mode;
+import structure.Tense;
+import structure.Verb;
+import app.Program;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -16,7 +16,7 @@ import java.util.List;
 public class ProgramTestSuite extends Program {
     public static void printListElementsToFile(){
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/list.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/list.txt", "UTF-16");
             for(int i = 0; i < Verb.getListSize(); i++){
                 pw.println(Verb.getListElement(i).toString());
             }
@@ -35,7 +35,7 @@ public class ProgramTestSuite extends Program {
     }
     public static void printTNToFile(){
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/multimapTN.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/multimapTN.txt", "UTF-16");
             int i = 0;
             for(String key : Verb.getMultiMapKeys()){
                 pw.println(i++ +" "+key);
@@ -50,7 +50,7 @@ public class ProgramTestSuite extends Program {
 
     public static void printVerbsWithSameTemplateName(){
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/multimap.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/multimap.txt", "UTF-16");
             for(String key : Verb.getMultiMapKeys()){
                 pw.println(key);
                 for(Verb v : Verb.getMultiMapValuesFromKey(key)){
@@ -98,7 +98,7 @@ public class ProgramTestSuite extends Program {
     public static void printRandomConjugation(){
         int count = rand.nextInt(100);
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/conjugation.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/conjugation.txt", "UTF-16");
             while(count>0){
                 pw.println(conjugateInfinitiveVerb());
                 pw.println();
@@ -114,7 +114,7 @@ public class ProgramTestSuite extends Program {
     public static void testConjugation(){
 //        try {
 //            int passes = 0;
-//            PrintWriter pw = new PrintWriter("./src/Test/testDecon.txt", "UTF-16");
+//            PrintWriter pw = new PrintWriter("./src/test/testDecon.txt", "UTF-16");
 //            for (int i = 0; i < Verb.getListSize(); i++) {
 //                Verb v = Verb.getListElement(i);
 //                String c = getRandomConjugatedVerb(v);
@@ -147,7 +147,7 @@ public class ProgramTestSuite extends Program {
     }
     public static void printRadicalsFromList(){
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/listRadicals.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/listRadicals.txt", "UTF-16");
             for(int i = 0; i < Verb.getListSize(); i++){
                 pw.println(Verb.getListElement(i).toString());
                 pw.println(Verb.getListElement(i).radical());
@@ -162,7 +162,7 @@ public class ProgramTestSuite extends Program {
 
     public static void printRadicalsLength(){
         try {
-            PrintWriter pw = new PrintWriter("./src/Test/listRadicalsLength.txt", "UTF-16");
+            PrintWriter pw = new PrintWriter("./src/test/listRadicalsLength.txt", "UTF-16");
             for(int i = 0; i < Verb.getListSize(); i++){
                 if(Verb.getListElement(i).radical().length() == 0){
                     pw.println(Verb.getListElement(i).toString());

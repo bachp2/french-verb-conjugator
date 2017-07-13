@@ -4,7 +4,67 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="" />
+    <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controlsfx-8.40.12.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_8_40_12.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jcommander-1.64.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode$ModeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Mode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tense.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tree$TreeNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Tree.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie$TrieNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Trie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/DataStructure/Verb.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Controller.java" afterPath="$PROJECT_DIR$/src/app/Controller.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Gui.fxml" afterPath="$PROJECT_DIR$/src/app/Gui.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Main.java" afterPath="$PROJECT_DIR$/src/app/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/OutputWriter.java" afterPath="$PROJECT_DIR$/src/app/OutputWriter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/Program.java" afterPath="$PROJECT_DIR$/src/app/Program.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App/icon.png" afterPath="$PROJECT_DIR$/src/app/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Mode.java" afterPath="$PROJECT_DIR$/src/structure/Mode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Tense.java" afterPath="$PROJECT_DIR$/src/structure/Tense.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Tree.java" afterPath="$PROJECT_DIR$/src/structure/Tree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Trie.java" afterPath="$PROJECT_DIR$/src/structure/Trie.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStructure/Verb.java" afterPath="$PROJECT_DIR$/src/structure/Verb.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/StyleSheets/comboBoxDisabled.css" afterPath="$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/Deconjugation.txt" afterPath="$PROJECT_DIR$/src/test/Deconjugation.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/ProgramTestSuite.java" afterPath="$PROJECT_DIR$/src/test/ProgramTestSuite.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestCollator.java" afterPath="$PROJECT_DIR$/src/test/TestCollator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestConjugation.java" afterPath="$PROJECT_DIR$/src/test/TestConjugation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestDeconjugation.java" afterPath="$PROJECT_DIR$/src/test/TestDeconjugation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestList.java" afterPath="$PROJECT_DIR$/src/test/TestList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestMultiMap.java" afterPath="$PROJECT_DIR$/src/test/TestMultiMap.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/TestTrie.java" afterPath="$PROJECT_DIR$/src/test/TestTrie.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/conjugation.txt" afterPath="$PROJECT_DIR$/src/test/conjugation.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/list.txt" afterPath="$PROJECT_DIR$/src/test/list.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/listRadicals.txt" afterPath="$PROJECT_DIR$/src/test/listRadicals.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/listRadicalsLength.txt" afterPath="$PROJECT_DIR$/src/test/listRadicalsLength.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/multimap.txt" afterPath="$PROJECT_DIR$/src/test/multimap.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/multimapTN.txt" afterPath="$PROJECT_DIR$/src/test/multimapTN.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Test/testDecon.txt" afterPath="$PROJECT_DIR$/src/test/testDecon.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Program.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/ProgramTestSuite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestCollator.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestCollator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestConjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestConjugation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestDeconjugation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestMultiMap.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestMultiMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/TestTrie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/french-verb-conjugator.iml" afterPath="$PROJECT_DIR$/french-verb-conjugator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.txt" afterPath="$PROJECT_DIR$/manifest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Gui.fxml" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Gui.fxml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,12 +91,116 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="459">
+              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1542#1908#0" expanded="true" />
+                <element signature="e#1907#1908#0" expanded="true" />
+                <element signature="e#3322#3841#0" expanded="true" />
+                <element signature="e#3840#3841#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Thread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Program.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+              <folding>
+                <element signature="docComment;class#Program#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Verb.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/structure/Verb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3281">
+              <caret line="236" column="42" lean-forward="false" selection-start-line="236" selection-start-column="42" selection-end-line="236" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1889#1890#0" expanded="false" />
+                <element signature="e#1923#1924#0" expanded="false" />
+                <element signature="e#2081#2082#0" expanded="false" />
+                <element signature="e#2119#2120#0" expanded="false" />
+                <element signature="e#2457#2458#0" expanded="false" />
+                <element signature="e#2528#2529#0" expanded="false" />
+                <element signature="e#3307#3308#0" expanded="false" />
+                <element signature="e#3382#3383#0" expanded="false" />
+                <element signature="e#3527#3528#0" expanded="false" />
+                <element signature="e#3575#3576#0" expanded="false" />
+                <element signature="e#3720#3721#0" expanded="false" />
+                <element signature="e#3767#3768#0" expanded="false" />
+                <element signature="e#3885#3886#0" expanded="false" />
+                <element signature="e#3936#3937#0" expanded="false" />
+                <element signature="e#4126#4127#0" expanded="false" />
+                <element signature="e#4166#4167#0" expanded="false" />
+                <element signature="e#4385#4386#0" expanded="false" />
+                <element signature="e#4443#4444#0" expanded="false" />
+                <element signature="method#setTable#0;class#Verb#0" expanded="false" />
+                <element signature="e#5823#5824#0" expanded="false" />
+                <element signature="e#5872#5873#0" expanded="false" />
+                <element signature="e#5911#5912#0" expanded="false" />
+                <element signature="e#5948#5949#0" expanded="false" />
+                <element signature="e#5999#6000#0" expanded="false" />
+                <element signature="e#6037#6038#0" expanded="false" />
+                <element signature="e#6146#6147#0" expanded="false" />
+                <element signature="e#6184#6185#0" expanded="false" />
+                <element signature="e#6390#6391#0" expanded="false" />
+                <element signature="e#6435#6436#0" expanded="false" />
+                <element signature="e#6510#6511#0" expanded="false" />
+                <element signature="e#6547#6548#0" expanded="false" />
+                <element signature="e#6585#6586#0" expanded="false" />
+                <element signature="e#6620#6621#0" expanded="false" />
+                <element signature="e#7204#7205#0" expanded="false" />
+                <element signature="e#7273#7274#0" expanded="false" />
+                <element signature="e#7332#7333#0" expanded="false" />
+                <element signature="e#7402#7403#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/structure/Mode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <folding>
+                <element signature="e#445#446#0" expanded="false" />
+                <element signature="e#481#482#0" expanded="false" />
+                <element signature="e#1361#1362#0" expanded="false" />
+                <element signature="e#1390#1391#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -98,9 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PrefixesGroup.java" />
-        <option value="$PROJECT_DIR$/src/DictionaryOfRadicalsSortByLength.java" />
-        <option value="$PROJECT_DIR$/src/DictionaryOfRepeteRadicalsSortByLength.java" />
         <option value="$PROJECT_DIR$/src/DictionaryOfVerbsWithSimilarRadical.java" />
         <option value="$PROJECT_DIR$/src/DictionaryImpl.java" />
         <option value="$PROJECT_DIR$/src/Dictionary.java" />
@@ -135,20 +296,23 @@
         <option value="$PROJECT_DIR$/src/Source/Handler.java" />
         <option value="$PROJECT_DIR$/src/Source/Main.java" />
         <option value="$PROJECT_DIR$/src/App/Handler.java" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Tense.java" />
         <option value="$PROJECT_DIR$/src/App/comboBoxDisabled.css" />
         <option value="$PROJECT_DIR$/src/App/testStringbuilder.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Accents.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Accent.java" />
-        <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
         <option value="$PROJECT_DIR$/src/Test/TestCollator.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Tree.java" />
         <option value="$PROJECT_DIR$/src/App/Program.java" />
-        <option value="$PROJECT_DIR$/src/App/Controller.java" />
         <option value="$PROJECT_DIR$/src/App/OutputWriter.java" />
         <option value="$PROJECT_DIR$/src/DataStructure/Trie.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Mode.java" />
         <option value="$PROJECT_DIR$/src/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/App/Controller.java" />
+        <option value="$PROJECT_DIR$/src/DataStructure/Verb.java" />
+        <option value="$PROJECT_DIR$/src/structure/Verb.java" />
+        <option value="$PROJECT_DIR$/src/app/Controller.java" />
+        <option value="$PROJECT_DIR$/src/app/Main.java" />
       </list>
     </option>
   </component>
@@ -178,6 +342,7 @@
     <panes>
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,7 +383,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="french-verb-conjugator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,7 +417,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,11 +446,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\lib" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\App" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\StyleSheets" />
       <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator\src\Main" />
-      <recent name="C:\Users\bachp\IdeaProjects\french-verb-conjugator" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,11 +469,11 @@
     <configuration default="false" name="TestList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Test.TestList" />
+      <option name="MAIN_CLASS_NAME" value="test.TestList" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -311,11 +489,11 @@
     <configuration default="false" name="TestMultiMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Test.TestMultiMap" />
+      <option name="MAIN_CLASS_NAME" value="test.TestMultiMap" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -331,11 +509,11 @@
     <configuration default="false" name="TestDeconjugation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Test.TestDeconjugation" />
+      <option name="MAIN_CLASS_NAME" value="test.TestDeconjugation" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -351,11 +529,11 @@
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="App.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="App.Main" />
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -371,11 +549,11 @@
     <configuration default="false" name="TestCollator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Test.TestCollator" />
+      <option name="MAIN_CLASS_NAME" value="test.TestCollator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -654,14 +832,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21319018" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="361" y="151" width="927" height="532" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="366" y="149" width="927" height="532" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -736,9 +914,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/SuffixesGroup.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main/SimilarRadsDict.java" />
-    <entry file="file://$PROJECT_DIR$/verbs_with_same_tn.txt" />
     <entry file="file://$PROJECT_DIR$/list.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -761,7 +936,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/multimapTN.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/multimapTN.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -785,35 +960,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/GUI.form" />
-    <entry file="file://$PROJECT_DIR$/src/Test/listRadicalsLength.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/listRadicalsLength.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestMultiMap.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestMultiMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="107" lean-forward="false" selection-start-line="15" selection-start-column="107" selection-end-line="15" selection-end-column="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/multimap.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/multimap.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/list.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/list.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="8410" column="12" lean-forward="false" selection-start-line="8410" selection-start-column="1" selection-end-line="8410" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/listRadicals.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/listRadicals.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="8410" column="5" lean-forward="false" selection-start-line="8410" selection-start-column="1" selection-end-line="8410" selection-end-column="5" />
@@ -827,21 +1002,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/conjugation.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/conjugation.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="226" column="78" lean-forward="false" selection-start-line="226" selection-start-column="78" selection-end-line="226" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Deconjugation.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/Deconjugation.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187510">
           <caret line="11030" column="16" lean-forward="false" selection-start-line="11030" selection-start-column="16" selection-end-line="11030" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestTrie.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestTrie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
@@ -850,42 +1025,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Output.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/ExceptionOutputWriter.java" />
-    <entry file="file://$PROJECT_DIR$/src/Test/TestConjugation.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestConjugation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/testDecon.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/testDecon.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestDeconjugation.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestDeconjugation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/ProgramTestSuite.java">
+    <entry file="file://$PROJECT_DIR$/src/test/ProgramTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="192" column="14" lean-forward="false" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestList.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StyleSheets/comboBoxDisabled.css">
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/comboBoxDisabled.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
@@ -893,14 +1068,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/testStringbuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tense.java">
+    <entry file="file://$PROJECT_DIR$/src/structure/Tense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#290#291#0" expanded="false" />
-            <element signature="e#326#327#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,9 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1122">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9462#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,7 +1098,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/TestCollator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestCollator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
@@ -957,10 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="2494" column="0" lean-forward="false" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
-          <folding>
-            <element signature="e#66617#66618#0" expanded="false" />
-            <element signature="e#66663#66664#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -968,11 +1132,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Gui.fxml">
+    <entry file="file://$PROJECT_DIR$/src/app/Gui.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
@@ -983,51 +1146,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Mode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#495#496#0" expanded="false" />
-            <element signature="e#531#532#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1440#1441#0" expanded="false" />
-            <element signature="e#1628#1629#0" expanded="false" />
-            <element signature="e#1669#1670#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Tree.java">
+    <entry file="file://$PROJECT_DIR$/src/structure/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#Program#0" expanded="false" />
-            <element signature="e#4106#4107#0" expanded="false" />
-            <element signature="e#4148#4149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Verb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-          <folding>
-            <element signature="method#setTable#0;class#Verb#0" expanded="false" />
-            <element signature="e#5876#5877#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,7 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/OutputWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/app/OutputWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="110" column="33" lean-forward="false" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
@@ -1055,28 +1176,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructure/Trie.java">
+    <entry file="file://$PROJECT_DIR$/src/structure/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding>
+            <element signature="e#445#446#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#1361#1362#0" expanded="false" />
+            <element signature="e#1390#1391#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Verb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3281">
+          <caret line="236" column="42" lean-forward="false" selection-start-line="236" selection-start-column="42" selection-end-line="236" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1889#1890#0" expanded="false" />
+            <element signature="e#1923#1924#0" expanded="false" />
+            <element signature="e#2081#2082#0" expanded="false" />
+            <element signature="e#2119#2120#0" expanded="false" />
+            <element signature="e#2457#2458#0" expanded="false" />
+            <element signature="e#2528#2529#0" expanded="false" />
+            <element signature="e#3307#3308#0" expanded="false" />
+            <element signature="e#3382#3383#0" expanded="false" />
+            <element signature="e#3527#3528#0" expanded="false" />
+            <element signature="e#3575#3576#0" expanded="false" />
+            <element signature="e#3720#3721#0" expanded="false" />
+            <element signature="e#3767#3768#0" expanded="false" />
+            <element signature="e#3885#3886#0" expanded="false" />
+            <element signature="e#3936#3937#0" expanded="false" />
+            <element signature="e#4126#4127#0" expanded="false" />
+            <element signature="e#4166#4167#0" expanded="false" />
+            <element signature="e#4385#4386#0" expanded="false" />
+            <element signature="e#4443#4444#0" expanded="false" />
+            <element signature="method#setTable#0;class#Verb#0" expanded="false" />
+            <element signature="e#5823#5824#0" expanded="false" />
+            <element signature="e#5872#5873#0" expanded="false" />
+            <element signature="e#5911#5912#0" expanded="false" />
+            <element signature="e#5948#5949#0" expanded="false" />
+            <element signature="e#5999#6000#0" expanded="false" />
+            <element signature="e#6037#6038#0" expanded="false" />
+            <element signature="e#6146#6147#0" expanded="false" />
+            <element signature="e#6184#6185#0" expanded="false" />
+            <element signature="e#6390#6391#0" expanded="false" />
+            <element signature="e#6435#6436#0" expanded="false" />
+            <element signature="e#6510#6511#0" expanded="false" />
+            <element signature="e#6547#6548#0" expanded="false" />
+            <element signature="e#6585#6586#0" expanded="false" />
+            <element signature="e#6620#6621#0" expanded="false" />
+            <element signature="e#7204#7205#0" expanded="false" />
+            <element signature="e#7273#7274#0" expanded="false" />
+            <element signature="e#7332#7333#0" expanded="false" />
+            <element signature="e#7402#7403#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="docComment;class#Program#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="549">
+          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1542#1908#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="e#3322#3841#0" expanded="true" />
+            <element signature="e#3840#3841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/com/sun/javafx/tk/quantum/WindowStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
           </folding>
         </state>
       </provider>
