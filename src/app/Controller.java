@@ -90,7 +90,8 @@ public class Controller {
             final String[] accents = {"ç","â","à","ê","é","è","ë","î","ï","ô","û" ,"ù", "ü"};
             int i = 0;
             for(int r = 0; r < 3; ++r){
-                for(int c = 0; c < 6; ++c){
+                for(int c = 0; c < 5; ++c){
+                    if(i == accents.length) break;
                     String accent = accents[i];
                     Button btn = new Button(accent);
                     btn.getStyleClass().add("customButton");
@@ -101,7 +102,6 @@ public class Controller {
                     gridPane.add(btn,c,r);
                     i++;
                 }
-                //if(i == accents.length-1) break;
             }
             popOver = new PopOver(gridPane);
             popOver.setDetachable(false);
