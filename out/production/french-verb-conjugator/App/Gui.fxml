@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.web.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<SplitPane fx:id="splitPane" dividerPositions="0.2993311036789298" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="208.0" minWidth="470.0" prefHeight="208.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
-  <items>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+<SplitPane fx:id="splitPane" dividerPositions="0.2993311036789298" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="208.0" minWidth="470.0" prefHeight="208.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
     <AnchorPane fx:id="leftPane" prefHeight="398.0" prefWidth="214.0">
-         <children>
-            <TextField fx:id="inputTextField" layoutX="52.0" layoutY="22.0" prefHeight="22.0" prefWidth="114.0" promptText="verb" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="13.0" />
-            <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="132.98095703125" />
-            <ComboBox fx:id="modeComboBox" layoutX="13.0" layoutY="58.0" onAction="#onPickedMode" prefWidth="150.0" promptText="Mode" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
-            <ComboBox fx:id="tenseComboBox" layoutX="13.0" layoutY="99.0" prefWidth="150.0" promptText="Tense" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" />
-            <HBox fx:id="buttons" layoutX="14.0" layoutY="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
-               <children>
-                  <Button fx:id="conjugate" mnemonicParsing="false" onAction="#conjugateButtonClicked" text="Conjugate" />
-                  <Button fx:id="roundButton" mnemonicParsing="false" onAction="#showAccents" text="é" />
-               </children>
-            </HBox>
-         </children></AnchorPane>
+        <TextField fx:id="inputTextField" layoutX="52.0" layoutY="22.0" prefHeight="22.0" prefWidth="114.0"
+                   promptText="verb" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="13.0"/>
+        <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input:"
+              AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="132.98095703125"/>
+        <ComboBox fx:id="modeComboBox" layoutX="13.0" layoutY="58.0" onAction="#onPickedMode" prefWidth="150.0"
+                  promptText="Mode" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0"/>
+        <ComboBox fx:id="tenseComboBox" layoutX="13.0" layoutY="99.0" prefWidth="150.0" promptText="Tense"
+                  AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0"/>
+        <HBox fx:id="buttons" layoutX="14.0" layoutY="148.0" AnchorPane.leftAnchor="14.0"
+              AnchorPane.rightAnchor="13.0">
+            <Button fx:id="conjugate" mnemonicParsing="false" onAction="#conjugateButtonClicked" text="Conjugate"/>
+            <Button fx:id="roundButton" mnemonicParsing="false" onAction="#showAccents" text="é"/>
+        </HBox>
+    </AnchorPane>
     <AnchorPane fx:id="rightPane" minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="362.0">
-         <children>
-            <WebView fx:id="wv" layoutX="14.0" layoutY="21.0" prefHeight="356.0" prefWidth="376.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
-         </children></AnchorPane>
-  </items>
+        <WebView fx:id="wv" layoutX="14.0" layoutY="21.0" prefHeight="356.0" prefWidth="376.0"
+                 AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+                 AnchorPane.topAnchor="15.0"/>
+    </AnchorPane>
 </SplitPane>

@@ -140,9 +140,7 @@ public class OutputWriter {
     }
     private <E> List<E> copyList(List<E> list){
         List<E> newList = new ArrayList<>();
-        for(E e : list){
-            newList.add(e);
-        }
+        newList.addAll(list);
         return newList;
     }
 

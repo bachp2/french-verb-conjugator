@@ -199,9 +199,7 @@ public class Trie {
             if (root.isEnd && root.setOfVerbs == null) {
                 temp.add(root.verb);
             } else if (root.isEnd){
-                for (Verb b : root.setOfVerbs) {
-                    temp.add(b);
-                }
+                temp.addAll(root.setOfVerbs);
             }
         }
     }
