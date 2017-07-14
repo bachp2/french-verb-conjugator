@@ -1,0 +1,8 @@
+.customButton{
+	-fx-background-radius: 5;
+	-fx-background-color: transparent;
+}
+.customButton:hover{
+	-fx-background-radius: 5;
+	-fx-background-color: #dae7f3;
+}

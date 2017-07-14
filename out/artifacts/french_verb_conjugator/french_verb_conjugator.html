@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'french_verb_conjugator.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedfrench_verb_conjugator_id() {
+        dtjava.embed(
+            {
+                id : 'french_verb_conjugator_id',
+                url : 'french_verb_conjugator.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedfrench_verb_conjugator_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>french-verb-conjugator</b></h2>
+  <b>Webstart:</b> <a href='french_verb_conjugator.jnlp' onclick="return launchApplication('french_verb_conjugator.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

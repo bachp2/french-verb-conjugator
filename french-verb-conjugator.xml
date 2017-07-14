@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="french-verb-conjugator" default="all">
+  
+  
+  <property file="french-verb-conjugator.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.controlsfx-8.40.12.classpath">
+    <pathelement location="${basedir}/lib/controlsfx-8.40.12.jar"/>
+  </path>
+  
+  <path id="library.kotlinjavaruntime.classpath">
+    <pathelement location="${path.variable.kotlin_bundled}/lib/kotlin-reflect.jar"/>
+    <pathelement location="${path.variable.kotlin_bundled}/lib/kotlin-runtime.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module french-verb-conjugator -->
+  
+  <dirname property="module.french-verb-conjugator.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.french-verb-conjugator" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.french-verb-conjugator" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.french-verb-conjugator" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.french-verb-conjugator" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="french-verb-conjugator.output.dir" value="${module.french-verb-conjugator.basedir}/out/production/french-verb-conjugator"/>
+  <property name="french-verb-conjugator.testoutput.dir" value="${module.french-verb-conjugator.basedir}/out/test/french-verb-conjugator"/>
+  
+  <path id="french-verb-conjugator.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="french-verb-conjugator.module.production.classpath">
+    <path refid="${module.jdk.classpath.french-verb-conjugator}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+    <pathelement location="${basedir}/lib/guava-19.0.jar"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+    <path refid="library.controlsfx-8.40.12.classpath"/>
+  </path>
+  
+  <path id="french-verb-conjugator.runtime.production.module.classpath">
+    <pathelement location="${french-verb-conjugator.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+    <pathelement location="${basedir}/lib/guava-19.0.jar"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+    <path refid="library.controlsfx-8.40.12.classpath"/>
+  </path>
+  
+  <path id="french-verb-conjugator.module.classpath">
+    <path refid="${module.jdk.classpath.french-verb-conjugator}"/>
+    <pathelement location="${french-verb-conjugator.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+    <pathelement location="${basedir}/lib/guava-19.0.jar"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+    <path refid="library.controlsfx-8.40.12.classpath"/>
+  </path>
+  
+  <path id="french-verb-conjugator.runtime.module.classpath">
+    <pathelement location="${french-verb-conjugator.testoutput.dir}"/>
+    <pathelement location="${french-verb-conjugator.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+    <pathelement location="${basedir}/lib/guava-19.0.jar"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+    <path refid="library.controlsfx-8.40.12.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.french-verb-conjugator">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.french-verb-conjugator">
+    <patternset refid="excluded.from.module.french-verb-conjugator"/>
+  </patternset>
+  
+  <path id="french-verb-conjugator.module.sourcepath">
+    <dirset dir="${module.french-verb-conjugator.basedir}">
+      <include name="src"/>
+      <include name="data"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.french-verb-conjugator" depends="compile.module.french-verb-conjugator.production,compile.module.french-verb-conjugator.tests" description="Compile module french-verb-conjugator"/>
+  
+  <target name="compile.module.french-verb-conjugator.production" depends="register.custom.compilers" description="Compile module french-verb-conjugator; production classes">
+    <mkdir dir="${french-verb-conjugator.output.dir}"/>
+    <javac2 destdir="${french-verb-conjugator.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.french-verb-conjugator}/javac">
+      <compilerarg line="${compiler.args.french-verb-conjugator}"/>
+      <bootclasspath refid="french-verb-conjugator.module.bootclasspath"/>
+      <classpath refid="french-verb-conjugator.module.production.classpath"/>
+      <src refid="french-verb-conjugator.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.french-verb-conjugator"/>
+    </javac2>
+    
+    <copy todir="${french-verb-conjugator.output.dir}">
+      <fileset dir="${module.french-verb-conjugator.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.french-verb-conjugator.basedir}/data">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.french-verb-conjugator.tests" depends="register.custom.compilers,compile.module.french-verb-conjugator.production" description="compile module french-verb-conjugator; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.french-verb-conjugator" description="cleanup module">
+    <delete dir="${french-verb-conjugator.output.dir}"/>
+    <delete dir="${french-verb-conjugator.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.french-verb-conjugator, clean.artifact.french-verb-conjugator" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.french-verb-conjugator" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.french-verb-conjugator" value="${basedir}/out/artifacts/french_verb_conjugator"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="artifact.temp.output.french_verb_conjugator" value="${artifacts.temp.dir}/french_verb_conjugator.jar"/>
+    <taskdef resource="com/sun/javafx/tools/ant/antlib.xml" uri="javafx:com.sun.javafx.tools.ant" classpath="${jdk.home.1.8}/lib/ant-javafx.jar"/>
+  </target>
+  
+  <target name="clean.artifact.french-verb-conjugator" description="clean french-verb-conjugator artifact output">
+    <delete dir="${artifact.output.french-verb-conjugator}"/>
+  </target>
+  
+  <target name="artifact.french-verb-conjugator" depends="init.artifacts, compile.module.french-verb-conjugator" description="Build &#39;french-verb-conjugator&#39; artifact" xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <mkdir dir="${artifact.output.french-verb-conjugator}"/>
+    <copy todir="${artifact.temp.output.french_verb_conjugator}">
+      <fileset dir="${french-verb-conjugator.output.dir}"/>
+    </copy>
+    <copy file="${basedir}/lib/controlsfx-8.40.12.jar" tofile="${artifact.temp.output.french_verb_conjugator}/controlsfx-8.40.12.jar"/>
+    <copy file="${basedir}/lib/guava-19.0.jar" tofile="${artifact.temp.output.french_verb_conjugator}/guava-19.0.jar"/>
+    <copy file="${idea.home}/lib/hamcrest-core-1.3.jar" tofile="${artifact.temp.output.french_verb_conjugator}/hamcrest-core-1.3.jar"/>
+    <copy file="${path.variable.kotlin_bundled}/lib/kotlin-reflect.jar" tofile="${artifact.temp.output.french_verb_conjugator}/kotlin-reflect.jar"/>
+    <copy file="${basedir}/lib/controlsfx-8.40.12.jar" tofile="${artifact.temp.output.french_verb_conjugator}/controlsfx-8.40.12.jar"/>
+    <fx:fileset id="all_but_french_verb_conjugator" dir="${artifact.temp.output.french_verb_conjugator}" includes="**/*.jar">
+      <exclude name="french_verb_conjugator.jar"/>
+    </fx:fileset>
+    <fx:fileset id="all_french_verb_conjugator" dir="${artifact.temp.output.french_verb_conjugator}" includes="**/*.jar"/>
+    <fx:application id="french_verb_conjugator_id" name="french-verb-conjugator" mainClass="app.Main"/>
+    <fx:jar destfile="${artifact.temp.output.french_verb_conjugator}/french_verb_conjugator.jar">
+      <fx:application refid="french_verb_conjugator_id"/>
+      <fileset dir="${artifact.temp.output.french_verb_conjugator}" excludes="**/*.jar"/>
+      <fx:resources>
+        <fx:fileset refid="all_but_french_verb_conjugator"/>
+      </fx:resources>
+      <manifest>
+        <attribute name="Implementation-Title" value="french-verb-conjugator"/>
+        <attribute name="Implementation-Version" value=""/>
+        <attribute name="Implementation-Vendor" value=""/>
+      </manifest>
+    </fx:jar>
+    <fx:deploy width="600" height="400" updatemode="background" outdir="${artifact.temp.output.french_verb_conjugator}/deploy" outfile="french_verb_conjugator">
+      <fx:application refid="french_verb_conjugator_id"/>
+      <fx:info title="french-verb-conjugator"/>
+      <fx:resources>
+        <fx:fileset refid="all_french_verb_conjugator"/>
+      </fx:resources>
+    </fx:deploy>
+    <copy todir="${artifact.output.french-verb-conjugator}">
+      <fileset dir="${artifact.temp.output.french_verb_conjugator}/deploy"/>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset dir="${artifact.temp.output.french_verb_conjugator}"/>
+    </delete>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.french-verb-conjugator" description="Build all artifacts">
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
