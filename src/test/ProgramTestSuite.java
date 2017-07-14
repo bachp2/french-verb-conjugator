@@ -21,9 +21,7 @@ public class ProgramTestSuite extends Program {
                 pw.println(Verb.getListElement(i).toString());
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -41,9 +39,7 @@ public class ProgramTestSuite extends Program {
                 pw.println(i++ +" "+key);
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -58,9 +54,7 @@ public class ProgramTestSuite extends Program {
                 }
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -105,9 +99,7 @@ public class ProgramTestSuite extends Program {
                 count--;
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -153,9 +145,7 @@ public class ProgramTestSuite extends Program {
                 pw.println(Verb.getListElement(i).radical());
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -170,9 +160,7 @@ public class ProgramTestSuite extends Program {
                 }
             }
             pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
@@ -211,7 +199,7 @@ public class ProgramTestSuite extends Program {
      *
      * @return
      */
-    public static String getRandomConjugatedVerb(Verb v) {
+    private static String getRandomConjugatedVerb(Verb v) {
         Mode m = getRandomMode();
         List <String> s = v.getSuffixes(m, getRandomTenseFromMode(m));
         String temp = s.get(rand.nextInt(s.size()));

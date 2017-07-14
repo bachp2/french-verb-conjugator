@@ -10,16 +10,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
-        new Program();
-//        new Thread(new Runnable() {
-//            @Override public void run() {
-//                Platform.runLater(new Runnable() {
-//                    @Override public void run() {
-//                        new Program();
-//                    }
-//                });
-//            }
-//        }).start();
+        //new Program();
+        new Thread(() -> Platform.runLater(() -> new Program())).start();
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("french verb conjugator");
         Scene scene = new Scene(root, 470, 208);

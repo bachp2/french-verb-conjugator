@@ -20,11 +20,11 @@ public class OutputWriter {
     private final String templateName;//output from verb object
     private final List<String> conjugatedForms;
 
-    public static String[] pronouns = {"Je", "Tu", "Il", "Nous", "Vous", "Ils"};
-    private static StringBuilder sb = new StringBuilder();
+    private static final String[] pronouns = {"Je", "Tu", "Il", "Nous", "Vous", "Ils"};
+    private static final StringBuilder sb = new StringBuilder();
     //static string builder for concatenating radical and suffixes of conjugated forms
 
-    public OutputWriter(Builder builder) {
+    private OutputWriter(Builder builder) {
         this.verbToBeConjugated = builder.verb;
         this.infVerb = builder.infVerb;
         this.templateName = builder.templateName;
@@ -172,6 +172,7 @@ public class OutputWriter {
          * constructor when there are multiple conjugated forms
          * @param multipleConjugatedForms
          */
+        @SafeVarargs
         public Builder(List<String>... multipleConjugatedForms){
             this.conjugatedForms = null;
             this.multipleConjugatedForms = multipleConjugatedForms;

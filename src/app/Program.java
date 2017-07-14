@@ -29,7 +29,7 @@ public class Program {
     private static final String PATH_TO_VERBS_FR = "./data/verbs-fr.xml";
     private static final String PATH_TO_CONJUGATION_FR = "./data/conjugation-fr.xml";
     //private app.Program instance;
-    protected static Random rand = new Random();
+    protected static final Random rand = new Random();
 
     static {
         try {

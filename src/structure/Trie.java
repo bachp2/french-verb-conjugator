@@ -3,8 +3,8 @@ package structure;
 import java.util.*;
 
 public class Trie {
-    private TrieNode root;
-    private static Verb[] EMPTY_ARRAY = new Verb[0];
+    private final TrieNode root;
+    private static final Verb[] EMPTY_ARRAY = new Verb[0];
     /**
      *
      */
@@ -212,10 +212,10 @@ public class Trie {
      */
 
     public class TrieNode {
-        protected char aChar;
+        final char aChar;
         private boolean isEnd;
         private boolean isRadical;
-        private Tree childList;
+        private final Tree childList;
         private Verb verb;
         private Set<Verb> setOfVerbs;
         /**

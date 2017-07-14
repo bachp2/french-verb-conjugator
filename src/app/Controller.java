@@ -1,9 +1,7 @@
 package app;
 
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import org.controlsfx.control.PopOver;
-import org.controlsfx.control.textfield.TextFields;
 import structure.Mode;
 import structure.Tense;
 import javafx.collections.FXCollections;
@@ -15,17 +13,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import structure.Verb;
 
 /**
  * Created by bachp on 7/1/2017.
  */
 public class Controller {
-    private ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
-    private ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
+    private final ObservableList<Mode> modes = FXCollections.observableArrayList(Mode.values());
+    private final ObservableList<Tense> tenses = FXCollections.observableArrayList(Tense.values());
 
     private String textField = "";
-    private static StringBuilder sb = new StringBuilder();
+    private static final StringBuilder sb = new StringBuilder();
 
     private Mode m;
     private Tense t;
@@ -139,9 +136,8 @@ public class Controller {
      * @param mode
      * @return
      */
-    private boolean isTenseInMode(Tense tense, Mode mode){
-        if(mode == null) return false;
-        return mode.isTenseInMode(tense);
+    private boolean isTenseInMode(Tense tense, Mode mode) {
+        return mode != null && mode.isTenseInMode(tense);
     }
 
     public void conjugateButtonClicked(){

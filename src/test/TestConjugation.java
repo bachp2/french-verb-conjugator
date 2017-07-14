@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by bachp on 6/25/2017.
  */
-public class TestConjugation {
+class TestConjugation {
     public static void main(String[] args){
         //todo redo Tense enummap
         Stopwatch stopwatch = Stopwatch.createStarted();

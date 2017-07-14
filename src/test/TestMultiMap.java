@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by bachp on 6/24/2017.
  */
-public class TestMultiMap {
+class TestMultiMap {
     public static void main(String[] args){
         Stopwatch stopwatch = Stopwatch.createStarted();
         //ProgramTestSuite.printVerbsWithSameTemplateName();

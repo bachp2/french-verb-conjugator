@@ -66,7 +66,7 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
      * sort the verb's list using Collections sort function
      */
     public static void sortList(){
-        Collections.sort(Verb.list, (o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
+        Verb.list.sort((o1, o2) -> o1.getInfinitiveForm().compareTo(o2.getInfinitiveForm()));
     }
 
     /**

@@ -7,8 +7,8 @@ import java.util.Stack;
  * Created by bachp on 1/31/2017.
  */
 class Tree {
-    protected TreeNode root;
-    private static Collator collator = Collator.getInstance();
+    private TreeNode root;
+    private static final Collator collator = Collator.getInstance();
     static {
         // This strategy mean it'll ignore the accents
         collator.setStrength(Collator.NO_DECOMPOSITION);
@@ -89,9 +89,9 @@ class Tree {
         return stack;
     }
     class TreeNode {
-        protected Trie.TrieNode content;
-        protected TreeNode left;
-        protected TreeNode right;
+        final Trie.TrieNode content;
+        TreeNode left;
+        TreeNode right;
 
         /**
          * constructor

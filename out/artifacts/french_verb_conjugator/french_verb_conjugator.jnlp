@@ -9,7 +9,7 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
     <jar href="controlsfx-8.40.12.jar" size="996389" download="eager" />
-    <jar href="french_verb_conjugator.jar" size="280997" download="eager" />
+    <jar href="french_verb_conjugator.jar" size="328450" download="eager" />
     <jar href="guava-19.0.jar" size="2308517" download="eager" />
     <jar href="hamcrest-core-1.3.jar" size="45024" download="eager" />
     <jar href="junit-4.12.jar" size="314932" download="eager" />
