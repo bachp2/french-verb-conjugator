@@ -10,17 +10,18 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
+        new Program();
+//        new Thread(new Runnable() {
+//            @Override public void run() {
+//                Platform.runLater(new Runnable() {
+//                    @Override public void run() {
+//                        new Program();
+//                    }
+//                });
+//            }
+//        }).start();
         Parent root = FXMLLoader.load(getClass().getResource("Gui.fxml"));
         primaryStage.setTitle("french verb conjugator");
-        new Thread(new Runnable() {
-            @Override public void run() {
-                Platform.runLater(new Runnable() {
-                    @Override public void run() {
-                        new Program();
-                    }
-                });
-            }
-        }).start();
         Scene scene = new Scene(root, 470, 208);
         scene.getStylesheets().add("stylesheets/comboBoxDisabled.css");
         scene.getStylesheets().add("stylesheets/customButton.css");

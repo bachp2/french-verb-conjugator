@@ -3,6 +3,7 @@ package app;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.controlsfx.control.PopOver;
+import org.controlsfx.control.textfield.TextFields;
 import structure.Mode;
 import structure.Tense;
 import javafx.collections.FXCollections;
@@ -14,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import structure.Verb;
 
 /**
  * Created by bachp on 7/1/2017.
@@ -74,7 +76,7 @@ public class Controller {
                 }
             }
         });
-        //TextFields.bindAutoCompletion(inputTextField, Verb.getVerbsListString());
+        //TextFields.bindAutoCompletion(inputTextField.getText(), Verb.getVerbsListString());
         SplitPane.setResizableWithParent(leftPane, Boolean.FALSE);
         buttons.setSpacing(15);
         buttons.setAlignment(Pos.CENTER_RIGHT);
@@ -168,7 +170,7 @@ public class Controller {
                 }
             }
         } catch (NullPointerException e) {
-            engine.loadContent(modeTenseSpecificationMessage);
+            e.printStackTrace();
         }
     }
 }
