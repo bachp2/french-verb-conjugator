@@ -26,8 +26,11 @@ public class OutputWriter {
 
     private OutputWriter(Builder builder) {
         this.verbToBeConjugated = builder.verb;
+
         this.infVerb = builder.infVerb;
+
         this.templateName = builder.templateName;
+
         if(isListNull(builder.conjugatedForms))
             this.conjugatedForms = Collections.emptyList();
         else {
@@ -52,6 +55,7 @@ public class OutputWriter {
         }
         //reset String builder
         sb.setLength(0);
+
         this.tense = builder.tense;
         this.mode = builder.mode;
     }
@@ -116,8 +120,11 @@ public class OutputWriter {
 
         //finalize
         sb.append("</table></body></html>");
+
         String result = sb.toString();
+
         sb.setLength(0);
+
         return result;
     }
     private String getElementHelper(List<String> A, int i){

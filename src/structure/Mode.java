@@ -13,6 +13,7 @@ public enum Mode {
     SUBJUNCTIVE(Tense.PRESENT, Tense.IMPERFECT),
     IMPERATIVE(Tense.PRESENT),
     PARTICIPLE(Tense.PRESENT, Tense.PAST);
+
     private final Tense[] tenses;
 
     Mode(Tense... tenses) {

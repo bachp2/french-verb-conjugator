@@ -10,7 +10,7 @@ class Tree {
     private TreeNode root;
     private static final Collator collator = Collator.getInstance();
     static {
-        // This strategy mean it'll ignore the accents
+        // this'll ignore the accents
         collator.setStrength(Collator.NO_DECOMPOSITION);
     }
     /**
@@ -88,6 +88,7 @@ class Tree {
             stackIsInSubtree(stack, root.right, c);
         return stack;
     }
+
     class TreeNode {
         final Trie.TrieNode content;
         TreeNode left;

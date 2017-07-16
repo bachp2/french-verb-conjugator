@@ -1,7 +1,14 @@
 package app;
 
+import javafx.application.Platform;
 import javafx.scene.layout.GridPane;
 import org.controlsfx.control.PopOver;
+import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.Validator;
+import org.controlsfx.validation.decoration.CompoundValidationDecoration;
+import org.controlsfx.validation.decoration.GraphicValidationDecoration;
+import org.controlsfx.validation.decoration.StyleClassValidationDecoration;
+import org.controlsfx.validation.decoration.ValidationDecoration;
 import structure.Mode;
 import structure.Tense;
 import javafx.collections.FXCollections;
@@ -59,6 +66,7 @@ public class Controller {
 
     @FXML
     private void initialize(){
+        new Thread(() -> Platform.runLater(() -> new Program())).start();
         modeComboBox.setItems(modes);
         tenseComboBox.setItems(tenses);
         tenseComboBox.setCellFactory(lv -> new ListCell<Tense>(){
@@ -102,11 +110,13 @@ public class Controller {
                     i++;
                 }
             }
+
             popOver = new PopOver(gridPane);
             popOver.setDetachable(false);
             popOver.setArrowLocation(PopOver.ArrowLocation.BOTTOM_RIGHT);
             popOver.setOnCloseRequest(e -> popOver.hide());
             popOver.show(roundButton);
+
         } catch (Exception e) {}
     }
 
@@ -141,20 +151,45 @@ public class Controller {
     }
 
     public void conjugateButtonClicked(){
-        final String notFoundMessage = "<p style=\"color:#762817;\"><em>verb not found!</em></p>";
-        final String modeTenseSpecificationMessage = "<p style=\"color:#762817;\">" +
-                "<em>please specify mode and tense for conjugation!</em></p>";
+        final String notFoundMessage =
+                "<p style=\"color:#762817;\"><em>verb not found!</em></p>";
+        final String modeComboBoxMessage =
+                "<p style=\"color:#762817;\"><em>please specify mode in combo box!</em></p>";
+        final String tenseComboBoxMessage =
+                "<p style=\"color:#762817;\"><em>please specify tense in combo box!</em></p>";
+        final String modeTenseComboBoxMessage =
+                "<p style=\"color:#762817;\"><em>please specify mode and tense in combo boxes!</em></p>";
+
         final WebEngine engine = wv.getEngine();
+
         String verb = inputTextField.getText();
         Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
         Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
+
+        if(verb.equals("")) return;
+
+        if(mode == null && tense == null){
+            engine.loadContent(modeTenseComboBoxMessage);
+            return;
+        }
+        else if(mode == null) {
+            engine.loadContent(modeComboBoxMessage);
+            return;
+        }
+        else if(tense == null){
+            engine.loadContent(tenseComboBoxMessage);
+            return;
+        }
         try {
-            if(!verb.equals("") && (mode == null || tense == null))
-                engine.loadContent(modeTenseSpecificationMessage);
-            if( (!verb.equals("") && !textField.equals(verb.toLowerCase())) || mode != m || tense != t ) {
+            if(!textField.equals(verb.toLowerCase()) || mode != m || tense != t ) {
                 textField = verb.toLowerCase();
                 m = mode; t = tense;
-                OutputWriter[] ows = Program.conjugateVerb(verb, mode, tense);
+                OutputWriter[] ows = new OutputWriter[0];
+                try {
+                    ows = Program.conjugateVerb(verb, mode, tense);
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+                }
                 if(ows == null)
                     engine.loadContent(notFoundMessage);
                 else{

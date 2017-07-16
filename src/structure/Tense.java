@@ -12,6 +12,7 @@ public enum Tense {
     Tense(String... tenses){
         this.tenses = tenses;
     }
+
     public static Tense toTense(String s) {
         try {
             for (Tense t : Tense.values()) {
