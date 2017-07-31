@@ -141,9 +141,9 @@ public class Program {
                     .getNodeValue();
             Table <Mode, Tense, List <String>> newTable = HashBasedTable.create();
             for (Mode mode : Mode.values()) {
+                Element md = (Element) tmp.getElementsByTagName(mode.toString().toLowerCase()).item(0);
                 for (Tense tense : mode.getTenses()) {
                     List <String> p = new ArrayList <>();
-                    Element md = (Element) tmp.getElementsByTagName(mode.toString().toLowerCase()).item(0);
                     Element ten = (Element) md.getElementsByTagName(tense.toString(mode).toLowerCase()).item(0);
                     NodeList listP = ten.getElementsByTagName("p");
                     NodeList listI;
@@ -187,7 +187,7 @@ public class Program {
                     .getTextContent();
             Verb.create(verb, template_name);
         }
-        Verb.sortList();
+        //Verb.sortList();redundant because list is already sorted in xml structure
     }
 
     /**

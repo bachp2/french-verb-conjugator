@@ -1,6 +1,7 @@
 package structure;
 
 import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Table;
 import org.jetbrains.annotations.NotNull;
@@ -13,8 +14,7 @@ import java.util.*;
 public class Verb implements Comparator<Verb>, Comparable<Verb> {
     private final String infinitiveForm;//verb in INFINITIVE either ends in er ir or er.
     private final String templateName;//template name of verbs with common suffix. ex..aim:er->radical:suffix
-    //index to keep track of list element
-    private static int index = 0;
+    //list of verb objects
     private static final List<Verb> list = new ArrayList<>();
     //multi map from Guava library is used to match a template name with verb in verb's list
     private static final ListMultimap<String, Verb> multiMap = ArrayListMultimap.create();
@@ -84,8 +84,8 @@ public class Verb implements Comparator<Verb>, Comparable<Verb> {
      */
     public static void create(String infinitive_form, String template_name){
         list.add(new Verb(infinitive_form, template_name));
-        multiMap.put(list.get(index).getTemplateName(), list.get(index));
-        index++;
+        Verb v = Iterables.getLast(list);
+        multiMap.put(v.getTemplateName(), v);
     }
 
     /**
