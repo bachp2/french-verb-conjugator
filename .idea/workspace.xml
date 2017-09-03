@@ -10,35 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d84cd51-cd30-4075-b159-7fbce5826d30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshot/Capture.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/testInputValidation.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/Deconjugation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/conjugation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/list.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/listRadicals.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/listRadicalsLength.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/multimap.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/multimapTN.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/Test/testDecon.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/Deconjugation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/conjugation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/list.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/listRadicals.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/listRadicalsLength.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/multimap.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/multimapTN.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/testDecon.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/App/OutputWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Mode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Mode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tense$1.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tense$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tense.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tense.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tree$TreeNode.class" afterPath="$PROJECT_DIR$/out/production/french-verb-conjugator/structure/Tree$TreeNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/Controller.java" afterPath="$PROJECT_DIR$/src/app/Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshot/Capture1.PNG" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -272,10 +244,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1456" />
-    <option name="y" value="-6" />
+    <option name="x" value="1382" />
+    <option name="y" value="-13" />
     <option name="width" value="1381" />
-    <option name="height" value="748" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
