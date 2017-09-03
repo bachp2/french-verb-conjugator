@@ -150,21 +150,33 @@ public class Controller {
         return mode != null && mode.isTenseInMode(tense);
     }
 
+    public boolean isValid(String input){
+        return input.matches("[a-zA-ZàâäèéêëîïôœùûüÿçÀÂÄÈÉÊËÎÏÔŒÙÛÜŸÇ]+");
+    }
+
     public void conjugateButtonClicked(){
+        final String invalidInput = "<p style=\"color:#762817;\"><em>Invalid Input!</em></p>";
         final String notFoundMessage =
                 "<p style=\"color:#762817;\"><em>verb not found!</em></p>";
         final String modeComboBoxMessage =
-                "<p style=\"color:#762817;\"><em>please specify mode in combo box!</em></p>";
+                "<p style=\"color:#762817;\"><em>Please specify mode in combo box!</em></p>";
         final String tenseComboBoxMessage =
-                "<p style=\"color:#762817;\"><em>please specify tense in combo box!</em></p>";
+                "<p style=\"color:#762817;\"><em>Please specify tense in combo box!</em></p>";
         final String modeTenseComboBoxMessage =
-                "<p style=\"color:#762817;\"><em>please specify mode and tense in combo boxes!</em></p>";
+                "<p style=\"color:#762817;\"><em>Please specify mode and tense in combo boxes!</em></p>";
 
         final WebEngine engine = wv.getEngine();
 
-        String verb = inputTextField.getText();
+
         Mode mode = (Mode) modeComboBox.getSelectionModel().getSelectedItem();
         Tense tense = (Tense) tenseComboBox.getSelectionModel().getSelectedItem();
+
+        String verb = inputTextField.getText();
+
+        if(!isValid(verb) && mode!=null && tense!=null){
+            engine.loadContent(invalidInput);
+            return;
+        }
 
         if(verb.equals("")) return;
 
@@ -180,6 +192,7 @@ public class Controller {
             engine.loadContent(tenseComboBoxMessage);
             return;
         }
+
         try {
             if(!textField.equals(verb.toLowerCase()) || mode != m || tense != t ) {
                 textField = verb.toLowerCase();
