@@ -1,7 +1,7 @@
 # french-verb-conjugator
 a simple verb conjugator for french language using JavaFX framework.
 
-![screenshot](https://github.com/bachp2/french-verb-conjugator/blob/master/screenshot/Capture.PNG?raw=true)
+![screenshot](https://github.com/bachp2/french-verb-conjugator/blob/master/screenshot/Capture1.PNG?raw=true)
 
 you can find the build in /french-verb-conjugator/out/artifacts/french_verb_conjugator/
 
